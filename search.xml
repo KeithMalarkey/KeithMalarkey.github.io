@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Applied Multivariate Statistical Analysis</title>
-    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
-    <content><![CDATA[<h1 id="实用多元统计分析"><a href="#实用多元统计分析" class="headerlink" title="实用多元统计分析"></a>实用多元统计分析</h1><p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by Richard A.Johnson and Dean W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
-<h2 id="1-预备知识"><a href="#1-预备知识" class="headerlink" title="1. 预备知识"></a>1. 预备知识</h2><h2 id="1-1-数据的组织"><a href="#1-1-数据的组织" class="headerlink" title="1.1 数据的组织"></a>1.1 数据的组织</h2>]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>创建一个hexoBlog</title>
     <url>/2023/05/08/Create-a-hexoBlog/</url>
     <content><![CDATA[<h1 id="使用hexo框架创建个人博客"><a href="#使用hexo框架创建个人博客" class="headerlink" title="使用hexo框架创建个人博客"></a>使用hexo框架创建个人博客</h1><p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术&#x2F;技术贴。在此，本贴给出hexo博客的创建流程。</p>
@@ -99,6 +85,21 @@
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Applied Multivariate Statistical Analysis</title>
+    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
+    <content><![CDATA[<h1 id="实用多元统计分析"><a href="#实用多元统计分析" class="headerlink" title="实用多元统计分析"></a>实用多元统计分析</h1><p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by Richard A.Johnson and Dean W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
+<h2 id="1-预备知识"><a href="#1-预备知识" class="headerlink" title="1. 预备知识"></a>1. 预备知识</h2><h2 id="1-1-多元数据的组织"><a href="#1-1-多元数据的组织" class="headerlink" title="1.1 多元数据的组织"></a>1.1 多元数据的组织</h2><p>多元数据的基本表示:n行p列的数据矩阵，每一行表示一个样本(sample)，每一列代表一个特征(feature)或属性(attribute)。即$$\bf{X}&#x3D;\begin{bmatrix}<br>    X_{11} &amp; \dotsb &amp; X_{1p}\<br>    \vdots &amp; \ddots &amp; \dotsb\<br>    X_{n1} &amp; \dotsb &amp; X_{np}<br>\end{bmatrix}$$<br>其中，不同样本之间相互独立。</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
       </tags>
   </entry>
 </search>
