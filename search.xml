@@ -14,7 +14,6 @@
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure>
 <p>或者</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
-
 <h3 id="1-2-安装hexo"><a href="#1-2-安装hexo" class="headerlink" title="1.2 安装hexo"></a>1.2 安装hexo</h3><p>创建本地仓库&#x2F;路径，用以编辑blog，比如</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure>
 <blockquote>
