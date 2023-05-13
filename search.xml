@@ -3,7 +3,8 @@
   <entry>
     <title>Applied Multivariate Statistical Analysis</title>
     <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="实用多元统计分析"><a href="#实用多元统计分析" class="headerlink" title="实用多元统计分析"></a>实用多元统计分析</h1><p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by Richard A.Johnson and Dean W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
+<h2 id="1-预备知识"><a href="#1-预备知识" class="headerlink" title="1. 预备知识"></a>1. 预备知识</h2><h2 id="1-1-数据的组织"><a href="#1-1-数据的组织" class="headerlink" title="1.1 数据的组织"></a>1.1 数据的组织</h2>]]></content>
       <categories>
         <category>机器学习</category>
         <category>统计学习</category>
