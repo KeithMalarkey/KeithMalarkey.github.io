@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Applied Multivariate Statistical Analysis</title>
+    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>创建一个hexoBlog</title>
     <url>/2023/05/08/Create-a-hexoBlog/</url>
-    <content><![CDATA[<h1 id="使用hexo框架创建个人博客"><a href="#使用hexo框架创建个人博客" class="headerlink" title="使用hexo框架创建个人博客"></a>使用hexo框架创建个人博客</h1><hr>
+    <content><![CDATA[<h1 id="使用hexo框架创建个人博客"><a href="#使用hexo框架创建个人博客" class="headerlink" title="使用hexo框架创建个人博客"></a>使用hexo框架创建个人博客</h1><p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术&#x2F;技术贴。在此，本贴给出hexo博客的创建流程。</p>
+<hr>
 <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><h3 id="1-1-安装需求"><a href="#1-1-安装需求" class="headerlink" title="1.1 安装需求"></a>1.1 安装需求</h3><ul>
 <li>Node.js (version &gt;&#x3D; 10.13)</li>
 <li>Git</li>
@@ -25,7 +39,7 @@
 <blockquote>
 <p>hexo s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
 </blockquote>
-<h3 id="1-4-创建新的blog"><a href="#1-4-创建新的blog" class="headerlink" title="1.4 创建新的blog"></a>1.4 创建新的blog</h3><figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">hexo n [layout] &lt;<span class="built_in">title</span>&gt;</span><br><span class="line">如：hexo <span class="built_in">new</span> <span class="string">&quot;keith&#x27;s first Blog&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-4-创建新的blog"><a href="#1-4-创建新的blog" class="headerlink" title="1.4 创建新的blog"></a>1.4 创建新的blog</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>layout表示文章布局，可以选择post&#x2F;page&#x2F;draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
 </blockquote>
@@ -36,7 +50,7 @@
 <h3 id="2-2-生成SSH密钥"><a href="#2-2-生成SSH密钥" class="headerlink" title="2.2 生成SSH密钥"></a>2.2 生成SSH密钥</h3><p>使用<code>git config --global --list</code> 查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现<br>下图时，说明密钥已经生成<br><img data-src="/../images/Create-a-hexoBlog/p1.png" alt="密钥"><br>之后以下bash代码</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New SSH key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功<br><img data-src="/../images/Create-a-hexoBlog/p2.png" alt="连接判断"></p>
-<h3 id="2-3-配置blog主题"><a href="#2-3-配置blog主题" class="headerlink" title="2.3 配置blog主题"></a>2.3 配置blog主题</h3><p><code>cd /KeithBlog/blog</code>回到本地仓,在<a href="https://hexo.io/themes/">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为</p>
+<h3 id="2-3-配置blog主题-建议安装Next主题"><a href="#2-3-配置blog主题-建议安装Next主题" class="headerlink" title="2.3 配置blog主题(建议安装Next主题)"></a>2.3 配置blog主题(建议安装Next主题)</h3><p><code>cd /KeithBlog/blog</code>回到本地仓,在<a href="https://hexo.io/themes/">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
 
