@@ -75,7 +75,7 @@ alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr
 href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
 SSH
 key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
-<img data-src="../images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
+<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
 <h3 id="配置blog主题建议安装next主题">2.3
 配置blog主题(建议安装Next主题)</h3>
 <p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
@@ -106,7 +106,7 @@ href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_histor
 在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
 3.
 来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
-4. .styl具体如下：<img data-src="../images/Create-a-hexoBlog/p3.png"
+4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
 alt="styl设置" /></p>
 <h2 id="latex支持以chic主题为例">5.latex支持(以Chic主题为例)</h2>
 <p><span
@@ -117,7 +117,7 @@ href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编�
 执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
 由于在1中我们将import设置为demand类型，所以在需要使用<span
-class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="../images/Create-a-hexoBlog/p4.png" alt="latex渲染" /></p>
+class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png" alt="latex渲染" /></p>
 <blockquote>
 <p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
 </blockquote>
