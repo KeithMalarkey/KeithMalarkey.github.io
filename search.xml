@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Applied Multivariate Statistical Analysis</title>
+    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
+    <content><![CDATA[<h1 id="实用多元统计分析">实用多元统计分析</h1>
+<p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by
+Richard A.Johnson and Dean
+W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
+<h2 id="预备知识">1. 预备知识</h2>
+<h2 id="多元数据的组织">1.1 多元数据的组织</h2>
+<p>多元数据的基本表示:n行p列的数据矩阵，每一行表示一个样本(sample)，每一列代表一个特征(feature)或属性(attribute)。即<span
+class="math display">\[\bf{X}=\begin{bmatrix}
+    X_{11} &amp; \dotsb &amp; X_{1p}\\
+    \vdots &amp; \ddots &amp; \dotsb\\
+    X_{n1} &amp; \dotsb &amp; X_{np}
+\end{bmatrix}\]</span> 其中，不同样本之间相互独立。</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>创建一个hexoBlog</title>
     <url>/2023/05/08/Create-a-hexoBlog/</url>
     <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
@@ -44,7 +69,7 @@ href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
 <h3 id="生成ssh密钥">2.2 生成SSH密钥</h3>
 <p>使用<code>git config --global --list</code>
 查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
-下图时，说明密钥已经生成 <img data-src="../images/Create-a-hexoBlog/p1.png"
+下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
 alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
 将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
 href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
@@ -70,6 +95,7 @@ class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Ch
 id="博客中图片无法同步以chic主题为例">3.博客中图片无法同步(以Chic主题为例)</h2>
 <ol type="1">
 <li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
+<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
 <li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
 &gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
 href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
@@ -104,37 +130,18 @@ href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配�
 <li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
 class="uri">https://hexo.io/zh-cn/docs/</a></li>
 </ol>
+<h2 id="参考文章">8.参考文章</h2>
+<ul>
+<li>https://blog.csdn.net/qq_52466006/article/details/126924064</li>
+<li>https://blog.csdn.net/Bennnnnnn/article/details/128000842</li>
+<li>https://www.issey.top/</li>
+</ul>
 ]]></content>
       <categories>
         <category>Instruction</category>
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Applied Multivariate Statistical Analysis</title>
-    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
-    <content><![CDATA[<h1 id="实用多元统计分析">实用多元统计分析</h1>
-<p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by
-Richard A.Johnson and Dean
-W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
-<h2 id="预备知识">1. 预备知识</h2>
-<h2 id="多元数据的组织">1.1 多元数据的组织</h2>
-<p>多元数据的基本表示:n行p列的数据矩阵，每一行表示一个样本(sample)，每一列代表一个特征(feature)或属性(attribute)。即<span
-class="math display">\[\bf{X}=\begin{bmatrix}
-    X_{11} &amp; \dotsb &amp; X_{1p}\\
-    \vdots &amp; \ddots &amp; \dotsb\\
-    X_{n1} &amp; \dotsb &amp; X_{np}
-\end{bmatrix}\]</span> 其中，不同样本之间相互独立。</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
       </tags>
   </entry>
 </search>
