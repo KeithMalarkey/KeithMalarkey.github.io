@@ -21,18 +21,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"keithmalarkey.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="使用hexo框架创建个人博客 创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术&#x2F;技术贴。在此，本贴给出hexo博客的创建流程。  1. 安装 1.1 安装需求">
+    <meta name="description" content="使用hexo框架创建个人博客 创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术&#x2F;技术贴。在此，本贴给出hexo博客的创建流程。  安装 安装需求">
 <meta property="og:type" content="article">
 <meta property="og:title" content="创建一个hexoBlog">
 <meta property="og:url" content="https://keithmalarkey.github.io/2023/05/08/Create-a-hexoBlog/index.html">
 <meta property="og:site_name" content="Keith&#39;s Blog">
-<meta property="og:description" content="使用hexo框架创建个人博客 创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术&#x2F;技术贴。在此，本贴给出hexo博客的创建流程。  1. 安装 1.1 安装需求">
+<meta property="og:description" content="使用hexo框架创建个人博客 创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术&#x2F;技术贴。在此，本贴给出hexo博客的创建流程。  安装 安装需求">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Create-a-hexoBlog/p1.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Create-a-hexoBlog/p2.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Create-a-hexoBlog/p3.png">
 <meta property="article:published_time" content="2023-05-08T09:44:35.000Z">
-<meta property="article:modified_time" content="2023-05-14T03:07:23.013Z">
+<meta property="article:modified_time" content="2023-05-14T11:23:07.431Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -146,9 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.</span> <span class="nav-text">使用hexo框架创建个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">1. 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%9C%80%E6%B1%82"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 安装需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96blog"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 初始化blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84blog"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4 创建新的blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E5%92%8C%E9%83%A8%E7%BD%B2blog"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.5 生成和部署blog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86blog%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%BB%A5chic%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">2.
-将blog项目部署到github(以Chic主题为例)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BAblog%E5%88%9B%E5%BB%BAgithub%E7%9A%84repo"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 为blog创建github的repo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90ssh%E5%AF%86%E9%92%A5"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 生成SSH密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEblog%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%AE%E5%AE%89%E8%A3%85next%E4%B8%BB%E9%A2%98"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3
-配置blog主题(建议安装Next主题)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90tag%E5%92%8Ccategories%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 生成tag和categories页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%87%AA%E5%AE%9A%E4%B9%89theme%E7%9A%84blog"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 生成自定义theme的blog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E4%BB%A5chic%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.3.</span> <span class="nav-text">3.博客中图片无法同步(以Chic主题为例)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E9%A1%B5%E9%9D%A2%E5%AD%97%E4%BD%93%E4%BB%A5chic%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">4.更改页面字体(以Chic主题为例)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex%E6%94%AF%E6%8C%81%E4%BB%A5chic%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.5.</span> <span class="nav-text">5.latex支持(以Chic主题为例)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="nav-number">1.6.</span> <span class="nav-text">6.Next主题配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.7.</span> <span class="nav-text">7.注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">1.8.</span> <span class="nav-text">8.参考文章</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.</span> <span class="nav-text">使用hexo框架创建个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%9C%80%E6%B1%82"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="nav-number">1.1.2.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96blog"><span class="nav-number">1.1.3.</span> <span class="nav-text">初始化blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84blog"><span class="nav-number">1.1.4.</span> <span class="nav-text">创建新的blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E5%92%8C%E9%83%A8%E7%BD%B2blog"><span class="nav-number">1.1.5.</span> <span class="nav-text">生成和部署blog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86blog%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%BB%A5chic%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">将blog项目部署到github(以Chic主题为例)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BAblog%E5%88%9B%E5%BB%BAgithub%E7%9A%84repo"><span class="nav-number">1.2.1.</span> <span class="nav-text">为blog创建github的repo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90ssh%E5%AF%86%E9%92%A5"><span class="nav-number">1.2.2.</span> <span class="nav-text">生成SSH密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEblog%E4%B8%BB%E9%A2%98%E5%BB%BA%E8%AE%AE%E5%AE%89%E8%A3%85next%E4%B8%BB%E9%A2%98"><span class="nav-number">1.2.3.</span> <span class="nav-text">配置blog主题(建议安装Next主题)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90tag%E5%92%8Ccategories%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.2.4.</span> <span class="nav-text">生成tag和categories页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%87%AA%E5%AE%9A%E4%B9%89theme%E7%9A%84blog"><span class="nav-number">1.2.5.</span> <span class="nav-text">生成自定义theme的blog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E5%90%8C%E6%AD%A5%E4%BB%A5chic%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.3.</span> <span class="nav-text">博客中图片无法同步(以Chic主题为例)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E9%A1%B5%E9%9D%A2%E5%AD%97%E4%BD%93%E4%BB%A5chic%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">更改页面字体(以Chic主题为例)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex%E6%94%AF%E6%8C%81%E4%BB%A5chic%E4%B8%BB%E9%A2%98%E4%B8%BA%E4%BE%8B"><span class="nav-number">1.5.</span> <span class="nav-text">latex支持(以Chic主题为例)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="nav-number">1.6.</span> <span class="nav-text">Next主题配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.7.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">1.8.</span> <span class="nav-text">参考文章</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -252,7 +250,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-14 11:07:23" itemprop="dateModified" datetime="2023-05-14T11:07:23+08:00">2023-05-14</time>
+      <time title="修改时间：2023-05-14 19:23:07" itemprop="dateModified" datetime="2023-05-14T19:23:07+08:00">2023-05-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -278,7 +276,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -299,8 +297,8 @@
 <p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
 methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
 <hr />
-<h2 id="安装">1. 安装</h2>
-<h3 id="安装需求">1.1 安装需求</h3>
+<h2 id="安装">安装</h2>
+<h3 id="安装需求">安装需求</h3>
 <ul>
 <li>Node.js (version &gt;= 10.13)</li>
 <li>Git</li>
@@ -309,31 +307,31 @@ methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)
 </ul>
 <p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
-<h3 id="安装hexo">1.2 安装hexo</h3>
+<h3 id="安装hexo">安装hexo</h3>
 <p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
 其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
 target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h3 id="初始化blog">1.3 初始化blog</h3>
+<h3 id="初始化blog">初始化blog</h3>
 <p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
 s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
 target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
-<h3 id="创建新的blog">1.4 创建新的blog</h3>
+<h3 id="创建新的blog">创建新的blog</h3>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
 </blockquote>
-<h3 id="生成和部署blog">1.5 生成和部署blog</h3>
+<h3 id="生成和部署blog">生成和部署blog</h3>
 <p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<h2 id="将blog项目部署到github以chic主题为例">2.
-将blog项目部署到github(以Chic主题为例)</h2>
-<h3 id="为blog创建github的repo">2.1 为blog创建github的repo</h3>
+<h2
+id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h2>
+<h3 id="为blog创建github的repo">为blog创建github的repo</h3>
 <p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
 <code>git config --global --list</code>
 查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
-<h3 id="生成ssh密钥">2.2 生成SSH密钥</h3>
+<h3 id="生成ssh密钥">生成SSH密钥</h3>
 <p>使用<code>git config --global --list</code>
 查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
 下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
@@ -343,23 +341,23 @@ target="_blank" rel="noopener" href="https://github.com/">github</a>中,点击�
 SSH
 key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
 <img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
-<h3 id="配置blog主题建议安装next主题">2.3
-配置blog主题(建议安装Next主题)</h3>
+<h3
+id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h3>
 <p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
 target="_blank" rel="noopener" href="https://hexo.io/themes/"
 class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
 <p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
-<h3 id="生成tag和categories页面">2.4 生成tag和categories页面</h3>
+<h3 id="生成tag和categories页面">生成tag和categories页面</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
 <p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
 同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
-<h3 id="生成自定义theme的blog">2.5 生成自定义theme的blog</h3>
+<h3 id="生成自定义theme的blog">生成自定义theme的blog</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <h2
-id="博客中图片无法同步以chic主题为例">3.博客中图片无法同步(以Chic主题为例)</h2>
+id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h2>
 <ol type="1">
 <li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
 <li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
@@ -367,7 +365,7 @@ id="博客中图片无法同步以chic主题为例">3.博客中图片无法同�
 &gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
 target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
 </ol>
-<h2 id="更改页面字体以chic主题为例">4.更改页面字体(以Chic主题为例)</h2>
+<h2 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h2>
 <p>初始状态的字体真的很丑，所以有必要换一下字体 1.
 选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
 在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
@@ -375,7 +373,7 @@ target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1D7411U7Yk
 来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
 4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
 alt="styl设置" /></p>
-<h2 id="latex支持以chic主题为例">5.latex支持(以Chic主题为例)</h2>
+<h2 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h2>
 <p><span
 class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
 class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
@@ -389,7 +387,7 @@ alt="latex渲染" />，这就是我转Next主题的文章。</p>
 <blockquote>
 <p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
 </blockquote>
-<h2 id="next主题配置">6.Next主题配置</h2>
+<h2 id="next主题配置">Next主题配置</h2>
 <p>相似于section 2.3-section 5，参考<a
 target="_blank" rel="noopener" href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
 class="math inline">\(\LaTeX\)</span>配置，可以参考<a
@@ -397,13 +395,13 @@ target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52466006/article/d
 latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
 target="_blank" rel="noopener" href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
 download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
-<h2 id="注意事项">7.注意事项</h2>
+<h2 id="注意事项">注意事项</h2>
 <ol type="1">
 <li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
 <li>hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"
 class="uri">https://hexo.io/zh-cn/docs/</a></li>
 </ol>
-<h2 id="参考文章">8.参考文章</h2>
+<h2 id="参考文章">参考文章</h2>
 <ul>
 <li><a
 target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52466006/article/details/126924064"
