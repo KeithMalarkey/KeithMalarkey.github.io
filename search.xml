@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Applied Multivariate Statistical Analysis</title>
-    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
-    <content><![CDATA[<h1 id="实用多元统计分析">实用多元统计分析</h1>
-<p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by
-Richard A.Johnson and Dean
-W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
-<h2 id="预备知识">1. 预备知识</h2>
-<h2 id="多元数据的组织">1.1 多元数据的组织</h2>
-<p>多元数据的基本表示:n行p列的数据矩阵，每一行表示一个样本(sample)，每一列代表一个特征(feature)或属性(attribute)。即<span
-class="math display">\[\bf{X}=\begin{bmatrix}
-    X_{11} &amp; \dotsb &amp; X_{1p}\\
-    \vdots &amp; \ddots &amp; \dotsb\\
-    X_{n1} &amp; \dotsb &amp; X_{np}
-\end{bmatrix}\]</span> 其中，不同样本之间相互独立。</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>创建一个hexoBlog</title>
     <url>/2023/05/08/Create-a-hexoBlog/</url>
     <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
@@ -124,12 +99,12 @@ alt="latex渲染" />，这就是我转Next主题的文章。</p>
 </blockquote>
 <h2 id="next主题配置">6.Next主题配置</h2>
 <p>相似于section 2.3-section 5，参考<a
-href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>，至于<span
+href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
 class="math inline">\(\LaTeX\)</span>配置，可以参考<a
 href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
-latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载最新pandoc的<a
+latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
 href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
-download</a></p>
+download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
 <h2 id="注意事项">7.注意事项</h2>
 <ol type="1">
 <li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
@@ -152,6 +127,82 @@ class="uri">https://www.issey.top/</a></li>
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Applied Multivariate Statistical Analysis</title>
+    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
+    <content><![CDATA[<h1 id="实用多元统计分析">实用多元统计分析</h1>
+<p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by
+Richard A.Johnson and Dean
+W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
+<h2 id="预备知识">1. 预备知识</h2>
+<h2 id="多元数据的组织">1.1 多元数据的组织</h2>
+<p>多元数据的基本表示:n行p列的数据矩阵，每一行表示一个样本(sample)，每一列代表一个特征(feature)或属性(attribute)。即<span
+class="math display">\[\bf{X}=\begin{bmatrix}
+    x_{11} &amp; x_{12} &amp; \dotsb &amp; x_{1p}\\
+    x_{21} &amp; x_{22} &amp; \dotsb &amp; x_{2p}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+    x_{n1} &amp; x_{n2} &amp; \dotsb &amp; x_{np}
+\end{bmatrix}=\begin{bmatrix}
+    X_1^T\\
+    \vdots\\
+    X_n^T
+\end{bmatrix}\]</span> 其中，不同样本之间相互独立。每个样本为<span
+class="math inline">\(X_j=[x_{j1},x_{j2},\dotsb,x_{jp}]^T,j=\{1,2,\dotsb,n\}\)</span>；</p>
+<h2 id="描述性统计量">1.2 描述性统计量</h2>
+<h3 id="对于单个特征">1.2.1 对于单个特征：</h3>
+<ul>
+<li>样本均值： <span class="math display">\[\begin{equation}
+  \bar{x}_k=\frac{1}{n}\sum\limits^n_{j=1} x_{jk},k=1,2,\dotsb,p
+\end{equation}\]</span></li>
+<li>样本方差：<span class="math display">\[\begin{equation}
+  s_k^2=s_{kk}=\frac{1}{n}\sum\limits^n_{j=1} (x_{jk}-\bar{x}_k
+)^2,k=1,2,\dotsb,p
+\end{equation}\]</span></li>
+</ul>
+<h3 id="对于两个特征">1.2.2 对于两个特征：</h3>
+<ul>
+<li>样本协方差：<span class="math display">\[\begin{equation}
+  s_{ik}=\frac{1}{n}\sum\limits^n_{j=1}
+(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p
+\end{equation}\]</span></li>
+<li>样本相关系数：<span class="math display">\[\begin{equation}
+  r_{ik}=\frac{s_{ik}}{\sqrt{s_{ii}}\sqrt{s_{kk}}}
+\end{equation}\]</span>，其中<span
+class="math inline">\(\sqrt{s_{ii}}\)</span>表示样本标准差；
+协方差和相关系数刻画两个特征之间的的线性相关性。</li>
+</ul>
+<h3 id="对于数据集bfx的特征空间">1.2.3 对于数据集<span
+class="math inline">\(\bf{X}\)</span>的特征空间：</h3>
+<ul>
+<li>样本均值：<span
+class="math inline">\(\bar{x}=\begin{bmatrix}  \bar{x}_1 \\ \vdots \\
+\bar{x}_p \end{bmatrix}\)</span></li>
+<li>样本协方差矩阵：<span
+class="math inline">\(S_n=\begin{bmatrix}  s_{11} &amp; \dotsb &amp;
+s_{1p}\\  \vdots &amp; \ddots &amp; \vdots\\  s_{p1} &amp; \dotsb &amp;
+s_{pp} \end{bmatrix}\)</span></li>
+<li>样本相关系数矩阵：<span class="math inline">\(R_n=\begin{bmatrix}  1
+&amp; \dotsb &amp; r_{1p}\\  \vdots &amp; \ddots &amp; \vdots\\  r_{p1}
+&amp; \dotsb &amp; 1 \end{bmatrix}\)</span>
+协方差矩阵和相关系数矩阵都对称且半正定。</li>
+</ul>
+<p><strong>证明：协方差矩阵和相关系数矩阵都对称且半正定</strong> 1.
+证明协方差矩阵对称且半正定： 已知对于两个特征，其样本协方差为<span
+class="math inline">\(s_{ik}=\frac{1}{n}\sum\limits^n_{j=1}
+(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p\)</span>，同样的由，<span
+class="math inline">\(s_{ki}=\frac{1}{n}\sum\limits^n_{j=1}
+(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p\)</span>，所以得到$s_{ik}=s_{ki}
+$ 协方差矩阵对称；</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
       </tags>
   </entry>
 </search>
