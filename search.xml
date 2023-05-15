@@ -166,7 +166,7 @@ class="math inline">\((x_1,x_2)\)</span>的极坐标表示为 <span
 class="math display">\[\begin{cases}
     x_1=r\cos(\alpha)\\
     x_2=r\sin(\alpha)
-\end{cases}\]</span> 由于坐标轴顺时针旋转<span
+\end{cases}\]</span> 由于坐标轴逆时针旋转<span
 class="math inline">\(\theta^\circ\)</span>，所以角度由初始的<span
 class="math inline">\(\alpha\)</span>变为<span
 class="math inline">\(\alpha -
@@ -185,6 +185,64 @@ class="math display">\[\begin{cases}
     \tilde{x}_1=x_1\cos(\theta) + x_2\sin(\theta)\\
     \tilde{x}_2=-x_1\sin(\theta) + x_2\cos(\theta)
 \end{cases}
+\]</span></p>
+<h3 id="马氏距离">马氏距离</h3>
+<h4 id="定义">定义</h4>
+<p>设<span class="math inline">\(x,y \in
+\mathcal{R^n}\)</span>为样本空间中的两个样本点，<span
+class="math inline">\(S\)</span>为<span
+class="math inline">\(x,y\)</span>所服从分布的协方差矩阵，则马氏距离为
+<span class="math display">\[\begin{gather*}
+    d(x,y)=\sqrt{(x-y)^TS^{-1}(x-y)}\\
+    d(x,0)=\sqrt{(x-\mu)^TS^{-1}(x-\mu)}
+\end{gather*}\]</span> 计算欧氏距离和马氏距离的期望。
+<font color="red">引理（lemma）</font>：若<span
+class="math inline">\(X\)</span>为时间序列，有均值<span
+class="math inline">\(\mu\)</span>和协方差矩阵<span
+class="math inline">\(\Sigma\)</span>(即<span
+class="math inline">\(\mathbb{E}(X)=\mu,\mathbb{E}[(X-\mu)(X-\mu)^T]=\Sigma\)</span>)，则<span
+class="math display">\[\begin{equation}
+\mathbb{E}(X^TAX)=tr(A\Sigma)+\mu^TA\mu
+\end{equation}\]</span> <span
+class="math inline">\(\bf{Proof}\)</span>:<span
+class="math display">\[\begin{equation}\begin{split}
+    X^TAX&amp;=(X-\mu)^TAX + \mu^TAX\\
+    &amp;=(x-\mu)^TA(X-\mu)+\mu^TAX+(X-\mu)^TA\mu
+\end{split}\end{equation}\]</span>
+然后对公式(6)左右两侧同时取期望值，则有 <span
+class="math display">\[\begin{equation}\begin{split}
+    \mathbb{E}(X^TAX)&amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mathbb{E}(\mu^TAX)+\mathbb{E}[(X-\mu)^TA\mu]\\
+    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu+\mathbb{E}(X^TA\mu)-\mathbb{E}(\mu^TA\mu)\\
+    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu+\mu^TA\mu-\mu^TA\mu\\
+    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu
+\end{split}\end{equation}\]</span> 此外， <span class="math display">\[
+\begin{equation}
+\begin{split}
+    \mathbb{E}[(x-\mu)^TA(X-\mu)]&amp;=\mathbb{E}(Y^TAY)\\
+    &amp;=\sum\limits^n_{i=1}
+\sum\limits^n_{j=1}\mathbb{E}(Y_iA_{i,j}Y_j)=\sum\limits^n_{i=1}
+\sum\limits^n_{j=1} A_{i,j}[Var(Y)]_{i,j}\\
+    &amp;=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
+A_{i,j}[Var(X-\mu)]_{i,j}=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
+A_{i,j}[Var(X)]_{i,j}\\
+    &amp;=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
+A_{i,j}\Sigma_{i,j}=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
+A_{i,j}\Sigma_{j,i}\\
+    &amp;=\sum\limits^n_{i=1} [A\Sigma]_{i,i}=tr(A\Sigma)
+\end{split}
+\end{equation}
+\]</span> 故，依据(6)、(7)和(8),易得到公式(5)。</p>
+<h4 id="欧氏距离期望">欧氏距离期望</h4>
+<p><span class="math display">\[
+\begin{equation}
+    \mathbb{E}[(X-Y)^TI(X-Y)]=2tr(\Sigma)=2\sum\limits^n_{i=1}\sigma_{ii}
+\end{equation}
+\]</span></p>
+<h4 id="马氏距离期望">马氏距离期望</h4>
+<p><span class="math display">\[
+\begin{equation}
+    \mathbb{E}[(X-Y)^T\Sigma^{-1}(X-Y)]=2tr(\Sigma^{-1}\Sigma)=2n
+\end{equation}
 \]</span></p>
 ]]></content>
       <categories>
