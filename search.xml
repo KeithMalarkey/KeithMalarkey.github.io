@@ -309,7 +309,11 @@ class="math display">\[\begin{gather*}
     \mathop{max}\limits_{x \bot e_1,\dotsb,e_k} \frac{x^TBx}{x^Tx} =
 \lambda_{k+1}(x=e_{k+1})\\
 \end{gather*}\]</span></p>
-<p><img data-src="../images/Applied%20Multivariate%20Statistical%20Analysis/p2.png" /></p>
+<figure>
+<img data-src="/images/Applied%20Multivariate%20Statistical%20Analysis/p2.png"
+alt="p2" />
+<figcaption aria-hidden="true">p2</figcaption>
+</figure>
 <h2 id="向量投影">向量投影</h2>
 <p>设<span class="math inline">\(x,y \in
 \mathcal{R^n}\)</span>,向量<span class="math inline">\(x\)</span>到<span
