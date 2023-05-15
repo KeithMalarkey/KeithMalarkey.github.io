@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Applied Multivariate Statistical Analysis(2)</title>
+    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
+    <content><![CDATA[
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Applied Multivariate Statistical Analysis(1)</title>
     <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -353,20 +367,9 @@ class="math display">\[
     Cov(b^Tx,c^Tx)=b^TCov(x)c
 \end{gather*}\]</span></p>
 <h1 id="其他章节">其他章节</h1>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Applied Multivariate Statistical Analysis(2)</title>
-    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
-    <content><![CDATA[
+<p><a
+href="https://keithmalarkey.github.io/2023/05/13/Applied-Multivariate-Statistical-Analysis-2/#more"
+class="uri">https://keithmalarkey.github.io/2023/05/13/Applied-Multivariate-Statistical-Analysis-2/#more</a></p>
 ]]></content>
       <categories>
         <category>机器学习</category>
