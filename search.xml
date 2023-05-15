@@ -1,6 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>创建一个hexoBlog</title>
+    <url>/2023/05/08/Create-a-hexoBlog/</url>
+    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
+<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
+methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
+<hr />
+<h1 id="安装">安装</h1>
+<h2 id="安装需求">安装需求</h2>
+<ul>
+<li>Node.js (version &gt;= 10.13)</li>
+<li>Git</li>
+<li>npm</li>
+<li>github账户</li>
+</ul>
+<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
+<h2 id="安装hexo">安装hexo</h2>
+<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
+其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
+href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="初始化blog">初始化blog</h2>
+<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
+s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
+href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
+<h2 id="创建新的blog">创建新的blog</h2>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
+</blockquote>
+<h2 id="生成和部署blog">生成和部署blog</h2>
+<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<h1
+id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
+<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
+<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
+<code>git config --global --list</code>
+查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
+<h2 id="生成ssh密钥">生成SSH密钥</h2>
+<p>使用<code>git config --global --list</code>
+查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
+下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
+alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
+将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
+href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
+SSH
+key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
+<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
+<h2
+id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
+<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
+href="https://hexo.io/themes/"
+class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
+<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
+<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
+<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
+同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1
+id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
+<ol type="1">
+<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
+<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
+<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
+&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
+href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
+</ol>
+<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
+<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
+选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
+在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
+3.
+来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
+4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
+alt="styl设置" /></p>
+<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
+<p><span
+class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
+class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
+href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
+1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
+执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
+由于在1中我们将import设置为demand类型，所以在需要使用<span
+class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
+alt="latex渲染" />，这就是我转Next主题的文章。</p>
+<blockquote>
+<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
+</blockquote>
+<h1 id="next主题配置">Next主题配置</h1>
+<p>相似于section 2.3-section 5，参考<a
+href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
+class="math inline">\(\LaTeX\)</span>配置，可以参考<a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
+latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
+download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
+<h1 id="注意事项">注意事项</h1>
+<ol type="1">
+<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
+<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
+class="uri">https://hexo.io/zh-cn/docs/</a></li>
+</ol>
+<h1 id="参考文章">参考文章</h1>
+<ul>
+<li><a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064"
+class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
+<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
+class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
+<li><a href="https://www.issey.top/"
+class="uri">https://www.issey.top/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Instruction</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Applied Multivariate Statistical Analysis(1)</title>
     <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -355,135 +484,6 @@ class="math display">\[
       <tags>
         <tag>统计分析</tag>
         <tag>数据降维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>创建一个hexoBlog</title>
-    <url>/2023/05/08/Create-a-hexoBlog/</url>
-    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
-<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
-methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
-<hr />
-<h1 id="安装">安装</h1>
-<h2 id="安装需求">安装需求</h2>
-<ul>
-<li>Node.js (version &gt;= 10.13)</li>
-<li>Git</li>
-<li>npm</li>
-<li>github账户</li>
-</ul>
-<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
-<h2 id="安装hexo">安装hexo</h2>
-<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
-其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
-href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="初始化blog">初始化blog</h2>
-<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
-s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
-href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
-<h2 id="创建新的blog">创建新的blog</h2>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
-</blockquote>
-<h2 id="生成和部署blog">生成和部署blog</h2>
-<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<h1
-id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
-<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
-<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
-<code>git config --global --list</code>
-查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
-<h2 id="生成ssh密钥">生成SSH密钥</h2>
-<p>使用<code>git config --global --list</code>
-查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
-下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
-alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
-将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
-href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
-SSH
-key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
-<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
-<h2
-id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
-<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
-href="https://hexo.io/themes/"
-class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
-<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
-<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
-<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
-同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
-<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1
-id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
-<ol type="1">
-<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
-<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
-<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
-&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
-href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
-</ol>
-<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
-<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
-选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
-在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
-3.
-来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
-4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
-alt="styl设置" /></p>
-<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
-<p><span
-class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
-class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
-href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
-1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
-执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
-由于在1中我们将import设置为demand类型，所以在需要使用<span
-class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
-alt="latex渲染" />，这就是我转Next主题的文章。</p>
-<blockquote>
-<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
-</blockquote>
-<h1 id="next主题配置">Next主题配置</h1>
-<p>相似于section 2.3-section 5，参考<a
-href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
-class="math inline">\(\LaTeX\)</span>配置，可以参考<a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
-latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
-download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
-<h1 id="注意事项">注意事项</h1>
-<ol type="1">
-<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
-<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
-class="uri">https://hexo.io/zh-cn/docs/</a></li>
-</ol>
-<h1 id="参考文章">参考文章</h1>
-<ul>
-<li><a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064"
-class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
-<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
-class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
-<li><a href="https://www.issey.top/"
-class="uri">https://www.issey.top/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Instruction</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
