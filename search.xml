@@ -154,8 +154,8 @@ class="math inline">\(x_1\)</span>值的变化不依赖于<span
 class="math inline">\(x_2\)</span>的值，欧氏距离是适用的。</font></p>
 <h3
 id="最小化特征相关度最大化特征间的方差">最小化特征相关度/最大化特征间的方差</h3>
-<p>当变量之间有相关性时，相当于先旋转坐标轴到变量之间相互独立的角度，再计算标准化距离。旋转的过程是二次型变换。<img data-src="/images/Applied%20Multivariate%20Statistical%20Analysis/p1.png" />
-从上图可以看出，原来的坐标系空间内，<span
+<p>当变量之间有相关性时，相当于先旋转坐标轴到变量之间相互独立的角度，再计算标准化距离。旋转的过程是二次型变换。<img data-src="/images/Applied%20Multivariate%20Statistical%20Analysis/p1.png"
+alt="坐标基旋转" /> 从上图可以看出，原来的坐标系空间内，<span
 class="math inline">\(x_1\)</span>和<span
 class="math inline">\(x_2\)</span>方向的可变性（方差/协方差）不同，为了减少变量的相关性，在保持散布不变的基础上，将原始的坐标系旋转<span
 class="math inline">\(\theta\)</span>角并标出旋转过的坐标轴<span
@@ -316,8 +316,8 @@ class="math display">\[\begin{gather*}
 \end{gather*}\]</span></p>
 <figure>
 <img data-src="/images/Applied%20Multivariate%20Statistical%20Analysis/p2.png"
-alt="p2" />
-<figcaption aria-hidden="true">p2</figcaption>
+alt="超平面和向量投影" />
+<figcaption aria-hidden="true">超平面和向量投影</figcaption>
 </figure>
 <h2 id="向量投影">向量投影</h2>
 <p>设<span class="math inline">\(x,y \in
@@ -352,6 +352,21 @@ class="math display">\[
     Cov(CX)=C\Sigma_X C\\
     Cov(b^Tx,c^Tx)=b^TCov(x)c
 \end{gather*}\]</span></p>
+<h1 id="其他章节">其他章节</h1>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Applied Multivariate Statistical Analysis(2)</title>
+    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
+    <content><![CDATA[
 ]]></content>
       <categories>
         <category>机器学习</category>
