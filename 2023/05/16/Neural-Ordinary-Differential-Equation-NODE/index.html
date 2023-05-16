@@ -21,27 +21,26 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"keithmalarkey.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://keithmalarkey.github.io/tags/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Neural Ordinary Differential Equation(NODE)">
+<meta property="og:url" content="https://keithmalarkey.github.io/2023/05/16/Neural-Ordinary-Differential-Equation-NODE/index.html">
 <meta property="og:site_name" content="Keith&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-12T14:10:40.000Z">
-<meta property="article:modified_time" content="2023-05-12T14:11:42.880Z">
+<meta property="article:published_time" content="2023-05-16T01:46:11.499Z">
+<meta property="article:modified_time" content="2023-05-16T06:08:17.931Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="python, machine-learning, deep-learning">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://keithmalarkey.github.io/tags/">
+<link rel="canonical" href="https://keithmalarkey.github.io/2023/05/16/Neural-Ordinary-Differential-Equation-NODE/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://keithmalarkey.github.io/tags/index.html","path":"tags/index.html","title":"tags"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://keithmalarkey.github.io/2023/05/16/Neural-Ordinary-Differential-Equation-NODE/","path":"2023/05/16/Neural-Ordinary-Differential-Equation-NODE/","title":"Neural Ordinary Differential Equation(NODE)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>tags | Keith's Blog
-</title>
+<title>Neural Ordinary Differential Equation(NODE) | Keith's Blog</title>
   
 
 
@@ -197,41 +196,124 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://keithmalarkey.github.io/2023/05/16/Neural-Ordinary-Differential-Equation-NODE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Keith Malarkey">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Keith's Blog">
+      <meta itemprop="description" content="技术贴 + 数学/算法笔记 + vim/neovim初级爱好者">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Neural Ordinary Differential Equation(NODE) | Keith's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Neural Ordinary Differential Equation(NODE)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-16 09:46:11 / 修改时间：14:08:17" itemprop="dateCreated datePublished" datetime="2023-05-16T09:46:11+08:00">2023-05-16</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body"><div class="tag-cloud">
-  <div class="tag-cloud-title">
-    目前共计 5 个标签
-  </div>
-  <div class="tag-cloud-tags">
-    <a href="/tags/ResNet/" style="font-size: 12px;" class="tag-cloud-0">ResNet</a> <a href="/tags/hexo/" style="font-size: 12px;" class="tag-cloud-0">hexo</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/" style="font-size: 12px;" class="tag-cloud-0">图像识别</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/" style="font-size: 30px;" class="tag-cloud-10">数据降维</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" style="font-size: 30px;" class="tag-cloud-10">统计分析</a>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------已经到底啦！<i class="fa fa-paw"></i>-------------</div>
+    
+</div>
+
+      
+    </div>
+
+
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/" rel="prev" title="Applied Multivariate Statistical Analysis(2)">
+                  <i class="fa fa-chevron-left"></i> Applied Multivariate Statistical Analysis(2)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/" rel="next" title="Deep Residual Networks for Image Recognition">
+                  Deep Residual Networks for Image Recognition <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
