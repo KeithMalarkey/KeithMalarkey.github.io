@@ -7,6 +7,38 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Deep Residual Networks for Image Recognition</title>
+    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
+href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
+Image Recognition</a>作为开篇。<br />
+主要目的：<br />
+1. 什么是ResNet？其基本结构是什么？<br />
+2. 为什么提出ResNet?或者说它的优势是什么？<br />
+3. 为何会有其优势，从数理层面的解释是什么？<br />
+4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
+<hr />
+<h1 id="论文解析">论文解析</h1>
+<h2 id="概要">概要</h2>
+<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
+<h2 id="引言">引言</h2>
+<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
+normlization,或者对间歇地在网络中增加normlization layers。<br />
+然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
+alt="深层网络准确率饱和现象" />
+从上图可以看出，不是说层数越多，（训练/测试）的错误率就越小，而且在一定的迭代之后出现明显的饱和现象。</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>图像识别</tag>
+        <tag>ResNet</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Applied Multivariate Statistical Analysis(2)</title>
     <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
     <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
