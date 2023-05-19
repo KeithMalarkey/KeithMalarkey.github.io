@@ -770,9 +770,42 @@ and \quad H(X|Y)=\sum\limits_{y \in \mathcal{Y}} p(y) H(X|Y=y)
     &amp;=-E_{p(x,y)} \log p(x|y)
     \end{split}
 \end{equation}
-\]</span> <span class="math inline">\(\text{where p(x|y) is the
-p.m.f.(probability mass function) of }X \text{given that }
-Y=y\)</span>.</p>
+\]</span> <span
+class="math inline">\(\text{where   p(x|y)   is  the  p.m.f.(probability  mass  function)  of}
+X \text{given that } Y=y\)</span>.</p>
+<h3 id="kl-divergencekl散度">KL-divergence(KL散度)</h3>
+<p><span class="math inline">\(P\)</span>和<span
+class="math inline">\(Q\)</span>是离散数据集<span
+class="math inline">\(\mathcal{X}\)</span>上定义的两个分布。它们两者之间的KL散度:
+<span class="math display">\[
+\begin{equation}
+  D_{kl}(P||Q):=\sum\limits_{x \in \mathcal{X}} p(x) \log
+\frac{p(x)}{q(x)}.
+\end{equation}
+\]</span> 用凸函数性质(Jensen不等式)，看下面推导: <span
+class="math display">\[\begin{equation}
+\begin{split}
+  D_{kl}(P||Q)&amp;=-E_p\bigg[ \log \frac{q(X)}{p(X)}\bigg] \geq -\log
+E_p \bigg[ \frac{q(X)}{p(X)} \bigg]\\
+  &amp;=-\log \bigg( \sum\limits_{x \in \mathcal{X}}
+p(x)\frac{q(x)}{p(x)} \bigg)=-\log 1=0.
+\end{split}
+\end{equation}
+\]</span> 这里因为<span
+class="math inline">\(-\log\)</span>是严格凸的，所以就有<span
+class="math inline">\(D_{kl}(P||Q) \geq 0(当P =
+Q,取得&quot;=&quot;)\)</span>.<br />
+再有，<span class="math display">\[
+\begin{equation}
+  \begin{split}
+    0 \leq D_{kl}(P||Q)&amp;=\sum\limits_{x \in \mathcal{X}} p(x)\log
+\frac{p(x)}{q(x)}\\
+    &amp;=-H(X)-\sum\limits_{x \in \mathcal{X}}p(x) \log q(x)\\
+    &amp;=-H(X)+\log |\mathcal{X}|
+  \end{split}
+\end{equation}
+\]</span> 所以<span class="math inline">\(H(X) \leq \log
+|\mathcal{X}|\)</span></p>
 <h3 id="hx的性质范围"><span
 class="math inline">\(H(X)\)</span>的性质范围</h3>
 <p>对于定义在数据集<span
@@ -800,7 +833,8 @@ class="math display">\[\frac{1}{|\mathcal{X}|}H(X)=E[f(X)] \le
 |\mathcal{X}|\]</span> <span class="math inline">\(\Rightarrow H(X)\le
 \log |\mathcal{X}|\)</span>，当且仅当<span
 class="math inline">\(p(x)=\frac{1}{|\mathcal{X}|}\)</span>。 2.
-函数最值</p>
+见公式(6).</p>
+<h3 id="互信息mutual-information">互信息(Mutual information)</h3>
 ]]></content>
       <categories>
         <category>信息论</category>
