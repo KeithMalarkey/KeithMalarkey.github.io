@@ -29,7 +29,7 @@
 <meta property="og:description" content="参考资料  CS 258(2020 Spring), Information Theory, Fan Cheng from ShangHai Jiao Tong University; Statistics 311(2021 Fall), Information Theory, John Duchi from Stanford University. Thomas Cover, Ele">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-18T13:25:12.000Z">
-<meta property="article:modified_time" content="2023-05-19T13:17:35.068Z">
+<meta property="article:modified_time" content="2023-05-22T02:37:58.185Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="Information Theory">
 <meta property="article:tag" content="信息熵">
@@ -144,7 +144,7 @@
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction-theory-and-ai"><span class="nav-number">2.</span> <span class="nav-text">Introduction Theory and AI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">深度学习中的信息论概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">2.2.</span> <span class="nav-text">前备知识</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-1--basic-concepts-in-information-theory"><span class="nav-number">3.</span> <span class="nav-text">Chapter
-1--Basic concepts in information theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#definitions"><span class="nav-number">3.1.</span> <span class="nav-text">Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#entropy"><span class="nav-number">3.1.1.</span> <span class="nav-text">Entropy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#entropyexamples"><span class="nav-number">3.1.2.</span> <span class="nav-text">Entropy:examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%86%B5"><span class="nav-number">3.1.3.</span> <span class="nav-text">条件熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kl-divergencekl%E6%95%A3%E5%BA%A6"><span class="nav-number">3.1.4.</span> <span class="nav-text">KL-divergence(KL散度)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hx%E7%9A%84%E6%80%A7%E8%B4%A8%E8%8C%83%E5%9B%B4"><span class="nav-number">3.1.5.</span> <span class="nav-text">\(H(X)\)的性质范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%92%E4%BF%A1%E6%81%AFmutual-information"><span class="nav-number">3.1.6.</span> <span class="nav-text">互信息(Mutual information)</span></a></li></ol></li></ol></li></ol></div>
+1--Basic concepts in information theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#definitions"><span class="nav-number">3.1.</span> <span class="nav-text">Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#entropy"><span class="nav-number">3.1.1.</span> <span class="nav-text">Entropy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#entropyexamples"><span class="nav-number">3.1.2.</span> <span class="nav-text">Entropy:examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kl-divergencekl%E6%95%A3%E5%BA%A6"><span class="nav-number">3.1.3.</span> <span class="nav-text">KL-divergence(KL散度)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hx%E7%9A%84%E6%80%A7%E8%B4%A8%E8%8C%83%E5%9B%B4"><span class="nav-number">3.1.4.</span> <span class="nav-text">\(H(X)\)的性质范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%94%E6%83%B3"><span class="nav-number">3.1.5.</span> <span class="nav-text">联想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#general-roadmap"><span class="nav-number">3.1.6.</span> <span class="nav-text">General Roadmap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%94%E5%90%88%E7%86%B5"><span class="nav-number">3.1.7.</span> <span class="nav-text">联合熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%86%B5"><span class="nav-number">3.1.8.</span> <span class="nav-text">条件熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%92%E4%BF%A1%E6%81%AFmutual-information"><span class="nav-number">3.1.9.</span> <span class="nav-text">互信息(Mutual information)</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -248,7 +248,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-19 21:17:35" itemprop="dateModified" datetime="2023-05-19T21:17:35+08:00">2023-05-19</time>
+      <time title="修改时间：2023-05-22 10:37:58" itemprop="dateModified" datetime="2023-05-22T10:37:58+08:00">2023-05-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -278,14 +278,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -413,26 +413,6 @@ p\sum\limits_{k=0}
 class="math inline">\(\sum\limits_{k=a}^{\infty} p^k=\frac{p^a}{1-p}(a
 \geq 0)\)</span></p></li>
 </ul>
-<h3 id="条件熵">条件熵</h3>
-<p>表示在观测到一个随机变量之后，另一个随机变量所持有的信息量。<span
-class="math display">\[
-\begin{equation}
-    H(X|Y=y)=-\sum\limits_{x \in \mathcal{X}} p(x|y) \log p(x|y) \quad
-and \quad H(X|Y)=\sum\limits_{y \in \mathcal{Y}} p(y) H(X|Y=y)
-\end{equation}
-\]</span> 据公式(2),另有 <span class="math display">\[
-\begin{equation}
-    \begin{split}
-    H(X|Y)&amp;=-\sum\limits_{y \in \mathcal{Y}} p(y) \sum\limits_{x \in
-\mathcal{X}} p(x|y)\log p(x|y)\\
-    &amp;=-\sum\limits_{x \in \mathcal{X}}\sum\limits_{y \in
-\mathcal{Y}} p(x,y)\log p(x|y)\\
-    &amp;=-E_{p(x,y)} \log p(x|y)
-    \end{split}
-\end{equation}
-\]</span> <span
-class="math inline">\(\text{where   p(x|y)   is  the  p.m.f.(probability  mass  function)  of}
-X \text{given that } Y=y\)</span>.</p>
 <h3 id="kl-divergencekl散度">KL-divergence(KL散度)</h3>
 <p><span class="math inline">\(P\)</span>和<span
 class="math inline">\(Q\)</span>是离散数据集<span
@@ -453,10 +433,11 @@ p(x)\frac{q(x)}{p(x)} \bigg)=-\log 1=0.
 \end{equation}
 \]</span> 这里因为<span
 class="math inline">\(-\log\)</span>是严格凸的，所以就有<span
-class="math inline">\(D_{kl}(P||Q) \geq 0(当P =
-Q,取得&quot;=&quot;)\)</span>.<br />
+class="math inline">\(D_{kl}(P||Q) \geq 0\)</span>(当<span
+class="math inline">\(P = Q\)</span>,取得等号).<br />
 再有，<span class="math display">\[
 \begin{equation}
+  \label{entro-ineq}
   \begin{split}
     0 \leq D_{kl}(P||Q)&amp;=\sum\limits_{x \in \mathcal{X}} p(x)\log
 \frac{p(x)}{q(x)}\\
@@ -486,14 +467,91 @@ f^{&#39;}(x)=-1-\log x, f^{&#39;&#39;}(x)=-\frac{1}{x} &lt;
 class="math inline">\(f(x)\)</span>为<span
 class="math inline">\((0,1]\)</span>上的凹函数。由Jensen不等式，有<span
 class="math inline">\(f[E(X)] \ge E[f(X)]\)</span>，故 <span
-class="math display">\[\frac{1}{|\mathcal{X}|}H(X)=E[f(X)] \le
--(E(X))\log (E(X))=-\frac{\sum\limits_\mathcal{X}p(x)}{|\mathcal{X}|}
-\log
-\frac{\sum\limits_{\mathcal{X}}p(x)}{|\mathcal{X}|}=\frac{1}{|\mathcal{X}|}\log
-|\mathcal{X}|\]</span> <span class="math inline">\(\Rightarrow H(X)\le
-\log |\mathcal{X}|\)</span>，当且仅当<span
-class="math inline">\(p(x)=\frac{1}{|\mathcal{X}|}\)</span>。 2.
-见公式(6).</p>
+class="math display">\[
+   \begin{split}
+   \frac{1}{|\mathcal{X}|}H(X)=E[f(X)] \le -(E(X))\log
+(E(X))&amp;=-\frac{\sum\limits_{x \in \mathcal{X}}p(x)}{|\mathcal{X}|}
+\log \frac{\sum\limits_{x \in \mathcal{X}}p(x)}{|\mathcal{X}|}\\
+   &amp;=\frac{1}{|\mathcal{X}|}\log |\mathcal{X}|
+   \end{split}
+   \]</span> <span class="math inline">\(\Rightarrow H(X)\le \log
+|\mathcal{X}|\)</span>，当且仅当<span
+class="math inline">\(p(x)=\frac{1}{|\mathcal{X}|}\)</span>取得等号。换言之，当随机变量服从均匀分布时，熵最大。<br />
+2. 见公式(<span class="math inline">\(\ref{entro-ineq}\)</span>).</p>
+<h3 id="联想">联想</h3>
+<p>在解决长尾分布的视觉识别任务中，常见的几种缓解class-imbalance的几种方案——重采样，重加权和迁移学习，当然还有一种<a
+target="_blank" rel="noopener" href="https://arxiv.org/pdf/1910.09217.pdf">decoupled learning
+scheme</a>。这种方案并不是典型的端到端的深度学习，具体的：将长尾分布下的训练集如同往常一样，作为orginal
+input，之后再剥离(解耦)分类器classifier，对分类器进行instance-balance(实例平衡)下的参数重训练，其分类结果在绝大多数情形(Medium
+shotting,Few shotting,All Samples)下，分类精度都得以提高。</p>
+<h3 id="general-roadmap">General Roadmap</h3>
+<ol type="1">
+<li>信息熵仅仅取决于随机变量的概率分布，和数据集无关<br />
+Probability distribution <span
+class="math inline">\(\Rightarrow\)</span> Entropy<br />
+</li>
+<li>设随机变量序列<span
+class="math inline">\(X_1,X_2,\dots,X_n\)</span>的联合概率分布为<span
+class="math inline">\(p(x_1,x_2,\dots,x_n)\)</span><br />
+</li>
+<li>概率论中基本准则
+<ol type="1">
+<li>链式法则(Chain rule)：<span class="math display">\[\begin{equation*}
+p(x_1,x_2,\dots,x_n)=p(x_n)p(x_{n-1}|x_n)p(x_{n-2}|x_{n-1},x_n) \dotsb
+p(x_1|x_2,x_3,\dots,x_{n})
+\end{equation*}\]</span></li>
+<li>贝叶斯准则：<span
+class="math inline">\(p(y)p(x|y)=p(x)p(y|x)\)</span></li>
+</ol></li>
+</ol>
+<h3 id="联合熵">联合熵</h3>
+<ul>
+<li>The joint entropy <span class="math inline">\(H(X,Y)\)</span> of a
+pair of discrete random variable <span
+class="math inline">\((X,Y)\)</span> with joint distribution <span
+class="math inline">\(p(x,y)\)</span> is defined as <span
+class="math display">\[H(X,Y)=-\sum\limits_{x \in \mathcal{X}}
+\sum\limits_{y \in \mathcal{Y}} p(x,y)\log p(x,y)\]</span><br />
+</li>
+<li><span class="math inline">\(H(X,X)=H(X)\)</span></li>
+<li><span class="math inline">\(H(X,Y)=H(Y,X)\)</span></li>
+<li>For a set of random variables <span
+class="math inline">\(X_1,X_2,\dots,X_n\)</span> with joint distribution
+<span class="math inline">\(p(x_1,\dots,x_n)\)</span>, its joint entropy
+is defined as <span class="math display">\[
+\begin{split}
+H(X_1,X_2,\dots,X_n)&amp;=-\sum p(x_1,x_2,\dots,x_n)\log
+p(x_1,x_2,\dots,x_n)\\
+&amp;=-E \log p(X_1,X_2,\dots,X_n)
+\end{split}
+\]</span></li>
+</ul>
+<h3 id="条件熵">条件熵</h3>
+<p>表示在观测到一个随机变量之后，另一个随机变量所持有的信息量。<span
+class="math display">\[
+\begin{equation}
+    \label{condi-entro}
+    \begin{split}
+    H(X|Y=y)&amp;=-\sum\limits_{x \in \mathcal{X}} p(x|Y=y) \log
+p(x|Y=y) \\
+    and \quad H(X|Y)&amp;=\sum\limits_{y \in \mathcal{Y}} p(y) H(X|Y=y)
+    \end{split}
+\end{equation}
+\]</span> 据公式(<span
+class="math inline">\(\ref{condi-entro}\)</span>),另有 <span
+class="math display">\[
+\begin{equation}
+    \begin{split}
+    H(X|Y)&amp;=-\sum\limits_{y \in \mathcal{Y}} p(y) \sum\limits_{x \in
+\mathcal{X}} p(x|y)\log p(x|y)\\
+    &amp;=-\sum\limits_{x \in \mathcal{X}}\sum\limits_{y \in
+\mathcal{Y}} p(x,y)\log p(x|y)\\
+    &amp;=-E_{p(x,y)} \log p(x|y)
+    \end{split}
+\end{equation}
+\]</span> <span
+class="math inline">\(\text{where   p(x|y)   is  the  p.m.f.(probability  mass  function)  of}
+X \text{given that } Y=y\)</span>.</p>
 <h3 id="互信息mutual-information">互信息(Mutual information)</h3>
 
     </div>
@@ -566,7 +624,7 @@ class="math inline">\(p(x)=\frac{1}{|\mathcal{X}|}\)</span>。 2.
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">29 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -628,7 +686,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
