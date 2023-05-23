@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Information-Theory/p2.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Information-Theory/p4.png">
 <meta property="article:published_time" content="2023-05-18T13:25:12.000Z">
-<meta property="article:modified_time" content="2023-05-23T06:10:26.694Z">
+<meta property="article:modified_time" content="2023-05-23T13:24:00.364Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="Information Theory">
 <meta property="article:tag" content="信息熵">
@@ -147,7 +147,8 @@
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">1.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction-theory-and-ai"><span class="nav-number">2.</span> <span class="nav-text">Introduction Theory and AI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E4%BF%A1%E6%81%AF%E8%AE%BA%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">深度学习中的信息论概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">2.2.</span> <span class="nav-text">前备知识</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-1--basic-concepts-in-information-theory"><span class="nav-number">3.</span> <span class="nav-text">Chapter
-1--Basic concepts in information theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#definitions"><span class="nav-number">3.1.</span> <span class="nav-text">Definitions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#entropy"><span class="nav-number">3.1.1.</span> <span class="nav-text">Entropy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#entropyexamples"><span class="nav-number">3.1.2.</span> <span class="nav-text">Entropy:examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kl-divergencekl%E6%95%A3%E5%BA%A6%E7%9B%B8%E5%AF%B9%E7%86%B5"><span class="nav-number">3.1.3.</span> <span class="nav-text">KL-divergence(KL散度&#x2F;相对熵)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hx%E7%9A%84%E6%80%A7%E8%B4%A8%E8%8C%83%E5%9B%B4"><span class="nav-number">3.1.4.</span> <span class="nav-text">\(H(X)\)的性质范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%94%E6%83%B3"><span class="nav-number">3.1.5.</span> <span class="nav-text">联想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#general-roadmap"><span class="nav-number">3.1.6.</span> <span class="nav-text">General Roadmap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%94%E5%90%88%E7%86%B5"><span class="nav-number">3.1.7.</span> <span class="nav-text">联合熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%86%B5"><span class="nav-number">3.1.8.</span> <span class="nav-text">条件熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%86%B5%E5%92%8C%E8%81%94%E5%90%88%E7%86%B5"><span class="nav-number">3.1.9.</span> <span class="nav-text">条件熵和联合熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kl%E6%95%A3%E5%BA%A6%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AAmetric"><span class="nav-number">3.1.10.</span> <span class="nav-text">KL散度不是一个metric</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%92%E4%BF%A1%E6%81%AFmutual-information"><span class="nav-number">3.1.11.</span> <span class="nav-text">互信息(Mutual information)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chain-rule-for-information"><span class="nav-number">3.1.12.</span> <span class="nav-text">Chain Rule for Information</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%9B%B8%E5%AF%B9%E7%86%B5"><span class="nav-number">3.1.13.</span> <span class="nav-text">条件相对熵</span></a></li></ol></li></ol></li></ol></div>
+1--Basic concepts in information theory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#definitions-conclusion"><span class="nav-number">3.1.</span> <span class="nav-text">Definitions &amp; Conclusion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#entropy"><span class="nav-number">3.1.1.</span> <span class="nav-text">Entropy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#entropyexamples"><span class="nav-number">3.1.2.</span> <span class="nav-text">Entropy:examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kl-divergencekl%E6%95%A3%E5%BA%A6%E7%9B%B8%E5%AF%B9%E7%86%B5"><span class="nav-number">3.1.3.</span> <span class="nav-text">KL-divergence(KL散度&#x2F;相对熵)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hx%E7%9A%84%E6%80%A7%E8%B4%A8%E8%8C%83%E5%9B%B4"><span class="nav-number">3.1.4.</span> <span class="nav-text">\(H(X)\)的性质范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%94%E6%83%B3"><span class="nav-number">3.1.5.</span> <span class="nav-text">联想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#general-roadmap"><span class="nav-number">3.1.6.</span> <span class="nav-text">General Roadmap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%94%E5%90%88%E7%86%B5"><span class="nav-number">3.1.7.</span> <span class="nav-text">联合熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%86%B5"><span class="nav-number">3.1.8.</span> <span class="nav-text">条件熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%86%B5%E5%92%8C%E8%81%94%E5%90%88%E7%86%B5"><span class="nav-number">3.1.9.</span> <span class="nav-text">条件熵和联合熵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kl%E6%95%A3%E5%BA%A6%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AAmetric"><span class="nav-number">3.1.10.</span> <span class="nav-text">KL散度不是一个metric</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%92%E4%BF%A1%E6%81%AFmutual-information"><span class="nav-number">3.1.11.</span> <span class="nav-text">互信息(Mutual information)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chain-rule-for-information"><span class="nav-number">3.1.12.</span> <span class="nav-text">Chain Rule for Information</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%9B%B8%E5%AF%B9%E7%86%B5"><span class="nav-number">3.1.13.</span> <span class="nav-text">条件相对熵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%87%8D%E8%A6%81%E7%9A%84%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">一些重要的不等式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#independence-bound-on-entropy"><span class="nav-number">3.2.1.</span> <span class="nav-text">Independence Bound on
+Entropy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#markov-chain"><span class="nav-number">3.2.2.</span> <span class="nav-text">Markov Chain</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">3.2.3.</span> <span class="nav-text">数据处理不等式</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -251,7 +252,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-23 14:10:26" itemprop="dateModified" datetime="2023-05-23T14:10:26+08:00">2023-05-23</time>
+      <time title="修改时间：2023-05-23 21:24:00" itemprop="dateModified" datetime="2023-05-23T21:24:00+08:00">2023-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -281,14 +282,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.1k</span>
+      <span>3.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>11 分钟</span>
+      <span>14 分钟</span>
     </span>
 </div>
 
@@ -331,10 +332,8 @@ class="math inline">\(^{nd}\)</span>.</li>
 </ol>
 <h1 id="chapter-1--basic-concepts-in-information-theory">Chapter
 1--Basic concepts in information theory</h1>
-<p>在本章节，主要引入一些信息论中的基本概念，内容相对琐碎。主要包括香农熵，KL散度、互信息和相应的条件版本。在本贴中所有的<span
-class="math inline">\(\log\)</span>都默认以<span
-class="math inline">\(e\)</span>为底。在本节的开始，假设所有的分布离散的。</p>
-<h2 id="definitions">Definitions</h2>
+<p>在本章节，主要引入一些信息论中的基本概念，内容相对琐碎。主要包括香农熵，KL散度、互信息和相应的条件版本。在本节的开始，假设所有的分布离散的。</p>
+<h2 id="definitions-conclusion">Definitions &amp; Conclusion</h2>
 <p>依据香农的回忆，信息熵可以简单地理解为"uncertainty"(不确定性)。</p>
 <h3 id="entropy">Entropy</h3>
 <p>假设<span class="math inline">\(P\)</span>是有限集<span
@@ -744,8 +743,8 @@ I(X_i;Y|X_{i-1},X_{i-2},\dots,X_1)
    \xlongequal[对右侧的熵进行链式拆解]{依据公式(\ref{chainrule4entro})}
 \\ &amp; H(X_1)+H(X_2|X_1)+H(X_3|X_1,X_2) \\ &amp;
 +\dotsb+H(X_n|X_1,X_2,\dots,X_{n-1})\\ &amp;
--(H(X_1|Y)+H(X_2|X_1,Y)+H(X_3|X_1,X_2,Y)\\ &amp;
-   + \dotsb + H(X_n|X_1,X_2,\dots,X_{n-1},Y))\\
+-(H(X_1|Y)+H(X_2|X_1,Y)+H(X_3|X_1,X_2,Y)\\ &amp; + \dotsb +
+H(X_n|X_1,X_2,\dots,X_{n-1},Y))\\
    =&amp;(H(X_1)-H(X_1|Y))+(H(X_2|X_1)-H(X_2|X_1,Y))  + \dotsb + \\
 &amp;
    (H(X_n|X_1,X_2,\dots,X_{n-1})-H(X_n|X_1,X_2,\dots,X_{n-1},Y))\\
@@ -760,6 +759,126 @@ I(X_n;Y|X_1,X_2,\dots,X_{n-1})\\
 <img data-src="/images/Information-Theory/p4.png" alt="con-rela-entro" />
 <figcaption aria-hidden="true">con-rela-entro</figcaption>
 </figure>
+<h2 id="一些重要的不等式">一些重要的不等式</h2>
+<h3 id="independence-bound-on-entropy">Independence Bound on
+Entropy</h3>
+<p><span class="math display">\[
+\begin{equation}
+  \label{iboe}
+  H(X_1,X_2,\dots,X_n) = \sum\limits_{i=1}^n
+H(X_i|X_{i-1},\dots,X_1)  \leq \sum\limits_{i=1}^n H(X_i)
+\end{equation}
+\]</span></p>
+<ul>
+<li>条件减少熵 <span class="math inline">\(H(Y|X) \leq
+H(Y)\)</span>(白话：一旦增加了约束，不确定性将减小)</li>
+<li>当且仅当<span
+class="math inline">\((X_i,X_{i-1},\dots,X_1)\)</span>相互独立，(<span
+class="math inline">\(\ref{iboe}\)</span>)两侧取等号</li>
+</ul>
+<h3 id="markov-chain">Markov Chain</h3>
+<p>随机变量<span
+class="math inline">\(X,Y,Z\)</span>形成一个马尔科夫链：<span
+class="math inline">\(Z\)</span>的条件分布只依赖于<span
+class="math inline">\(Y\)</span>,独立于随机变量<span
+class="math inline">\(X\)</span>，记作<span class="math inline">\(X
+\rightarrow Y \rightarrow Z\)</span>。<span class="math inline">\(X
+\rightarrow Y \rightarrow
+Z\)</span>这样的一个马尔科夫链，其联合概率质量函数可以写成 <span
+class="math display">\[
+\begin{equation*}
+p(x,y,z)=p(x)p(y|x)p(z|y).  
+\end{equation*}
+\]</span>
+从时序关系的角度来看，马尔科夫链说明当前时间点所发生事件的概率只依赖于前一个时间点的事件情况。马尔可夫链在现实世界中是十分重要的一个结构：</p>
+<ul>
+<li><span class="math inline">\(X \rightarrow Y \rightarrow
+Z\)</span>当且仅当<span class="math inline">\(X\)</span>和<span
+class="math inline">\(Z\)</span>条件依赖于给定的<span
+class="math inline">\(Y\)</span>
+<ul>
+<li>即<span class="math inline">\(X \rightarrow Y \rightarrow Z
+\Leftrightarrow I(X;Z|Y)=0\)</span></li>
+</ul></li>
+<li><span class="math inline">\(X \rightarrow Y \rightarrow
+Z\)</span>指示着<span class="math inline">\(Z \rightarrow Y \rightarrow
+X\)</span>,所以有时候MC(Markov Chain)写成<span class="math inline">\(X
+\leftrightarrow Y \leftrightarrow Z\)</span></li>
+<li>若<span class="math inline">\(Z=f(Y)\)</span>,则<span
+class="math inline">\(X \rightarrow Y \rightarrow Z\)</span></li>
+</ul>
+<p>Proof Sketch:<br />
+<span class="math display">\[
+\begin{equation*}
+\begin{split}
+  I(X;Z|Y)&amp;=E_p(x,y,z) \log \frac{p(X,Z|Y)}{p(X|Y)p(Z|Y)}\\
+  &amp; \xlongequal[故p(X,Z|Y)=p(X|Y)p(Z|Y)]{X,Z相互独立} 0
+\end{split}
+\end{equation*}
+\]</span></p>
+<h3 id="数据处理不等式">数据处理不等式</h3>
+<p>若<span class="math inline">\(MC:X \rightarrow Y \rightarrow
+Z\)</span>，则 <span class="math display">\[
+\begin{equation}
+  I(X;Y) \geq I(X;Z)
+\end{equation}
+\]</span></p>
+<p>Proof Sketch: Expand <span class="math inline">\(I(X;Y,Z)\)</span> by
+chain rule <span class="math display">\[
+\begin{equation*}
+  \begin{split}
+    I(X;Y,Z)&amp;=H(Y,Z)-H(Y,Z|X)\\
+    &amp;=H(Z)+H(Y|Z)-H(Y|Z,X)-H(Z|X)\\
+    &amp;=[H(Z)-H(Z|X)]+[H(Y|Z)-H(Y|Z,X)]\\
+    &amp;=I(X;Z)+I(X;Y|Z)\\
+    I(X;Y,Z)&amp;=I(X;Y)+\textcolor{purple}{I(X;Z|Y)}
+  \end{split}
+\end{equation*}
+\]</span> where <span
+class="math inline">\(\textcolor{purple}{I(X;Z|Y)}=0\)</span></p>
+<blockquote>
+<p>注意：在互信息的运算中，条件运算符“|”优先级高于";"，比如<span
+class="math inline">\(I(\underbrace{X}_{(1)};\underbrace{Z|Y}_{(2)})\)</span>需要看作这样的两部分.此外数据处理不等式说明，数据处理的步骤越多，信息丢失的也就越多。但是在熵运算中，"|"的优先级低于","，即<span
+class="math inline">\(H(\underbrace{X}_{(1)}|\underbrace{Y,Z}_{(2)})\)</span></p>
+</blockquote>
+<ul>
+<li>特别地，若<span class="math inline">\(Z=g(Y)\)</span>，则<span
+class="math inline">\(I(X;Y) \geq I(X;g(Y))\)</span></li>
+<li>若<span class="math inline">\(MC:X \rightarrow Y \rightarrow
+Z\)</span>，则<span class="math inline">\(I(X;Y|Z) \le
+I(X;Y)\)</span></li>
+<li>假设<span
+class="math inline">\(X,Y\)</span>是两个相互独立的随机变量，且在<span
+class="math inline">\(\{0,1\}\)</span>服从均匀分布，随机变量<span
+class="math inline">\(Z\)</span>满足<span
+class="math inline">\(Z=X+Y(mod \hspace{1em} 2)\)</span>,计算<span
+class="math inline">\(I(X;Y|Z)\)</span>和<span
+class="math inline">\(I(X;Y)\)</span></li>
+</ul>
+<p>更具已知信息，得到 <span class="math display">\[X,Y,Z \sim
+\begin{pmatrix}
+  0 &amp; 1 \\
+  \frac{1}{2} &amp; \frac{1}{2}
+\end{pmatrix}
+\]</span>和(Y,Z)的联合概率分布 <span class="math display">\[(Y,Z) \sim
+\begin{pmatrix}
+  (0,0) &amp; (0,1) &amp; (1,0) &amp; (1,1)\\
+  \frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4} &amp; \frac{1}{4} \\
+\end{pmatrix}
+\]</span></p>
+<p>则<span class="math display">\[
+\begin{equation*}
+\begin{split}
+H(X)&amp;=-E [\log p(x)]=1 \\
+H(Y|Z)&amp;=H(Y,Z)-H(Z)=2-1=1\\
+H(Y|Z,X)&amp;=H(Y|Z)=H(Y,Z)-H(Z)=2\\
+I(X;Y|Z)&amp;=H(Y|Z)-H(Y|Z,X)=-1\\
+I(X;Y)&amp;=0\\
+\Rightarrow I(X;Y|Z) &amp; &lt; I(X;Y)
+\end{split}
+\end{equation*}
+\]</span>
+这也就说明，在有条件的情况下，互信息未必小于没有条件时的互信息。</p>
 
     </div>
 
@@ -831,7 +950,7 @@ I(X_n;Y|X_1,X_2,\dots,X_{n-1})\\
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">35 分钟</span>
+    <span title="站点阅读时长">38 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
