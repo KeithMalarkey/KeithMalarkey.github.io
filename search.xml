@@ -7,6 +7,29 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Principle component analysis</title>
+    <url>/2023/05/29/Principle-component-analysis/</url>
+    <content><![CDATA[<h1 id="参考用书">参考用书</h1>
+<p>Chapter 12, Pattern Recognition and Machine Learning, by Christopher
+M.Bishop;</p>
+<h1 id="背景">背景</h1>
+<ol type="1">
+<li>潜变量(latent variables)连续；</li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+        <category>统计分析</category>
+      </categories>
+      <tags>
+        <tag>Data preprocessing</tag>
+        <tag>数据降维</tag>
+        <tag>特征提取</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Applied Multivariate Statistical Analysis(2)</title>
     <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
     <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
@@ -39,8 +62,8 @@ class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
         <category>统计学习</category>
       </categories>
       <tags>
-        <tag>统计分析</tag>
         <tag>数据降维</tag>
+        <tag>统计分析</tag>
       </tags>
   </entry>
   <entry>
@@ -405,8 +428,8 @@ Multivariate Statistical Analysis(2)</a></p>
         <category>统计学习</category>
       </categories>
       <tags>
-        <tag>统计分析</tag>
         <tag>数据降维</tag>
+        <tag>统计分析</tag>
       </tags>
   </entry>
   <entry>
