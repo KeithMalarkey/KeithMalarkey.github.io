@@ -21,32 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"keithmalarkey.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言 残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的Deep Residual Learning for Image Recognition作为开篇。 主要目的： 1. 什么是ResNet？其基本结构是什么？ 2. 为什么提出ResNet?或者说它的优势是什么？ 3. 为何会有其优势，从数理层面的解释是什么？ 4. 适用">
+    <meta name="description" content="前言  学习模式识别和机器学习的基础 贝叶斯学派日常学习记录 不断夯实基础，包括统计学习的相关概念、图网络和经典的生成模型等 面向以下几个优秀UP学习：  徐芝兰 派派大星星 Poros踵  UP派派大星星 给出了相关书籍的github-repo,里面会有简略中文版书籍和公式推导 英文原版书籍 因为一些推理或者proof不够完整，自己整理和修改了github-repo，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Deep Residual Networks for Image Recognition">
-<meta property="og:url" content="https://keithmalarkey.github.io/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/index.html">
+<meta property="og:title" content="Pattern Recognition and Machine Learning(1)">
+<meta property="og:url" content="https://keithmalarkey.github.io/2023/06/01/PRML-1/index.html">
 <meta property="og:site_name" content="Keith&#39;s Blog">
-<meta property="og:description" content="前言 残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的Deep Residual Learning for Image Recognition作为开篇。 主要目的： 1. 什么是ResNet？其基本结构是什么？ 2. 为什么提出ResNet?或者说它的优势是什么？ 3. 为何会有其优势，从数理层面的解释是什么？ 4. 适用">
+<meta property="og:description" content="前言  学习模式识别和机器学习的基础 贝叶斯学派日常学习记录 不断夯实基础，包括统计学习的相关概念、图网络和经典的生成模型等 面向以下几个优秀UP学习：  徐芝兰 派派大星星 Poros踵  UP派派大星星 给出了相关书籍的github-repo,里面会有简略中文版书籍和公式推导 英文原版书籍 因为一些推理或者proof不够完整，自己整理和修改了github-repo，">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://keithmalarkey.github.io/images/Deep-Residual-Networks-for-Image-Recognition/p2.png">
-<meta property="og:image" content="https://keithmalarkey.github.io/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg">
-<meta property="article:published_time" content="2023-05-16T08:08:23.000Z">
-<meta property="article:modified_time" content="2023-05-17T13:05:45.640Z">
+<meta property="article:published_time" content="2023-06-01T08:58:04.598Z">
+<meta property="article:modified_time" content="2023-06-13T03:19:05.975Z">
 <meta property="article:author" content="Keith Malarkey">
-<meta property="article:tag" content="图像识别">
-<meta property="article:tag" content="ResNet">
+<meta property="article:tag" content="PRML">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://keithmalarkey.github.io/images/Deep-Residual-Networks-for-Image-Recognition/p2.png">
 
 
-<link rel="canonical" href="https://keithmalarkey.github.io/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/">
+<link rel="canonical" href="https://keithmalarkey.github.io/2023/06/01/PRML-1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://keithmalarkey.github.io/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/","path":"2023/05/16/Deep-Residual-Networks-for-Image-Recognition/","title":"Deep Residual Networks for Image Recognition"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://keithmalarkey.github.io/2023/06/01/PRML-1/","path":"2023/06/01/PRML-1/","title":"Pattern Recognition and Machine Learning(1)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Deep Residual Networks for Image Recognition | Keith's Blog</title>
+<title>Pattern Recognition and Machine Learning(1) | Keith's Blog</title>
   
 
 
@@ -146,7 +142,9 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E8%A7%A3%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">论文解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%A6%81"><span class="nav-number">2.1.</span> <span class="nav-text">概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">2.2.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">2.3.</span> <span class="nav-text">实验结果</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%90%86%E8%A7%A3%E9%87%8A"><span class="nav-number">3.</span> <span class="nav-text">数理解释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">遗留问题</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#prerequisites"><span class="nav-number">2.</span> <span class="nav-text">Prerequisites</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%91%E7%8E%87%E5%AD%A6%E6%B4%BE%E5%92%8C%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E6%B4%BE"><span class="nav-number">3.</span> <span class="nav-text">频率学派和贝叶斯学派</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">贝叶斯公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%88%E9%AA%8C%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">3.2.</span> <span class="nav-text">先验概率分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E8%BD%AD%E5%88%86%E5%B8%83"><span class="nav-number">3.3.</span> <span class="nav-text">共轭分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E8%BD%AD%E5%88%86%E5%B8%83%E4%B8%BE%E4%BE%8B"><span class="nav-number">3.4.</span> <span class="nav-text">共轭分布举例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">4.</span> <span class="nav-text">概率分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%85%83%E5%88%86%E5%B8%830-1%E5%88%86%E5%B8%83binary-distribution"><span class="nav-number">4.1.</span> <span class="nav-text">二元分布&#x2F;0-1分布(Binary
+distribution)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83binomial-distribution"><span class="nav-number">4.2.</span> <span class="nav-text">二项分布(Binomial
+distribution)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#beta%E5%88%86%E5%B8%83"><span class="nav-number">4.3.</span> <span class="nav-text">Beta分布</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -214,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://keithmalarkey.github.io/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/">
+    <link itemprop="mainEntityOfPage" href="https://keithmalarkey.github.io/2023/06/01/PRML-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -227,12 +225,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Deep Residual Networks for Image Recognition | Keith's Blog">
+      <meta itemprop="name" content="Pattern Recognition and Machine Learning(1) | Keith's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Deep Residual Networks for Image Recognition
+          Pattern Recognition and Machine Learning(1)
         </h1>
 
         <div class="post-meta-container">
@@ -243,14 +241,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-05-16 16:08:23" itemprop="dateCreated datePublished" datetime="2023-05-16T16:08:23+08:00">2023-05-16</time>
+      <time title="创建时间：2023-06-01 16:58:04" itemprop="dateCreated datePublished" datetime="2023-06-01T16:58:04+08:00">2023-06-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-17 21:05:45" itemprop="dateModified" datetime="2023-05-17T21:05:45+08:00">2023-05-17</time>
+      <time title="修改时间：2023-06-13 11:19:05" itemprop="dateModified" datetime="2023-06-13T11:19:05+08:00">2023-06-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -262,7 +260,11 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">贝叶斯学习</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AD%A6%E4%B9%A0/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">统计学习</span></a>
         </span>
     </span>
 
@@ -282,8 +284,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/" itemprop="commentCount"></span>
+    <a title="waline" href="/2023/06/01/PRML-1/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/06/01/PRML-1/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -294,7 +296,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -312,86 +314,124 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="前言">前言</h1>
-<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
-target="_blank" rel="noopener" href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
-Image Recognition</a>作为开篇。<br />
-主要目的：<br />
-1. 什么是ResNet？其基本结构是什么？<br />
-2. 为什么提出ResNet?或者说它的优势是什么？<br />
-3. 为何会有其优势，从数理层面的解释是什么？<br />
-4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
-<hr />
-<h1 id="论文解析">论文解析</h1>
-<h2 id="概要">概要</h2>
-<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
-<h2 id="引言">引言</h2>
-<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
-normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
-Normalization)。<br />
-然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
-alt="深层网络准确率饱和现象" />
-从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
-<font color="red">
-设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
-mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
-error)。
-</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
-alt="Shortcut connection" /> <font color="red">Deep residual learning
-framework</font>:假设我们希望得到的一个潜在映射为<span
-class="math inline">\(\mathcal{H}(\bf
-x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
-class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
-class="math inline">\(\mathcal{F}(\textbf{x}) :=
-\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
-class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
-connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
-x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
-x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
-alt="全局设计" /></p>
-<h2 id="实验结果">实验结果</h2>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
-alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
-block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
-alt="Resnet性能同plain CNN的对比" />
-上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
-class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
-<h1 id="数理解释">数理解释</h1>
 <ol type="1">
-<li>假设plain CNN需要学得潜在的mapping是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
-class="math inline">\(g\)</span>;(2)深层部分的映射<span
-class="math inline">\(f\)</span>，即<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
-class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
-f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
-g(\theta)}{\partial
-\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
-<li>同样的，ResNet需要学习的潜在mapping也是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
-connection的原因，每次迭代训练参数时需要做的是<span
-class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
-g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
-\underbrace{\frac{\partial g(\theta)}{\partial
-\theta}}_{(2)}\)</span>，在(1)中还会存在plain
-CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
-</ol>
-<h1 id="总结">总结</h1>
-<p>ResNet就是使用了shortcut(residual)
-connection的CNN变种，其基本结构就是残差块(residual
-block)和残差连接(residual
-connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
-<h1 id="遗留问题">遗留问题</h1>
+<li>学习模式识别和机器学习的基础</li>
+<li>贝叶斯学派日常学习记录</li>
+<li>不断夯实基础，包括统计学习的相关概念、图网络和经典的生成模型等</li>
+<li>面向以下几个优秀UP学习：
 <ol type="1">
-<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
-<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
-<li>提到Residual，在机器学习中，比如Gradient
-boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
+<li><a
+target="_blank" rel="noopener" href="https://space.bilibili.com/497536319?spm_id_from=333.999.0.0">徐芝兰</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">派派大星星</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://space.bilibili.com/552439878?spm_id_from=333.999.0.0">Poros踵</a></li>
+</ol></li>
+<li><a
+target="_blank" rel="noopener" href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">UP派派大星星</a>
+给出了相关书籍的<a
+target="_blank" rel="noopener" href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>,里面会有简略中文版书籍和公式推导</li>
+<li><a
+target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">英文原版书籍</a></li>
+<li>因为一些推理或者proof不够完整，自己整理和修改了<a
+target="_blank" rel="noopener" href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>，之后会上传到github(尚未完成：TODO)
+<!-- #TODO --></li>
 </ol>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>需要一些前备知识： 1. 概率论(够用)或随机过程(更好) 2.
+线性代数/高等代数/矩阵论 3. 微积分基础</p>
+<h1 id="频率学派和贝叶斯学派">频率学派和贝叶斯学派</h1>
+<p>在学习大数定理时，在样本观测值已知情形下，我们可以确定该样本的似然函数，通过求最大似然确定未知参数。即，假设对独立同分布(i.i.d,
+independent and identical distribution)的样本集<span
+class="math inline">\(X_1,X_2,\dotsb,X_n\)</span>进行观测，其观测值依次为<span
+class="math inline">\(x_1,x_2,\dotsb,x_n\)</span>，其样本的p.d.f(概率密度函数)为<span
+class="math display">\[p(x_i|\omega)(i=1,2,\dots,n)\]</span>
+则相应似然函数为<span
+class="math inline">\(f(\omega)=\prod\limits_{i=1}^n
+p(x_i|\omega)\)</span>,然后求得对参数<span
+class="math inline">\(\omega\)</span>的极大参数估计<span
+class="math inline">\(\hat{\omega}_{MLE}\)</span>，其推导如下： <span
+class="math display">\[
+\begin{equation*}
+    \begin{split}
+    \hat{\omega}_{MLE}&amp;= argmax \ln f(\omega)\\
+    &amp;= argmax \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
+    &amp;= argmin - \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
+    \end{split}
+\end{equation*}
+\]</span> 参考<a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/337637096">频率学派和贝叶斯学派</a>,<font color="purple">频率学派和贝叶斯学派的主要区别：是否允许先验概率分布的使用</font>。</p>
+<ul>
+<li>频率学派不假设任何的先验知识，不参照过去的经验，只按照当前已有的数据进行概率推断</li>
+<li>贝叶斯学派会假设先验知识的存在，然后再用采样逐渐修改先验知识并逼近真实知识(一个不断更新先验知识的过程，也就是一个不断学习的过程)</li>
+</ul>
+<p>因此贝叶斯推论中前一次得到的后验概率分布可以作为后一次的先验概率。但实际上，在数据量趋近无穷时，频率学派和贝叶斯学派得到的结果是一样的，也就是说频率方法是贝叶斯方法的极限。当考虑的试验次数非常少的时候，贝叶斯方法的解释非常有用。此外，贝叶斯理论将我们对于随机过程的先验知识纳入考虑，当我们获得的数据越来越多的时候，这个先验的概率分布就会被更新到后验分布中。</p>
+<h2 id="贝叶斯公式">贝叶斯公式</h2>
+<p><span class="math display">\[
+\begin{equation}
+\begin{split}
+    p(\theta | x)&amp;= \frac{p(x|\theta) \cdot \pi(\theta)}{p(x)}\\
+    &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\sum\limits_{\Theta}
+p(x|\theta) \cdot \pi(\theta)}\\
+    \text{或} &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\int_{\Theta}
+p(x|\theta) \cdot \pi(\theta)d\theta}
+\end{split}
+\end{equation}
+\]</span> 其中，<span
+class="math inline">\(\pi(\theta)\)</span>称为先验概率(the prior)，<span
+class="math inline">\(p(x|\theta)\)</span>称为似然函数(likelihood)，<span
+class="math inline">\(p(x)\)</span>称为边缘分布(margin
+distribution)，<span class="math inline">\(p(\theta |
+x)\)</span>称为后验分布(the
+posterior)。事实上，分母可以看成是对后验分布的正则化或归一化</p>
+<h2 id="先验概率分布">先验概率分布</h2>
+<blockquote>
+<p><a
+target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Prior_probability">维基百科</a>:A
+prior probability distribution of an uncertain quantity, often simply
+called the prior, is its assumed probability distribution before some
+evidence is taken into account. For example, the prior could be the
+probability distribution representing the relative proportions of voters
+who will vote for a particular politician in a future election. The
+unknown quantity may be a parameter of the model or a latent variable
+rather than an observable variable.
+不确定量的先验概率分布，通常简称为先验，是在考虑某些证据之前假定的概率分布。例如，先验可以是代表在未来选举中投票给特定政治家的选民的相对比例的概率分布。未知量可能是模型的参数或潜在变量，而不是可观察变量。</p>
+</blockquote>
+<h2 id="共轭分布">共轭分布</h2>
+<p>在贝叶斯统计中，如果先验分布和后验分布属于同类（分布形式相同），则先验分布与后验分布被称为<font color="red">共轭分布</font>，而先验分布被称为似然函数的<font color="red">共轭先验</font>。如果我们需要验证共轭分布，由于<span
+class="math inline">\(posterior \propto likelihood \times
+prior\)</span>，所以带入似然函数和先验分布子式之后，若后验分布和先验分布的形式相同，那么就说明两者是共轭分布。</p>
+<h2 id="共轭分布举例">共轭分布举例</h2>
+<ol type="1">
+<li>二项分布 <span class="math display">\[Bin(m|N,\mu)=\binom{N}{m}\mu^m
+(1-\mu)^{N-m} \label{eq3}\]</span></li>
+<li>Beta分布 <span
+class="math display">\[Bata(\mu|a,b)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}
+\mu^{a-1}(1-\mu)^{b-1}(a,b&gt;0,\mu \in (0,1)) \label{eq4}\]</span>
+其中，<span class="math inline">\(\Gamma(x) \equiv \int_0^\infty
+u^{x-1}e^{-u}du(x&gt;0)\)</span></li>
+<li>由分布<span class="math inline">\(\ref{eq3}\)</span> <span
+class="math inline">\(\times\)</span> 分布 <span
+class="math inline">\(\ref{eq4}\)</span>，归一化之后得到： <span
+class="math display">\[p(\mu|m,l,a,b) \propto
+\mu^{m+a-1}(1-\mu)^{l+b-1}\]</span>，其中<span
+class="math inline">\(l=N-m\)</span>。和先验分布的形式相同。所以说,二项分布和Beta分布互为共轭先验，分布<span
+class="math inline">\(p(\mu|m,l,a,b)\)</span>和二项分布以及beta分布都是共轭分布</li>
+</ol>
+<h1 id="概率分布">概率分布</h1>
+<h2 id="二元分布0-1分布binary-distribution">二元分布/0-1分布(Binary
+distribution)</h2>
+<p><span
+class="math display">\[Bern(x|\mu)=\mu^x(1-\mu)^{1-x}\]</span>，可以看到这是特殊的伯努利分布</p>
+<h2 id="二项分布binomial-distribution">二项分布(Binomial
+distribution)</h2>
+<p><span class="math display">\[Bin(m|N, \mu) = \binom{N}{m}\mu^m(1 -
+\mu)^{N - m}\]</span></p>
+<h2 id="beta分布">Beta分布</h2>
+<p><span class="math display">\[Beta(\mu|a, b) = \frac{\Gamma(a +
+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
+(0,1))\]</span>，其中<span class="math inline">\(\Gamma(x) \equiv
+\int_0^\infty u^{x-1}e^{-u}du (x &gt; 0)\)</span></p>
 
     </div>
 
@@ -413,21 +453,20 @@ boosting中的residual和这里的resodual有什么区别？(这部分目前我�
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/" rel="tag"># 图像识别</a>
-              <a href="/tags/ResNet/" rel="tag"># ResNet</a>
+              <a href="/tags/PRML/" rel="tag"># PRML</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/" rel="prev" title="Applied Multivariate Statistical Analysis(2)">
-                  <i class="fa fa-chevron-left"></i> Applied Multivariate Statistical Analysis(2)
+                <a href="/2023/05/30/Principal-component-analysis/" rel="prev" title="Principal component analysis">
+                  <i class="fa fa-chevron-left"></i> Principal component analysis
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/05/18/Information-Theory/" rel="next" title="Information Theory">
-                  Information Theory <i class="fa fa-chevron-right"></i>
+                <a href="/2023/06/13/Fourier-Serie-and-Fourier-Transformation/" rel="next" title="Fourier Series and Fourier Transform">
+                  Fourier Series and Fourier Transform <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -533,7 +572,7 @@ setInterval("createtime()",250);
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline4test-af5tulsko-keithmalarkey.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论鸭~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline4test-af5tulsko-keithmalarkey.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论鸭~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/06/01/PRML-1/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
