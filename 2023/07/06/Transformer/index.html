@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p6.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p5.png">
 <meta property="article:published_time" content="2023-07-06T06:58:44.051Z">
-<meta property="article:modified_time" content="2023-07-09T04:01:28.294Z">
+<meta property="article:modified_time" content="2023-07-09T04:24:57.227Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="python, machine-learning, deep-learning">
 <meta name="twitter:card" content="summary">
@@ -252,7 +252,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-09 12:01:28" itemprop="dateModified" datetime="2023-07-09T12:01:28+08:00">2023-07-09</time>
+      <time title="修改时间：2023-07-09 12:24:57" itemprop="dateModified" datetime="2023-07-09T12:24:57+08:00">2023-07-09</time>
     </span>
 
   
@@ -283,7 +283,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
+      <span>2.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -334,7 +334,7 @@ cases.
 转导推断：<font color="green">在逻辑、统计推断和有监督学习中，</font>transduction或transductive
 inference指的是从观察到的特定（训练）案例到特定（测试）案例的推理</p>
 <blockquote>
-<p>转导学习不适用于半监督学习和无监督学习。简单说，一般的机器学习都是希望在训练数据集上学到使得期望风险最小的模型，当这类模型足够鲁棒时，其泛化能力足够强，即模型在相似数据上普遍适用；而转导学习的目标是学习一种在给定测试集上错误率最小的模型，在训练阶段可以利用测试集的信息</p>
+<p>简单说，一般的机器学习都是希望在训练数据集上学到使得期望风险最小的模型，当这类模型足够鲁棒时，其泛化能力足够强，即模型在相似数据上普遍适用；而转导学习的目标是学习一种在给定测试集上错误率最小的模型，在训练阶段可以利用测试集的信息</p>
 </blockquote>
 <h2 id="转导示例示意">转导示例/示意</h2>
 <p>为了对比转导和推导，在这里举例对比他们的一些特有的属性。 <img data-src="/images/Transformer/p2.png" alt="exa" />
@@ -418,6 +418,9 @@ target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Transduction_
 Normlization，所以当每层的输入是x时，其标准输出是x+Sublayer(x),这里的Sublayer指的是某个子层实现的函数功能；</li>
 <li>解码器：解码器也由N个相同的层堆叠而成。除了每个编码器层中的两个子层外，解码器还插入第三个子层，该子层在编码器堆栈的输出上执行多头注意力。与编码器类似，每个子层周围使用残差连接，然后进行层归一化。此外还修改了解码器堆栈中的自注意力子层，以防止位置编码参与到后续的位置编码。</li>
 </ul>
+<blockquote>
+<p>掩码：假如需要预测t+1时刻的分布或真值，需要依据t时刻所提供的真实数据对t+1时的分布（或真值）进行预测，而掩码使得在t时刻，预测者看不到t+1时刻的真值，从而保证训练和预测时的行为一致性（对真实情况未知）</p>
+</blockquote>
 <h3 id="attention">Attention</h3>
 
     </div>
@@ -487,7 +490,7 @@ Normlization，所以当每层的输入是x时，其标准输出是x+Sublayer(x)
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">54 分钟</span>
+    <span title="站点阅读时长">55 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
