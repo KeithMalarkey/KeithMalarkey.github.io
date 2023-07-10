@@ -1,48 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Combinatorics</title>
-    <url>/2023/06/24/Combinatorial-Mathematics/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>主要记录一些组合数学和离散数学的知识框架用以回顾,
-参考书：（美）R.A.Brualdi. 组合数学（第五版）. 机械工业出版社，2012.</p>
-<h1 id="什么是组合数学">什么是组合数学</h1>
-<p>组合数学也称为组合学和组合分析，是一门研究离散对象的科学。随着计算机科学的日益发展，组合数学的重要性也日渐凸显，因为计算机科学的核心内容是使用算法处理离散数据。组合数学主要研究满足一定条件的组态（也称组合模型）的存在、计数以及构造等方面的问题。组合数学的主要内容有组合计数、组合设计、组合矩阵、组合优化（最佳组合）等。组合数学不仅在软件技术中有重要的应用价值，在企业管理，交通规划，试验设计，战争指挥，金融分析等领域都有重要的应用。</p>
-<h2 id="切块问题">切块问题</h2>
-<p>把一个<span class="math inline">\(3 \times 3 \times
-3\)</span>的立方体木块切成27个<span class="math inline">\(1 \times 1
-\times
-1\)</span>的小立方体木块，如果切割过程中允许重新排列已切割木块的位置，求完成整个切割的最少次数。<br />
-1. 测量实心长方体的对角线长度？<br />
-2. 如果把上述问题中的立方体换成<span class="math inline">\(3 \times 6
-\times 9\)</span>的长方体结果如何？</p>
-<p>思路：对于<span class="math inline">\(1 \times 1 \times
-5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil \log_2
-5 \rceil\)</span>；相似的，对于<span class="math inline">\(1 \times 3
-\times 5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil
-\log_2 3 \rceil + \lceil \log_2 5 \rceil\)</span></p>
-<p>解答：由上分析，对于任意<span class="math inline">\(w_1 \times w_2
-\times w_3\)</span>的立方体，分割成单位立方体至少需要<span
-class="math inline">\(\sum\limits_{i=1}^3 \lceil \log_2 w_i
-\rceil\)</span>,故此时的最小切割代价为<span class="math inline">\(3
-\times \lceil \log_2 3 \rceil = 6\)</span></p>
-<h2 id="nim问题">Nim问题</h2>
-<p>有五堆石子，各堆石子的个数分别是10、29和48。甲乙两人玩取石子游戏，要求：两个人轮流取石子，每个人取石子时，只能从同一堆中取，最少取一枚，最多可以把整堆石子取走。谁取到最后的石子，谁获胜。如果你是其中的一个游戏人，你选择先取子还是后取子，如何取？</p>
-<p>思路：按位异或，非零，则先手必胜；否则，先手必输。</p>
-<p>解答：10D=1010B,29D=11101B,48D=110000B,由<span
-class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
-0\)</span>，所以先手必赢。</p>
-<p>取子方案：<br />
-<span class="math inline">\(110000(48D) \rightarrow
-010111(23D)\)</span>,即从第三堆48块中取走25块，并保证每次自己取子之后，每堆石子数按位异或为0.，这样最终就会获胜。</p>
-<h1 id="鸽笼原理">鸽笼原理</h1>
-<h2 id="简单形式">简单形式</h2>
-<p>若把n+1个物体放到n
-（n≥1）个盒子中去，则至少有一个盒子放有至少2个物体。</p>
-<p>证明：用反证法证明。如果n个盒子中每个盒子至多放入一个物体，则放入n个盒子中的物体总数至多为n个。这与假设有n+1个物体矛盾。从而定理得证。</p>
-<h2 id="例题">例题</h2>
-<p><img data-src="/images/Combinatorial-Mathematics/p1.jpg" alt="p1" /> <img data-src="/images/Combinatorial-Mathematics/p2.png" alt="p2" /> <img data-src="/images/Combinatorial-Mathematics/p3.png" alt="p3" /> <img data-src="/images/Combinatorial-Mathematics/p4.png" alt="p4-1" /> <img data-src="/images/Combinatorial-Mathematics/p4-1.png" alt="p4-2" /></p>
-<h2 id="一般形式">一般形式</h2>
+    <title>Fourier Series and Fourier Transform</title>
+    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
+    <content><![CDATA[
 ]]></content>
   </entry>
   <entry>
@@ -178,53 +139,241 @@ b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
       </tags>
   </entry>
   <entry>
+    <title>Combinatorics</title>
+    <url>/2023/06/24/Combinatorial-Mathematics/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>主要记录一些组合数学和离散数学的知识框架用以回顾,
+参考书：（美）R.A.Brualdi. 组合数学（第五版）. 机械工业出版社，2012.</p>
+<h1 id="什么是组合数学">什么是组合数学</h1>
+<p>组合数学也称为组合学和组合分析，是一门研究离散对象的科学。随着计算机科学的日益发展，组合数学的重要性也日渐凸显，因为计算机科学的核心内容是使用算法处理离散数据。组合数学主要研究满足一定条件的组态（也称组合模型）的存在、计数以及构造等方面的问题。组合数学的主要内容有组合计数、组合设计、组合矩阵、组合优化（最佳组合）等。组合数学不仅在软件技术中有重要的应用价值，在企业管理，交通规划，试验设计，战争指挥，金融分析等领域都有重要的应用。</p>
+<h2 id="切块问题">切块问题</h2>
+<p>把一个<span class="math inline">\(3 \times 3 \times
+3\)</span>的立方体木块切成27个<span class="math inline">\(1 \times 1
+\times
+1\)</span>的小立方体木块，如果切割过程中允许重新排列已切割木块的位置，求完成整个切割的最少次数。<br />
+1. 测量实心长方体的对角线长度？<br />
+2. 如果把上述问题中的立方体换成<span class="math inline">\(3 \times 6
+\times 9\)</span>的长方体结果如何？</p>
+<p>思路：对于<span class="math inline">\(1 \times 1 \times
+5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil \log_2
+5 \rceil\)</span>；相似的，对于<span class="math inline">\(1 \times 3
+\times 5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil
+\log_2 3 \rceil + \lceil \log_2 5 \rceil\)</span></p>
+<p>解答：由上分析，对于任意<span class="math inline">\(w_1 \times w_2
+\times w_3\)</span>的立方体，分割成单位立方体至少需要<span
+class="math inline">\(\sum\limits_{i=1}^3 \lceil \log_2 w_i
+\rceil\)</span>,故此时的最小切割代价为<span class="math inline">\(3
+\times \lceil \log_2 3 \rceil = 6\)</span></p>
+<h2 id="nim问题">Nim问题</h2>
+<p>有五堆石子，各堆石子的个数分别是10、29和48。甲乙两人玩取石子游戏，要求：两个人轮流取石子，每个人取石子时，只能从同一堆中取，最少取一枚，最多可以把整堆石子取走。谁取到最后的石子，谁获胜。如果你是其中的一个游戏人，你选择先取子还是后取子，如何取？</p>
+<p>思路：按位异或，非零，则先手必胜；否则，先手必输。</p>
+<p>解答：10D=1010B,29D=11101B,48D=110000B,由<span
+class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
+0\)</span>，所以先手必赢。</p>
+<p>取子方案：<br />
+<span class="math inline">\(110000(48D) \rightarrow
+010111(23D)\)</span>,即从第三堆48块中取走25块，并保证每次自己取子之后，每堆石子数按位异或为0.，这样最终就会获胜。</p>
+<h1 id="鸽笼原理">鸽笼原理</h1>
+<h2 id="简单形式">简单形式</h2>
+<p>若把n+1个物体放到n
+（n≥1）个盒子中去，则至少有一个盒子放有至少2个物体。</p>
+<p>证明：用反证法证明。如果n个盒子中每个盒子至多放入一个物体，则放入n个盒子中的物体总数至多为n个。这与假设有n+1个物体矛盾。从而定理得证。</p>
+<h2 id="例题">例题</h2>
+<p><img data-src="/images/Combinatorial-Mathematics/p1.jpg" alt="p1" /> <img data-src="/images/Combinatorial-Mathematics/p2.png" alt="p2" /> <img data-src="/images/Combinatorial-Mathematics/p3.png" alt="p3" /> <img data-src="/images/Combinatorial-Mathematics/p4.png" alt="p4-1" /> <img data-src="/images/Combinatorial-Mathematics/p4-1.png" alt="p4-2" /></p>
+<h2 id="一般形式">一般形式</h2>
+]]></content>
+  </entry>
+  <entry>
+    <title>Transformer</title>
+    <url>/2023/07/06/Transformer/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。</p>
+<h1 id="提问">提问</h1>
+<ol type="1">
+<li>What is the Transformer？其基本结构是什么？</li>
+<li>Transformer的主要特征(优缺点)？它是如何实现的(实现机制)？</li>
+<li>注意力机制？自注意力机制？两者区别？</li>
+<li>ViT是如何将Transformer移植到视觉领域的？</li>
+</ol>
+<h1 id="参考">参考</h1>
+<ol type="1">
+<li>Attention Is All You Need, Neural Information Processing Systems
+(NIPS 2017);</li>
+<li>zhihu---<a
+href="https://zhuanlan.zhihu.com/p/411311520">Transformer详解</a>;</li>
+<li><a
+href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.999.0.0">Transformer精读-李沐</a></li>
+</ol>
+<h1 id="模型框架">模型框架</h1>
+<ul>
+<li>left:encoder <span class="math inline">\(\times N\)</span></li>
+<li>right:decoder <span class="math inline">\(\times N\)</span> <img data-src="/images/Transformer/p1.png" alt="Transformer Architecture" /></li>
+</ul>
+<h1 id="推断分类">推断分类</h1>
+<h2 id="transduction-induction">transduction &amp; induction</h2>
+<p>推断主要分为两类：<br />
+1. 归纳推断(inductive inference): induction is reasoning from observed
+training cases to general rules, which are then applied to the test
+cases.
+归纳是从观察到的训练案例推理出一般规则，然后将其应用于测试案例<br />
+2.
+转导推断：<font color="green">在逻辑、统计推断和有监督学习中，</font>transduction或transductive
+inference指的是从观察到的特定（训练）案例到特定（测试）案例的推理</p>
+<blockquote>
+<p>简单说，一般的机器学习都是希望在训练数据集上学到使得期望风险最小的模型，当这类模型足够鲁棒时，其泛化能力足够强，即模型在相似数据上普遍适用；而转导学习的目标是学习一种在给定测试集上错误率最小的模型，在训练阶段可以利用测试集的信息</p>
+</blockquote>
+<h2 id="转导示例示意">转导示例/示意</h2>
+<p>为了对比转导和推导，在这里举例对比他们的一些特有的属性。 <img data-src="/images/Transformer/p2.png" alt="exa" />
+在上图中，给出了一个点集，有些点已经被标注好了标签(A、B、C)，但是大部分点没有。目标：预测未被标注的标签信息</p>
+<h3 id="inductive-inference">inductive inference</h3>
+<p>解决此问题的归纳方法是使用标记点来训练监督学习算法，然后让它预测所有未标记点的标签。然而，对于这个问题，监督学习算法将只有五个标记点用作构建预测模型的基础。建立一个捕获这些数据结构的模型肯定会很困难。例如，如果使用最近邻算法，则中间附近的点将被标记为“A”或“C”，即使它们显然与标记为“B”的点属于同一簇。</p>
+<h3 id="transductive-inference">transductive inference</h3>
+<p>转导的优点是在执行标记任务时能够考虑所有点，而不仅仅是标记点。在这种情况下，传导算法将根据未标记点自然所属的簇来标记它们。因此，中间的点很可能被标记为“B”，因为它们非常靠近该簇。</p>
+<h2 id="转导的适用场合和优缺点">转导的适用场合和优缺点</h2>
+<p>转导的优点是它可以用更少的标记点做出更好的预测，因为它使用在未标记点中发现的自然中断。转导的一个缺点是它无法建立预测模型。如果将先前未知的点添加到集合中，则需要对所有点重复整个传导算法才能预测标签。如果数据在计算流中增量可用，则计算成本可能会很高。此外，这可能会导致一些旧点的预测发生变化（这可能是好是坏，具体取决于应用程序）。另一方面，监督学习算法可以立即标记新点，而计算成本非常低</p>
+<h2 id="转导算法">转导算法</h2>
+<p>转导算法可以大致分为两类：那些寻求将离散标签分配给未标记点的算法，以及那些寻求对未标记点回归连续标签的算法。寻求预测离散标签的算法往往是通过向聚类算法添加部分监督来导出的。可以使用两类算法：平面聚类和层次聚类。后者可以进一步细分为两类：通过划分进行聚类的聚类和通过聚集进行聚类的聚类。寻求预测连续标签的算法往往是通过向流形学习算法添加部分监督来导出的。</p>
+<h3 id="partitioning-transduction">Partitioning transduction</h3>
+<p>分区转导可以被认为是自上而下的转导。它是基于分区的聚类的半监督扩展。它通常按如下方式执行：将所有点的集合视为一个大分区。虽然任何分区
+P 都包含两个具有冲突标签的点： 将 P 分区为更小的分区。对于每个分区 P：为
+P 中的所有点分配相同的标签。</p>
+<h3 id="agglomerative-transduction">Agglomerative transduction</h3>
+<p>聚集转导可以被认为是自下而上的转导。它是凝聚聚类的半监督扩展。它通常按如下方式执行：计算所有点之间的成对距离
+D。按升序对 D 进行排序。将每个点视为大小为 1 的簇。对于 D 中的每对点
+{a,b}：如果（a 未标记）或（b 未标记）或（a 和 b
+具有相同的标记），则合并包含 a 和 b
+的两个簇。使用相同的标签标记合并簇中的所有点。</p>
+<h3 id="manifold-transduction">Manifold transduction</h3>
+<p>基于流形学习的转导仍然是一个非常年轻的研究领域。</p>
+<h1
+id="为什么transformer是一个转导模型">为什么Transformer是一个转导模型？</h1>
+<p>因为Transformer仍然使用一个自回归结构（decoder部分），在对t+1时刻的真实分布或真值进行预测时，其输入是考虑到t时刻的输出的，这就是将先前预测的“点”加入到新的“集合”当中，这也导致了计算流的压力增大。</p>
+<h1 id="layer-normalization-batch-normalization">Layer Normalization
+&amp; Batch Normalization</h1>
+<h2 id="d情形">2D情形</h2>
+<p>在统计推断基础部分得知，单个batch的样本可以表示为<span
+class="math inline">\(X \in \mathbb{R}^{n \times
+p}\)</span>，其中行向量组表示该batch内所有样本，列向量组表示所有特征。假定这里的batch都是预处理之后或某些layer的输出，则</p>
+<ul>
+<li><p>Batch normalization:假设<span class="math inline">\(X=\{f_1, f_2,
+\dotsb, f_p\}, f_i = (x_{1i}, x_{2i}, \dotsb,
+x_{ni})^T\)</span>，则特征均值<span
+class="math inline">\(\bar{f_i}=\sum_{j=1}^n
+x_{ji}\)</span>，特征标准差为<span
+class="math inline">\(\sigma_i\)</span>,则batch
+normalization所做的是<span
+class="math inline">\(\frac{f_i-\bar{f_i}}{\sigma_i}\)</span>。更具体的，我们将该batch的均值和方差-协方差矩阵记作<span
+class="math inline">\(\bar{X}\)</span>，<span
+class="math inline">\(\frak{v}\)</span>，则<span
+class="math inline">\(batch\_normal(X)=\frac{X-\bar{X}}{\frak{v}}\)</span>
+<img data-src="/images/Transformer/p3.png" alt="2D-batch norm" /></p></li>
+<li><p>Layer normalization:2D时的layer norm和batch
+normal很相似，甚至计算如出一辙，只有细小区别，对比两图一目了然 <img data-src="/images/Transformer/p4.png" alt="2D-layer norm" /></p></li>
+</ul>
+<h2 id="时序3d情形">时序3D情形</h2>
+<p>首先，由于文本之间拟存在时序关系，所以当每个短句抽象为一个seq，则在多个样本打包成一个batch时，其batch样本集结构如下图所示(假设每个短句，即seq的长度一样,当然现实是seq长度不一致时，可以选择补零策略)。这里，我们看到3D情形下的batch
+norm差异性还是比较大的。一般情形下，考虑下面的情况，我们优先选择layer
+norm:当一个长句成为该batch中的一个seq，显然在计算某个特征feature(q)的均值和方差时，其影响力就会比较大，则数据抖动就较大，这样是不好的；相反，在求单一样本的layer
+norm时，则相对稳定。</p>
+<figure>
+<img data-src="/images/Transformer/p6.png" alt="时序3D-batch norm" />
+<figcaption aria-hidden="true">时序3D-batch norm</figcaption>
+</figure>
+<figure>
+<img data-src="/images/Transformer/p5.png" alt="时序3D-layer norm" />
+<figcaption aria-hidden="true">时序3D-layer norm</figcaption>
+</figure>
+<h1 id="从论文出发">从论文出发</h1>
+<p>鉴于本人的研究方向主要是图像识别，所以对NLP只能基于自己的粗浅理解和面向Google,XXXD</p>
+<h2 id="背景">背景</h2>
+<p>常见的并行计算模型(如，ByteNet和ConvS2S)中，使用了卷积神经网络作为基本的构建模块，在输入和输出位置并行计算隐藏特征表示，这确实解决了顺序计算/训练所带来的时间消耗，却带了这样的问题——学习远距离之间的特征依赖关系更加困难(操作/计算量激增)。相反，在Transformer中，这样的计算量被减少为恒定数量，<font color="red">代价是由于均值了注意力加权position而导致的有效分辨率降低</font>，在实现时，多头注意力机制可以抵消这种影响。</p>
+<h2 id="自注意力机制">自注意力机制</h2>
+<p>原文定义：self-attention, sometimes called intra-attention is an
+attention mechanism relating different positions of a single sequence in
+order to compute a representation of the sequence.
+译作：自注意力，有时叫做内注意力，是一种注意力机制，用于单一序列中的不同位置，以计算序列的表示。</p>
+<h2 id="不完全定义">不完全定义</h2>
+<p>Transformer是一个<font color="red">完全依靠自注意力</font>进行输入和输出表示计算的<a
+href="https://en.wikipedia.org/wiki/Transduction_(machine_learning)">转导模型</a></p>
+<h2 id="框架解析">框架解析</h2>
+<ul>
+<li>转导模型</li>
+<li>编码器-解码器结构</li>
+</ul>
+<h3 id="encoder-and-decoder-stacks">Encoder and Decoder Stacks</h3>
+<ul>
+<li>编码器：编码器由N个相同的层堆叠而成。每个层包含两个子层。第一个子层是一个多头自注意力机制，第二个子层是一个简单的position-wise的全连接前馈网络。在两个子层周围使用残差连接，并且每个子层的输出由于采用了残差连接和Layer
+Normlization，所以当每层的输入是x时，其标准输出是LayerNorm(x+Sublayer(x)),这里的Sublayer指的是某个子层实现的函数功能；</li>
+<li>解码器：解码器也由N个相同的层堆叠而成。除了每个编码器层中的两个子层外，解码器还插入第三个子层，该子层在编码器堆栈的输出上执行多头注意力。与编码器类似，每个子层周围使用残差连接，然后进行层归一化。此外还修改了解码器堆栈中的自注意力子层，以防止位置编码参与到后续的位置编码。</li>
+</ul>
+<blockquote>
+<p>掩码：假如需要预测t+1时刻的分布或真值，需要依据t时刻所提供的真实数据对t+1时的分布（或真值）进行预测，而掩码使得在t时刻，预测者看不到t+1时刻的真值，从而保证训练和预测时的行为一致性（对真实情况未知）</p>
+</blockquote>
+<h3 id="attention">Attention</h3>
+<p>注意力函数（Attention
+function）可以描述成一个查询（query）和一组键-值（key-value）对映射到一个输出上，其中查询（query）、键（keys）、值（values）和输出都是向量。输出通过对值的加权求和来计算，其中分配给每个值的权重是通过查询与相应键的相似度（兼容性）函数计算得到的。即
+<span class="math display">\[Attention(Q,K,V)=compatibility(Q,K) \cdot
+V\]</span> 这里，compatibility是描述Q,K相似度的函数。</p>
+<p>假设以2范距离来描述Q,K的相似度，即<span
+class="math inline">\(compatibility(Q,K) \propto
+\frac{1}{||Position_Q-Position_K||_2}\)</span>，则如下图所示，体现出了对向量V各分量的加权情形
+<img data-src="/images/Transformer/p8.png" alt="compatibility function" />
+可以看到，由于查询分量<span class="math inline">\(Q_i\)</span>离<span
+class="math inline">\(k_1,k_2\)</span>比较近，所以对<span
+class="math inline">\(v_1,v_2\)</span>加权比较大，相反对较远的V分量加权较小。</p>
+<h4 id="scaled-dot-product-attention">Scaled Dot-Product Attention</h4>
+<p>计算流程如下图所示 <img data-src="/images/Transformer/p7.png"
+alt="Scaled-Dot Attention" /></p>
+<p>基本形式： <span
+class="math display">\[Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V\]</span></p>
+<h4 id="multi-head-attention">Multi-Head Attention</h4>
+<figure>
+<img data-src="/images/Transformer/p9.png" alt="Multi-Head Attention" />
+<figcaption aria-hidden="true">Multi-Head Attention</figcaption>
+</figure>
+<blockquote>
+<p>为什么使用多头注意力机制？
+类似于CNN的多通道卷积(每个通道都是图像的一个特征子空间，不过开始时不包含高级语义，需要通过多个filter【对应多头注意力里的多个线性投影下的关注】后，才能获得)。在Transformer中引入了h次注意力，由图可知，全连接的线性层将输入的(V,K,Q)进行降维（投影），然后通过h次的Scaled
+Dot-Product
+Attention获得h个模式Pattern，可以看到这样做可以挖掘更多的高级特征。</p>
+</blockquote>
+<p>多头注意力的一般形式： <span class="math display">\[\begin{split}
+MultiHead(Q,K,V)&amp;=Concat(head_1,\dots,head_h)W^O \\
+where head_i &amp;= Attention(QW_i^Q,KW^K_i,VW^V_i)
+\end{split}
+\]</span> 这里，<span class="math inline">\(Q,K,V \in
+\mathbb{R}^{d\_model},W_i^Q \in \mathbb{R}^{d\_model \times d_k}, W^K_i
+\in \mathbb{R}^{d\_model \times d_k},W^V_i \in \mathbb{R}^{d\_model
+\times d_v},i=\{1,2,\dots,h\}\)</span> and <span
+class="math inline">\(W^O \in \mathbb{R}^{hd_v \times
+d\_model}\)</span>。 可以看到，这里将Q,K,V通过h种投影矩阵<span
+class="math inline">\((W_i^Q,W^K_i,W^V_i)\)</span>投影到了不同的子空间，从而在不同的子空间上进行关注。</p>
+<p>多头注意力使模型能够同时关注不同位置的不同表示子空间中的信息。使用单个注意力头，平均操作会抑制这种能力。通过引入多个注意力头，模型可以并行地学习多个不同的查询、键和值的投影，从而在不同的表示子空间上进行关注，避免了信息的平均化。这样可以增强模型对输入的表征能力，提高模型处理复杂关系和学习长距离依赖的能力。通过多头注意力，模型可以捕捉更丰富的上下文信息，并且能够更好地处理输入中的多样性和复杂性。</p>
+<h3 id="position-wise-feed-forward-networksmlp">Position-wise
+Feed-Forward Networks(MLP)</h3>
+<h4 id="基本形式">基本形式</h4>
+<p><span
+class="math display">\[FFN(x)=max(0,xW_1+b_1)W_2+b_2\]</span></p>
+<h4 id="position-encoding">Position Encoding</h4>
+<p>RNN是逐步处理embedding的过程，是将t时刻的输出作为t时刻的输入的一部分考量。而Transformer则不同，他是在一开始就利用注意力机制考量不同embedding
+vectors之间的相关度，所以在输入时位置编码显得比较重要，它会提供RNN中“逐步处理”这样的时序关系，来告诉模型每个embedding的位置(position)。</p>
+<ul>
+<li>论文中的位置编码： <span class="math display">\[
+\begin{split}
+  PE_{(pos,2i)} &amp;= sin(pos/10000^{2i/d\_model})\\
+  PE_{(pos,2i+1)} &amp;= cos(pos/10000^{2i/d\_model})
+\end{split}
+\]</span></li>
+</ul>
+<h1 id="从代码出发">从代码出发</h1>
+<p>#TODO</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Principal component analysis</title>
     <url>/2023/05/30/Principal-component-analysis/</url>
     <content><![CDATA[
 ]]></content>
-  </entry>
-  <entry>
-    <title>Fourier Series and Fourier Transform</title>
-    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>Applied Multivariate Statistical Analysis(2)</title>
-    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
-    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
-<h2 id="基本形式">基本形式</h2>
-<ul>
-<li>一元正态分布的密度函数：<span
-class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
-<li>多元正态分布的密度函数：<span
-class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
-其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
-class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
-对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
-class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
-其中<span class="math inline">\(\bf
-c\)</span>为常数。这是个高维椭圆，中心在<span
-class="math inline">\(\bf\mu\)</span>，拥有<span
-class="math inline">\(p\)</span>个轴，第<span
-class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
-c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
-class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
-class="math inline">\(\lambda_i\)</span>和<span
-class="math inline">\(\textbf{e}_i\)</span>为<span
-class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
-</ul>
-<h2 id="线性变换">线性变换</h2>
-<p><span class="math inline">\(X~\)</span></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
-      </tags>
   </entry>
   <entry>
     <title>Deep Residual Networks for Image Recognition</title>
@@ -321,173 +470,133 @@ boosting中的residual和这里的resodual有什么区别？(这部分目前我�
       </tags>
   </entry>
   <entry>
-    <title>Transformer</title>
-    <url>/2023/07/06/Transformer/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。</p>
-<h1 id="提问">提问</h1>
-<ol type="1">
-<li>What is the Transformer？其基本结构是什么？</li>
-<li>Transformer的主要特征(优缺点)？它是如何实现的(实现机制)？</li>
-<li>注意力机制？自注意力机制？两者区别？</li>
-<li>ViT是如何将Transformer移植到视觉领域的？</li>
-</ol>
-<h1 id="参考">参考</h1>
-<ol type="1">
-<li>Attention Is All You Need, Neural Information Processing Systems
-(NIPS 2017);</li>
-<li>zhihu---<a
-href="https://zhuanlan.zhihu.com/p/411311520">Transformer详解</a>;</li>
-<li><a
-href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.999.0.0">Transformer精读-李沐</a></li>
-</ol>
-<h1 id="模型框架">模型框架</h1>
-<figure>
-<img data-src="/images/Transformer/p1.png" alt="Transformer Architecture" />
-<figcaption aria-hidden="true">Transformer Architecture</figcaption>
-</figure>
-<h1 id="推断分类">推断分类</h1>
-<h2 id="transduction-induction">transduction &amp; induction</h2>
-<p>推断主要分为两类：<br />
-1. 归纳推断(inductive inference): induction is reasoning from observed
-training cases to general rules, which are then applied to the test
-cases.
-归纳是从观察到的训练案例推理出一般规则，然后将其应用于测试案例<br />
-2.
-转导推断：<font color="green">在逻辑、统计推断和有监督学习中，</font>transduction或transductive
-inference指的是从观察到的特定（训练）案例到特定（测试）案例的推理</p>
+    <title>创建一个hexoBlog</title>
+    <url>/2023/05/08/Create-a-hexoBlog/</url>
+    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
+<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
+methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
+<hr />
+<h1 id="安装">安装</h1>
+<h2 id="安装需求">安装需求</h2>
+<ul>
+<li>Node.js (version &gt;= 10.13)</li>
+<li>Git</li>
+<li>npm</li>
+<li>github账户</li>
+</ul>
+<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
+<h2 id="安装hexo">安装hexo</h2>
+<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
+其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
+href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="初始化blog">初始化blog</h2>
+<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
+s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
+href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
+<h2 id="创建新的blog">创建新的blog</h2>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>简单说，一般的机器学习都是希望在训练数据集上学到使得期望风险最小的模型，当这类模型足够鲁棒时，其泛化能力足够强，即模型在相似数据上普遍适用；而转导学习的目标是学习一种在给定测试集上错误率最小的模型，在训练阶段可以利用测试集的信息</p>
+<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
 </blockquote>
-<h2 id="转导示例示意">转导示例/示意</h2>
-<p>为了对比转导和推导，在这里举例对比他们的一些特有的属性。 <img data-src="/images/Transformer/p2.png" alt="exa" />
-在上图中，给出了一个点集，有些点已经被标注好了标签(A、B、C)，但是大部分点没有。目标：预测未被标注的标签信息</p>
-<h3 id="inductive-inference">inductive inference</h3>
-<p>解决此问题的归纳方法是使用标记点来训练监督学习算法，然后让它预测所有未标记点的标签。然而，对于这个问题，监督学习算法将只有五个标记点用作构建预测模型的基础。建立一个捕获这些数据结构的模型肯定会很困难。例如，如果使用最近邻算法，则中间附近的点将被标记为“A”或“C”，即使它们显然与标记为“B”的点属于同一簇。</p>
-<h3 id="transductive-inference">transductive inference</h3>
-<p>转导的优点是在执行标记任务时能够考虑所有点，而不仅仅是标记点。在这种情况下，传导算法将根据未标记点自然所属的簇来标记它们。因此，中间的点很可能被标记为“B”，因为它们非常靠近该簇。</p>
-<h2 id="转导的适用场合和优缺点">转导的适用场合和优缺点</h2>
-<p>转导的优点是它可以用更少的标记点做出更好的预测，因为它使用在未标记点中发现的自然中断。转导的一个缺点是它无法建立预测模型。如果将先前未知的点添加到集合中，则需要对所有点重复整个传导算法才能预测标签。如果数据在计算流中增量可用，则计算成本可能会很高。此外，这可能会导致一些旧点的预测发生变化（这可能是好是坏，具体取决于应用程序）。另一方面，监督学习算法可以立即标记新点，而计算成本非常低</p>
-<h2 id="转导算法">转导算法</h2>
-<p>转导算法可以大致分为两类：那些寻求将离散标签分配给未标记点的算法，以及那些寻求对未标记点回归连续标签的算法。寻求预测离散标签的算法往往是通过向聚类算法添加部分监督来导出的。可以使用两类算法：平面聚类和层次聚类。后者可以进一步细分为两类：通过划分进行聚类的聚类和通过聚集进行聚类的聚类。寻求预测连续标签的算法往往是通过向流形学习算法添加部分监督来导出的。</p>
-<h3 id="partitioning-transduction">Partitioning transduction</h3>
-<p>分区转导可以被认为是自上而下的转导。它是基于分区的聚类的半监督扩展。它通常按如下方式执行：将所有点的集合视为一个大分区。虽然任何分区
-P 都包含两个具有冲突标签的点： 将 P 分区为更小的分区。对于每个分区 P：为
-P 中的所有点分配相同的标签。</p>
-<h3 id="agglomerative-transduction">Agglomerative transduction</h3>
-<p>聚集转导可以被认为是自下而上的转导。它是凝聚聚类的半监督扩展。它通常按如下方式执行：计算所有点之间的成对距离
-D。按升序对 D 进行排序。将每个点视为大小为 1 的簇。对于 D 中的每对点
-{a,b}：如果（a 未标记）或（b 未标记）或（a 和 b
-具有相同的标记），则合并包含 a 和 b
-的两个簇。使用相同的标签标记合并簇中的所有点。</p>
-<h3 id="manifold-transduction">Manifold transduction</h3>
-<p>基于流形学习的转导仍然是一个非常年轻的研究领域。</p>
+<h2 id="生成和部署blog">生成和部署blog</h2>
+<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
 <h1
-id="为什么transformer是一个转导模型">为什么Transformer是一个转导模型？</h1>
-<p>因为Transformer仍然是一个自回归结构，在对t+1时刻的真实分布或真值进行预测时，其输入是考虑到t时刻的输出的，这就是将先前预测的“点”加入到新的“集合”当中，这也导致了计算流的压力增大。</p>
-<h1 id="layer-normalization-batch-normalization">Layer Normalization
-&amp; Batch Normalization</h1>
-<h2 id="d情形">2D情形</h2>
-<p>在统计推断基础部分得知，单个batch的样本可以表示为<span
-class="math inline">\(X \in \mathbb{R}^{n \times
-p}\)</span>，其中行向量组表示该batch内所有样本，列向量组表示所有特征。假定这里的batch都是预处理之后或某些layer的输出，则</p>
-<ul>
-<li><p>Batch normalization:假设<span class="math inline">\(X=\{f_1, f_2,
-\dotsb, f_p\}, f_i = (x_{1i}, x_{2i}, \dotsb,
-x_{ni})^T\)</span>，则特征均值<span
-class="math inline">\(\bar{f_i}=\sum_{j=1}^n
-x_{ji}\)</span>，特征标准差为<span
-class="math inline">\(\sigma_i\)</span>,则batch
-normalization所做的是<span
-class="math inline">\(\frac{f_i-\bar{f_i}}{\sigma_i}\)</span>。更具体的，我们将该batch的均值和方差-协方差矩阵记作<span
-class="math inline">\(\bar{X}\)</span>，<span
-class="math inline">\(\frak{v}\)</span>，则<span
-class="math inline">\(batch\_normal(X)=\frac{X-\bar{X}}{\frak{v}}\)</span>
-<img data-src="/images/Transformer/p3.png" alt="2D-batch norm" /></p></li>
-<li><p>Layer normalization:2D时的layer norm和batch
-normal很相似，甚至计算如出一辙，只有细小区别，对比两图一目了然 <img data-src="/images/Transformer/p4.png" alt="2D-layer norm" /></p></li>
-</ul>
-<h2 id="时序3d情形">时序3D情形</h2>
-<p>首先，由于文本之间拟存在时序关系，所以当每个短句抽象为一个seq，则在多个样本打包成一个batch时，其batch样本集结构如下图所示(假设每个短句，即seq的长度一样,当然现实是seq长度不一致时，可以选择补零策略)。这里，我们看到3D情形下的batch
-norm差异性还是比较大的。一般情形下，考虑下面的情况，我们优先选择layer
-norm:当一个长句成为该batch中的一个seq，显然在计算某个特征feature(q)的均值和方差时，其影响力就会比较大，则数据抖动就较大，这样是不好的；相反，在求单一样本的layer
-norm时，则相对稳定。</p>
-<figure>
-<img data-src="/images/Transformer/p6.png" alt="时序3D-batch norm" />
-<figcaption aria-hidden="true">时序3D-batch norm</figcaption>
-</figure>
-<figure>
-<img data-src="/images/Transformer/p5.png" alt="时序3D-layer norm" />
-<figcaption aria-hidden="true">时序3D-layer norm</figcaption>
-</figure>
-<h1 id="从论文出发">从论文出发</h1>
-<p>鉴于本人的研究方向主要是图像识别，所以对NLP只能基于自己的粗浅理解和面向Google,XXXD</p>
-<h2 id="背景">背景</h2>
-<p>常见的并行计算模型(如，ByteNet和ConvS2S)中，使用了卷积神经网络作为基本的构建模块，在输入和输出位置并行计算隐藏特征表示，这确实解决了顺序计算/训练所带来的时间消耗，却带了这样的问题——学习远距离之间的特征依赖关系更加困难(操作/计算量激增)。相反，在Transformer中，这样的计算量被减少为恒定数量，<font color="red">代价是由于均值了注意力加权position而导致的有效分辨率降低</font>，在实现时，多头注意力机制可以抵消这种影响。</p>
-<h2 id="自注意力机制">自注意力机制</h2>
-<p>原文定义：self-attention, sometimes called intra-attention is an
-attention mechanism relating different positions of a single sequence in
-order to compute a representation of the sequence.
-译作：自注意力，有时叫做内注意力，是一种注意力机制，用于单一序列中的不同位置，以计算序列的表示。</p>
-<h2 id="不完全定义">不完全定义</h2>
-<p>Transformer是一个<font color="red">完全依靠自注意力</font>进行输入和输出表示计算的<a
-href="https://en.wikipedia.org/wiki/Transduction_(machine_learning)">转导模型</a></p>
-<h2 id="框架解析">框架解析</h2>
-<ul>
-<li>转导模型</li>
-<li>编码器-解码器结构</li>
-</ul>
-<h3 id="encoder-and-decoder-stacks">Encoder and Decoder Stacks</h3>
-<ul>
-<li>编码器：编码器由N个相同的层堆叠而成。每个层包含两个子层。第一个子层是一个多头自注意力机制，第二个子层是一个简单的position-wise的全连接前馈网络。在两个子层周围使用残差连接，并且每个子层的输出由于采用了残差连接和Layer
-Normlization，所以当每层的输入是x时，其标准输出是x+Sublayer(x),这里的Sublayer指的是某个子层实现的函数功能；</li>
-<li>解码器：解码器也由N个相同的层堆叠而成。除了每个编码器层中的两个子层外，解码器还插入第三个子层，该子层在编码器堆栈的输出上执行多头注意力。与编码器类似，每个子层周围使用残差连接，然后进行层归一化。此外还修改了解码器堆栈中的自注意力子层，以防止位置编码参与到后续的位置编码。</li>
-</ul>
+id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
+<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
+<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
+<code>git config --global --list</code>
+查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
+<h2 id="生成ssh密钥">生成SSH密钥</h2>
+<p>使用<code>git config --global --list</code>
+查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
+下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
+alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
+将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
+href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
+SSH
+key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
+<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
+<h2
+id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
+<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
+href="https://hexo.io/themes/"
+class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
+<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
+<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
+<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
+同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1
+id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
+<ol type="1">
+<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
+<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
+<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
+&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
+href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
+</ol>
+<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
+<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
+选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
+在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
+3.
+来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
+4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
+alt="styl设置" /></p>
+<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
+<p><span
+class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
+class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
+href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
+1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
+执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
+由于在1中我们将import设置为demand类型，所以在需要使用<span
+class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
+alt="latex渲染" />，这就是我转Next主题的文章。</p>
 <blockquote>
-<p>掩码：假如需要预测t+1时刻的分布或真值，需要依据t时刻所提供的真实数据对t+1时的分布（或真值）进行预测，而掩码使得在t时刻，预测者看不到t+1时刻的真值，从而保证训练和预测时的行为一致性（对真实情况未知）</p>
+<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
 </blockquote>
-<h3 id="attention">Attention</h3>
-<p>注意力函数（Attention
-function）可以描述成一个查询（query）和一组键-值（key-value）对映射到一个输出上，其中查询（query）、键（keys）、值（values）和输出都是向量。输出通过对值的加权求和来计算，其中分配给每个值的权重是通过查询与相应键的相似度（兼容性）函数计算得到的。即
-<span class="math display">\[Attention(Q,K,V)=compatibility(Q,K) \cdot
-V\]</span> 这里，compatibility是描述Q,K相似度的函数。</p>
-<p>假设以2范距离来描述Q,K的相似度，即<span
-class="math inline">\(compatibility(Q,K) \propto
-\frac{1}{||Position_Q-Position_K||_2}\)</span>，则如下图所示，体现出了对向量V各分量的加权情形
-<img data-src="/images/Transformer/p8.png" alt="compatibility function" />
-可以看到，由于查询分量<span class="math inline">\(Q_i\)</span>离<span
-class="math inline">\(k_1,k_2\)</span>比较近，所以对<span
-class="math inline">\(v_1,v_2\)</span>加权比较大，相反对较远的V分量加权较小。</p>
-<h4 id="scaled-dot-product-attention">Scaled Dot-Product Attention</h4>
-<p>计算流程如下图所示 <img data-src="/images/Transformer/p7.png"
-alt="Scaled-Dot Attention" /></p>
-<p>基本形式： <span
-class="math display">\[Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V\]</span></p>
-<h4 id="multi-head-attention">Multi-Head Attention</h4>
-<figure>
-<img data-src="/images/Transformer/p9.png" alt="Multi-Head Attention" />
-<figcaption aria-hidden="true">Multi-Head Attention</figcaption>
-</figure>
-<blockquote>
-<p>为什么使用多头注意力机制？
-类似于CNN的多通道卷积(每个通道都是图像的一个特征子空间，不过开始时不包含高级语义，需要通过多个filter【对应多头注意力里的多个线性投影下的关注】后，才能获得)。在Transformer中引入了h次注意力，由图可知，全连接的线性层将输入的(V,K,Q)进行降维（投影），然后通过h次的Scaled
-Dot-Product
-Attention获得h个模式Pattern，可以看到这样做可以挖掘更多的高级特征。</p>
-</blockquote>
-<p>多头注意力的一般形式： <span class="math display">\[\begin{split}
-MultiHead(Q,K,V)&amp;=Concat(head_1,\dots,head_h)W^O \\
-where head_i &amp;= Attention(QW_i^Q,KW^K_i,VW^V_i)
-\end{split}
-\]</span> 这里，<span class="math inline">\(Q,K,V \in
-\mathbb{R}^{d\_model},W_i^Q \in \mathbb{R}^{d\_model \times d_k}, W^K_i
-\in \mathbb{R}^{d\_model \times d_k},W^V_i \in \mathbb{R}^{d\_model
-\times d_v},i=\{1,2,\dots,h\}\)</span> and <span
-class="math inline">\(W^O \in \mathbb{R}^{hd_v \times
-d\_model}\)</span>。 可以看到，这里将Q,K,V通过h种投影矩阵<span
-class="math inline">\((W_i^Q,W^K_i,W^V_i)\)</span>投影到了不同的子空间，从而在不同的子空间上进行关注。</p>
-<p>多头注意力使模型能够同时关注不同位置的不同表示子空间中的信息。使用单个注意力头，平均操作会抑制这种能力。通过引入多个注意力头，模型可以并行地学习多个不同的查询、键和值的投影，从而在不同的表示子空间上进行关注，避免了信息的平均化。这样可以增强模型对输入的表征能力，提高模型处理复杂关系和学习长距离依赖的能力。通过多头注意力，模型可以捕捉更丰富的上下文信息，并且能够更好地处理输入中的多样性和复杂性。</p>
-<h3 id="feed-forwardmlp">Feed Forward(MLP)</h3>
+<h1 id="next主题配置">Next主题配置</h1>
+<p>相似于section 2.3-section 5，参考<a
+href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
+class="math inline">\(\LaTeX\)</span>配置，可以参考<a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
+latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
+download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
+<h1 id="注意事项">注意事项</h1>
+<ol type="1">
+<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
+<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
+class="uri">https://hexo.io/zh-cn/docs/</a></li>
+</ol>
+<h1 id="参考文章">参考文章</h1>
+<ul>
+<li><a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064"
+class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
+<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
+class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
+<li><a href="https://www.issey.top/"
+class="uri">https://www.issey.top/</a></li>
+</ul>
 ]]></content>
+      <categories>
+        <category>Instruction</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>Applied Multivariate Statistical Analysis(1)</title>
@@ -856,132 +965,40 @@ Multivariate Statistical Analysis(2)</a></p>
       </tags>
   </entry>
   <entry>
-    <title>创建一个hexoBlog</title>
-    <url>/2023/05/08/Create-a-hexoBlog/</url>
-    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
-<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
-methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
-<hr />
-<h1 id="安装">安装</h1>
-<h2 id="安装需求">安装需求</h2>
+    <title>Applied Multivariate Statistical Analysis(2)</title>
+    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
+    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
+<h2 id="基本形式">基本形式</h2>
 <ul>
-<li>Node.js (version &gt;= 10.13)</li>
-<li>Git</li>
-<li>npm</li>
-<li>github账户</li>
+<li>一元正态分布的密度函数：<span
+class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
+<li>多元正态分布的密度函数：<span
+class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
+其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
+class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
+对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
+class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
+其中<span class="math inline">\(\bf
+c\)</span>为常数。这是个高维椭圆，中心在<span
+class="math inline">\(\bf\mu\)</span>，拥有<span
+class="math inline">\(p\)</span>个轴，第<span
+class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
+c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
+class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
+class="math inline">\(\lambda_i\)</span>和<span
+class="math inline">\(\textbf{e}_i\)</span>为<span
+class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
 </ul>
-<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
-<h2 id="安装hexo">安装hexo</h2>
-<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
-其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
-href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="初始化blog">初始化blog</h2>
-<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
-s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
-href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
-<h2 id="创建新的blog">创建新的blog</h2>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
-</blockquote>
-<h2 id="生成和部署blog">生成和部署blog</h2>
-<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<h1
-id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
-<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
-<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
-<code>git config --global --list</code>
-查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
-<h2 id="生成ssh密钥">生成SSH密钥</h2>
-<p>使用<code>git config --global --list</code>
-查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
-下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
-alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
-将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
-href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
-SSH
-key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
-<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
-<h2
-id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
-<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
-href="https://hexo.io/themes/"
-class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
-<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
-<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
-<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
-同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
-<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1
-id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
-<ol type="1">
-<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
-<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
-<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
-&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
-href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
-</ol>
-<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
-<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
-选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
-在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
-3.
-来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
-4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
-alt="styl设置" /></p>
-<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
-<p><span
-class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
-class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
-href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
-1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
-执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
-由于在1中我们将import设置为demand类型，所以在需要使用<span
-class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
-alt="latex渲染" />，这就是我转Next主题的文章。</p>
-<blockquote>
-<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
-</blockquote>
-<h1 id="next主题配置">Next主题配置</h1>
-<p>相似于section 2.3-section 5，参考<a
-href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
-class="math inline">\(\LaTeX\)</span>配置，可以参考<a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
-latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
-download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
-<h1 id="注意事项">注意事项</h1>
-<ol type="1">
-<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
-<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
-class="uri">https://hexo.io/zh-cn/docs/</a></li>
-</ol>
-<h1 id="参考文章">参考文章</h1>
-<ul>
-<li><a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064"
-class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
-<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
-class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
-<li><a href="https://www.issey.top/"
-class="uri">https://www.issey.top/</a></li>
-</ul>
+<h2 id="线性变换">线性变换</h2>
+<p><span class="math inline">\(X~\)</span></p>
 ]]></content>
       <categories>
-        <category>Instruction</category>
+        <category>机器学习</category>
+        <category>统计学习</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
       </tags>
   </entry>
   <entry>
