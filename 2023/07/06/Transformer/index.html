@@ -21,12 +21,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"keithmalarkey.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Introduction Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。 提问  What is the Transformer？其基本结构是什么？ Transformer的主要特征(">
+    <meta name="description" content="Introduction Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。 提问  What is the Transformer？其基本结构是什么？  什么是“平均注意力加权位置”(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Transformer">
 <meta property="og:url" content="https://keithmalarkey.github.io/2023/07/06/Transformer/index.html">
 <meta property="og:site_name" content="Keith&#39;s Blog">
-<meta property="og:description" content="Introduction Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。 提问  What is the Transformer？其基本结构是什么？ Transformer的主要特征(">
+<meta property="og:description" content="Introduction Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。 提问  What is the Transformer？其基本结构是什么？  什么是“平均注意力加权位置”(">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p3.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p6.png">
@@ -34,8 +34,9 @@
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p8.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p7.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p9.png">
+<meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p10.png">
 <meta property="article:published_time" content="2023-07-06T06:58:44.051Z">
-<meta property="article:modified_time" content="2023-07-10T02:37:18.763Z">
+<meta property="article:modified_time" content="2023-07-10T11:23:04.993Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="python, machine-learning, deep-learning">
 <meta name="twitter:card" content="summary">
@@ -151,7 +152,7 @@
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%90%E9%97%AE"><span class="nav-number">2.</span> <span class="nav-text">提问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6"><span class="nav-number">4.</span> <span class="nav-text">模型框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A8%E6%96%AD%E5%88%86%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">推断分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#transduction-induction"><span class="nav-number">5.1.</span> <span class="nav-text">transduction &amp; induction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%AF%BC%E7%A4%BA%E4%BE%8B%E7%A4%BA%E6%84%8F"><span class="nav-number">5.2.</span> <span class="nav-text">转导示例&#x2F;示意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#inductive-inference"><span class="nav-number">5.2.1.</span> <span class="nav-text">inductive inference</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transductive-inference"><span class="nav-number">5.2.2.</span> <span class="nav-text">transductive inference</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%AF%BC%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E5%90%88%E5%92%8C%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.3.</span> <span class="nav-text">转导的适用场合和优缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%AF%BC%E7%AE%97%E6%B3%95"><span class="nav-number">5.4.</span> <span class="nav-text">转导算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#partitioning-transduction"><span class="nav-number">5.4.1.</span> <span class="nav-text">Partitioning transduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#agglomerative-transduction"><span class="nav-number">5.4.2.</span> <span class="nav-text">Agglomerative transduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#manifold-transduction"><span class="nav-number">5.4.3.</span> <span class="nav-text">Manifold transduction</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88transformer%E6%98%AF%E4%B8%80%E4%B8%AA%E8%BD%AC%E5%AF%BC%E6%A8%A1%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">为什么Transformer是一个转导模型？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#layer-normalization-batch-normalization"><span class="nav-number">7.</span> <span class="nav-text">Layer Normalization
 &amp; Batch Normalization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#d%E6%83%85%E5%BD%A2"><span class="nav-number">7.1.</span> <span class="nav-text">2D情形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E5%BA%8F3d%E6%83%85%E5%BD%A2"><span class="nav-number">7.2.</span> <span class="nav-text">时序3D情形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E8%AE%BA%E6%96%87%E5%87%BA%E5%8F%91"><span class="nav-number">8.</span> <span class="nav-text">从论文出发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">8.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6"><span class="nav-number">8.2.</span> <span class="nav-text">自注意力机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%AE%8C%E5%85%A8%E5%AE%9A%E4%B9%89"><span class="nav-number">8.3.</span> <span class="nav-text">不完全定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6%E8%A7%A3%E6%9E%90"><span class="nav-number">8.4.</span> <span class="nav-text">框架解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#encoder-and-decoder-stacks"><span class="nav-number">8.4.1.</span> <span class="nav-text">Encoder and Decoder Stacks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attention"><span class="nav-number">8.4.2.</span> <span class="nav-text">Attention</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#scaled-dot-product-attention"><span class="nav-number">8.4.2.1.</span> <span class="nav-text">Scaled Dot-Product Attention</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#multi-head-attention"><span class="nav-number">8.4.2.2.</span> <span class="nav-text">Multi-Head Attention</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position-wise-feed-forward-networksmlp"><span class="nav-number">8.4.3.</span> <span class="nav-text">Position-wise
-Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F"><span class="nav-number">8.4.3.1.</span> <span class="nav-text">基本形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#position-encoding"><span class="nav-number">8.4.3.2.</span> <span class="nav-text">Position Encoding</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E4%BB%A3%E7%A0%81%E5%87%BA%E5%8F%91"><span class="nav-number">9.</span> <span class="nav-text">从代码出发</span></a></li></ol></div>
+Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F"><span class="nav-number">8.4.3.1.</span> <span class="nav-text">基本形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#position-encoding"><span class="nav-number">8.4.3.2.</span> <span class="nav-text">Position Encoding</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E4%BB%A3%E7%A0%81%E5%87%BA%E5%8F%91"><span class="nav-number">9.</span> <span class="nav-text">从代码出发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#section"><span class="nav-number">10.</span> <span class="nav-text"></span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -255,7 +256,7 @@ Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item n
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-10 10:37:18" itemprop="dateModified" datetime="2023-07-10T10:37:18+08:00">2023-07-10</time>
+      <time title="修改时间：2023-07-10 19:23:04" itemprop="dateModified" datetime="2023-07-10T19:23:04+08:00">2023-07-10</time>
     </span>
 
   
@@ -286,7 +287,7 @@ Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item n
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.5k</span>
+      <span>3.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -307,7 +308,11 @@ Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item n
 <p>Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。</p>
 <h1 id="提问">提问</h1>
 <ol type="1">
-<li>What is the Transformer？其基本结构是什么？</li>
+<li>What is the Transformer？其基本结构是什么？
+<ol type="1">
+<li>什么是“平均注意力加权位置”(average attention-weighted position)</li>
+<li>为什么平均注意力加权位置会导致有效分辨率降低？</li>
+</ol></li>
 <li>Transformer的主要特征(优缺点)？它是如何实现的(实现机制)？</li>
 <li>注意力机制？自注意力机制？两者区别？</li>
 <li>ViT是如何将Transformer移植到视觉领域的？</li>
@@ -320,6 +325,8 @@ Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item n
 target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/411311520">Transformer详解</a>;</li>
 <li><a
 target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.999.0.0">Transformer精读-李沐</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.999.0.0">白话教程</a></li>
 </ol>
 <h1 id="模型框架">模型框架</h1>
 <ul>
@@ -483,7 +490,15 @@ vectors之间的相关度，所以在输入时位置编码显得比较重要，�
 \]</span></li>
 </ul>
 <h1 id="从代码出发">从代码出发</h1>
-<p>#TODO</p>
+<p>前面的章节，已经介绍了Transformer的主要框架结构，包含了(自)注意力机制、（掩码）多头注意力机制、MLP以及位置编码和残差连接，但是若没有接触过自回归结构的模型，其实仍然很难明白，当一个embedding进到Encoder之后的具体流程如何？当然可以参考这个<a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.999.0.0">教程</a>，介绍了Attention的张量计算过程，并举实例将训练流程讲清楚了。</p>
+<figure>
+<img data-src="/images/Transformer/p10.png" alt="实例" />
+<figcaption aria-hidden="true">实例</figcaption>
+</figure>
+<p>其中，&lt;bos&gt; 和 &lt;eos&gt;分别表示beginning of sentence和end of
+sentence。但即便这样，依旧会错过很多细枝末节，不妨来看看代码实现。</p>
+<h1 id="section"></h1>
 
     </div>
 
@@ -552,7 +567,7 @@ vectors之间的相关度，所以在输入时位置编码显得比较重要，�
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">58 分钟</span>
+    <span title="站点阅读时长">59 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
