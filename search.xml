@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Fourier Series and Fourier Transform</title>
+    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
     <title>Combinatorics</title>
     <url>/2023/06/24/Combinatorial-Mathematics/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -44,6 +50,49 @@ class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
 <p><img data-src="/images/Combinatorial-Mathematics/p1.jpg" alt="p1" /> <img data-src="/images/Combinatorial-Mathematics/p2.png" alt="p2" /> <img data-src="/images/Combinatorial-Mathematics/p3.png" alt="p3" /> <img data-src="/images/Combinatorial-Mathematics/p4.png" alt="p4-1" /> <img data-src="/images/Combinatorial-Mathematics/p4-1.png" alt="p4-2" /></p>
 <h2 id="一般形式">一般形式</h2>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Principal component analysis</title>
+    <url>/2023/05/30/Principal-component-analysis/</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>Applied Multivariate Statistical Analysis(2)</title>
+    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
+    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
+<h2 id="基本形式">基本形式</h2>
+<ul>
+<li>一元正态分布的密度函数：<span
+class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
+<li>多元正态分布的密度函数：<span
+class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
+其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
+class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
+对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
+class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
+其中<span class="math inline">\(\bf
+c\)</span>为常数。这是个高维椭圆，中心在<span
+class="math inline">\(\bf\mu\)</span>，拥有<span
+class="math inline">\(p\)</span>个轴，第<span
+class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
+c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
+class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
+class="math inline">\(\lambda_i\)</span>和<span
+class="math inline">\(\textbf{e}_i\)</span>为<span
+class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
+</ul>
+<h2 id="线性变换">线性变换</h2>
+<p><span class="math inline">\(X~\)</span></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
+      </tags>
   </entry>
   <entry>
     <title>Pattern Recognition and Machine Learning(1)</title>
@@ -178,59 +227,10 @@ b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
       </tags>
   </entry>
   <entry>
-    <title>Fourier Series and Fourier Transform</title>
-    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
     <title>Masked Autoencoder</title>
     <url>/2023/07/13/Masked-Autoencoder/</url>
     <content><![CDATA[
 ]]></content>
-  </entry>
-  <entry>
-    <title>Principal component analysis</title>
-    <url>/2023/05/30/Principal-component-analysis/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>Applied Multivariate Statistical Analysis(2)</title>
-    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
-    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
-<h2 id="基本形式">基本形式</h2>
-<ul>
-<li>一元正态分布的密度函数：<span
-class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
-<li>多元正态分布的密度函数：<span
-class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
-其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
-class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
-对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
-class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
-其中<span class="math inline">\(\bf
-c\)</span>为常数。这是个高维椭圆，中心在<span
-class="math inline">\(\bf\mu\)</span>，拥有<span
-class="math inline">\(p\)</span>个轴，第<span
-class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
-c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
-class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
-class="math inline">\(\lambda_i\)</span>和<span
-class="math inline">\(\textbf{e}_i\)</span>为<span
-class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
-</ul>
-<h2 id="线性变换">线性变换</h2>
-<p><span class="math inline">\(X~\)</span></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
-      </tags>
   </entry>
   <entry>
     <title>创建一个hexoBlog</title>
@@ -359,100 +359,6 @@ class="uri">https://www.issey.top/</a></li>
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Deep Residual Networks for Image Recognition</title>
-    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
-href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
-Image Recognition</a>作为开篇。<br />
-主要目的：<br />
-1. 什么是ResNet？其基本结构是什么？<br />
-2. 为什么提出ResNet?或者说它的优势是什么？<br />
-3. 为何会有其优势，从数理层面的解释是什么？<br />
-4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
-<hr />
-<h1 id="论文解析">论文解析</h1>
-<h2 id="概要">概要</h2>
-<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
-<h2 id="引言">引言</h2>
-<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
-normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
-Normalization)。<br />
-然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
-alt="深层网络准确率饱和现象" />
-从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
-<font color="red">
-设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
-mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
-error)。
-</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
-alt="Shortcut connection" /> <font color="red">Deep residual learning
-framework</font>:假设我们希望得到的一个潜在映射为<span
-class="math inline">\(\mathcal{H}(\bf
-x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
-class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
-class="math inline">\(\mathcal{F}(\textbf{x}) :=
-\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
-class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
-connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
-x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
-x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
-alt="全局设计" /></p>
-<h2 id="实验结果">实验结果</h2>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
-alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
-block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
-alt="Resnet性能同plain CNN的对比" />
-上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
-class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
-<h1 id="数理解释">数理解释</h1>
-<ol type="1">
-<li>假设plain CNN需要学得潜在的mapping是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
-class="math inline">\(g\)</span>;(2)深层部分的映射<span
-class="math inline">\(f\)</span>，即<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
-class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
-f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
-g(\theta)}{\partial
-\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
-<li>同样的，ResNet需要学习的潜在mapping也是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
-connection的原因，每次迭代训练参数时需要做的是<span
-class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
-g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
-\underbrace{\frac{\partial g(\theta)}{\partial
-\theta}}_{(2)}\)</span>，在(1)中还会存在plain
-CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
-</ol>
-<h1 id="总结">总结</h1>
-<p>ResNet就是使用了shortcut(residual)
-connection的CNN变种，其基本结构就是残差块(residual
-block)和残差连接(residual
-connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
-<h1 id="遗留问题">遗留问题</h1>
-<ol type="1">
-<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
-<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
-<li>提到Residual，在机器学习中，比如Gradient
-boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>图像识别</tag>
-        <tag>ResNet</tag>
       </tags>
   </entry>
   <entry>
@@ -1036,248 +942,6 @@ class="math inline">\(I(X;Y)\)</span></li>
       </tags>
   </entry>
   <entry>
-    <title>Transformer</title>
-    <url>/2023/06/18/Transformer/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。</p>
-<h1 id="提问">提问</h1>
-<ol type="1">
-<li>What is the Transformer？其基本结构是什么？
-<ol type="1">
-<li>什么是“平均注意力加权位置”(average attention-weighted position)</li>
-<li>为什么平均注意力加权位置会导致有效分辨率降低？</li>
-</ol></li>
-<li>Transformer的主要特征(优缺点)？它是如何实现的(实现机制)？</li>
-<li>注意力机制？自注意力机制？两者区别？</li>
-<li>ViT是如何将Transformer移植到视觉领域的？</li>
-</ol>
-<h1 id="参考">参考</h1>
-<ul>
-<li><strong>Transformer</strong></li>
-</ul>
-<ol type="1">
-<li>Attention Is All You Need, Neural Information Processing Systems
-(NIPS 2017);</li>
-<li>zhihu---<a
-href="https://zhuanlan.zhihu.com/p/411311520">Transformer详解</a>;</li>
-<li><a
-href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.999.0.0">Transformer精读-李沐</a></li>
-<li><a
-href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.999.0.0">白话教程1</a></li>
-<li><a
-href="https://www.bilibili.com/video/BV15v411W78M/?spm_id_from=333.999.0.0&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">白话教程2</a></li>
-<li><a
-href="https://www.bilibili.com/video/BV1Qg4y1P7r4/?spm_id_from=333.788.recommend_more_video.1&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">Transformer中的数据流动</a>---<font color="red">全场最佳</font></li>
-</ol>
-<ul>
-<li><strong>Vision Transformer</strong></li>
-</ul>
-<ol type="1">
-<li><a href="https://arxiv.org/pdf/2010.11929.pdf">AN IAMGE IS WORTH 16
-<span class="math inline">\(\times\)</span> 16 TRANSFORMERS FOR IMAGE
-RECOGNITION AT SCALE</a></li>
-<li><a
-href="https://www.bilibili.com/video/BV15P4y137jb/?spm_id_from=333.999.0.0&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">ViT解读</a>--by<a
-href="https://bryanyzhu.github.io/">朱毅</a></li>
-</ol>
-<h1 id="模型框架">模型框架</h1>
-<ul>
-<li>left:encoder <span class="math inline">\(\times N\)</span></li>
-<li>right:decoder <span class="math inline">\(\times N\)</span></li>
-<li>computing the loss compared with the GT after prediction by
-softmax(Linear(decoder_output)) <img data-src="/images/Transformer/p1.png"
-alt="Transformer Architecture" /></li>
-</ul>
-<h1 id="推断分类">推断分类</h1>
-<h2 id="transduction-induction">transduction &amp; induction</h2>
-<p>推断主要分为两类：<br />
-1. 归纳推断(inductive inference): induction is reasoning from observed
-training cases to general rules, which are then applied to the test
-cases.
-归纳是从观察到的训练案例推理出一般规则，然后将其应用于测试案例<br />
-2.
-转导推断：<font color="green">在逻辑、统计推断和有监督学习中，</font>transduction或transductive
-inference指的是从观察到的特定（训练）案例到特定（测试）案例的推理</p>
-<blockquote>
-<p>简单说，一般的机器学习都是希望在训练数据集上学到使得期望风险最小的模型，当这类模型足够鲁棒时，其泛化能力足够强，即模型在相似数据上普遍适用；而转导学习的目标是学习一种在给定测试集上错误率最小的模型，在训练阶段可以利用测试集的信息</p>
-</blockquote>
-<h2 id="转导示例示意">转导示例/示意</h2>
-<p>为了对比转导和归纳，在这里举例对比他们的一些特有的属性。 <img data-src="/images/Transformer/p2.png" alt="exa" />
-在上图中，给出了一个点集，有些点已经被标注好了标签(A、B、C)，但是大部分点没有。目标：预测未被标注的标签信息</p>
-<h3 id="inductive-inference">inductive inference</h3>
-<p>解决此问题的归纳方法是使用标记点来训练监督学习算法，然后让它预测所有未标记点的标签。然而，对于这个问题，监督学习算法将只有五个标记点用作构建预测模型的基础。建立一个捕获这些数据结构的模型肯定会很困难。例如，如果使用最近邻算法，则中间附近的点将被标记为“A”或“C”，即使它们显然与标记为“B”的点属于同一簇。</p>
-<h3 id="transductive-inference">transductive inference</h3>
-<p>转导的优点是在执行标记任务时能够考虑所有点，而不仅仅是标记点。在这种情况下，传导算法将根据未标记点自然所属的簇来标记它们。因此，中间的点很可能被标记为“B”，因为它们非常靠近该簇。</p>
-<h2 id="转导的适用场合和优缺点">转导的适用场合和优缺点</h2>
-<p>转导的优点是它可以用更少的标记点做出更好的预测，因为它使用在未标记点中发现的自然中断。转导的一个缺点是它无法建立预测模型。如果将先前未知的点添加到集合中，则需要对所有点重复整个传导算法才能预测标签。如果数据在计算流中增量可用，则计算成本可能会很高。此外，这可能会导致一些旧点的预测发生变化（这可能是好是坏，具体取决于应用程序）。另一方面，监督学习算法可以立即标记新点，而计算成本非常低</p>
-<h2 id="转导算法">转导算法</h2>
-<p>转导算法可以大致分为两类：那些寻求将离散标签分配给未标记点的算法，以及那些寻求对未标记点回归连续标签的算法。寻求预测离散标签的算法往往是通过向聚类算法添加部分监督来导出的。可以使用两类算法：平面聚类和层次聚类。后者可以进一步细分为两类：通过划分进行聚类的聚类和通过聚集进行聚类的聚类。寻求预测连续标签的算法往往是通过向流形学习算法添加部分监督来导出的。</p>
-<h3 id="partitioning-transduction">Partitioning transduction</h3>
-<p>分区转导可以被认为是自上而下的转导。它是基于分区的聚类的半监督扩展。它通常按如下方式执行：将所有点的集合视为一个大分区。虽然任何分区
-P 都包含两个具有冲突标签的点： 将 P 分区为更小的分区。对于每个分区 P：为
-P 中的所有点分配相同的标签。</p>
-<h3 id="agglomerative-transduction">Agglomerative transduction</h3>
-<p>聚集转导可以被认为是自下而上的转导。它是凝聚聚类的半监督扩展。它通常按如下方式执行：计算所有点之间的成对距离
-D。按升序对 D 进行排序。将每个点视为大小为 1 的簇。对于 D 中的每对点
-{a,b}：如果（a 未标记）或（b 未标记）或（a 和 b
-具有相同的标记），则合并包含 a 和 b
-的两个簇。使用相同的标签标记合并簇中的所有点。</p>
-<h3 id="manifold-transduction">Manifold transduction</h3>
-<p>基于流形学习的转导仍然是一个非常年轻的研究领域。</p>
-<h1 id="layer-normalization-batch-normalization">Layer Normalization
-&amp; Batch Normalization</h1>
-<h2 id="d情形">2D情形</h2>
-<p>在统计推断基础部分得知，单个batch的样本可以表示为<span
-class="math inline">\(X \in \mathbb{R}^{n \times
-p}\)</span>，其中行向量组表示该batch内所有样本，列向量组表示所有特征。假定这里的batch都是预处理之后或某些layer的输出，则</p>
-<ul>
-<li><p>Batch normalization:假设<span class="math inline">\(X=\{f_1, f_2,
-\dotsb, f_p\}, f_i = (x_{1i}, x_{2i}, \dotsb,
-x_{ni})^T\)</span>，则特征均值<span
-class="math inline">\(\bar{f_i}=\sum_{j=1}^n
-x_{ji}\)</span>，特征标准差为<span
-class="math inline">\(\sigma_i\)</span>,则batch
-normalization所做的是<span
-class="math inline">\(\frac{f_i-\bar{f_i}}{\sigma_i}\)</span>。更具体的，我们将该batch的均值和方差-协方差矩阵记作<span
-class="math inline">\(\bar{X}\)</span>，<span
-class="math inline">\(\frak{v}\)</span>，则<span
-class="math inline">\(batch\_normal(X)=\frac{X-\bar{X}}{\frak{v}}\)</span>
-<img data-src="/images/Transformer/p3.png" alt="2D-batch norm" /></p></li>
-<li><p>Layer normalization:2D时的layer norm和batch
-normal很相似，甚至计算如出一辙，只有细小区别，对比两图一目了然 <img data-src="/images/Transformer/p4.png" alt="2D-layer norm" /></p></li>
-</ul>
-<h2 id="时序3d情形">时序3D情形</h2>
-<p>首先，由于文本之间拟存在时序关系，所以当每个短句抽象为一个seq，则在多个样本打包成一个batch时，其batch样本集结构如下图所示(假设每个短句，即seq的长度一样,当然现实是seq长度不一致时，可以选择补零策略)。这里，我们看到3D情形下的batch
-norm差异性还是比较大的。一般情形下，考虑下面的情况，我们优先选择layer
-norm:当一个长句成为该batch中的一个seq，显然在计算某个特征feature(q)的均值和方差时，其影响力就会比较大，则数据抖动就较大，这样是不好的；相反，在求单一样本的layer
-norm时，则相对稳定。</p>
-<figure>
-<img data-src="/images/Transformer/p6.png" alt="时序3D-batch norm" />
-<figcaption aria-hidden="true">时序3D-batch norm</figcaption>
-</figure>
-<figure>
-<img data-src="/images/Transformer/p5.png" alt="时序3D-layer norm" />
-<figcaption aria-hidden="true">时序3D-layer norm</figcaption>
-</figure>
-<h1 id="从论文出发">从论文出发</h1>
-<p>鉴于本人的研究方向主要是图像识别，所以对NLP只能基于自己的粗浅理解和面向Google,XXXD</p>
-<h2 id="背景">背景</h2>
-<p>常见的并行计算模型(如，ByteNet和ConvS2S)中，使用了卷积神经网络作为基本的构建模块，在输入和输出位置并行计算隐藏特征表示，这确实解决了顺序计算/训练所带来的时间消耗，却带了这样的问题——学习远距离之间的特征依赖关系更加困难(操作/计算量激增)。相反，在Transformer中，这样的计算量被减少为恒定数量，<font color="red">代价是由于均值了注意力加权position而导致的有效分辨率降低</font>，在实现时，多头注意力机制可以抵消这种影响。</p>
-<h2 id="自注意力机制">自注意力机制</h2>
-<p>原文定义：self-attention, sometimes called intra-attention is an
-attention mechanism relating different positions of a single sequence in
-order to compute a representation of the sequence.
-译作：自注意力，有时叫做内注意力，是一种注意力机制，用于单一序列中的不同位置，以计算序列的表示。</p>
-<h2 id="不完全定义">不完全定义</h2>
-<p>在这篇paper中，Transformer是一个<font color="red">完全依靠自注意力</font>进行输入和输出表示计算的<a
-href="https://en.wikipedia.org/wiki/Transduction_(machine_learning)">转导模型</a>。在Transformer中，自注意力机制允许模型在编码和解码阶段同时对整个输入序列和输出序列进行注意力计算。这种并行性使得Transformer能够在整个数据集上进行推断，利用所有样本的信息来学习模型的表示能力。这种全局推断的性质使得Transformer更具转导模型的特点。</p>
-<h2 id="框架解析">框架解析</h2>
-<ul>
-<li>转导模型</li>
-<li>编码器-解码器结构</li>
-<li>（自）注意力机制</li>
-</ul>
-<h3 id="encoder-and-decoder-stacks">Encoder and Decoder Stacks</h3>
-<ul>
-<li>编码器：编码器由N个相同的层堆叠而成。每个层包含两个子层。第一个子层是一个多头自注意力机制，第二个子层是一个简单的position-wise的全连接前馈网络。在两个子层周围使用残差连接，并且每个子层的输出由于采用了残差连接和Layer
-Normlization，所以当每层的输入是x时，其标准输出是LayerNorm(x+Sublayer(x)),这里的Sublayer指的是某个子层实现的函数功能；</li>
-<li>解码器：解码器也由N个相同的层堆叠而成。除了每个编码器层中的两个子层外，解码器还插入第三个子层，该子层在编码器堆栈的输出上执行多头注意力。与编码器类似，每个子层周围使用残差连接，然后进行层归一化。此外还修改了解码器堆栈中的自注意力子层，以防止位置编码参与到后续的位置编码。</li>
-</ul>
-<blockquote>
-<p>掩码：假如需要预测t+1时刻的分布或真值，需要依据t时刻所提供的真实数据对t+1时的分布（或真值）进行预测，而掩码使得在t时刻，预测者看不到t+1时刻的真值，从而保证训练和预测时的行为一致性（对真实情况未知）</p>
-</blockquote>
-<h3 id="attention">Attention</h3>
-<p>注意力函数（Attention
-function）可以描述成一个查询（query）和一组键-值（key-value）对映射到一个输出上，其中查询（query）、键（keys）、值（values）和输出都是向量。输出通过对值的加权求和来计算，其中分配给每个值的权重是通过查询与相应键的相似度（兼容性）函数计算得到的。即
-<span class="math display">\[Attention(Q,K,V)=compatibility(Q,K) \cdot
-V\]</span> 这里，compatibility是描述Q,K相似度的函数。</p>
-<p>假设以2范距离来描述Q,K的相似度，即<span
-class="math inline">\(compatibility(Q,K) \propto
-\frac{1}{||Position_Q-Position_K||_2}\)</span>，则如下图所示，体现出了对向量V各分量的加权情形
-<img data-src="/images/Transformer/p8.png" alt="compatibility function" />
-可以看到，由于查询分量<span class="math inline">\(Q_i\)</span>离<span
-class="math inline">\(k_1,k_2\)</span>比较近，所以对<span
-class="math inline">\(v_1,v_2\)</span>加权比较大，相反对较远的V分量加权较小。</p>
-<h4 id="scaled-dot-product-attention">Scaled Dot-Product Attention</h4>
-<p>计算流程如下图所示 <img data-src="/images/Transformer/p7.png"
-alt="Scaled-Dot Attention" /></p>
-<p>基本形式： <span
-class="math display">\[Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V\]</span></p>
-<h4 id="multi-head-attention">Multi-Head Attention</h4>
-<figure>
-<img data-src="/images/Transformer/p9.png" alt="Multi-Head Attention" />
-<figcaption aria-hidden="true">Multi-Head Attention</figcaption>
-</figure>
-<blockquote>
-<p>为什么使用多头注意力机制？
-类似于CNN的多通道卷积(每个通道都是图像的一个特征子空间，不过开始时不包含高级语义，需要通过多个filter【对应多头注意力里的多个线性投影下的关注】后，才能获得)。在Transformer中引入了h次注意力，由图可知，全连接的线性层将输入的(V,K,Q)进行降维（投影），然后通过h次的Scaled
-Dot-Product
-Attention获得h个模式Pattern，可以看到这样做可以挖掘更多的高级特征。</p>
-</blockquote>
-<p>多头注意力的一般形式： <span class="math display">\[\begin{split}
-MultiHead(Q,K,V)&amp;=Concat(head_1,\dots,head_h)W^O \\
-where head_i &amp;= Attention(QW_i^Q,KW^K_i,VW^V_i)
-\end{split}
-\]</span> 这里，<span class="math inline">\(Q,K,V \in
-\mathbb{R}^{d\_model},W_i^Q \in \mathbb{R}^{d\_model \times d_k}, W^K_i
-\in \mathbb{R}^{d\_model \times d_k},W^V_i \in \mathbb{R}^{d\_model
-\times d_v},i=\{1,2,\dots,h\}\)</span> and <span
-class="math inline">\(W^O \in \mathbb{R}^{hd_v \times
-d\_model}\)</span>。 可以看到，这里将Q,K,V通过h种投影矩阵<span
-class="math inline">\((W_i^Q,W^K_i,W^V_i)\)</span>投影到了不同的子空间，从而在不同的子空间上进行关注。</p>
-<p>多头注意力使模型能够同时关注不同位置的不同表示子空间中的信息。使用单个注意力头，平均操作会抑制这种能力。通过引入多个注意力头，模型可以并行地学习多个不同的查询、键和值的投影，从而在不同的表示子空间上进行关注，避免了信息的平均化。这样可以增强模型对输入的表征能力，提高模型处理复杂关系和学习长距离依赖的能力。通过多头注意力，模型可以捕捉更丰富的上下文信息，并且能够更好地处理输入中的多样性和复杂性。</p>
-<h3 id="position-wise-feed-forward-networksmlp">Position-wise
-Feed-Forward Networks(MLP)</h3>
-<h4 id="基本形式">基本形式</h4>
-<p><span
-class="math display">\[FFN(x)=max(0,xW_1+b_1)W_2+b_2\]</span></p>
-<h4 id="position-encoding">Position Encoding</h4>
-<p>RNN是逐步处理embedding的过程，是将t时刻的输出作为t时刻的输入的一部分考量。而Transformer则不同，他是在一开始就利用注意力机制考量不同embedding
-vectors之间的相关度，所以在输入时位置编码显得比较重要，它会提供RNN中“逐步处理”这样的时序关系，来告诉模型每个embedding的位置(position)。</p>
-<ul>
-<li>论文中的位置编码： <span class="math display">\[
-\begin{split}
-  PE_{(pos,2i)} &amp;= sin(pos/10000^{2i/d\_model})\\
-  PE_{(pos,2i+1)} &amp;= cos(pos/10000^{2i/d\_model})
-\end{split}
-\]</span></li>
-</ul>
-<h1 id="从代码出发">从代码出发</h1>
-<p>前面的章节，已经介绍了Transformer的主要框架结构，包含了(自)注意力机制、（掩码）多头注意力机制、MLP以及位置编码和残差连接，但是若没有接触过自回归结构的模型，其实仍然很难明白，当一个embedding进到Encoder之后的具体流程如何？当然可以参考这个<a
-href="https://www.bilibili.com/video/BV15v411W78M/?spm_id_from=333.999.0.0&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">教程</a>，介绍了Attention的张量计算过程，并举实例将训练流程讲清楚了。</p>
-<figure>
-<img data-src="/images/Transformer/p10.png" alt="实例" />
-<figcaption aria-hidden="true">实例</figcaption>
-</figure>
-<p>其中，&lt;bos&gt; 和 &lt;eos&gt;分别表示beginning of sentence和end of
-sentence。但即便这样，依旧会错过很多细枝末节，不妨来看看代码实现。</p>
-<h2 id="机翻代码示例">机翻代码示例</h2>
-<p>代码链接：<a
-href="https://github.com/wmathor/nlp-tutorial">github-code</a></p>
-<p>代码框架：<img data-src="/images/Transformer/p11.png"
-alt="code-struct" /></p>
-<h2 id="transformer">Transformer</h2>
-<p>Transfomer可以抽象为3部分——Encoders,Decoders和(Linear+Softmax)。其学习过程可以由function
-“forward”得出,可以看到在最初</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Transformer</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Transformer, self).__init__()</span><br><span class="line">        self.encoder = Encoder().cuda()</span><br><span class="line">        self.decoder = Decoder().cuda()</span><br><span class="line">        self.projection = nn.Linear(d_model, tgt_vocab_size, bias=<span class="literal">False</span>).cuda()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, enc_inputs, dec_inputs</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        enc_inputs: [batch_size, src_len]</span></span><br><span class="line"><span class="string">        dec_inputs: [batch_size, tgt_len]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="comment"># tensor to store decoder outputs</span></span><br><span class="line">        <span class="comment"># outputs = torch.zeros(batch_size, tgt_len, tgt_vocab_size).to(self.device)</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># enc_outputs: [batch_size, src_len, d_model], enc_self_attns: [n_layers, batch_size, n_heads, src_len, src_len]</span></span><br><span class="line">        enc_outputs, enc_self_attns = self.encoder(enc_inputs)</span><br><span class="line">        <span class="comment"># dec_outpus: [batch_size, tgt_len, d_model], dec_self_attns: [n_layers, batch_size, n_heads, tgt_len, tgt_len], dec_enc_attn: [n_layers, batch_size, tgt_len, src_len]</span></span><br><span class="line">        dec_outputs, dec_self_attns, dec_enc_attns = self.decoder(dec_inputs, enc_inputs, enc_outputs)</span><br><span class="line">        dec_logits = self.projection(dec_outputs) <span class="comment"># dec_logits: [batch_size, tgt_len, tgt_vocab_size]</span></span><br><span class="line">        <span class="keyword">return</span> dec_logits.view(-<span class="number">1</span>, dec_logits.size(-<span class="number">1</span>)), enc_self_attns, dec_self_attns, dec_enc_attns</span><br></pre></td></tr></table></figure>
-<h2 id="encoder">Encoder</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Encoder</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Encoder, self).__init__()</span><br><span class="line">        self.src_emb = nn.Embedding(src_vocab_size, d_model)</span><br><span class="line">        self.pos_emb = PositionalEncoding(d_model)</span><br><span class="line">        self.layers = nn.ModuleList([EncoderLayer() <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n_layers)])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, enc_inputs</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        enc_inputs: [batch_size, src_len]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        enc_outputs = self.src_emb(enc_inputs) <span class="comment"># [batch_size, src_len, d_model]</span></span><br><span class="line">        enc_outputs = self.pos_emb(enc_outputs.transpose(<span class="number">0</span>, <span class="number">1</span>)).transpose(<span class="number">0</span>, <span class="number">1</span>) <span class="comment"># [batch_size, src_len, d_model]</span></span><br><span class="line">        enc_self_attn_mask = get_attn_pad_mask(enc_inputs, enc_inputs) <span class="comment"># [batch_size, src_len, src_len]</span></span><br><span class="line">        enc_self_attns = []</span><br><span class="line">        <span class="keyword">for</span> layer <span class="keyword">in</span> self.layers:</span><br><span class="line">            <span class="comment"># enc_outputs: [batch_size, src_len, d_model], enc_self_attn: [batch_size, n_heads, src_len, src_len]</span></span><br><span class="line">            enc_outputs, enc_self_attn = layer(enc_outputs, enc_self_attn_mask)</span><br><span class="line">            enc_self_attns.append(enc_self_attn)</span><br><span class="line">        <span class="keyword">return</span> enc_outputs, enc_self_attns</span><br></pre></td></tr></table></figure>
-<h2 id="decoder">Decoder</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Decoder</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Decoder, self).__init__()</span><br><span class="line">        self.tgt_emb = nn.Embedding(tgt_vocab_size, d_model)</span><br><span class="line">        self.pos_emb = PositionalEncoding(d_model)</span><br><span class="line">        self.layers = nn.ModuleList([DecoderLayer() <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n_layers)])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, dec_inputs, enc_inputs, enc_outputs</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        dec_inputs: [batch_size, tgt_len]</span></span><br><span class="line"><span class="string">        enc_intpus: [batch_size, src_len]</span></span><br><span class="line"><span class="string">        enc_outputs: [batsh_size, src_len, d_model]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        dec_outputs = self.tgt_emb(dec_inputs) <span class="comment"># [batch_size, tgt_len, d_model]</span></span><br><span class="line">        dec_outputs = self.pos_emb(dec_outputs.transpose(<span class="number">0</span>, <span class="number">1</span>)).transpose(<span class="number">0</span>, <span class="number">1</span>).cuda() <span class="comment"># [batch_size, tgt_len, d_model]</span></span><br><span class="line">        dec_self_attn_pad_mask = get_attn_pad_mask(dec_inputs, dec_inputs).cuda() <span class="comment"># [batch_size, tgt_len, tgt_len]</span></span><br><span class="line">        dec_self_attn_subsequence_mask = get_attn_subsequence_mask(dec_inputs).cuda() <span class="comment"># [batch_size, tgt_len, tgt_len]</span></span><br><span class="line">        dec_self_attn_mask = torch.gt((dec_self_attn_pad_mask + dec_self_attn_subsequence_mask), <span class="number">0</span>).cuda() <span class="comment"># [batch_size, tgt_len, tgt_len]</span></span><br><span class="line"></span><br><span class="line">        dec_enc_attn_mask = get_attn_pad_mask(dec_inputs, enc_inputs) <span class="comment"># [batc_size, tgt_len, src_len]</span></span><br><span class="line"></span><br><span class="line">        dec_self_attns, dec_enc_attns = [], []</span><br><span class="line">        <span class="keyword">for</span> layer <span class="keyword">in</span> self.layers:</span><br><span class="line">            <span class="comment"># dec_outputs: [batch_size, tgt_len, d_model], dec_self_attn: [batch_size, n_heads, tgt_len, tgt_len], dec_enc_attn: [batch_size, h_heads, tgt_len, src_len]</span></span><br><span class="line">            dec_outputs, dec_self_attn, dec_enc_attn = layer(dec_outputs, enc_outputs, dec_self_attn_mask, dec_enc_attn_mask)</span><br><span class="line">            dec_self_attns.append(dec_self_attn)</span><br><span class="line">            dec_enc_attns.append(dec_enc_attn)</span><br><span class="line">        <span class="keyword">return</span> dec_outputs, dec_self_attns, dec_enc_attns</span><br></pre></td></tr></table></figure>
-<h2 id="positional-encoding">Positional Encoding</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">PositionalEncoding</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, d_model, dropout=<span class="number">0.1</span>, max_len=<span class="number">5000</span></span>):</span><br><span class="line">        <span class="built_in">super</span>(PositionalEncoding, self).__init__()</span><br><span class="line">        self.dropout = nn.Dropout(p=dropout)</span><br><span class="line"></span><br><span class="line">        pe = torch.zeros(max_len, d_model)</span><br><span class="line">        position = torch.arange(<span class="number">0</span>, max_len, dtype=torch.<span class="built_in">float</span>).unsqueeze(<span class="number">1</span>)</span><br><span class="line">        div_term = torch.exp(torch.arange(<span class="number">0</span>, d_model, <span class="number">2</span>).<span class="built_in">float</span>() * (-math.log(<span class="number">10000.0</span>) / d_model))</span><br><span class="line">        pe[:, <span class="number">0</span>::<span class="number">2</span>] = torch.sin(position * div_term)</span><br><span class="line">        pe[:, <span class="number">1</span>::<span class="number">2</span>] = torch.cos(position * div_term)</span><br><span class="line">        pe = pe.unsqueeze(<span class="number">0</span>).transpose(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        self.register_buffer(<span class="string">&#x27;pe&#x27;</span>, pe)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        x: [seq_len, batch_size, d_model]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        x = x + self.pe[:x.size(<span class="number">0</span>), :]</span><br><span class="line">        <span class="keyword">return</span> self.dropout(x)</span><br></pre></td></tr></table></figure>
-<p>当然，位置编码这里的自由度比较高，很多论文也是引入了新的位置编码改善性能。</p>
-<h1 id="vit">ViT</h1>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>Model</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Applied Multivariate Statistical Analysis(1)</title>
     <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -1641,6 +1305,342 @@ Multivariate Statistical Analysis(2)</a></p>
       <tags>
         <tag>统计分析</tag>
         <tag>数据降维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deep Residual Networks for Image Recognition</title>
+    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
+href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
+Image Recognition</a>作为开篇。<br />
+主要目的：<br />
+1. 什么是ResNet？其基本结构是什么？<br />
+2. 为什么提出ResNet?或者说它的优势是什么？<br />
+3. 为何会有其优势，从数理层面的解释是什么？<br />
+4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
+<hr />
+<h1 id="论文解析">论文解析</h1>
+<h2 id="概要">概要</h2>
+<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
+<h2 id="引言">引言</h2>
+<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
+normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
+Normalization)。<br />
+然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
+alt="深层网络准确率饱和现象" />
+从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
+<font color="red">
+设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
+mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
+error)。
+</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
+<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
+alt="Shortcut connection" /> <font color="red">Deep residual learning
+framework</font>:假设我们希望得到的一个潜在映射为<span
+class="math inline">\(\mathcal{H}(\bf
+x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
+class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
+class="math inline">\(\mathcal{F}(\textbf{x}) :=
+\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
+class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
+connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
+x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
+x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
+<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
+alt="全局设计" /></p>
+<h2 id="实验结果">实验结果</h2>
+<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
+alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
+block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
+<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
+alt="Resnet性能同plain CNN的对比" />
+上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
+class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
+<h1 id="数理解释">数理解释</h1>
+<ol type="1">
+<li>假设plain CNN需要学得潜在的mapping是<span
+class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
+class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
+class="math inline">\(g\)</span>;(2)深层部分的映射<span
+class="math inline">\(f\)</span>，即<span
+class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
+class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
+f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
+g(\theta)}{\partial
+\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
+<li>同样的，ResNet需要学习的潜在mapping也是<span
+class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
+class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
+connection的原因，每次迭代训练参数时需要做的是<span
+class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
+g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
+\underbrace{\frac{\partial g(\theta)}{\partial
+\theta}}_{(2)}\)</span>，在(1)中还会存在plain
+CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
+</ol>
+<h1 id="总结">总结</h1>
+<p>ResNet就是使用了shortcut(residual)
+connection的CNN变种，其基本结构就是残差块(residual
+block)和残差连接(residual
+connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
+<h1 id="遗留问题">遗留问题</h1>
+<ol type="1">
+<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
+<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
+<li>提到Residual，在机器学习中，比如Gradient
+boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>图像识别</tag>
+        <tag>ResNet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Transformer</title>
+    <url>/2023/06/18/Transformer/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。</p>
+<h1 id="提问">提问</h1>
+<ol type="1">
+<li>What is the Transformer？其基本结构是什么？
+<ol type="1">
+<li>什么是“平均注意力加权位置”(average attention-weighted position)</li>
+<li>为什么平均注意力加权位置会导致有效分辨率降低？</li>
+</ol></li>
+<li>Transformer的主要特征(优缺点)？它是如何实现的(实现机制)？</li>
+<li>注意力机制？自注意力机制？两者区别？</li>
+<li>ViT是如何将Transformer移植到视觉领域的？</li>
+</ol>
+<h1 id="参考">参考</h1>
+<ul>
+<li><strong>Transformer</strong></li>
+</ul>
+<ol type="1">
+<li>Attention Is All You Need, Neural Information Processing Systems
+(NIPS 2017);</li>
+<li>zhihu---<a
+href="https://zhuanlan.zhihu.com/p/411311520">Transformer详解</a>;</li>
+<li><a
+href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.999.0.0">Transformer精读-李沐</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.999.0.0">白话教程1</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV15v411W78M/?spm_id_from=333.999.0.0&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">白话教程2</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV1Qg4y1P7r4/?spm_id_from=333.788.recommend_more_video.1&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">Transformer中的数据流动</a>---<font color="red">全场最佳</font></li>
+</ol>
+<ul>
+<li><strong>Vision Transformer</strong></li>
+</ul>
+<ol type="1">
+<li><a href="https://arxiv.org/pdf/2010.11929.pdf">AN IAMGE IS WORTH 16
+<span class="math inline">\(\times\)</span> 16 TRANSFORMERS FOR IMAGE
+RECOGNITION AT SCALE</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV15P4y137jb/?spm_id_from=333.999.0.0&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">ViT解读</a>--by<a
+href="https://bryanyzhu.github.io/">朱毅</a></li>
+</ol>
+<h1 id="模型框架">模型框架</h1>
+<ul>
+<li>left:encoder <span class="math inline">\(\times N\)</span></li>
+<li>right:decoder <span class="math inline">\(\times N\)</span></li>
+<li>computing the loss compared with the GT after prediction by
+softmax(Linear(decoder_output)) <img data-src="/images/Transformer/p1.png"
+alt="Transformer Architecture" /></li>
+</ul>
+<h1 id="推断分类">推断分类</h1>
+<h2 id="transduction-induction">transduction &amp; induction</h2>
+<p>推断主要分为两类：<br />
+1. 归纳推断(inductive inference): induction is reasoning from observed
+training cases to general rules, which are then applied to the test
+cases.
+归纳是从观察到的训练案例推理出一般规则，然后将其应用于测试案例<br />
+2.
+转导推断：<font color="green">在逻辑、统计推断和有监督学习中，</font>transduction或transductive
+inference指的是从观察到的特定（训练）案例到特定（测试）案例的推理</p>
+<blockquote>
+<p>简单说，一般的机器学习都是希望在训练数据集上学到使得期望风险最小的模型，当这类模型足够鲁棒时，其泛化能力足够强，即模型在相似数据上普遍适用；而转导学习的目标是学习一种在给定测试集上错误率最小的模型，在训练阶段可以利用测试集的信息</p>
+</blockquote>
+<h2 id="转导示例示意">转导示例/示意</h2>
+<p>为了对比转导和归纳，在这里举例对比他们的一些特有的属性。 <img data-src="/images/Transformer/p2.png" alt="exa" />
+在上图中，给出了一个点集，有些点已经被标注好了标签(A、B、C)，但是大部分点没有。目标：预测未被标注的标签信息</p>
+<h3 id="inductive-inference">inductive inference</h3>
+<p>解决此问题的归纳方法是使用标记点来训练监督学习算法，然后让它预测所有未标记点的标签。然而，对于这个问题，监督学习算法将只有五个标记点用作构建预测模型的基础。建立一个捕获这些数据结构的模型肯定会很困难。例如，如果使用最近邻算法，则中间附近的点将被标记为“A”或“C”，即使它们显然与标记为“B”的点属于同一簇。</p>
+<h3 id="transductive-inference">transductive inference</h3>
+<p>转导的优点是在执行标记任务时能够考虑所有点，而不仅仅是标记点。在这种情况下，传导算法将根据未标记点自然所属的簇来标记它们。因此，中间的点很可能被标记为“B”，因为它们非常靠近该簇。</p>
+<h2 id="转导的适用场合和优缺点">转导的适用场合和优缺点</h2>
+<p>转导的优点是它可以用更少的标记点做出更好的预测，因为它使用在未标记点中发现的自然中断。转导的一个缺点是它无法建立预测模型。如果将先前未知的点添加到集合中，则需要对所有点重复整个传导算法才能预测标签。如果数据在计算流中增量可用，则计算成本可能会很高。此外，这可能会导致一些旧点的预测发生变化（这可能是好是坏，具体取决于应用程序）。另一方面，监督学习算法可以立即标记新点，而计算成本非常低</p>
+<h2 id="转导算法">转导算法</h2>
+<p>转导算法可以大致分为两类：那些寻求将离散标签分配给未标记点的算法，以及那些寻求对未标记点回归连续标签的算法。寻求预测离散标签的算法往往是通过向聚类算法添加部分监督来导出的。可以使用两类算法：平面聚类和层次聚类。后者可以进一步细分为两类：通过划分进行聚类的聚类和通过聚集进行聚类的聚类。寻求预测连续标签的算法往往是通过向流形学习算法添加部分监督来导出的。</p>
+<h3 id="partitioning-transduction">Partitioning transduction</h3>
+<p>分区转导可以被认为是自上而下的转导。它是基于分区的聚类的半监督扩展。它通常按如下方式执行：将所有点的集合视为一个大分区。虽然任何分区
+P 都包含两个具有冲突标签的点： 将 P 分区为更小的分区。对于每个分区 P：为
+P 中的所有点分配相同的标签。</p>
+<h3 id="agglomerative-transduction">Agglomerative transduction</h3>
+<p>聚集转导可以被认为是自下而上的转导。它是凝聚聚类的半监督扩展。它通常按如下方式执行：计算所有点之间的成对距离
+D。按升序对 D 进行排序。将每个点视为大小为 1 的簇。对于 D 中的每对点
+{a,b}：如果（a 未标记）或（b 未标记）或（a 和 b
+具有相同的标记），则合并包含 a 和 b
+的两个簇。使用相同的标签标记合并簇中的所有点。</p>
+<h3 id="manifold-transduction">Manifold transduction</h3>
+<p>基于流形学习的转导仍然是一个非常年轻的研究领域。</p>
+<h1 id="layer-normalization-batch-normalization">Layer Normalization
+&amp; Batch Normalization</h1>
+<h2 id="d情形">2D情形</h2>
+<p>在统计推断基础部分得知，单个batch的样本可以表示为<span
+class="math inline">\(X \in \mathbb{R}^{n \times
+p}\)</span>，其中行向量组表示该batch内所有样本，列向量组表示所有特征。假定这里的batch都是预处理之后或某些layer的输出，则</p>
+<ul>
+<li><p>Batch normalization:假设<span class="math inline">\(X=\{f_1, f_2,
+\dotsb, f_p\}, f_i = (x_{1i}, x_{2i}, \dotsb,
+x_{ni})^T\)</span>，则特征均值<span
+class="math inline">\(\bar{f_i}=\sum_{j=1}^n
+x_{ji}\)</span>，特征标准差为<span
+class="math inline">\(\sigma_i\)</span>,则batch
+normalization所做的是<span
+class="math inline">\(\frac{f_i-\bar{f_i}}{\sigma_i}\)</span>。更具体的，我们将该batch的均值和方差-协方差矩阵记作<span
+class="math inline">\(\bar{X}\)</span>，<span
+class="math inline">\(\frak{v}\)</span>，则<span
+class="math inline">\(batch\_normal(X)=\frac{X-\bar{X}}{\frak{v}}\)</span>
+<img data-src="/images/Transformer/p3.png" alt="2D-batch norm" /></p></li>
+<li><p>Layer normalization:2D时的layer norm和batch
+normal很相似，甚至计算如出一辙，只有细小区别，对比两图一目了然 <img data-src="/images/Transformer/p4.png" alt="2D-layer norm" /></p></li>
+</ul>
+<h2 id="时序3d情形">时序3D情形</h2>
+<p>首先，由于文本之间拟存在时序关系，所以当每个短句抽象为一个seq，则在多个样本打包成一个batch时，其batch样本集结构如下图所示(假设每个短句，即seq的长度一样,当然现实是seq长度不一致时，可以选择补零策略)。这里，我们看到3D情形下的batch
+norm差异性还是比较大的。一般情形下，考虑下面的情况，我们优先选择layer
+norm:当一个长句成为该batch中的一个seq，显然在计算某个特征feature(q)的均值和方差时，其影响力就会比较大，则数据抖动就较大，这样是不好的；相反，在求单一样本的layer
+norm时，则相对稳定。</p>
+<figure>
+<img data-src="/images/Transformer/p6.png" alt="时序3D-batch norm" />
+<figcaption aria-hidden="true">时序3D-batch norm</figcaption>
+</figure>
+<figure>
+<img data-src="/images/Transformer/p5.png" alt="时序3D-layer norm" />
+<figcaption aria-hidden="true">时序3D-layer norm</figcaption>
+</figure>
+<h1 id="从论文出发">从论文出发</h1>
+<p>鉴于本人的研究方向主要是图像识别，所以对NLP只能基于自己的粗浅理解和面向Google,XXXD</p>
+<h2 id="背景">背景</h2>
+<p>常见的并行计算模型(如，ByteNet和ConvS2S)中，使用了卷积神经网络作为基本的构建模块，在输入和输出位置并行计算隐藏特征表示，这确实解决了顺序计算/训练所带来的时间消耗，却带了这样的问题——学习远距离之间的特征依赖关系更加困难(操作/计算量激增)。相反，在Transformer中，这样的计算量被减少为恒定数量，<font color="red">代价是由于均值了注意力加权position而导致的有效分辨率降低</font>，在实现时，多头注意力机制可以抵消这种影响。</p>
+<h2 id="自注意力机制">自注意力机制</h2>
+<p>原文定义：self-attention, sometimes called intra-attention is an
+attention mechanism relating different positions of a single sequence in
+order to compute a representation of the sequence.
+译作：自注意力，有时叫做内注意力，是一种注意力机制，用于单一序列中的不同位置，以计算序列的表示。</p>
+<h2 id="不完全定义">不完全定义</h2>
+<p>在这篇paper中，Transformer是一个<font color="red">完全依靠自注意力</font>进行输入和输出表示计算的<a
+href="https://en.wikipedia.org/wiki/Transduction_(machine_learning)">转导模型</a>。在Transformer中，自注意力机制允许模型在编码和解码阶段同时对整个输入序列和输出序列进行注意力计算。这种并行性使得Transformer能够在整个数据集上进行推断，利用所有样本的信息来学习模型的表示能力。这种全局推断的性质使得Transformer更具转导模型的特点。</p>
+<h2 id="框架解析">框架解析</h2>
+<ul>
+<li>转导模型</li>
+<li>编码器-解码器结构</li>
+<li>（自）注意力机制</li>
+</ul>
+<h3 id="encoder-and-decoder-stacks">Encoder and Decoder Stacks</h3>
+<ul>
+<li>编码器：编码器由N个相同的层堆叠而成。每个层包含两个子层。第一个子层是一个多头自注意力机制，第二个子层是一个简单的position-wise的全连接前馈网络。在两个子层周围使用残差连接，并且每个子层的输出由于采用了残差连接和Layer
+Normlization，所以当每层的输入是x时，其标准输出是LayerNorm(x+Sublayer(x)),这里的Sublayer指的是某个子层实现的函数功能；</li>
+<li>解码器：解码器也由N个相同的层堆叠而成。除了每个编码器层中的两个子层外，解码器还插入第三个子层，该子层在编码器堆栈的输出上执行多头注意力。与编码器类似，每个子层周围使用残差连接，然后进行层归一化。此外还修改了解码器堆栈中的自注意力子层，以防止位置编码参与到后续的位置编码。</li>
+</ul>
+<blockquote>
+<p>掩码：假如需要预测t+1时刻的分布或真值，需要依据t时刻所提供的真实数据对t+1时的分布（或真值）进行预测，而掩码使得在t时刻，预测者看不到t+1时刻的真值，从而保证训练和预测时的行为一致性（对真实情况未知）</p>
+</blockquote>
+<h3 id="attention">Attention</h3>
+<p>注意力函数（Attention
+function）可以描述成一个查询（query）和一组键-值（key-value）对映射到一个输出上，其中查询（query）、键（keys）、值（values）和输出都是向量。输出通过对值的加权求和来计算，其中分配给每个值的权重是通过查询与相应键的相似度（兼容性）函数计算得到的。即
+<span class="math display">\[Attention(Q,K,V)=compatibility(Q,K) \cdot
+V\]</span> 这里，compatibility是描述Q,K相似度的函数。</p>
+<p>假设以2范距离来描述Q,K的相似度，即<span
+class="math inline">\(compatibility(Q,K) \propto
+\frac{1}{||Position_Q-Position_K||_2}\)</span>，则如下图所示，体现出了对向量V各分量的加权情形
+<img data-src="/images/Transformer/p8.png" alt="compatibility function" />
+可以看到，由于查询分量<span class="math inline">\(Q_i\)</span>离<span
+class="math inline">\(k_1,k_2\)</span>比较近，所以对<span
+class="math inline">\(v_1,v_2\)</span>加权比较大，相反对较远的V分量加权较小。</p>
+<h4 id="scaled-dot-product-attention">Scaled Dot-Product Attention</h4>
+<p>计算流程如下图所示 <img data-src="/images/Transformer/p7.png"
+alt="Scaled-Dot Attention" /></p>
+<p>基本形式： <span
+class="math display">\[Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V\]</span></p>
+<h4 id="multi-head-attention">Multi-Head Attention</h4>
+<figure>
+<img data-src="/images/Transformer/p9.png" alt="Multi-Head Attention" />
+<figcaption aria-hidden="true">Multi-Head Attention</figcaption>
+</figure>
+<blockquote>
+<p>为什么使用多头注意力机制？
+类似于CNN的多通道卷积(每个通道都是图像的一个特征子空间，不过开始时不包含高级语义，需要通过多个filter【对应多头注意力里的多个线性投影下的关注】后，才能获得)。在Transformer中引入了h次注意力，由图可知，全连接的线性层将输入的(V,K,Q)进行降维（投影），然后通过h次的Scaled
+Dot-Product
+Attention获得h个模式Pattern，可以看到这样做可以挖掘更多的高级特征。</p>
+</blockquote>
+<p>多头注意力的一般形式： <span class="math display">\[\begin{split}
+MultiHead(Q,K,V)&amp;=Concat(head_1,\dots,head_h)W^O \\
+where head_i &amp;= Attention(QW_i^Q,KW^K_i,VW^V_i)
+\end{split}
+\]</span> 这里，<span class="math inline">\(Q,K,V \in
+\mathbb{R}^{d\_model},W_i^Q \in \mathbb{R}^{d\_model \times d_k}, W^K_i
+\in \mathbb{R}^{d\_model \times d_k},W^V_i \in \mathbb{R}^{d\_model
+\times d_v},i=\{1,2,\dots,h\}\)</span> and <span
+class="math inline">\(W^O \in \mathbb{R}^{hd_v \times
+d\_model}\)</span>。 可以看到，这里将Q,K,V通过h种投影矩阵<span
+class="math inline">\((W_i^Q,W^K_i,W^V_i)\)</span>投影到了不同的子空间，从而在不同的子空间上进行关注。</p>
+<p>多头注意力使模型能够同时关注不同位置的不同表示子空间中的信息。使用单个注意力头，平均操作会抑制这种能力。通过引入多个注意力头，模型可以并行地学习多个不同的查询、键和值的投影，从而在不同的表示子空间上进行关注，避免了信息的平均化。这样可以增强模型对输入的表征能力，提高模型处理复杂关系和学习长距离依赖的能力。通过多头注意力，模型可以捕捉更丰富的上下文信息，并且能够更好地处理输入中的多样性和复杂性。</p>
+<h3 id="position-wise-feed-forward-networksmlp">Position-wise
+Feed-Forward Networks(MLP)</h3>
+<h4 id="基本形式">基本形式</h4>
+<p><span
+class="math display">\[FFN(x)=max(0,xW_1+b_1)W_2+b_2\]</span></p>
+<h4 id="position-encoding">Position Encoding</h4>
+<p>RNN是逐步处理embedding的过程，是将t时刻的输出作为t时刻的输入的一部分考量。而Transformer则不同，他是在一开始就利用注意力机制考量不同embedding
+vectors之间的相关度，所以在输入时位置编码显得比较重要，它会提供RNN中“逐步处理”这样的时序关系，来告诉模型每个embedding的位置(position)。</p>
+<ul>
+<li>论文中的位置编码： <span class="math display">\[
+\begin{split}
+  PE_{(pos,2i)} &amp;= sin(pos/10000^{2i/d\_model})\\
+  PE_{(pos,2i+1)} &amp;= cos(pos/10000^{2i/d\_model})
+\end{split}
+\]</span></li>
+</ul>
+<h1 id="从代码出发">从代码出发</h1>
+<p>前面的章节，已经介绍了Transformer的主要框架结构，包含了(自)注意力机制、（掩码）多头注意力机制、MLP以及位置编码和残差连接，但是若没有接触过自回归结构的模型，其实仍然很难明白，当一个embedding进到Encoder之后的具体流程如何？当然可以参考这个<a
+href="https://www.bilibili.com/video/BV15v411W78M/?spm_id_from=333.999.0.0&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">教程</a>，介绍了Attention的张量计算过程，并举实例将训练流程讲清楚了。</p>
+<figure>
+<img data-src="/images/Transformer/p10.png" alt="实例" />
+<figcaption aria-hidden="true">实例</figcaption>
+</figure>
+<p>其中，&lt;bos&gt; 和 &lt;eos&gt;分别表示beginning of sentence和end of
+sentence。但即便这样，依旧会错过很多细枝末节，不妨来看看代码实现。</p>
+<h2 id="机翻代码示例">机翻代码示例</h2>
+<p>代码链接：<a
+href="https://github.com/wmathor/nlp-tutorial">github-code</a></p>
+<p>代码框架：<img data-src="/images/Transformer/p11.png"
+alt="code-struct" /></p>
+<h2 id="transformer">Transformer</h2>
+<p>Transfomer可以抽象为3部分——Encoders,Decoders和(Linear+Softmax)。其学习过程可以由function
+“forward”得出,可以看到在最初</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Transformer</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Transformer, self).__init__()</span><br><span class="line">        self.encoder = Encoder().cuda()</span><br><span class="line">        self.decoder = Decoder().cuda()</span><br><span class="line">        self.projection = nn.Linear(d_model, tgt_vocab_size, bias=<span class="literal">False</span>).cuda()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, enc_inputs, dec_inputs</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        enc_inputs: [batch_size, src_len]</span></span><br><span class="line"><span class="string">        dec_inputs: [batch_size, tgt_len]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="comment"># tensor to store decoder outputs</span></span><br><span class="line">        <span class="comment"># outputs = torch.zeros(batch_size, tgt_len, tgt_vocab_size).to(self.device)</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># enc_outputs: [batch_size, src_len, d_model], enc_self_attns: [n_layers, batch_size, n_heads, src_len, src_len]</span></span><br><span class="line">        enc_outputs, enc_self_attns = self.encoder(enc_inputs)</span><br><span class="line">        <span class="comment"># dec_outpus: [batch_size, tgt_len, d_model], dec_self_attns: [n_layers, batch_size, n_heads, tgt_len, tgt_len], dec_enc_attn: [n_layers, batch_size, tgt_len, src_len]</span></span><br><span class="line">        dec_outputs, dec_self_attns, dec_enc_attns = self.decoder(dec_inputs, enc_inputs, enc_outputs)</span><br><span class="line">        dec_logits = self.projection(dec_outputs) <span class="comment"># dec_logits: [batch_size, tgt_len, tgt_vocab_size]</span></span><br><span class="line">        <span class="keyword">return</span> dec_logits.view(-<span class="number">1</span>, dec_logits.size(-<span class="number">1</span>)), enc_self_attns, dec_self_attns, dec_enc_attns</span><br></pre></td></tr></table></figure>
+<h2 id="encoder">Encoder</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Encoder</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Encoder, self).__init__()</span><br><span class="line">        self.src_emb = nn.Embedding(src_vocab_size, d_model)</span><br><span class="line">        self.pos_emb = PositionalEncoding(d_model)</span><br><span class="line">        self.layers = nn.ModuleList([EncoderLayer() <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n_layers)])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, enc_inputs</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        enc_inputs: [batch_size, src_len]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        enc_outputs = self.src_emb(enc_inputs) <span class="comment"># [batch_size, src_len, d_model]</span></span><br><span class="line">        enc_outputs = self.pos_emb(enc_outputs.transpose(<span class="number">0</span>, <span class="number">1</span>)).transpose(<span class="number">0</span>, <span class="number">1</span>) <span class="comment"># [batch_size, src_len, d_model]</span></span><br><span class="line">        enc_self_attn_mask = get_attn_pad_mask(enc_inputs, enc_inputs) <span class="comment"># [batch_size, src_len, src_len]</span></span><br><span class="line">        enc_self_attns = []</span><br><span class="line">        <span class="keyword">for</span> layer <span class="keyword">in</span> self.layers:</span><br><span class="line">            <span class="comment"># enc_outputs: [batch_size, src_len, d_model], enc_self_attn: [batch_size, n_heads, src_len, src_len]</span></span><br><span class="line">            enc_outputs, enc_self_attn = layer(enc_outputs, enc_self_attn_mask)</span><br><span class="line">            enc_self_attns.append(enc_self_attn)</span><br><span class="line">        <span class="keyword">return</span> enc_outputs, enc_self_attns</span><br></pre></td></tr></table></figure>
+<h2 id="decoder">Decoder</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Decoder</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(Decoder, self).__init__()</span><br><span class="line">        self.tgt_emb = nn.Embedding(tgt_vocab_size, d_model)</span><br><span class="line">        self.pos_emb = PositionalEncoding(d_model)</span><br><span class="line">        self.layers = nn.ModuleList([DecoderLayer() <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n_layers)])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, dec_inputs, enc_inputs, enc_outputs</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        dec_inputs: [batch_size, tgt_len]</span></span><br><span class="line"><span class="string">        enc_intpus: [batch_size, src_len]</span></span><br><span class="line"><span class="string">        enc_outputs: [batsh_size, src_len, d_model]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        dec_outputs = self.tgt_emb(dec_inputs) <span class="comment"># [batch_size, tgt_len, d_model]</span></span><br><span class="line">        dec_outputs = self.pos_emb(dec_outputs.transpose(<span class="number">0</span>, <span class="number">1</span>)).transpose(<span class="number">0</span>, <span class="number">1</span>).cuda() <span class="comment"># [batch_size, tgt_len, d_model]</span></span><br><span class="line">        dec_self_attn_pad_mask = get_attn_pad_mask(dec_inputs, dec_inputs).cuda() <span class="comment"># [batch_size, tgt_len, tgt_len]</span></span><br><span class="line">        dec_self_attn_subsequence_mask = get_attn_subsequence_mask(dec_inputs).cuda() <span class="comment"># [batch_size, tgt_len, tgt_len]</span></span><br><span class="line">        dec_self_attn_mask = torch.gt((dec_self_attn_pad_mask + dec_self_attn_subsequence_mask), <span class="number">0</span>).cuda() <span class="comment"># [batch_size, tgt_len, tgt_len]</span></span><br><span class="line"></span><br><span class="line">        dec_enc_attn_mask = get_attn_pad_mask(dec_inputs, enc_inputs) <span class="comment"># [batc_size, tgt_len, src_len]</span></span><br><span class="line"></span><br><span class="line">        dec_self_attns, dec_enc_attns = [], []</span><br><span class="line">        <span class="keyword">for</span> layer <span class="keyword">in</span> self.layers:</span><br><span class="line">            <span class="comment"># dec_outputs: [batch_size, tgt_len, d_model], dec_self_attn: [batch_size, n_heads, tgt_len, tgt_len], dec_enc_attn: [batch_size, h_heads, tgt_len, src_len]</span></span><br><span class="line">            dec_outputs, dec_self_attn, dec_enc_attn = layer(dec_outputs, enc_outputs, dec_self_attn_mask, dec_enc_attn_mask)</span><br><span class="line">            dec_self_attns.append(dec_self_attn)</span><br><span class="line">            dec_enc_attns.append(dec_enc_attn)</span><br><span class="line">        <span class="keyword">return</span> dec_outputs, dec_self_attns, dec_enc_attns</span><br></pre></td></tr></table></figure>
+<h2 id="positional-encoding">Positional Encoding</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">PositionalEncoding</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, d_model, dropout=<span class="number">0.1</span>, max_len=<span class="number">5000</span></span>):</span><br><span class="line">        <span class="built_in">super</span>(PositionalEncoding, self).__init__()</span><br><span class="line">        self.dropout = nn.Dropout(p=dropout)</span><br><span class="line"></span><br><span class="line">        pe = torch.zeros(max_len, d_model)</span><br><span class="line">        position = torch.arange(<span class="number">0</span>, max_len, dtype=torch.<span class="built_in">float</span>).unsqueeze(<span class="number">1</span>)</span><br><span class="line">        div_term = torch.exp(torch.arange(<span class="number">0</span>, d_model, <span class="number">2</span>).<span class="built_in">float</span>() * (-math.log(<span class="number">10000.0</span>) / d_model))</span><br><span class="line">        pe[:, <span class="number">0</span>::<span class="number">2</span>] = torch.sin(position * div_term)</span><br><span class="line">        pe[:, <span class="number">1</span>::<span class="number">2</span>] = torch.cos(position * div_term)</span><br><span class="line">        pe = pe.unsqueeze(<span class="number">0</span>).transpose(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        self.register_buffer(<span class="string">&#x27;pe&#x27;</span>, pe)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        x: [seq_len, batch_size, d_model]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        x = x + self.pe[:x.size(<span class="number">0</span>), :]</span><br><span class="line">        <span class="keyword">return</span> self.dropout(x)</span><br></pre></td></tr></table></figure>
+<p>当然，位置编码这里的自由度比较高，很多论文也是引入了新的位置编码改善性能。</p>
+<h1 id="vit">ViT</h1>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>Model</tag>
       </tags>
   </entry>
 </search>
