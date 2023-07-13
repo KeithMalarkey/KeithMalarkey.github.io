@@ -1,63 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Fourier Series and Fourier Transform</title>
-    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>Combinatorics</title>
-    <url>/2023/06/24/Combinatorial-Mathematics/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>主要记录一些组合数学和离散数学的知识框架用以回顾,
-参考书：（美）R.A.Brualdi. 组合数学（第五版）. 机械工业出版社，2012.</p>
-<h1 id="什么是组合数学">什么是组合数学</h1>
-<p>组合数学也称为组合学和组合分析，是一门研究离散对象的科学。随着计算机科学的日益发展，组合数学的重要性也日渐凸显，因为计算机科学的核心内容是使用算法处理离散数据。组合数学主要研究满足一定条件的组态（也称组合模型）的存在、计数以及构造等方面的问题。组合数学的主要内容有组合计数、组合设计、组合矩阵、组合优化（最佳组合）等。组合数学不仅在软件技术中有重要的应用价值，在企业管理，交通规划，试验设计，战争指挥，金融分析等领域都有重要的应用。</p>
-<h2 id="切块问题">切块问题</h2>
-<p>把一个<span class="math inline">\(3 \times 3 \times
-3\)</span>的立方体木块切成27个<span class="math inline">\(1 \times 1
-\times
-1\)</span>的小立方体木块，如果切割过程中允许重新排列已切割木块的位置，求完成整个切割的最少次数。<br />
-1. 测量实心长方体的对角线长度？<br />
-2. 如果把上述问题中的立方体换成<span class="math inline">\(3 \times 6
-\times 9\)</span>的长方体结果如何？</p>
-<p>思路：对于<span class="math inline">\(1 \times 1 \times
-5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil \log_2
-5 \rceil\)</span>；相似的，对于<span class="math inline">\(1 \times 3
-\times 5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil
-\log_2 3 \rceil + \lceil \log_2 5 \rceil\)</span></p>
-<p>解答：由上分析，对于任意<span class="math inline">\(w_1 \times w_2
-\times w_3\)</span>的立方体，分割成单位立方体至少需要<span
-class="math inline">\(\sum\limits_{i=1}^3 \lceil \log_2 w_i
-\rceil\)</span>,故此时的最小切割代价为<span class="math inline">\(3
-\times \lceil \log_2 3 \rceil = 6\)</span></p>
-<h2 id="nim问题">Nim问题</h2>
-<p>有五堆石子，各堆石子的个数分别是10、29和48。甲乙两人玩取石子游戏，要求：两个人轮流取石子，每个人取石子时，只能从同一堆中取，最少取一枚，最多可以把整堆石子取走。谁取到最后的石子，谁获胜。如果你是其中的一个游戏人，你选择先取子还是后取子，如何取？</p>
-<p>思路：按位异或，非零，则先手必胜；否则，先手必输。</p>
-<p>解答：10D=1010B,29D=11101B,48D=110000B,由<span
-class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
-0\)</span>，所以先手必赢。</p>
-<p>取子方案：<br />
-<span class="math inline">\(110000(48D) \rightarrow
-010111(23D)\)</span>,即从第三堆48块中取走25块，并保证每次自己取子之后，每堆石子数按位异或为0.，这样最终就会获胜。</p>
-<h1 id="鸽笼原理">鸽笼原理</h1>
-<h2 id="简单形式">简单形式</h2>
-<p>若把n+1个物体放到n
-（n≥1）个盒子中去，则至少有一个盒子放有至少2个物体。</p>
-<p>证明：用反证法证明。如果n个盒子中每个盒子至多放入一个物体，则放入n个盒子中的物体总数至多为n个。这与假设有n+1个物体矛盾。从而定理得证。</p>
-<h2 id="例题">例题</h2>
-<p><img data-src="/images/Combinatorial-Mathematics/p1.jpg" alt="p1" /> <img data-src="/images/Combinatorial-Mathematics/p2.png" alt="p2" /> <img data-src="/images/Combinatorial-Mathematics/p3.png" alt="p3" /> <img data-src="/images/Combinatorial-Mathematics/p4.png" alt="p4-1" /> <img data-src="/images/Combinatorial-Mathematics/p4-1.png" alt="p4-2" /></p>
-<h2 id="一般形式">一般形式</h2>
-]]></content>
-  </entry>
-  <entry>
-    <title>Principal component analysis</title>
-    <url>/2023/05/30/Principal-component-analysis/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
     <title>Applied Multivariate Statistical Analysis(2)</title>
     <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
     <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
@@ -93,144 +36,6 @@ class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
         <tag>统计分析</tag>
         <tag>数据降维</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Pattern Recognition and Machine Learning(1)</title>
-    <url>/2023/06/01/PRML-1/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<ol type="1">
-<li>学习模式识别和机器学习的基础</li>
-<li>贝叶斯学派日常学习记录</li>
-<li>不断夯实基础，包括统计学习的相关概念、图网络和经典的生成模型等</li>
-<li>面向以下几个优秀UP学习：
-<ol type="1">
-<li><a
-href="https://space.bilibili.com/497536319?spm_id_from=333.999.0.0">徐芝兰</a></li>
-<li><a
-href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">派派大星星</a></li>
-<li><a
-href="https://space.bilibili.com/552439878?spm_id_from=333.999.0.0">Poros踵</a></li>
-</ol></li>
-<li><a
-href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">UP派派大星星</a>
-给出了相关书籍的<a
-href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>,里面会有简略中文版书籍和公式推导</li>
-<li><a
-href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">英文原版书籍</a></li>
-<li>因为一些推理或者proof不够完整，自己整理和修改了<a
-href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>，之后会上传到github(尚未完成：TODO)
-<!-- #TODO --></li>
-</ol>
-<h1 id="prerequisites">Prerequisites</h1>
-<p>需要一些前备知识： 1. 概率论(够用)或随机过程(更好) 2.
-线性代数/高等代数/矩阵论 3. 微积分基础</p>
-<h1 id="频率学派和贝叶斯学派">频率学派和贝叶斯学派</h1>
-<p>在学习大数定理时，在样本观测值已知情形下，我们可以确定该样本的似然函数，通过求最大似然确定未知参数。即，假设对独立同分布(i.i.d,
-independent and identical distribution)的样本集<span
-class="math inline">\(X_1,X_2,\dotsb,X_n\)</span>进行观测，其观测值依次为<span
-class="math inline">\(x_1,x_2,\dotsb,x_n\)</span>，其样本的p.d.f(概率密度函数)为<span
-class="math display">\[p(x_i|\omega)(i=1,2,\dots,n)\]</span>
-则相应似然函数为<span
-class="math inline">\(f(\omega)=\prod\limits_{i=1}^n
-p(x_i|\omega)\)</span>,然后求得对参数<span
-class="math inline">\(\omega\)</span>的极大参数估计<span
-class="math inline">\(\hat{\omega}_{MLE}\)</span>，其推导如下： <span
-class="math display">\[
-\begin{equation*}
-    \begin{split}
-    \hat{\omega}_{MLE}&amp;= argmax \ln f(\omega)\\
-    &amp;= argmax \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
-    &amp;= argmin - \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
-    \end{split}
-\end{equation*}
-\]</span> 参考<a
-href="https://zhuanlan.zhihu.com/p/337637096">频率学派和贝叶斯学派</a>,<font color="purple">频率学派和贝叶斯学派的主要区别：是否允许先验概率分布的使用</font>。</p>
-<ul>
-<li>频率学派不假设任何的先验知识，不参照过去的经验，只按照当前已有的数据进行概率推断</li>
-<li>贝叶斯学派会假设先验知识的存在，然后再用采样逐渐修改先验知识并逼近真实知识(一个不断更新先验知识的过程，也就是一个不断学习的过程)</li>
-</ul>
-<p>因此贝叶斯推论中前一次得到的后验概率分布可以作为后一次的先验概率。但实际上，在数据量趋近无穷时，频率学派和贝叶斯学派得到的结果是一样的，也就是说频率方法是贝叶斯方法的极限。当考虑的试验次数非常少的时候，贝叶斯方法的解释非常有用。此外，贝叶斯理论将我们对于随机过程的先验知识纳入考虑，当我们获得的数据越来越多的时候，这个先验的概率分布就会被更新到后验分布中。</p>
-<h2 id="贝叶斯公式">贝叶斯公式</h2>
-<p><span class="math display">\[
-\begin{equation}
-\begin{split}
-    p(\theta | x)&amp;= \frac{p(x|\theta) \cdot \pi(\theta)}{p(x)}\\
-    &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\sum\limits_{\Theta}
-p(x|\theta) \cdot \pi(\theta)}\\
-    \text{或} &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\int_{\Theta}
-p(x|\theta) \cdot \pi(\theta)d\theta}
-\end{split}
-\end{equation}
-\]</span> 其中，<span
-class="math inline">\(\pi(\theta)\)</span>称为先验概率(the prior)，<span
-class="math inline">\(p(x|\theta)\)</span>称为似然函数(likelihood)，<span
-class="math inline">\(p(x)\)</span>称为边缘分布(margin
-distribution)，<span class="math inline">\(p(\theta |
-x)\)</span>称为后验分布(the
-posterior)。事实上，分母可以看成是对后验分布的正则化或归一化</p>
-<h2 id="先验概率分布">先验概率分布</h2>
-<blockquote>
-<p><a
-href="https://en.wikipedia.org/wiki/Prior_probability">维基百科</a>:A
-prior probability distribution of an uncertain quantity, often simply
-called the prior, is its assumed probability distribution before some
-evidence is taken into account. For example, the prior could be the
-probability distribution representing the relative proportions of voters
-who will vote for a particular politician in a future election. The
-unknown quantity may be a parameter of the model or a latent variable
-rather than an observable variable.
-不确定量的先验概率分布，通常简称为先验，是在考虑某些证据之前假定的概率分布。例如，先验可以是代表在未来选举中投票给特定政治家的选民的相对比例的概率分布。未知量可能是模型的参数或潜在变量，而不是可观察变量。</p>
-</blockquote>
-<h2 id="共轭分布">共轭分布</h2>
-<p>在贝叶斯统计中，如果先验分布和后验分布属于同类（分布形式相同），则先验分布与后验分布被称为<font color="red">共轭分布</font>，而先验分布被称为似然函数的<font color="red">共轭先验</font>。如果我们需要验证共轭分布，由于<span
-class="math inline">\(posterior \propto likelihood \times
-prior\)</span>，所以带入似然函数和先验分布子式之后，若后验分布和先验分布的形式相同，那么就说明两者是共轭分布。</p>
-<h2 id="共轭分布举例">共轭分布举例</h2>
-<ol type="1">
-<li>二项分布 <span class="math display">\[Bin(m|N,\mu)=\binom{N}{m}\mu^m
-(1-\mu)^{N-m} \label{eq3}\]</span></li>
-<li>Beta分布 <span
-class="math display">\[Bata(\mu|a,b)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}
-\mu^{a-1}(1-\mu)^{b-1}(a,b&gt;0,\mu \in (0,1)) \label{eq4}\]</span>
-其中，<span class="math inline">\(\Gamma(x) \equiv \int_0^\infty
-u^{x-1}e^{-u}du(x&gt;0)\)</span></li>
-<li>由分布<span class="math inline">\(\ref{eq3}\)</span> <span
-class="math inline">\(\times\)</span> 分布 <span
-class="math inline">\(\ref{eq4}\)</span>，归一化之后得到： <span
-class="math display">\[p(\mu|m,l,a,b) \propto
-\mu^{m+a-1}(1-\mu)^{l+b-1}\]</span>，其中<span
-class="math inline">\(l=N-m\)</span>。和先验分布的形式相同。所以说,二项分布和Beta分布互为共轭先验，分布<span
-class="math inline">\(p(\mu|m,l,a,b)\)</span>和二项分布以及beta分布都是共轭分布</li>
-</ol>
-<h1 id="概率分布">概率分布</h1>
-<h2 id="二元分布0-1分布binary-distribution">二元分布/0-1分布(Binary
-distribution)</h2>
-<p><span
-class="math display">\[Bern(x|\mu)=\mu^x(1-\mu)^{1-x}\]</span>，可以看到这是特殊的伯努利分布</p>
-<h2 id="二项分布binomial-distribution">二项分布(Binomial
-distribution)</h2>
-<p><span class="math display">\[Bin(m|N, \mu) = \binom{N}{m}\mu^m(1 -
-\mu)^{N - m}\]</span></p>
-<h2 id="beta分布">Beta分布</h2>
-<p><span class="math display">\[Beta(\mu|a, b) = \frac{\Gamma(a +
-b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
-(0,1))\]</span>，其中<span class="math inline">\(\Gamma(x) \equiv
-\int_0^\infty u^{x-1}e^{-u}du (x &gt; 0)\)</span></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>贝叶斯学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>PRML</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Masked Autoencoder</title>
-    <url>/2023/07/13/Masked-Autoencoder/</url>
-    <content><![CDATA[
-]]></content>
   </entry>
   <entry>
     <title>创建一个hexoBlog</title>
@@ -360,6 +165,575 @@ class="uri">https://www.issey.top/</a></li>
       <tags>
         <tag>hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Applied Multivariate Statistical Analysis(1)</title>
+    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by
+Richard A.Johnson and Dean
+W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
+<h1 id="预备知识">预备知识</h1>
+<h2 id="多元数据的组织">多元数据的组织</h2>
+<p>多元数据的基本表示:n行p列的数据矩阵，每一行表示一个样本(sample)，每一列代表一个特征(feature)或属性(attribute)。即<span
+class="math display">\[X=\begin{bmatrix}
+    x_{11} &amp; x_{12} &amp; \dotsb &amp; x_{1p}\\
+    x_{21} &amp; x_{22} &amp; \dotsb &amp; x_{2p}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+    x_{n1} &amp; x_{n2} &amp; \dotsb &amp; x_{np}
+\end{bmatrix}=\begin{bmatrix}
+    X_1^T\\
+    \vdots\\
+    X_n^T
+\end{bmatrix}\]</span> 其中，不同样本之间相互独立。每个样本为<span
+class="math inline">\(X_j=[x_{j1},x_{j2},\dotsb,x_{jp}]^T,j=\{1,2,\dotsb,n\}\)</span>；</p>
+<h2 id="描述性统计量">描述性统计量</h2>
+<h3 id="对于单个特征">对于单个特征：</h3>
+<ul>
+<li>样本均值： <span class="math display">\[\begin{equation}
+  \bar{x}_k=\frac{1}{n}\sum\limits^n_{j=1} x_{jk},k=1,2,\dotsb,p
+\end{equation}\]</span></li>
+<li>样本方差：<span class="math display">\[\begin{equation}
+  s_k^2=s_{kk}=\frac{1}{n}\sum\limits^n_{j=1} (x_{jk}-\bar{x}_k
+)^2,k=1,2,\dotsb,p
+\end{equation}\]</span></li>
+</ul>
+<h3 id="对于两个特征">对于两个特征：</h3>
+<ul>
+<li>样本协方差：<span class="math display">\[\begin{equation}
+  s_{ik}=\frac{1}{n}\sum\limits^n_{j=1}
+(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p
+\end{equation}\]</span></li>
+<li>样本相关系数：<span class="math display">\[\begin{equation}
+  r_{ik}=\frac{s_{ik}}{\sqrt{s_{ii}}\sqrt{s_{kk}}}
+\end{equation}\]</span>，其中<span
+class="math inline">\(\sqrt{s_{ii}}\)</span>表示样本标准差；
+协方差和相关系数刻画两个特征之间的的线性相关性。</li>
+</ul>
+<h3 id="对于数据集x的特征空间">对于数据集<span
+class="math inline">\(X\)</span>的特征空间：</h3>
+<ul>
+<li>样本均值：<span
+class="math inline">\(\bar{x}=\begin{bmatrix}  \bar{x}_1 \\ \vdots \\
+\bar{x}_p \end{bmatrix}\)</span></li>
+<li>样本协方差矩阵：<span
+class="math inline">\(S_n=\begin{bmatrix}  s_{11} &amp; \dotsb &amp;
+s_{1p}\\  \vdots &amp; \ddots &amp; \vdots\\  s_{p1} &amp; \dotsb &amp;
+s_{pp} \end{bmatrix}=\mathbb{E}[(X-\bar{X}) (X-\bar{X})^T]\)</span></li>
+<li>样本相关系数矩阵：<span class="math inline">\(R_n=\begin{bmatrix}  1
+&amp; \dotsb &amp; r_{1p}\\  \vdots &amp; \ddots &amp; \vdots\\  r_{p1}
+&amp; \dotsb &amp; 1 \end{bmatrix}\)</span></li>
+</ul>
+<p>且有结论：协方差矩阵和相关系数矩阵都对称且半正定。
+从公式(1)可以看出，样本均值<span
+class="math inline">\(\bar{x}\)</span>中的每个元素都是某个特征的均值，即<span
+class="math inline">\(\bar{x}_i\)</span>表示的是第i列（第i个）特征的均值，所以可以将<span
+class="math inline">\(\bar{x}\)</span>拓展为<span
+class="math inline">\(\bar{X}\)</span>，且<span
+class="math display">\[\bar{X}=\begin{bmatrix}
+    \bar{x}_1 &amp; \bar{x}_2 &amp; \bar{x}_3 &amp; \dotsb &amp;
+\bar{x}_p\\
+    \bar{x}_1 &amp; \bar{x}_2 &amp; \bar{x}_3 &amp; \dotsb &amp;
+\bar{x}_p\\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+    \bar{x}_1 &amp; \bar{x}_2 &amp; \bar{x}_3 &amp; \dotsb &amp;
+\bar{x}_p
+\end{bmatrix}\]</span>，用以和数据集<span
+class="math inline">\(X\)</span>进行比较，使得每列的特征和其均值进行直接比较。所以<span
+class="math display">\[X-\bar{X}=\begin{bmatrix}
+    x_{11}-\bar{x}_1 &amp; x_{12}-\bar{x}_2 &amp; \dotsb &amp;
+x_{1p}-\bar{x}_p\\
+    x_{21}-\bar{x}_1 &amp; x_{22}-\bar{x}_2 &amp; \dotsb &amp;
+x_{2p}-\bar{x}_p\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+    x_{n1}-\bar{x}_1 &amp; x_{n2}-\bar{x}_2 &amp; \dotsb &amp;
+x_{np}-\bar{x}_p
+\end{bmatrix}\]</span>，不难发现样本协方差矩阵<span
+class="math inline">\(S_n=\mathbb{E}[(X-\bar{X})
+(X-\bar{X})^T]\)</span>，其中<span
+class="math inline">\(\mathbb{E}\)</span>表示数学期望。</p>
+<h3
+id="证明协方差矩阵和相关系数矩阵都对称且半正定">证明：协方差矩阵和相关系数矩阵都对称且半正定</h3>
+<ol type="1">
+<li>证明协方差矩阵对称且半正定：
+由公式（3）知对于两个特征，其样本协方差为<span
+class="math display">\[s_{ik}=\frac{1}{n}\sum\limits^n_{j=1}
+(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p.\]</span>同样地,<span
+class="math display">\[s_{ki}=\frac{1}{n}\sum\limits^n_{j=1}
+(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p.\]</span>所以得到$s_{ik}=s_{ki}
+$ 协方差矩阵对称；对于<span
+class="math inline">\(S_n\)</span>的任意特征向量<span
+class="math inline">\(\eta \in \mathcal{R^p}\)</span>和相应的特征值<span
+class="math inline">\(\lambda\)</span>，即<span
+class="math inline">\(S_n\eta=\lambda\eta(\eta \neq
+0)\)</span>。又有<span class="math display">\[\begin{split}
+\eta^T S_n \eta &amp;= \eta^T\mathbb{E}[(X-\bar{X}) (X-\bar{X})^T]\eta
+\\
+&amp; = \mathbb{E}[\eta^T (X-\bar{X}) (X-\bar{X})^T \eta]\\
+&amp; \xlongequal{Q=(X-\bar{X})^T \eta
+, Q \in \mathcal{R^p}} \mathbb{E}(Q^TQ) \geq 0.
+\end{split}\]</span> 得证。</li>
+<li>证相关系数矩阵对称且半正定：
+这个就比较简单了。首先由公式(4)知，样本相关系数矩阵<span
+class="math inline">\(R_n\)</span>是对称的，其次，由于<span
+class="math inline">\(R_n=\begin{bmatrix}  1 &amp; \dotsb &amp;
+r_{1p}\\  \vdots &amp; \ddots &amp; \vdots\\  r_{p1} &amp; \dotsb &amp;
+1 \end{bmatrix}\)</span>中非对角元素<span class="math inline">\(r_{ij}
+\leq
+1\)</span>，所以任何一个主对角子式的行列式值都大于等于零，得证。</li>
+</ol>
+<h2 id="距离">距离</h2>
+<h3 id="欧氏距离">欧氏距离</h3>
+<p>设两点<span class="math inline">\(P、Q \in \mathcal{R^p},P=(x_1,x_2,
+\dotsb, x_p)^T, Q=(y_1,y_2, \dotsb,
+y_p)^T\)</span>,两点之间的距离为<span
+class="math inline">\(d(P,Q)\)</span>;则<span
+class="math display">\[\begin{split}
+    d(P,Q)&amp;=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+ \dotsb +(x_p-y_p)^2}\\
+    &amp;=\sqrt{\sum\limits^p_{i=1} (x_i - y_i)^2}\\
+    &amp;=\sqrt{P^TQ}
+\end{split}\]</span></p>
+<h3 id="标准化距离">标准化距离</h3>
+<p>当p个变量全部相互独立，标准化距离：<span
+class="math display">\[d(P,Q)=\sqrt{\sum\limits^p_{i=1}
+\frac{(x_i-y_i)^2}{s_{ii}}}.\]</span></p>
+<h3 id="统计距离">统计距离</h3>
+<p>考虑到变差的不同以及相关性的存在，我们引入统计距离的概念。统计距离是多元分析的基础。比如，从原点<span
+class="math inline">\(O(0,0)\)</span>到<span
+class="math inline">\(P(x_1,x_2)\)</span>的统计距离可以由标准化坐标<span
+class="math inline">\(x_1^*=\frac{x_1}{\sqrt{s_{11}}},x_2^*=\frac{x_2}{\sqrt{s_{22}}}\)</span>计算出来。<span
+class="math display">\[\begin{split}
+    d(O,P)&amp;=\sqrt{(x_1^*)^2+(x_2^*)^2}\\
+    &amp;=\sqrt{(\frac{x_1}{\sqrt{s_{11}}})^2+(\frac{x_2}{\sqrt{s_{22}}})^2}\\
+    &amp;=\sqrt{\frac{x_1^2}{s_{11}}+\frac{x_2^2}{s_{22}}}
+\end{split}\]</span> 较之于欧氏距离，<span
+class="math display">\[d(O,P)=\sqrt{x_1^2+x_2^2}\]</span>
+我们可以发现增加了权重系数<span
+class="math inline">\(k_1=1/s_{11}\)</span>和<span
+class="math inline">\(k_2=1/s_{22}\)</span>。如果样本方差相同，即<span
+class="math inline">\(k_1=k_2\)</span>，则<span
+class="math inline">\(x_1^2\)</span>和<span
+class="math inline">\(x_2^2\)</span>将得到相同的权重系数。当权重系数相同时，忽略公因子，使用普通的欧几里得距离仍然是适用的。<font color="red">换言之，如果<span
+class="math inline">\(x_1\)</span>方向的变异性与<span
+class="math inline">\(x_2\)</span>方向的相同，并且<span
+class="math inline">\(x_1\)</span>值的变化不依赖于<span
+class="math inline">\(x_2\)</span>的值，欧氏距离是适用的。</font></p>
+<h3
+id="最小化特征相关度最大化特征间的方差">最小化特征相关度/最大化特征间的方差</h3>
+<p>当变量之间有相关性时，相当于先旋转坐标轴到变量之间相互独立的角度，再计算标准化距离。旋转的过程是二次型变换。<img data-src="/images/Applied%20Multivariate%20Statistical%20Analysis/p1.png"
+alt="坐标基旋转" /> 从上图可以看出，原来的坐标系空间内，<span
+class="math inline">\(x_1\)</span>和<span
+class="math inline">\(x_2\)</span>方向的可变性（方差/协方差）不同，为了减少变量的相关性，在保持散布不变的基础上，将原始的坐标系旋转<span
+class="math inline">\(\theta\)</span>角并标出旋转过的坐标轴<span
+class="math inline">\(\tilde{x}_1\)</span>和<span
+class="math inline">\(\tilde{x}_2\)</span>。原始坐标<span
+class="math inline">\((x_1,x_2)\)</span>与旋转后所得坐标<span
+class="math inline">\((\tilde{x}_1,\tilde{x}_2)\)</span>之间的关系如下<span
+class="math display">\[\begin{gather*}
+    \tilde{x}_1=x_1\cos(\theta) + x_2\sin(\theta) \\
+    \tilde{x}_2=-x_1\sin(\theta) + x_2\cos(\theta)
+\end{gather*}\]</span> 推导过程： 初始坐标<span
+class="math inline">\((x_1,x_2)\)</span>的极坐标表示为 <span
+class="math display">\[\begin{cases}
+    x_1=r\cos(\alpha)\\
+    x_2=r\sin(\alpha)
+\end{cases}\]</span> 由于坐标轴逆时针旋转<span
+class="math inline">\(\theta^\circ\)</span>，所以角度由初始的<span
+class="math inline">\(\alpha\)</span>变为<span
+class="math inline">\(\alpha -
+\theta\)</span>,所以极坐标表示发生如下变化 <span
+class="math display">\[\begin{cases}
+    \tilde{x}_1=r\cos(\alpha - \theta)\\
+    \tilde{x}_2=r\sin(\alpha - \theta)\\
+\end{cases}\]</span> <span class="math display">\[
+\Rightarrow
+\begin{cases}
+    \tilde{x}_1=r\cos(\alpha)\cos(\theta) + r\sin(\alpha)\sin(\theta)\\
+    \tilde{x}_2=r\sin(\alpha)\cos(\theta)-r\cos(\alpha)\sin(\theta)\\
+\end{cases}\]</span> <span class="math display">\[
+\Rightarrow
+\begin{cases}
+    \tilde{x}_1=x_1\cos(\theta) + x_2\sin(\theta)\\
+    \tilde{x}_2=-x_1\sin(\theta) + x_2\cos(\theta)
+\end{cases}
+\]</span></p>
+<h3 id="马氏距离">马氏距离</h3>
+<h4 id="定义">定义</h4>
+<p>设<span class="math inline">\(x,y \in
+\mathcal{R^n}\)</span>为样本空间中的两个样本点，<span
+class="math inline">\(S\)</span>为<span
+class="math inline">\(x,y\)</span>所服从分布的协方差矩阵，则马氏距离为
+<span class="math display">\[\begin{gather*}
+    d(x,y)=\sqrt{(x-y)^TS^{-1}(x-y)}\\
+    d(x,0)=\sqrt{(x-\mu)^TS^{-1}(x-\mu)}
+\end{gather*}\]</span> 计算欧氏距离和马氏距离的期望。
+<font color="red">引理（lemma）</font>：若<span
+class="math inline">\(X\)</span>为时间序列，有均值<span
+class="math inline">\(\mu\)</span>和协方差矩阵<span
+class="math inline">\(\Sigma\)</span>(即<span
+class="math inline">\(\mathbb{E}(X)=\mu,\mathbb{E}[(X-\mu)(X-\mu)^T]=\Sigma\)</span>)，则<span
+class="math display">\[\begin{equation}
+\mathbb{E}(X^TAX)=tr(A\Sigma)+\mu^TA\mu
+\end{equation}\]</span> <span
+class="math inline">\(\bf{Proof}\)</span>:<span
+class="math display">\[\begin{equation}\begin{split}
+    X^TAX&amp;=(X-\mu)^TAX + \mu^TAX\\
+    &amp;=(x-\mu)^TA(X-\mu)+\mu^TAX+(X-\mu)^TA\mu
+\end{split}\end{equation}\]</span>
+然后对公式(6)左右两侧同时取期望值，则有 <span
+class="math display">\[\begin{equation}\begin{split}
+    \mathbb{E}(X^TAX)&amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mathbb{E}(\mu^TAX)+\mathbb{E}[(X-\mu)^TA\mu]\\
+    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu+\mathbb{E}(X^TA\mu)-\mathbb{E}(\mu^TA\mu)\\
+    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu+\mu^TA\mu-\mu^TA\mu\\
+    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu
+\end{split}\end{equation}\]</span> 此外， <span class="math display">\[
+\begin{equation}
+\begin{split}
+    \mathbb{E}[(x-\mu)^TA(X-\mu)]&amp;=\mathbb{E}(Y^TAY)\\
+    &amp;=\sum\limits^n_{i=1}
+\sum\limits^n_{j=1}\mathbb{E}(Y_iA_{i,j}Y_j)=\sum\limits^n_{i=1}
+\sum\limits^n_{j=1} A_{i,j}[Var(Y)]_{i,j}\\
+    &amp;=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
+A_{i,j}[Var(X-\mu)]_{i,j}=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
+A_{i,j}[Var(X)]_{i,j}\\
+    &amp;=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
+A_{i,j}\Sigma_{i,j}=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
+A_{i,j}\Sigma_{j,i}\\
+    &amp;=\sum\limits^n_{i=1} [A\Sigma]_{i,i}=tr(A\Sigma)
+\end{split}
+\end{equation}
+\]</span> 故，依据(6)、(7)和(8),易得到公式(5)。</p>
+<h4 id="欧氏距离期望">欧氏距离期望</h4>
+<p><span class="math display">\[
+\begin{equation}
+    \mathbb{E}[(X-Y)^TI(X-Y)]=2tr(\Sigma)=2\sum\limits^n_{i=1}\sigma_{ii}
+\end{equation}
+\]</span></p>
+<h4 id="马氏距离期望">马氏距离期望</h4>
+<p><span class="math display">\[
+\begin{equation}
+    \mathbb{E}[(X-Y)^T\Sigma^{-1}(X-Y)]=2tr(\Sigma^{-1}\Sigma)=2n
+\end{equation}
+\]</span></p>
+<h2 id="马氏距离推导">马氏距离推导</h2>
+<p>设原始数据为<span class="math inline">\(x \in
+\mathcal{R^p}\)</span>，经过可逆线性变换后为数据<span
+class="math inline">\(y\)</span>，且假设<span
+class="math inline">\(x=\hat{P}\hat{\Lambda}y\)</span>,其中<span
+class="math inline">\(\hat{P}\)</span>为正交阵，负责旋转，<span
+class="math inline">\(\hat{\Lambda}\)</span>为对角阵，负责伸缩。目的是将变换后的数据变成各维度独立且尺度统一，即<span
+class="math inline">\(Var(y)=I\)</span>，对y计算欧氏距离就是<span
+class="math inline">\(x\)</span>计算马氏距离。其实，就是和上述讲到的最小化特征相关度再进行标准化一致。</p>
+<ol type="1">
+<li>原数据的协方差矩阵：<span
+class="math display">\[\Sigma=Var(x)=Var(\hat{P}\hat{\Lambda}y)=\hat{P}\hat{\Lambda}Var(y)\hat{\Lambda}\hat{P}=\hat{P}\hat{\Lambda}\hat{P}^T\]</span></li>
+<li>转换后数据的欧氏距离： <span
+class="math display">\[y^Ty=(x^T\hat{P}\hat{\Lambda}^{-1})(\hat{\Lambda}^{-1}\hat{P}^Tx)=x^T\Sigma^{-1}x\]</span></li>
+</ol>
+<p>这样，就得到了马氏距离的表达式。</p>
+<h2 id="矩阵相关不等式">矩阵相关不等式</h2>
+<h3 id="柯西-施瓦茨不等式三角不等式">柯西-施瓦茨不等式(三角不等式)</h3>
+<ul>
+<li>已知<span class="math inline">\(b,d \in
+\mathcal{R^p}\)</span>(两个样本) <span
+class="math display">\[\begin{equation}
+  (b^Td)^2 \leq (b^Tb)(d^Td)
+\end{equation}\]</span> 等号成立当且仅当<span
+class="math inline">\(b=cd\)</span>，其中c为常数。 <span
+class="math inline">\(\bf{Proof}\)</span>: <span class="math display">\[
+\begin{gather*}
+  b^Td=|b| \cdot |d| \cdot \cos&lt;b,d&gt; \\
+  (b^Td)^2=(|b| \cdot |d| \cdot \cos&lt;b,d&gt;)^2\\
+  =|b|^2 \cdot |d|^2 \cdot \cos^2 &lt;b,d&gt;\\
+  \leq (b^Tb)(d^Td), \cos&lt;b,d&gt; \in [0,1]
+\end{gather*}
+\]</span></li>
+</ul>
+<h3 id="扩展的柯西-施瓦茨不等式">扩展的柯西-施瓦茨不等式</h3>
+<ul>
+<li><span class="math inline">\(B\)</span>为正定矩阵<span
+class="math display">\[(b^Td)^2 \leq
+(b^TBb)(d^TB^{-1}d)\]</span>等号成立当且仅当<span
+class="math inline">\(b=cB^{-1}d\)</span>，其中c为常数。</li>
+</ul>
+<h3 id="极大化引理">极大化引理</h3>
+<ul>
+<li><span class="math inline">\(B \in \mathcal{R^{p \times p}},d \in
+\mathcal{R^p}\)</span>,<span
+class="math inline">\(B\)</span>为正定矩阵，<span
+class="math inline">\(d\)</span>为给定向量，则对任何非零向量<span
+class="math inline">\(x\)</span>,有<span class="math display">\[
+\mathop{max}\limits_{x \neq 0}
+\frac{(x^Td)^2}{x^TBx}=d^TB^{-1}d\]</span> 其中最大值取在<span
+class="math inline">\(x=cB^{-1}d\)</span>，其中c为常数。</li>
+</ul>
+<h3 id="单位球上二次型最大化瑞丽商">单位球上二次型最大化(瑞丽商)</h3>
+<p><span class="math inline">\(B\)</span>为正定矩阵，特征值为<span
+class="math inline">\(\lambda_1 \geq \lambda_2 \geq \dotsb \geq
+\lambda_p \geq 0\)</span>，对应特征向量（单位化后）为<span
+class="math inline">\(e_1,e_2,\dotsb,e_p\)</span>,则<span
+class="math display">\[\begin{gather*}
+    \mathop{max}\limits_{x \neq 0} \frac{x^TBx}{x^Tx} =
+\lambda_1(x=e_1)\\
+    \mathop{min}\limits_{x \neq 0} \frac{x^TBx}{x^Tx} =
+\lambda_p(x=e_p)\\
+    \mathop{max}\limits_{x \bot e_1,\dotsb,e_k} \frac{x^TBx}{x^Tx} =
+\lambda_{k+1}(x=e_{k+1})\\
+\end{gather*}\]</span></p>
+<figure>
+<img data-src="/images/Applied%20Multivariate%20Statistical%20Analysis/p2.png"
+alt="超平面和向量投影" />
+<figcaption aria-hidden="true">超平面和向量投影</figcaption>
+</figure>
+<h2 id="向量投影">向量投影</h2>
+<p>设<span class="math inline">\(x,y \in
+\mathcal{R^n}\)</span>,向量<span class="math inline">\(x\)</span>到<span
+class="math inline">\(y\)</span>的投影：<span
+class="math inline">\(\frac{x^Ty}{y^Ty}y\)</span>。证明可以看MIT的《Introduction
+to linear algebra》。</p>
+<h2 id="矩阵求导">矩阵求导</h2>
+<p><span class="math inline">\(A\)</span>为矩阵，<span
+class="math inline">\(x\)</span>为向量，则有 <span
+class="math display">\[
+\begin{gather*}
+    \frac{\partial}{\partial x}(Ax)=A^T\\
+    \frac{\partial}{\partial x}(x^TA)=A\\
+    \frac{\partial}{\partial x}(x^Tx)=2x\\
+    \frac{\partial}{\partial x}(x^TAx)=Ax+A^Tx
+\end{gather*}
+\]</span> <span class="math inline">\(A\)</span>为矩阵，<span
+class="math inline">\(x\)</span>为方阵，则有<span
+class="math display">\[
+\begin{gather*}
+    \frac{\partial |A|}{\partial A}=|A|A^{-1}\\
+    \frac{\partial tr(AB)}{\partial A}=B^T\\
+    \frac{\partial tr(A^{-1}B)}{\partial A}=-A^{-1}B^TA^{-1}
+\end{gather*}\]</span></p>
+<h2 id="统计量的更多运算">统计量的更多运算</h2>
+<p><span class="math display">\[
+\begin{gather*}
+    \mathbb{E}(c^Tx)=x^T\mu\\
+    Var(c^Tx)=c^T\Sigma c\\
+    \mathbb{E}(CX)=C\mu_X\\
+    Cov(CX)=C\Sigma_X C\\
+    Cov(b^Tx,c^Tx)=b^TCov(x)c
+\end{gather*}\]</span></p>
+<h1 id="其他章节">其他章节</h1>
+<p><a
+href="https://keithmalarkey.github.io/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/">Applied
+Multivariate Statistical Analysis(2)</a></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deep Residual Networks for Image Recognition</title>
+    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
+href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
+Image Recognition</a>作为开篇。<br />
+主要目的：<br />
+1. 什么是ResNet？其基本结构是什么？<br />
+2. 为什么提出ResNet?或者说它的优势是什么？<br />
+3. 为何会有其优势，从数理层面的解释是什么？<br />
+4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
+<hr />
+<h1 id="论文解析">论文解析</h1>
+<h2 id="概要">概要</h2>
+<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
+<h2 id="引言">引言</h2>
+<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
+normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
+Normalization)。<br />
+然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
+alt="深层网络准确率饱和现象" />
+从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
+<font color="red">
+设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
+mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
+error)。
+</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
+<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
+alt="Shortcut connection" /> <font color="red">Deep residual learning
+framework</font>:假设我们希望得到的一个潜在映射为<span
+class="math inline">\(\mathcal{H}(\bf
+x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
+class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
+class="math inline">\(\mathcal{F}(\textbf{x}) :=
+\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
+class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
+connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
+x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
+x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
+<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
+alt="全局设计" /></p>
+<h2 id="实验结果">实验结果</h2>
+<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
+alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
+block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
+<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
+alt="Resnet性能同plain CNN的对比" />
+上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
+class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
+<h1 id="数理解释">数理解释</h1>
+<ol type="1">
+<li>假设plain CNN需要学得潜在的mapping是<span
+class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
+class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
+class="math inline">\(g\)</span>;(2)深层部分的映射<span
+class="math inline">\(f\)</span>，即<span
+class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
+class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
+f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
+g(\theta)}{\partial
+\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
+<li>同样的，ResNet需要学习的潜在mapping也是<span
+class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
+class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
+connection的原因，每次迭代训练参数时需要做的是<span
+class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
+g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
+\underbrace{\frac{\partial g(\theta)}{\partial
+\theta}}_{(2)}\)</span>，在(1)中还会存在plain
+CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
+</ol>
+<h1 id="总结">总结</h1>
+<p>ResNet就是使用了shortcut(residual)
+connection的CNN变种，其基本结构就是残差块(residual
+block)和残差连接(residual
+connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
+<h1 id="遗留问题">遗留问题</h1>
+<ol type="1">
+<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
+<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
+<li>提到Residual，在机器学习中，比如Gradient
+boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>图像识别</tag>
+        <tag>ResNet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Masked Autoencoder</title>
+    <url>/2023/07/13/Masked-Autoencoder/</url>
+    <content><![CDATA[<h1 id="参考">参考</h1>
+<ol type="1">
+<li><a href="https://arxiv.org/pdf/2111.06377.pdf">paper</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV1sq4y1q77t/?spm_id_from=333.788&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">文献精读
+by 李沐</a></li>
+</ol>
+<h1 id="prerequsitions">Prerequsitions</h1>
+<ul>
+<li>NLP
+<ul>
+<li>Transformer</li>
+<li>BERT</li>
+</ul></li>
+<li>CV
+<ul>
+<li>ViT</li>
+</ul></li>
+<li>自监督
+<ul>
+<li>Encoder-Decoder</li>
+<li>AutoEncoder</li>
+<li>DAE(Denoising Autoencoder)</li>
+<li>VAE(Variational Autoencoder)</li>
+</ul></li>
+<li>迁移学习（预训练）</li>
+<li>CNN</li>
+</ul>
+<h1 id="question">Question</h1>
+<ol type="1">
+<li>What is the Masked Autoencoder? Details about the architecture?</li>
+<li>What is the main application scenario of Masked Autoencoder?
+<ol type="1">
+<li>数据去噪</li>
+<li>特征学习</li>
+<li>生成模型</li>
+<li>数据压缩</li>
+</ol></li>
+</ol>
+<h1 id="abstract">Abstract</h1>
+<ol type="1">
+<li>scalable self-supervised learners for CV;</li>
+<li>操作：对输入的图片进行随机掩码，然后利用MAE重构打上掩码的patches(这就意味着，它是一个生成模型，且可以学得Latent
+representation);</li>
+<li>框架：非对称的encoder-decoder
+<ol type="1">
+<li>encoder:只在可视的patch进行操作</li>
+<li>decoder:利用潜表示和打了掩码的patches重构原始图像</li>
+</ol></li>
+</ol>
+<h1 id="introduction">Introduction</h1>
+]]></content>
+      <categories>
+        <category>自监督学习</category>
+      </categories>
+      <tags>
+        <tag>Encoder-Decoder</tag>
+        <tag>Autoencoder</tag>
+        <tag>MAE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Combinatorics</title>
+    <url>/2023/06/24/Combinatorial-Mathematics/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>主要记录一些组合数学和离散数学的知识框架用以回顾,
+参考书：（美）R.A.Brualdi. 组合数学（第五版）. 机械工业出版社，2012.</p>
+<h1 id="什么是组合数学">什么是组合数学</h1>
+<p>组合数学也称为组合学和组合分析，是一门研究离散对象的科学。随着计算机科学的日益发展，组合数学的重要性也日渐凸显，因为计算机科学的核心内容是使用算法处理离散数据。组合数学主要研究满足一定条件的组态（也称组合模型）的存在、计数以及构造等方面的问题。组合数学的主要内容有组合计数、组合设计、组合矩阵、组合优化（最佳组合）等。组合数学不仅在软件技术中有重要的应用价值，在企业管理，交通规划，试验设计，战争指挥，金融分析等领域都有重要的应用。</p>
+<h2 id="切块问题">切块问题</h2>
+<p>把一个<span class="math inline">\(3 \times 3 \times
+3\)</span>的立方体木块切成27个<span class="math inline">\(1 \times 1
+\times
+1\)</span>的小立方体木块，如果切割过程中允许重新排列已切割木块的位置，求完成整个切割的最少次数。<br />
+1. 测量实心长方体的对角线长度？<br />
+2. 如果把上述问题中的立方体换成<span class="math inline">\(3 \times 6
+\times 9\)</span>的长方体结果如何？</p>
+<p>思路：对于<span class="math inline">\(1 \times 1 \times
+5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil \log_2
+5 \rceil\)</span>；相似的，对于<span class="math inline">\(1 \times 3
+\times 5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil
+\log_2 3 \rceil + \lceil \log_2 5 \rceil\)</span></p>
+<p>解答：由上分析，对于任意<span class="math inline">\(w_1 \times w_2
+\times w_3\)</span>的立方体，分割成单位立方体至少需要<span
+class="math inline">\(\sum\limits_{i=1}^3 \lceil \log_2 w_i
+\rceil\)</span>,故此时的最小切割代价为<span class="math inline">\(3
+\times \lceil \log_2 3 \rceil = 6\)</span></p>
+<h2 id="nim问题">Nim问题</h2>
+<p>有五堆石子，各堆石子的个数分别是10、29和48。甲乙两人玩取石子游戏，要求：两个人轮流取石子，每个人取石子时，只能从同一堆中取，最少取一枚，最多可以把整堆石子取走。谁取到最后的石子，谁获胜。如果你是其中的一个游戏人，你选择先取子还是后取子，如何取？</p>
+<p>思路：按位异或，非零，则先手必胜；否则，先手必输。</p>
+<p>解答：10D=1010B,29D=11101B,48D=110000B,由<span
+class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
+0\)</span>，所以先手必赢。</p>
+<p>取子方案：<br />
+<span class="math inline">\(110000(48D) \rightarrow
+010111(23D)\)</span>,即从第三堆48块中取走25块，并保证每次自己取子之后，每堆石子数按位异或为0.，这样最终就会获胜。</p>
+<h1 id="鸽笼原理">鸽笼原理</h1>
+<h2 id="简单形式">简单形式</h2>
+<p>若把n+1个物体放到n
+（n≥1）个盒子中去，则至少有一个盒子放有至少2个物体。</p>
+<p>证明：用反证法证明。如果n个盒子中每个盒子至多放入一个物体，则放入n个盒子中的物体总数至多为n个。这与假设有n+1个物体矛盾。从而定理得证。</p>
+<h2 id="例题">例题</h2>
+<p><img data-src="/images/Combinatorial-Mathematics/p1.jpg" alt="p1" /> <img data-src="/images/Combinatorial-Mathematics/p2.png" alt="p2" /> <img data-src="/images/Combinatorial-Mathematics/p3.png" alt="p3" /> <img data-src="/images/Combinatorial-Mathematics/p4.png" alt="p4-1" /> <img data-src="/images/Combinatorial-Mathematics/p4-1.png" alt="p4-2" /></p>
+<h2 id="一般形式">一般形式</h2>
+]]></content>
   </entry>
   <entry>
     <title>Information Theory</title>
@@ -942,468 +1316,20 @@ class="math inline">\(I(X;Y)\)</span></li>
       </tags>
   </entry>
   <entry>
-    <title>Applied Multivariate Statistical Analysis(1)</title>
-    <url>/2023/05/13/Applied-Multivariate-Statistical-Analysis/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by
-Richard A.Johnson and Dean
-W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
-<h1 id="预备知识">预备知识</h1>
-<h2 id="多元数据的组织">多元数据的组织</h2>
-<p>多元数据的基本表示:n行p列的数据矩阵，每一行表示一个样本(sample)，每一列代表一个特征(feature)或属性(attribute)。即<span
-class="math display">\[X=\begin{bmatrix}
-    x_{11} &amp; x_{12} &amp; \dotsb &amp; x_{1p}\\
-    x_{21} &amp; x_{22} &amp; \dotsb &amp; x_{2p}\\
-    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-    x_{n1} &amp; x_{n2} &amp; \dotsb &amp; x_{np}
-\end{bmatrix}=\begin{bmatrix}
-    X_1^T\\
-    \vdots\\
-    X_n^T
-\end{bmatrix}\]</span> 其中，不同样本之间相互独立。每个样本为<span
-class="math inline">\(X_j=[x_{j1},x_{j2},\dotsb,x_{jp}]^T,j=\{1,2,\dotsb,n\}\)</span>；</p>
-<h2 id="描述性统计量">描述性统计量</h2>
-<h3 id="对于单个特征">对于单个特征：</h3>
-<ul>
-<li>样本均值： <span class="math display">\[\begin{equation}
-  \bar{x}_k=\frac{1}{n}\sum\limits^n_{j=1} x_{jk},k=1,2,\dotsb,p
-\end{equation}\]</span></li>
-<li>样本方差：<span class="math display">\[\begin{equation}
-  s_k^2=s_{kk}=\frac{1}{n}\sum\limits^n_{j=1} (x_{jk}-\bar{x}_k
-)^2,k=1,2,\dotsb,p
-\end{equation}\]</span></li>
-</ul>
-<h3 id="对于两个特征">对于两个特征：</h3>
-<ul>
-<li>样本协方差：<span class="math display">\[\begin{equation}
-  s_{ik}=\frac{1}{n}\sum\limits^n_{j=1}
-(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p
-\end{equation}\]</span></li>
-<li>样本相关系数：<span class="math display">\[\begin{equation}
-  r_{ik}=\frac{s_{ik}}{\sqrt{s_{ii}}\sqrt{s_{kk}}}
-\end{equation}\]</span>，其中<span
-class="math inline">\(\sqrt{s_{ii}}\)</span>表示样本标准差；
-协方差和相关系数刻画两个特征之间的的线性相关性。</li>
-</ul>
-<h3 id="对于数据集x的特征空间">对于数据集<span
-class="math inline">\(X\)</span>的特征空间：</h3>
-<ul>
-<li>样本均值：<span
-class="math inline">\(\bar{x}=\begin{bmatrix}  \bar{x}_1 \\ \vdots \\
-\bar{x}_p \end{bmatrix}\)</span></li>
-<li>样本协方差矩阵：<span
-class="math inline">\(S_n=\begin{bmatrix}  s_{11} &amp; \dotsb &amp;
-s_{1p}\\  \vdots &amp; \ddots &amp; \vdots\\  s_{p1} &amp; \dotsb &amp;
-s_{pp} \end{bmatrix}=\mathbb{E}[(X-\bar{X}) (X-\bar{X})^T]\)</span></li>
-<li>样本相关系数矩阵：<span class="math inline">\(R_n=\begin{bmatrix}  1
-&amp; \dotsb &amp; r_{1p}\\  \vdots &amp; \ddots &amp; \vdots\\  r_{p1}
-&amp; \dotsb &amp; 1 \end{bmatrix}\)</span></li>
-</ul>
-<p>且有结论：协方差矩阵和相关系数矩阵都对称且半正定。
-从公式(1)可以看出，样本均值<span
-class="math inline">\(\bar{x}\)</span>中的每个元素都是某个特征的均值，即<span
-class="math inline">\(\bar{x}_i\)</span>表示的是第i列（第i个）特征的均值，所以可以将<span
-class="math inline">\(\bar{x}\)</span>拓展为<span
-class="math inline">\(\bar{X}\)</span>，且<span
-class="math display">\[\bar{X}=\begin{bmatrix}
-    \bar{x}_1 &amp; \bar{x}_2 &amp; \bar{x}_3 &amp; \dotsb &amp;
-\bar{x}_p\\
-    \bar{x}_1 &amp; \bar{x}_2 &amp; \bar{x}_3 &amp; \dotsb &amp;
-\bar{x}_p\\
-    \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-    \bar{x}_1 &amp; \bar{x}_2 &amp; \bar{x}_3 &amp; \dotsb &amp;
-\bar{x}_p
-\end{bmatrix}\]</span>，用以和数据集<span
-class="math inline">\(X\)</span>进行比较，使得每列的特征和其均值进行直接比较。所以<span
-class="math display">\[X-\bar{X}=\begin{bmatrix}
-    x_{11}-\bar{x}_1 &amp; x_{12}-\bar{x}_2 &amp; \dotsb &amp;
-x_{1p}-\bar{x}_p\\
-    x_{21}-\bar{x}_1 &amp; x_{22}-\bar{x}_2 &amp; \dotsb &amp;
-x_{2p}-\bar{x}_p\\
-    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-    x_{n1}-\bar{x}_1 &amp; x_{n2}-\bar{x}_2 &amp; \dotsb &amp;
-x_{np}-\bar{x}_p
-\end{bmatrix}\]</span>，不难发现样本协方差矩阵<span
-class="math inline">\(S_n=\mathbb{E}[(X-\bar{X})
-(X-\bar{X})^T]\)</span>，其中<span
-class="math inline">\(\mathbb{E}\)</span>表示数学期望。</p>
-<h3
-id="证明协方差矩阵和相关系数矩阵都对称且半正定">证明：协方差矩阵和相关系数矩阵都对称且半正定</h3>
-<ol type="1">
-<li>证明协方差矩阵对称且半正定：
-由公式（3）知对于两个特征，其样本协方差为<span
-class="math display">\[s_{ik}=\frac{1}{n}\sum\limits^n_{j=1}
-(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p.\]</span>同样地,<span
-class="math display">\[s_{ki}=\frac{1}{n}\sum\limits^n_{j=1}
-(x_{ji}-\bar{x}_i)(x_{jk}-\bar{x}_k),i,k=1,2,\dotsb,p.\]</span>所以得到$s_{ik}=s_{ki}
-$ 协方差矩阵对称；对于<span
-class="math inline">\(S_n\)</span>的任意特征向量<span
-class="math inline">\(\eta \in \mathcal{R^p}\)</span>和相应的特征值<span
-class="math inline">\(\lambda\)</span>，即<span
-class="math inline">\(S_n\eta=\lambda\eta(\eta \neq
-0)\)</span>。又有<span class="math display">\[\begin{split}
-\eta^T S_n \eta &amp;= \eta^T\mathbb{E}[(X-\bar{X}) (X-\bar{X})^T]\eta
-\\
-&amp; = \mathbb{E}[\eta^T (X-\bar{X}) (X-\bar{X})^T \eta]\\
-&amp; \xlongequal{Q=(X-\bar{X})^T \eta
-, Q \in \mathcal{R^p}} \mathbb{E}(Q^TQ) \geq 0.
-\end{split}\]</span> 得证。</li>
-<li>证相关系数矩阵对称且半正定：
-这个就比较简单了。首先由公式(4)知，样本相关系数矩阵<span
-class="math inline">\(R_n\)</span>是对称的，其次，由于<span
-class="math inline">\(R_n=\begin{bmatrix}  1 &amp; \dotsb &amp;
-r_{1p}\\  \vdots &amp; \ddots &amp; \vdots\\  r_{p1} &amp; \dotsb &amp;
-1 \end{bmatrix}\)</span>中非对角元素<span class="math inline">\(r_{ij}
-\leq
-1\)</span>，所以任何一个主对角子式的行列式值都大于等于零，得证。</li>
-</ol>
-<h2 id="距离">距离</h2>
-<h3 id="欧氏距离">欧氏距离</h3>
-<p>设两点<span class="math inline">\(P、Q \in \mathcal{R^p},P=(x_1,x_2,
-\dotsb, x_p)^T, Q=(y_1,y_2, \dotsb,
-y_p)^T\)</span>,两点之间的距离为<span
-class="math inline">\(d(P,Q)\)</span>;则<span
-class="math display">\[\begin{split}
-    d(P,Q)&amp;=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+ \dotsb +(x_p-y_p)^2}\\
-    &amp;=\sqrt{\sum\limits^p_{i=1} (x_i - y_i)^2}\\
-    &amp;=\sqrt{P^TQ}
-\end{split}\]</span></p>
-<h3 id="标准化距离">标准化距离</h3>
-<p>当p个变量全部相互独立，标准化距离：<span
-class="math display">\[d(P,Q)=\sqrt{\sum\limits^p_{i=1}
-\frac{(x_i-y_i)^2}{s_{ii}}}.\]</span></p>
-<h3 id="统计距离">统计距离</h3>
-<p>考虑到变差的不同以及相关性的存在，我们引入统计距离的概念。统计距离是多元分析的基础。比如，从原点<span
-class="math inline">\(O(0,0)\)</span>到<span
-class="math inline">\(P(x_1,x_2)\)</span>的统计距离可以由标准化坐标<span
-class="math inline">\(x_1^*=\frac{x_1}{\sqrt{s_{11}}},x_2^*=\frac{x_2}{\sqrt{s_{22}}}\)</span>计算出来。<span
-class="math display">\[\begin{split}
-    d(O,P)&amp;=\sqrt{(x_1^*)^2+(x_2^*)^2}\\
-    &amp;=\sqrt{(\frac{x_1}{\sqrt{s_{11}}})^2+(\frac{x_2}{\sqrt{s_{22}}})^2}\\
-    &amp;=\sqrt{\frac{x_1^2}{s_{11}}+\frac{x_2^2}{s_{22}}}
-\end{split}\]</span> 较之于欧氏距离，<span
-class="math display">\[d(O,P)=\sqrt{x_1^2+x_2^2}\]</span>
-我们可以发现增加了权重系数<span
-class="math inline">\(k_1=1/s_{11}\)</span>和<span
-class="math inline">\(k_2=1/s_{22}\)</span>。如果样本方差相同，即<span
-class="math inline">\(k_1=k_2\)</span>，则<span
-class="math inline">\(x_1^2\)</span>和<span
-class="math inline">\(x_2^2\)</span>将得到相同的权重系数。当权重系数相同时，忽略公因子，使用普通的欧几里得距离仍然是适用的。<font color="red">换言之，如果<span
-class="math inline">\(x_1\)</span>方向的变异性与<span
-class="math inline">\(x_2\)</span>方向的相同，并且<span
-class="math inline">\(x_1\)</span>值的变化不依赖于<span
-class="math inline">\(x_2\)</span>的值，欧氏距离是适用的。</font></p>
-<h3
-id="最小化特征相关度最大化特征间的方差">最小化特征相关度/最大化特征间的方差</h3>
-<p>当变量之间有相关性时，相当于先旋转坐标轴到变量之间相互独立的角度，再计算标准化距离。旋转的过程是二次型变换。<img data-src="/images/Applied%20Multivariate%20Statistical%20Analysis/p1.png"
-alt="坐标基旋转" /> 从上图可以看出，原来的坐标系空间内，<span
-class="math inline">\(x_1\)</span>和<span
-class="math inline">\(x_2\)</span>方向的可变性（方差/协方差）不同，为了减少变量的相关性，在保持散布不变的基础上，将原始的坐标系旋转<span
-class="math inline">\(\theta\)</span>角并标出旋转过的坐标轴<span
-class="math inline">\(\tilde{x}_1\)</span>和<span
-class="math inline">\(\tilde{x}_2\)</span>。原始坐标<span
-class="math inline">\((x_1,x_2)\)</span>与旋转后所得坐标<span
-class="math inline">\((\tilde{x}_1,\tilde{x}_2)\)</span>之间的关系如下<span
-class="math display">\[\begin{gather*}
-    \tilde{x}_1=x_1\cos(\theta) + x_2\sin(\theta) \\
-    \tilde{x}_2=-x_1\sin(\theta) + x_2\cos(\theta)
-\end{gather*}\]</span> 推导过程： 初始坐标<span
-class="math inline">\((x_1,x_2)\)</span>的极坐标表示为 <span
-class="math display">\[\begin{cases}
-    x_1=r\cos(\alpha)\\
-    x_2=r\sin(\alpha)
-\end{cases}\]</span> 由于坐标轴逆时针旋转<span
-class="math inline">\(\theta^\circ\)</span>，所以角度由初始的<span
-class="math inline">\(\alpha\)</span>变为<span
-class="math inline">\(\alpha -
-\theta\)</span>,所以极坐标表示发生如下变化 <span
-class="math display">\[\begin{cases}
-    \tilde{x}_1=r\cos(\alpha - \theta)\\
-    \tilde{x}_2=r\sin(\alpha - \theta)\\
-\end{cases}\]</span> <span class="math display">\[
-\Rightarrow
-\begin{cases}
-    \tilde{x}_1=r\cos(\alpha)\cos(\theta) + r\sin(\alpha)\sin(\theta)\\
-    \tilde{x}_2=r\sin(\alpha)\cos(\theta)-r\cos(\alpha)\sin(\theta)\\
-\end{cases}\]</span> <span class="math display">\[
-\Rightarrow
-\begin{cases}
-    \tilde{x}_1=x_1\cos(\theta) + x_2\sin(\theta)\\
-    \tilde{x}_2=-x_1\sin(\theta) + x_2\cos(\theta)
-\end{cases}
-\]</span></p>
-<h3 id="马氏距离">马氏距离</h3>
-<h4 id="定义">定义</h4>
-<p>设<span class="math inline">\(x,y \in
-\mathcal{R^n}\)</span>为样本空间中的两个样本点，<span
-class="math inline">\(S\)</span>为<span
-class="math inline">\(x,y\)</span>所服从分布的协方差矩阵，则马氏距离为
-<span class="math display">\[\begin{gather*}
-    d(x,y)=\sqrt{(x-y)^TS^{-1}(x-y)}\\
-    d(x,0)=\sqrt{(x-\mu)^TS^{-1}(x-\mu)}
-\end{gather*}\]</span> 计算欧氏距离和马氏距离的期望。
-<font color="red">引理（lemma）</font>：若<span
-class="math inline">\(X\)</span>为时间序列，有均值<span
-class="math inline">\(\mu\)</span>和协方差矩阵<span
-class="math inline">\(\Sigma\)</span>(即<span
-class="math inline">\(\mathbb{E}(X)=\mu,\mathbb{E}[(X-\mu)(X-\mu)^T]=\Sigma\)</span>)，则<span
-class="math display">\[\begin{equation}
-\mathbb{E}(X^TAX)=tr(A\Sigma)+\mu^TA\mu
-\end{equation}\]</span> <span
-class="math inline">\(\bf{Proof}\)</span>:<span
-class="math display">\[\begin{equation}\begin{split}
-    X^TAX&amp;=(X-\mu)^TAX + \mu^TAX\\
-    &amp;=(x-\mu)^TA(X-\mu)+\mu^TAX+(X-\mu)^TA\mu
-\end{split}\end{equation}\]</span>
-然后对公式(6)左右两侧同时取期望值，则有 <span
-class="math display">\[\begin{equation}\begin{split}
-    \mathbb{E}(X^TAX)&amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mathbb{E}(\mu^TAX)+\mathbb{E}[(X-\mu)^TA\mu]\\
-    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu+\mathbb{E}(X^TA\mu)-\mathbb{E}(\mu^TA\mu)\\
-    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu+\mu^TA\mu-\mu^TA\mu\\
-    &amp;=\mathbb{E}[(x-\mu)^TA(X-\mu)]+\mu^TA\mu
-\end{split}\end{equation}\]</span> 此外， <span class="math display">\[
-\begin{equation}
-\begin{split}
-    \mathbb{E}[(x-\mu)^TA(X-\mu)]&amp;=\mathbb{E}(Y^TAY)\\
-    &amp;=\sum\limits^n_{i=1}
-\sum\limits^n_{j=1}\mathbb{E}(Y_iA_{i,j}Y_j)=\sum\limits^n_{i=1}
-\sum\limits^n_{j=1} A_{i,j}[Var(Y)]_{i,j}\\
-    &amp;=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
-A_{i,j}[Var(X-\mu)]_{i,j}=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
-A_{i,j}[Var(X)]_{i,j}\\
-    &amp;=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
-A_{i,j}\Sigma_{i,j}=\sum\limits^n_{i=1} \sum\limits^n_{j=1}
-A_{i,j}\Sigma_{j,i}\\
-    &amp;=\sum\limits^n_{i=1} [A\Sigma]_{i,i}=tr(A\Sigma)
-\end{split}
-\end{equation}
-\]</span> 故，依据(6)、(7)和(8),易得到公式(5)。</p>
-<h4 id="欧氏距离期望">欧氏距离期望</h4>
-<p><span class="math display">\[
-\begin{equation}
-    \mathbb{E}[(X-Y)^TI(X-Y)]=2tr(\Sigma)=2\sum\limits^n_{i=1}\sigma_{ii}
-\end{equation}
-\]</span></p>
-<h4 id="马氏距离期望">马氏距离期望</h4>
-<p><span class="math display">\[
-\begin{equation}
-    \mathbb{E}[(X-Y)^T\Sigma^{-1}(X-Y)]=2tr(\Sigma^{-1}\Sigma)=2n
-\end{equation}
-\]</span></p>
-<h2 id="马氏距离推导">马氏距离推导</h2>
-<p>设原始数据为<span class="math inline">\(x \in
-\mathcal{R^p}\)</span>，经过可逆线性变换后为数据<span
-class="math inline">\(y\)</span>，且假设<span
-class="math inline">\(x=\hat{P}\hat{\Lambda}y\)</span>,其中<span
-class="math inline">\(\hat{P}\)</span>为正交阵，负责旋转，<span
-class="math inline">\(\hat{\Lambda}\)</span>为对角阵，负责伸缩。目的是将变换后的数据变成各维度独立且尺度统一，即<span
-class="math inline">\(Var(y)=I\)</span>，对y计算欧氏距离就是<span
-class="math inline">\(x\)</span>计算马氏距离。其实，就是和上述讲到的最小化特征相关度再进行标准化一致。</p>
-<ol type="1">
-<li>原数据的协方差矩阵：<span
-class="math display">\[\Sigma=Var(x)=Var(\hat{P}\hat{\Lambda}y)=\hat{P}\hat{\Lambda}Var(y)\hat{\Lambda}\hat{P}=\hat{P}\hat{\Lambda}\hat{P}^T\]</span></li>
-<li>转换后数据的欧氏距离： <span
-class="math display">\[y^Ty=(x^T\hat{P}\hat{\Lambda}^{-1})(\hat{\Lambda}^{-1}\hat{P}^Tx)=x^T\Sigma^{-1}x\]</span></li>
-</ol>
-<p>这样，就得到了马氏距离的表达式。</p>
-<h2 id="矩阵相关不等式">矩阵相关不等式</h2>
-<h3 id="柯西-施瓦茨不等式三角不等式">柯西-施瓦茨不等式(三角不等式)</h3>
-<ul>
-<li>已知<span class="math inline">\(b,d \in
-\mathcal{R^p}\)</span>(两个样本) <span
-class="math display">\[\begin{equation}
-  (b^Td)^2 \leq (b^Tb)(d^Td)
-\end{equation}\]</span> 等号成立当且仅当<span
-class="math inline">\(b=cd\)</span>，其中c为常数。 <span
-class="math inline">\(\bf{Proof}\)</span>: <span class="math display">\[
-\begin{gather*}
-  b^Td=|b| \cdot |d| \cdot \cos&lt;b,d&gt; \\
-  (b^Td)^2=(|b| \cdot |d| \cdot \cos&lt;b,d&gt;)^2\\
-  =|b|^2 \cdot |d|^2 \cdot \cos^2 &lt;b,d&gt;\\
-  \leq (b^Tb)(d^Td), \cos&lt;b,d&gt; \in [0,1]
-\end{gather*}
-\]</span></li>
-</ul>
-<h3 id="扩展的柯西-施瓦茨不等式">扩展的柯西-施瓦茨不等式</h3>
-<ul>
-<li><span class="math inline">\(B\)</span>为正定矩阵<span
-class="math display">\[(b^Td)^2 \leq
-(b^TBb)(d^TB^{-1}d)\]</span>等号成立当且仅当<span
-class="math inline">\(b=cB^{-1}d\)</span>，其中c为常数。</li>
-</ul>
-<h3 id="极大化引理">极大化引理</h3>
-<ul>
-<li><span class="math inline">\(B \in \mathcal{R^{p \times p}},d \in
-\mathcal{R^p}\)</span>,<span
-class="math inline">\(B\)</span>为正定矩阵，<span
-class="math inline">\(d\)</span>为给定向量，则对任何非零向量<span
-class="math inline">\(x\)</span>,有<span class="math display">\[
-\mathop{max}\limits_{x \neq 0}
-\frac{(x^Td)^2}{x^TBx}=d^TB^{-1}d\]</span> 其中最大值取在<span
-class="math inline">\(x=cB^{-1}d\)</span>，其中c为常数。</li>
-</ul>
-<h3 id="单位球上二次型最大化瑞丽商">单位球上二次型最大化(瑞丽商)</h3>
-<p><span class="math inline">\(B\)</span>为正定矩阵，特征值为<span
-class="math inline">\(\lambda_1 \geq \lambda_2 \geq \dotsb \geq
-\lambda_p \geq 0\)</span>，对应特征向量（单位化后）为<span
-class="math inline">\(e_1,e_2,\dotsb,e_p\)</span>,则<span
-class="math display">\[\begin{gather*}
-    \mathop{max}\limits_{x \neq 0} \frac{x^TBx}{x^Tx} =
-\lambda_1(x=e_1)\\
-    \mathop{min}\limits_{x \neq 0} \frac{x^TBx}{x^Tx} =
-\lambda_p(x=e_p)\\
-    \mathop{max}\limits_{x \bot e_1,\dotsb,e_k} \frac{x^TBx}{x^Tx} =
-\lambda_{k+1}(x=e_{k+1})\\
-\end{gather*}\]</span></p>
-<figure>
-<img data-src="/images/Applied%20Multivariate%20Statistical%20Analysis/p2.png"
-alt="超平面和向量投影" />
-<figcaption aria-hidden="true">超平面和向量投影</figcaption>
-</figure>
-<h2 id="向量投影">向量投影</h2>
-<p>设<span class="math inline">\(x,y \in
-\mathcal{R^n}\)</span>,向量<span class="math inline">\(x\)</span>到<span
-class="math inline">\(y\)</span>的投影：<span
-class="math inline">\(\frac{x^Ty}{y^Ty}y\)</span>。证明可以看MIT的《Introduction
-to linear algebra》。</p>
-<h2 id="矩阵求导">矩阵求导</h2>
-<p><span class="math inline">\(A\)</span>为矩阵，<span
-class="math inline">\(x\)</span>为向量，则有 <span
-class="math display">\[
-\begin{gather*}
-    \frac{\partial}{\partial x}(Ax)=A^T\\
-    \frac{\partial}{\partial x}(x^TA)=A\\
-    \frac{\partial}{\partial x}(x^Tx)=2x\\
-    \frac{\partial}{\partial x}(x^TAx)=Ax+A^Tx
-\end{gather*}
-\]</span> <span class="math inline">\(A\)</span>为矩阵，<span
-class="math inline">\(x\)</span>为方阵，则有<span
-class="math display">\[
-\begin{gather*}
-    \frac{\partial |A|}{\partial A}=|A|A^{-1}\\
-    \frac{\partial tr(AB)}{\partial A}=B^T\\
-    \frac{\partial tr(A^{-1}B)}{\partial A}=-A^{-1}B^TA^{-1}
-\end{gather*}\]</span></p>
-<h2 id="统计量的更多运算">统计量的更多运算</h2>
-<p><span class="math display">\[
-\begin{gather*}
-    \mathbb{E}(c^Tx)=x^T\mu\\
-    Var(c^Tx)=c^T\Sigma c\\
-    \mathbb{E}(CX)=C\mu_X\\
-    Cov(CX)=C\Sigma_X C\\
-    Cov(b^Tx,c^Tx)=b^TCov(x)c
-\end{gather*}\]</span></p>
-<h1 id="其他章节">其他章节</h1>
-<p><a
-href="https://keithmalarkey.github.io/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/">Applied
-Multivariate Statistical Analysis(2)</a></p>
+    <title>Fourier Series and Fourier Transform</title>
+    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
+    <content><![CDATA[
 ]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
-      </tags>
   </entry>
   <entry>
-    <title>Deep Residual Networks for Image Recognition</title>
-    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
-href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
-Image Recognition</a>作为开篇。<br />
-主要目的：<br />
-1. 什么是ResNet？其基本结构是什么？<br />
-2. 为什么提出ResNet?或者说它的优势是什么？<br />
-3. 为何会有其优势，从数理层面的解释是什么？<br />
-4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
-<hr />
-<h1 id="论文解析">论文解析</h1>
-<h2 id="概要">概要</h2>
-<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
-<h2 id="引言">引言</h2>
-<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
-normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
-Normalization)。<br />
-然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
-alt="深层网络准确率饱和现象" />
-从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
-<font color="red">
-设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
-mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
-error)。
-</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
-alt="Shortcut connection" /> <font color="red">Deep residual learning
-framework</font>:假设我们希望得到的一个潜在映射为<span
-class="math inline">\(\mathcal{H}(\bf
-x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
-class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
-class="math inline">\(\mathcal{F}(\textbf{x}) :=
-\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
-class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
-connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
-x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
-x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
-alt="全局设计" /></p>
-<h2 id="实验结果">实验结果</h2>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
-alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
-block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
-alt="Resnet性能同plain CNN的对比" />
-上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
-class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
-<h1 id="数理解释">数理解释</h1>
-<ol type="1">
-<li>假设plain CNN需要学得潜在的mapping是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
-class="math inline">\(g\)</span>;(2)深层部分的映射<span
-class="math inline">\(f\)</span>，即<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
-class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
-f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
-g(\theta)}{\partial
-\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
-<li>同样的，ResNet需要学习的潜在mapping也是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
-connection的原因，每次迭代训练参数时需要做的是<span
-class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
-g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
-\underbrace{\frac{\partial g(\theta)}{\partial
-\theta}}_{(2)}\)</span>，在(1)中还会存在plain
-CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
-</ol>
-<h1 id="总结">总结</h1>
-<p>ResNet就是使用了shortcut(residual)
-connection的CNN变种，其基本结构就是残差块(residual
-block)和残差连接(residual
-connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
-<h1 id="遗留问题">遗留问题</h1>
-<ol type="1">
-<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
-<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
-<li>提到Residual，在机器学习中，比如Gradient
-boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
-</ol>
+    <title>Principal component analysis</title>
+    <url>/2023/05/30/Principal-component-analysis/</url>
+    <content><![CDATA[
 ]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>图像识别</tag>
-        <tag>ResNet</tag>
-      </tags>
   </entry>
   <entry>
     <title>Transformer</title>
-    <url>/2023/06/18/Transformer/</url>
+    <url>/2023/07/06/Transformer/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
 <p>Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。</p>
 <h1 id="提问">提问</h1>
@@ -1634,6 +1560,11 @@ alt="code-struct" /></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">PositionalEncoding</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, d_model, dropout=<span class="number">0.1</span>, max_len=<span class="number">5000</span></span>):</span><br><span class="line">        <span class="built_in">super</span>(PositionalEncoding, self).__init__()</span><br><span class="line">        self.dropout = nn.Dropout(p=dropout)</span><br><span class="line"></span><br><span class="line">        pe = torch.zeros(max_len, d_model)</span><br><span class="line">        position = torch.arange(<span class="number">0</span>, max_len, dtype=torch.<span class="built_in">float</span>).unsqueeze(<span class="number">1</span>)</span><br><span class="line">        div_term = torch.exp(torch.arange(<span class="number">0</span>, d_model, <span class="number">2</span>).<span class="built_in">float</span>() * (-math.log(<span class="number">10000.0</span>) / d_model))</span><br><span class="line">        pe[:, <span class="number">0</span>::<span class="number">2</span>] = torch.sin(position * div_term)</span><br><span class="line">        pe[:, <span class="number">1</span>::<span class="number">2</span>] = torch.cos(position * div_term)</span><br><span class="line">        pe = pe.unsqueeze(<span class="number">0</span>).transpose(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">        self.register_buffer(<span class="string">&#x27;pe&#x27;</span>, pe)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        x: [seq_len, batch_size, d_model]</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        x = x + self.pe[:x.size(<span class="number">0</span>), :]</span><br><span class="line">        <span class="keyword">return</span> self.dropout(x)</span><br></pre></td></tr></table></figure>
 <p>当然，位置编码这里的自由度比较高，很多论文也是引入了新的位置编码改善性能。</p>
 <h1 id="vit">ViT</h1>
+<p>从<a
+href="https://arxiv.org/pdf/2010.11929.pdf">paper</a>的标题--TRANSFORMERS
+FOR IMAGE RECOGNITION AT
+SCALE，我们就清楚ViT仍然更适用于大数据集的视觉任务。</p>
+<p>#TODO</p>
 ]]></content>
       <categories>
         <category>机器学习</category>
@@ -1641,6 +1572,138 @@ alt="code-struct" /></p>
       </categories>
       <tags>
         <tag>Model</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pattern Recognition and Machine Learning(1)</title>
+    <url>/2023/06/01/PRML-1/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<ol type="1">
+<li>学习模式识别和机器学习的基础</li>
+<li>贝叶斯学派日常学习记录</li>
+<li>不断夯实基础，包括统计学习的相关概念、图网络和经典的生成模型等</li>
+<li>面向以下几个优秀UP学习：
+<ol type="1">
+<li><a
+href="https://space.bilibili.com/497536319?spm_id_from=333.999.0.0">徐芝兰</a></li>
+<li><a
+href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">派派大星星</a></li>
+<li><a
+href="https://space.bilibili.com/552439878?spm_id_from=333.999.0.0">Poros踵</a></li>
+</ol></li>
+<li><a
+href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">UP派派大星星</a>
+给出了相关书籍的<a
+href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>,里面会有简略中文版书籍和公式推导</li>
+<li><a
+href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">英文原版书籍</a></li>
+<li>因为一些推理或者proof不够完整，自己整理和修改了<a
+href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>，之后会上传到github(尚未完成：TODO)
+<!-- #TODO --></li>
+</ol>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>需要一些前备知识： 1. 概率论(够用)或随机过程(更好) 2.
+线性代数/高等代数/矩阵论 3. 微积分基础</p>
+<h1 id="频率学派和贝叶斯学派">频率学派和贝叶斯学派</h1>
+<p>在学习大数定理时，在样本观测值已知情形下，我们可以确定该样本的似然函数，通过求最大似然确定未知参数。即，假设对独立同分布(i.i.d,
+independent and identical distribution)的样本集<span
+class="math inline">\(X_1,X_2,\dotsb,X_n\)</span>进行观测，其观测值依次为<span
+class="math inline">\(x_1,x_2,\dotsb,x_n\)</span>，其样本的p.d.f(概率密度函数)为<span
+class="math display">\[p(x_i|\omega)(i=1,2,\dots,n)\]</span>
+则相应似然函数为<span
+class="math inline">\(f(\omega)=\prod\limits_{i=1}^n
+p(x_i|\omega)\)</span>,然后求得对参数<span
+class="math inline">\(\omega\)</span>的极大参数估计<span
+class="math inline">\(\hat{\omega}_{MLE}\)</span>，其推导如下： <span
+class="math display">\[
+\begin{equation*}
+    \begin{split}
+    \hat{\omega}_{MLE}&amp;= argmax \ln f(\omega)\\
+    &amp;= argmax \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
+    &amp;= argmin - \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
+    \end{split}
+\end{equation*}
+\]</span> 参考<a
+href="https://zhuanlan.zhihu.com/p/337637096">频率学派和贝叶斯学派</a>,<font color="purple">频率学派和贝叶斯学派的主要区别：是否允许先验概率分布的使用</font>。</p>
+<ul>
+<li>频率学派不假设任何的先验知识，不参照过去的经验，只按照当前已有的数据进行概率推断</li>
+<li>贝叶斯学派会假设先验知识的存在，然后再用采样逐渐修改先验知识并逼近真实知识(一个不断更新先验知识的过程，也就是一个不断学习的过程)</li>
+</ul>
+<p>因此贝叶斯推论中前一次得到的后验概率分布可以作为后一次的先验概率。但实际上，在数据量趋近无穷时，频率学派和贝叶斯学派得到的结果是一样的，也就是说频率方法是贝叶斯方法的极限。当考虑的试验次数非常少的时候，贝叶斯方法的解释非常有用。此外，贝叶斯理论将我们对于随机过程的先验知识纳入考虑，当我们获得的数据越来越多的时候，这个先验的概率分布就会被更新到后验分布中。</p>
+<h2 id="贝叶斯公式">贝叶斯公式</h2>
+<p><span class="math display">\[
+\begin{equation}
+\begin{split}
+    p(\theta | x)&amp;= \frac{p(x|\theta) \cdot \pi(\theta)}{p(x)}\\
+    &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\sum\limits_{\Theta}
+p(x|\theta) \cdot \pi(\theta)}\\
+    \text{或} &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\int_{\Theta}
+p(x|\theta) \cdot \pi(\theta)d\theta}
+\end{split}
+\end{equation}
+\]</span> 其中，<span
+class="math inline">\(\pi(\theta)\)</span>称为先验概率(the prior)，<span
+class="math inline">\(p(x|\theta)\)</span>称为似然函数(likelihood)，<span
+class="math inline">\(p(x)\)</span>称为边缘分布(margin
+distribution)，<span class="math inline">\(p(\theta |
+x)\)</span>称为后验分布(the
+posterior)。事实上，分母可以看成是对后验分布的正则化或归一化</p>
+<h2 id="先验概率分布">先验概率分布</h2>
+<blockquote>
+<p><a
+href="https://en.wikipedia.org/wiki/Prior_probability">维基百科</a>:A
+prior probability distribution of an uncertain quantity, often simply
+called the prior, is its assumed probability distribution before some
+evidence is taken into account. For example, the prior could be the
+probability distribution representing the relative proportions of voters
+who will vote for a particular politician in a future election. The
+unknown quantity may be a parameter of the model or a latent variable
+rather than an observable variable.
+不确定量的先验概率分布，通常简称为先验，是在考虑某些证据之前假定的概率分布。例如，先验可以是代表在未来选举中投票给特定政治家的选民的相对比例的概率分布。未知量可能是模型的参数或潜在变量，而不是可观察变量。</p>
+</blockquote>
+<h2 id="共轭分布">共轭分布</h2>
+<p>在贝叶斯统计中，如果先验分布和后验分布属于同类（分布形式相同），则先验分布与后验分布被称为<font color="red">共轭分布</font>，而先验分布被称为似然函数的<font color="red">共轭先验</font>。如果我们需要验证共轭分布，由于<span
+class="math inline">\(posterior \propto likelihood \times
+prior\)</span>，所以带入似然函数和先验分布子式之后，若后验分布和先验分布的形式相同，那么就说明两者是共轭分布。</p>
+<h2 id="共轭分布举例">共轭分布举例</h2>
+<ol type="1">
+<li>二项分布 <span class="math display">\[Bin(m|N,\mu)=\binom{N}{m}\mu^m
+(1-\mu)^{N-m} \label{eq3}\]</span></li>
+<li>Beta分布 <span
+class="math display">\[Bata(\mu|a,b)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}
+\mu^{a-1}(1-\mu)^{b-1}(a,b&gt;0,\mu \in (0,1)) \label{eq4}\]</span>
+其中，<span class="math inline">\(\Gamma(x) \equiv \int_0^\infty
+u^{x-1}e^{-u}du(x&gt;0)\)</span></li>
+<li>由分布<span class="math inline">\(\ref{eq3}\)</span> <span
+class="math inline">\(\times\)</span> 分布 <span
+class="math inline">\(\ref{eq4}\)</span>，归一化之后得到： <span
+class="math display">\[p(\mu|m,l,a,b) \propto
+\mu^{m+a-1}(1-\mu)^{l+b-1}\]</span>，其中<span
+class="math inline">\(l=N-m\)</span>。和先验分布的形式相同。所以说,二项分布和Beta分布互为共轭先验，分布<span
+class="math inline">\(p(\mu|m,l,a,b)\)</span>和二项分布以及beta分布都是共轭分布</li>
+</ol>
+<h1 id="概率分布">概率分布</h1>
+<h2 id="二元分布0-1分布binary-distribution">二元分布/0-1分布(Binary
+distribution)</h2>
+<p><span
+class="math display">\[Bern(x|\mu)=\mu^x(1-\mu)^{1-x}\]</span>，可以看到这是特殊的伯努利分布</p>
+<h2 id="二项分布binomial-distribution">二项分布(Binomial
+distribution)</h2>
+<p><span class="math display">\[Bin(m|N, \mu) = \binom{N}{m}\mu^m(1 -
+\mu)^{N - m}\]</span></p>
+<h2 id="beta分布">Beta分布</h2>
+<p><span class="math display">\[Beta(\mu|a, b) = \frac{\Gamma(a +
+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
+(0,1))\]</span>，其中<span class="math inline">\(\Gamma(x) \equiv
+\int_0^\infty u^{x-1}e^{-u}du (x &gt; 0)\)</span></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>贝叶斯学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>PRML</tag>
       </tags>
   </entry>
 </search>
