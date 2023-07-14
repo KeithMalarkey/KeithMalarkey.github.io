@@ -154,7 +154,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -206,6 +206,122 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://keithmalarkey.github.io/2023/07/14/Hyperspectral-or-Multispectral-Image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Keith Malarkey">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Keith's Blog">
+      <meta itemprop="description" content="技术贴 + 数学/算法笔记 + vim/neovim初级爱好者">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Keith's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/07/14/Hyperspectral-or-Multispectral-Image/" class="post-title-link" itemprop="url">Hyperspectral or Multispectral Image</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-07-14 08:48:49 / 修改时间：09:37:15" itemprop="dateCreated datePublished" datetime="2023-07-14T08:48:49+08:00">2023-07-14</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/07/14/Hyperspectral-or-Multispectral-Image/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/07/14/Hyperspectral-or-Multispectral-Image/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>883</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="什么是高多光谱图像">什么是高(多)光谱图像</h1>
+<p>一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel)</p>
+<p>高光谱图像： + 大量不同波段的图像(N channels, gennerally, N <span class="math inline">\(\geq\)</span> 100) + 波段可以连续或离散 +
+每个波段捕捉不同波长范围内的光谱信息</p>
+<p>高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数千个窄波段范围内获取数据，并生成具有多个波段的图像。每个波段对应着不同的光谱范围，例如可见光、红外线和近红外线等。通过组合这些波段的数据，我们可以获得一个包含丰富光谱信息的多波段图像。</p>
+<p>多光谱图像: + N channels(generally, 1 <span class="math inline">\(\leq\)</span> N <span class="math inline">\(\leq\)</span> 100)</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/07/14/Hyperspectral-or-Multispectral-Image/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+
+
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://keithmalarkey.github.io/2023/07/13/Masked-Autoencoder/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -234,9 +350,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-07-13 15:44:44 / 修改时间：20:31:11" itemprop="dateCreated datePublished" datetime="2023-07-13T15:44:44+08:00">2023-07-13</time>
+      <time title="创建时间：2023-07-13 15:44:44" itemprop="dateCreated datePublished" datetime="2023-07-13T15:44:44+08:00">2023-07-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-14 08:33:08" itemprop="dateModified" datetime="2023-07-14T08:33:08+08:00">2023-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -269,7 +391,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>177</span>
+      <span>254</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -308,7 +430,12 @@ by 李沐</a></li>
 <ul>
 <li>Encoder-Decoder</li>
 <li>AutoEncoder</li>
-<li>DAE(Denoising Autoencoder)</li>
+<li>DAE(Denoising Autoencoder)
+<ul>
+<li>Pascal Vincent, Hugo Larochelle, Yoshua Bengio, and PierreAntoine
+Manzagol. Extracting and composing robust features with denoising
+autoencoders. In ICML, 2008.</li>
+</ul></li>
 <li>VAE(Variational Autoencoder)</li>
 </ul></li>
 <li>迁移学习（预训练）</li>
@@ -1405,151 +1532,6 @@ c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span class="math inline">\(\Sigm
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://keithmalarkey.github.io/2023/05/13/Applied-Multivariate-Statistical-Analysis/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="Keith Malarkey">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Keith's Blog">
-      <meta itemprop="description" content="技术贴 + 数学/算法笔记 + vim/neovim初级爱好者">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Keith's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/05/13/Applied-Multivariate-Statistical-Analysis/" class="post-title-link" itemprop="url">Applied Multivariate Statistical Analysis(1)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-05-13 17:02:17" itemprop="dateCreated datePublished" datetime="2023-05-13T17:02:17+08:00">2023-05-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-15 22:18:12" itemprop="dateModified" datetime="2023-05-15T22:18:12+08:00">2023-05-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">统计学习</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2023/05/13/Applied-Multivariate-Statistical-Analysis/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2023/05/13/Applied-Multivariate-Statistical-Analysis/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>10 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前言">前言</h1>
-<p>本贴参考书《Applied Multivariate Statistical Analysis, 4th ed.》 by
-Richard A.Johnson and Dean
-W.Wichern，主要是学习统计分析的基础，并且在数据预处理时常常会涉及到数据压缩和数据降维，在本贴中也会给出很多相关的方法。</p>
-<h1 id="预备知识">预备知识</h1>
-<h2 id="多元数据的组织">多元数据的组织</h2>
-<p>多元数据的基本表示:n行p列的数据矩阵，每一行表示一个样本(sample)，每一列代表一个特征(feature)或属性(attribute)。即<span class="math display">\[X=\begin{bmatrix}
-    x_{11} &amp; x_{12} &amp; \dotsb &amp; x_{1p}\\
-    x_{21} &amp; x_{22} &amp; \dotsb &amp; x_{2p}\\
-    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-    x_{n1} &amp; x_{n2} &amp; \dotsb &amp; x_{np}
-\end{bmatrix}=\begin{bmatrix}
-    X_1^T\\
-    \vdots\\
-    X_n^T
-\end{bmatrix}\]</span> 其中，不同样本之间相互独立。每个样本为<span class="math inline">\(X_j=[x_{j1},x_{j2},\dotsb,x_{jp}]^T,j=\{1,2,\dotsb,n\}\)</span>；</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/05/13/Applied-Multivariate-Statistical-Analysis/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-    <div>
-      
-    </div>
-
-
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1574,13 +1556,13 @@ W.Wichern，主要是学习统计分析的基础，并且在数据预处理时�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">18k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:02</span>
+    <span title="站点阅读时长">1:05</span>
   </span>
 </div>
 <div class="busuanzi-count">

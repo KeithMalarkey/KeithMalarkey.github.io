@@ -21,26 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"keithmalarkey.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="技术贴 + 数学&#x2F;算法笔记 + vim&#x2F;neovim初级爱好者">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Keith&#39;s Blog">
-<meta property="og:url" content="https://keithmalarkey.github.io/tags/Information-Theory/index.html">
+    <meta name="description" content="什么是高(多)光谱图像 一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel) 高光谱图像： + 大量不同波段的图像(N channels, gennerally, N \(\geq\) 100) + 波段可以连续或离散 + 每个波段捕捉不同波长范围内的光谱信息 高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hyperspectral or Multispectral Image">
+<meta property="og:url" content="https://keithmalarkey.github.io/2023/07/14/Hyperspectral-or-Multispectral-Image/index.html">
 <meta property="og:site_name" content="Keith&#39;s Blog">
-<meta property="og:description" content="技术贴 + 数学&#x2F;算法笔记 + vim&#x2F;neovim初级爱好者">
+<meta property="og:description" content="什么是高(多)光谱图像 一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel) 高光谱图像： + 大量不同波段的图像(N channels, gennerally, N \(\geq\) 100) + 波段可以连续或离散 + 每个波段捕捉不同波长范围内的光谱信息 高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-14T00:48:49.000Z">
+<meta property="article:modified_time" content="2023-07-14T01:37:15.857Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="python, machine-learning, deep-learning">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://keithmalarkey.github.io/tags/Information-Theory/">
+<link rel="canonical" href="https://keithmalarkey.github.io/2023/07/14/Hyperspectral-or-Multispectral-Image/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/Information-Theory/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://keithmalarkey.github.io/2023/07/14/Hyperspectral-or-Multispectral-Image/","path":"2023/07/14/Hyperspectral-or-Multispectral-Image/","title":"Hyperspectral or Multispectral Image"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: Information Theory | Keith's Blog</title>
+<title>Hyperspectral or Multispectral Image | Keith's Blog</title>
   
 
 
@@ -127,7 +129,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -140,6 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E5%A4%9A%E5%85%89%E8%B0%B1%E5%9B%BE%E5%83%8F"><span class="nav-number">1.</span> <span class="nav-text">什么是高(多)光谱图像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E5%A4%9A%E5%85%89%E8%B0%B1b-times-h-times-w%E5%9B%BE%E8%B1%A1%E8%AF%86%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">高(多)光谱(B \(\times\) H \(\times\) W)图象识别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E8%B0%B1%E4%BF%A1%E6%81%AF%E5%92%8C%E7%A9%BA%E9%97%B4%E4%BF%A1%E6%81%AF"><span class="nav-number">2.1.</span> <span class="nav-text">光谱信息和空间信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spatial-information"><span class="nav-number">2.1.1.</span> <span class="nav-text">spatial information</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spectral-information"><span class="nav-number">2.1.2.</span> <span class="nav-text">spectral information</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -196,51 +199,172 @@
 
     </div>
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Information Theory
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://keithmalarkey.github.io/2023/07/14/Hyperspectral-or-Multispectral-Image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="Keith Malarkey">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Keith's Blog">
+      <meta itemprop="description" content="技术贴 + 数学/算法笔记 + vim/neovim初级爱好者">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hyperspectral or Multispectral Image | Keith's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hyperspectral or Multispectral Image
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+
+      <time title="创建时间：2023-07-14 08:48:49 / 修改时间：09:37:15" itemprop="dateCreated datePublished" datetime="2023-07-14T08:48:49+08:00">2023-07-14</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/07/14/Hyperspectral-or-Multispectral-Image/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/07/14/Hyperspectral-or-Multispectral-Image/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>883</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="什么是高多光谱图像">什么是高(多)光谱图像</h1>
+<p>一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel)</p>
+<p>高光谱图像： + 大量不同波段的图像(N channels, gennerally, N <span
+class="math inline">\(\geq\)</span> 100) + 波段可以连续或离散 +
+每个波段捕捉不同波长范围内的光谱信息</p>
+<p>高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数千个窄波段范围内获取数据，并生成具有多个波段的图像。每个波段对应着不同的光谱范围，例如可见光、红外线和近红外线等。通过组合这些波段的数据，我们可以获得一个包含丰富光谱信息的多波段图像。</p>
+<p>多光谱图像: + N channels(generally, 1 <span
+class="math inline">\(\leq\)</span> N <span
+class="math inline">\(\leq\)</span> 100)</p>
+<p>多光谱图像和高光谱图像高度相似，区别在于波段较少</p>
+<h1 id="高多光谱b-times-h-times-w图象识别">高(多)光谱(B <span
+class="math inline">\(\times\)</span> H <span
+class="math inline">\(\times\)</span> W)图象识别</h1>
+<h2 id="光谱信息和空间信息">光谱信息和空间信息</h2>
+<p>机器学习任务主要是学习特征表示，但是在接触高光谱之初，其实由于没有相关知识的学习，对于学习什么特征表示，是一头雾水。</p>
+<p>通过些许论文的阅读，了解到主要是来自spectral-spatial的特征。如果一张图片是由多个channels组成，那么在高光谱图像中的channels也可以称为波段(spectral
+bands, B)。</p>
+<h3 id="spatial-information">spatial information</h3>
+<p>spatial(空间)信息其实很好理解，就是将所有的波段分离开来，每张子图(<span
+class="math inline">\(H \times
+W\)</span>)内表现出的特征，就叫做spatial特征。</p>
+<p>通过利用图像的空间信息，例如像素的邻域关系、纹理、形状等，可以进一步提高分类的准确性。常见的方法包括基于纹理特征的滤波器方法、基于空间像素关系的邻域统计方法等。</p>
+<h3 id="spectral-information">spectral information</h3>
+<p>其实光谱信息(spectral
+information)是很抽象的。因为空间信息中像素的邻域关系、纹理、形状都可以理解并抛给深度网络进行学习特征表示，但是spectral,
+what is it?</p>
+<p>以下是面向GPT的结果：<br />
+1.
+光谱特征提取：对于每个像素，可以提取每个波段的光谱特征，例如波段反射率或辐射强度。通过计算波段的统计特征，如平均值、标准差、最大值、最小值等，可以获取波段的特征表示。
+2.
+光谱指数：通过计算不同波段之间的比值或差异，可以提取地物的特定属性。常用的光谱指数包括NDVI（归一化植被指数）、NDWI（归一化水体指数）、NDSI（归一化积雪指数）等。这些指数可以用于提取植被、水体、积雪等地物信息。
+3.
+光谱曲线形状：每个地物类别在光谱上具有特定的形状和特征。通过对比不同地物类别在光谱曲线上的差异，可以区分不同地物类别。例如，某个地物类别可能在某个波段上有较高的反射率，而其他类别则相对较低。
+4.
+波段组合：将多个波段进行组合，形成新的特征表示。可以通过使用波段的比值、差异或组合算法（如主成分分析）来创建新的波段组合。这些波段组合可以提供更具区分度的特征，用于地物分类。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-05-18T21:25:12+08:00"
-              content="2023-05-18">
-          05-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/05/18/Information-Theory/" itemprop="url">
-            <span itemprop="name">Information Theory</span>
-          </a>
-      </div>
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------已经到底啦！<i class="fa fa-paw"></i>-------------</div>
+    
+</div>
 
       
-    </header>
+    </div>
+
+
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/07/13/Masked-Autoencoder/" rel="prev" title="Masked Autoencoder">
+                  <i class="fa fa-chevron-left"></i> Masked Autoencoder
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
 
+
+
+
+
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -333,7 +457,7 @@ setInterval("createtime()",250);
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline4test-af5tulsko-keithmalarkey.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论鸭~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/tags/Information-Theory/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline4test-af5tulsko-keithmalarkey.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论鸭~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2023/07/14/Hyperspectral-or-Multispectral-Image/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
