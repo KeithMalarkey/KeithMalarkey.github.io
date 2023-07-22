@@ -52,12 +52,6 @@ class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
 ]]></content>
   </entry>
   <entry>
-    <title>Principal component analysis</title>
-    <url>/2023/05/30/Principal-component-analysis/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
     <title>Pattern Recognition and Machine Learning(1)</title>
     <url>/2023/06/01/PRML-1/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -190,6 +184,12 @@ b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
       </tags>
   </entry>
   <entry>
+    <title>Principal component analysis</title>
+    <url>/2023/05/30/Principal-component-analysis/</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
     <title>创建一个hexoBlog</title>
     <url>/2023/05/08/Create-a-hexoBlog/</url>
     <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
@@ -316,43 +316,6 @@ class="uri">https://www.issey.top/</a></li>
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Applied Multivariate Statistical Analysis(2)</title>
-    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
-    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
-<h2 id="基本形式">基本形式</h2>
-<ul>
-<li>一元正态分布的密度函数：<span
-class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
-<li>多元正态分布的密度函数：<span
-class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
-其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
-class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
-对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
-class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
-其中<span class="math inline">\(\bf
-c\)</span>为常数。这是个高维椭圆，中心在<span
-class="math inline">\(\bf\mu\)</span>，拥有<span
-class="math inline">\(p\)</span>个轴，第<span
-class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
-c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
-class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
-class="math inline">\(\lambda_i\)</span>和<span
-class="math inline">\(\textbf{e}_i\)</span>为<span
-class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
-</ul>
-<h2 id="线性变换">线性变换</h2>
-<p><span class="math inline">\(X~\)</span></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
       </tags>
   </entry>
   <entry>
@@ -813,6 +776,43 @@ boosting中的residual和这里的resodual有什么区别？(这部分目前我�
       <tags>
         <tag>图像识别</tag>
         <tag>ResNet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Applied Multivariate Statistical Analysis(2)</title>
+    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
+    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
+<h2 id="基本形式">基本形式</h2>
+<ul>
+<li>一元正态分布的密度函数：<span
+class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
+<li>多元正态分布的密度函数：<span
+class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
+其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
+class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
+对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
+class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
+其中<span class="math inline">\(\bf
+c\)</span>为常数。这是个高维椭圆，中心在<span
+class="math inline">\(\bf\mu\)</span>，拥有<span
+class="math inline">\(p\)</span>个轴，第<span
+class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
+c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
+class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
+class="math inline">\(\lambda_i\)</span>和<span
+class="math inline">\(\textbf{e}_i\)</span>为<span
+class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
+</ul>
+<h2 id="线性变换">线性变换</h2>
+<p><span class="math inline">\(X~\)</span></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
       </tags>
   </entry>
   <entry>
@@ -1526,7 +1526,7 @@ representation)映射回输入时的模样，然而decoder在NLP和CV领域起�
       </tags>
   </entry>
   <entry>
-    <title>Transformer</title>
+    <title>Transformer &amp; ViT</title>
     <url>/2023/07/06/Transformer/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
 <p>Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。</p>
@@ -1702,7 +1702,8 @@ class="math display">\[Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V\]</spa
 <p>为什么使用多头注意力机制？
 类似于CNN的多通道卷积(每个通道都是图像的一个特征子空间，不过开始时不包含高级语义，需要通过多个filter【对应多头注意力里的多个线性投影下的关注】后，才能获得)。在Transformer中引入了h次注意力，由图可知，全连接的线性层将输入的(V,K,Q)进行降维（投影），然后通过h次的Scaled
 Dot-Product
-Attention获得h个模式Pattern，可以看到这样做可以挖掘更多的高级特征。</p>
+Attention获得h个模式Pattern，可以看到这样做可以挖掘更多的高级特征。从注意力的角度来说，就是多个头关注不同的position
+dot，然后挖掘全局之于此处position的关联度。</p>
 </blockquote>
 <p>多头注意力的一般形式： <span class="math display">\[\begin{split}
 MultiHead(Q,K,V)&amp;=Concat(head_1,\dots,head_h)W^O \\
@@ -1719,8 +1720,11 @@ class="math inline">\((W_i^Q,W^K_i,W^V_i)\)</span>投影到了不同的子空间
 <h3 id="position-wise-feed-forward-networksmlp">Position-wise
 Feed-Forward Networks(MLP)</h3>
 <h4 id="基本形式">基本形式</h4>
-<p><span
-class="math display">\[FFN(x)=max(0,xW_1+b_1)W_2+b_2\]</span></p>
+<p><span class="math display">\[FFN(x)=max(0,xW_1+b_1)W_2+b_2\]</span>
+实质：将来自Multi-Attention的输入交给一个线性层<span
+class="math inline">\(Linear_1(x)=xW_1 +
+b_1\)</span>,然后交给激活函数ReLU，最后在做线性变换<span
+class="math inline">\(Linear_2(x)=xW_2+b_2\)</span></p>
 <h4 id="position-encoding">Position Encoding</h4>
 <p>RNN是逐步处理embedding的过程，是将t时刻的输出作为t时刻的输入的一部分考量。而Transformer则不同，他是在一开始就利用注意力机制考量不同embedding
 vectors之间的相关度，所以在输入时位置编码显得比较重要，它会提供RNN中“逐步处理”这样的时序关系，来告诉模型每个embedding的位置(position)。</p>
@@ -1761,8 +1765,40 @@ alt="code-struct" /></p>
 <p>从<a
 href="https://arxiv.org/pdf/2010.11929.pdf">paper</a>的标题--TRANSFORMERS
 FOR IMAGE RECOGNITION AT
-SCALE，我们就清楚ViT仍然更适用于大数据集的视觉任务。</p>
-<p>#TODO</p>
+SCALE，我们就清楚ViT仍然更适用于大数据集的视觉任务。当然，如果使用预训练模型，对下游任务进行参数微调，性能也会很好。</p>
+<h2 id="cnn-transformer">CNN &amp; Transformer</h2>
+<p>当在数据规模相近的不带强制性正则的中小型数据集上(比如，ImageNet)采用ViT和ResNet,那么ViT的性能会劣于ResNet,主要原因：ViT缺乏CNN内在固有的Inductive
+bias(简单理解为合理的先验知识)——translation equivariance和locality。</p>
+<h2 id="overview-of-vit">Overview of ViT</h2>
+<figure>
+<img data-src="/images/Transformer/ViT-model.png" alt="ViT Overview" />
+<figcaption aria-hidden="true">ViT Overview</figcaption>
+</figure>
+<p>可以看到其结构相对于Transfomer的架构相对简单，原来的encoder-decoder结构将decoder抽象为了简单的MLP，且加入了可以学习的<code>classfication token</code>
+(简称<code>cls token</code>)，当然也可以不加，但是需要在最后进行全局平均池化。</p>
+<h2 id="method">Method</h2>
+<ul>
+<li>input:图像<span class="math inline">\({x} \in \mathbb{R}^{H \times W
+\times C}\)</span></li>
+<li>设定patch_size=P,将多通道图像打成2D,此时图像变为<span
+class="math inline">\({x}_p \in \mathbb{R}^{N \times (P^2 \cdot C)
+}\)</span>,其中<span
+class="math inline">\(P^2\)</span>是每个patch的分辨率(图像大小)，C为通道数，则每个patch
+token的大小为<span class="math inline">\(P^2 \cdot
+C\)</span>，N为每个通道切割出的patch数，即<span
+class="math inline">\(N=\frac{HW}{P^2}\)</span>,然后将多个patch
+token打包成一个batch</li>
+<li>假定batch size为N,则单个embedded batch可以描述为<span
+class="math inline">\([x_p^1, x_p^2, \dotsb,
+x_p^N]\)</span>,将其进行线性投影，投影矩阵为<span
+class="math inline">\(E\)</span>，即作<span
+class="math inline">\([x_p^1\textbf{E}, x_p^2\textbf{E}, \dotsb,
+x_p^N\textbf{E}]\)</span></li>
+<li>concat拼接<code>cls token</code>,<span
+class="math inline">\([x_{class}, x_p^1\textbf{E}, x_p^2\textbf{E},
+\dotsb, x_p^N\textbf{E}]\)</span></li>
+<li>加上位置编码<span class="math inline">\(E_{pos}\)</span></li>
+</ul>
 ]]></content>
       <categories>
         <category>机器学习</category>

@@ -23,7 +23,7 @@
 
     <meta name="description" content="Introduction Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。 提问  What is the Transformer？其基本结构是什么？  什么是“平均注意力加权位置”(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Transformer">
+<meta property="og:title" content="Transformer &amp; ViT">
 <meta property="og:url" content="https://keithmalarkey.github.io/2023/07/06/Transformer/index.html">
 <meta property="og:site_name" content="Keith&#39;s Blog">
 <meta property="og:description" content="Introduction Transformer因为更好的并行计算能力，以及在大样本下更好的表现性能，已经在NLP领域得到了广泛运用，并取得了很多成效。随着ViT的出现，视觉领域也得到了重大突破。考虑到相关研究方法的主要背景然是深度学习和图像识别，所以主要是卷积神经网络做比较。 提问  What is the Transformer？其基本结构是什么？  什么是“平均注意力加权位置”(">
@@ -37,8 +37,9 @@
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p9.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p10.png">
 <meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/p11.png">
+<meta property="og:image" content="https://keithmalarkey.github.io/images/Transformer/ViT-model.png">
 <meta property="article:published_time" content="2023-07-06T06:58:44.051Z">
-<meta property="article:modified_time" content="2023-07-13T07:45:31.380Z">
+<meta property="article:modified_time" content="2023-07-22T13:08:20.706Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="Model">
 <meta name="twitter:card" content="summary">
@@ -49,10 +50,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://keithmalarkey.github.io/2023/07/06/Transformer/","path":"2023/07/06/Transformer/","title":"Transformer"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://keithmalarkey.github.io/2023/07/06/Transformer/","path":"2023/07/06/Transformer/","title":"Transformer & ViT"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Transformer | Keith's Blog</title>
+<title>Transformer & ViT | Keith's Blog</title>
   
 
 
@@ -154,7 +155,7 @@
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%90%E9%97%AE"><span class="nav-number">2.</span> <span class="nav-text">提问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6"><span class="nav-number">4.</span> <span class="nav-text">模型框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A8%E6%96%AD%E5%88%86%E7%B1%BB"><span class="nav-number">5.</span> <span class="nav-text">推断分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#transduction-induction"><span class="nav-number">5.1.</span> <span class="nav-text">transduction &amp; induction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%AF%BC%E7%A4%BA%E4%BE%8B%E7%A4%BA%E6%84%8F"><span class="nav-number">5.2.</span> <span class="nav-text">转导示例&#x2F;示意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#inductive-inference"><span class="nav-number">5.2.1.</span> <span class="nav-text">inductive inference</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transductive-inference"><span class="nav-number">5.2.2.</span> <span class="nav-text">transductive inference</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%AF%BC%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E5%90%88%E5%92%8C%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">5.3.</span> <span class="nav-text">转导的适用场合和优缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E5%AF%BC%E7%AE%97%E6%B3%95"><span class="nav-number">5.4.</span> <span class="nav-text">转导算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#partitioning-transduction"><span class="nav-number">5.4.1.</span> <span class="nav-text">Partitioning transduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#agglomerative-transduction"><span class="nav-number">5.4.2.</span> <span class="nav-text">Agglomerative transduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#manifold-transduction"><span class="nav-number">5.4.3.</span> <span class="nav-text">Manifold transduction</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#layer-normalization-batch-normalization"><span class="nav-number">6.</span> <span class="nav-text">Layer Normalization
 &amp; Batch Normalization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#d%E6%83%85%E5%BD%A2"><span class="nav-number">6.1.</span> <span class="nav-text">2D情形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E5%BA%8F3d%E6%83%85%E5%BD%A2"><span class="nav-number">6.2.</span> <span class="nav-text">时序3D情形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E8%AE%BA%E6%96%87%E5%87%BA%E5%8F%91"><span class="nav-number">7.</span> <span class="nav-text">从论文出发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">7.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6"><span class="nav-number">7.2.</span> <span class="nav-text">自注意力机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%AE%8C%E5%85%A8%E5%AE%9A%E4%B9%89"><span class="nav-number">7.3.</span> <span class="nav-text">不完全定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6%E8%A7%A3%E6%9E%90"><span class="nav-number">7.4.</span> <span class="nav-text">框架解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#encoder-and-decoder-stacks"><span class="nav-number">7.4.1.</span> <span class="nav-text">Encoder and Decoder Stacks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#attention"><span class="nav-number">7.4.2.</span> <span class="nav-text">Attention</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#scaled-dot-product-attention"><span class="nav-number">7.4.2.1.</span> <span class="nav-text">Scaled Dot-Product Attention</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#multi-head-attention"><span class="nav-number">7.4.2.2.</span> <span class="nav-text">Multi-Head Attention</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position-wise-feed-forward-networksmlp"><span class="nav-number">7.4.3.</span> <span class="nav-text">Position-wise
-Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F"><span class="nav-number">7.4.3.1.</span> <span class="nav-text">基本形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#position-encoding"><span class="nav-number">7.4.3.2.</span> <span class="nav-text">Position Encoding</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E4%BB%A3%E7%A0%81%E5%87%BA%E5%8F%91"><span class="nav-number">8.</span> <span class="nav-text">从代码出发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E7%BF%BB%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">8.1.</span> <span class="nav-text">机翻代码示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transformer"><span class="nav-number">8.2.</span> <span class="nav-text">Transformer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#encoder"><span class="nav-number">8.3.</span> <span class="nav-text">Encoder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#decoder"><span class="nav-number">8.4.</span> <span class="nav-text">Decoder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#positional-encoding"><span class="nav-number">8.5.</span> <span class="nav-text">Positional Encoding</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vit"><span class="nav-number">9.</span> <span class="nav-text">ViT</span></a></li></ol></div>
+Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F"><span class="nav-number">7.4.3.1.</span> <span class="nav-text">基本形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#position-encoding"><span class="nav-number">7.4.3.2.</span> <span class="nav-text">Position Encoding</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E4%BB%A3%E7%A0%81%E5%87%BA%E5%8F%91"><span class="nav-number">8.</span> <span class="nav-text">从代码出发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E7%BF%BB%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">8.1.</span> <span class="nav-text">机翻代码示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transformer"><span class="nav-number">8.2.</span> <span class="nav-text">Transformer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#encoder"><span class="nav-number">8.3.</span> <span class="nav-text">Encoder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#decoder"><span class="nav-number">8.4.</span> <span class="nav-text">Decoder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#positional-encoding"><span class="nav-number">8.5.</span> <span class="nav-text">Positional Encoding</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vit"><span class="nav-number">9.</span> <span class="nav-text">ViT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cnn-transformer"><span class="nav-number">9.1.</span> <span class="nav-text">CNN &amp; Transformer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overview-of-vit"><span class="nav-number">9.2.</span> <span class="nav-text">Overview of ViT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method"><span class="nav-number">9.3.</span> <span class="nav-text">Method</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -235,12 +236,12 @@ Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item n
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Transformer | Keith's Blog">
+      <meta itemprop="name" content="Transformer & ViT | Keith's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Transformer
+          Transformer & ViT
         </h1>
 
         <div class="post-meta-container">
@@ -258,7 +259,7 @@ Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item n
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-13 15:45:31" itemprop="dateModified" datetime="2023-07-13T15:45:31+08:00">2023-07-13</time>
+      <time title="修改时间：2023-07-22 21:08:20" itemprop="dateModified" datetime="2023-07-22T21:08:20+08:00">2023-07-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -302,14 +303,14 @@ Feed-Forward Networks(MLP)</span></a><ol class="nav-child"><li class="nav-item n
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.3k</span>
+      <span>4.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>16 分钟</span>
+      <span>17 分钟</span>
     </span>
 </div>
 
@@ -493,7 +494,8 @@ class="math display">\[Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V\]</spa
 <p>为什么使用多头注意力机制？
 类似于CNN的多通道卷积(每个通道都是图像的一个特征子空间，不过开始时不包含高级语义，需要通过多个filter【对应多头注意力里的多个线性投影下的关注】后，才能获得)。在Transformer中引入了h次注意力，由图可知，全连接的线性层将输入的(V,K,Q)进行降维（投影），然后通过h次的Scaled
 Dot-Product
-Attention获得h个模式Pattern，可以看到这样做可以挖掘更多的高级特征。</p>
+Attention获得h个模式Pattern，可以看到这样做可以挖掘更多的高级特征。从注意力的角度来说，就是多个头关注不同的position
+dot，然后挖掘全局之于此处position的关联度。</p>
 </blockquote>
 <p>多头注意力的一般形式： <span class="math display">\[\begin{split}
 MultiHead(Q,K,V)&amp;=Concat(head_1,\dots,head_h)W^O \\
@@ -510,8 +512,11 @@ class="math inline">\((W_i^Q,W^K_i,W^V_i)\)</span>投影到了不同的子空间
 <h3 id="position-wise-feed-forward-networksmlp">Position-wise
 Feed-Forward Networks(MLP)</h3>
 <h4 id="基本形式">基本形式</h4>
-<p><span
-class="math display">\[FFN(x)=max(0,xW_1+b_1)W_2+b_2\]</span></p>
+<p><span class="math display">\[FFN(x)=max(0,xW_1+b_1)W_2+b_2\]</span>
+实质：将来自Multi-Attention的输入交给一个线性层<span
+class="math inline">\(Linear_1(x)=xW_1 +
+b_1\)</span>,然后交给激活函数ReLU，最后在做线性变换<span
+class="math inline">\(Linear_2(x)=xW_2+b_2\)</span></p>
 <h4 id="position-encoding">Position Encoding</h4>
 <p>RNN是逐步处理embedding的过程，是将t时刻的输出作为t时刻的输入的一部分考量。而Transformer则不同，他是在一开始就利用注意力机制考量不同embedding
 vectors之间的相关度，所以在输入时位置编码显得比较重要，它会提供RNN中“逐步处理”这样的时序关系，来告诉模型每个embedding的位置(position)。</p>
@@ -552,8 +557,40 @@ alt="code-struct" /></p>
 <p>从<a
 target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.11929.pdf">paper</a>的标题--TRANSFORMERS
 FOR IMAGE RECOGNITION AT
-SCALE，我们就清楚ViT仍然更适用于大数据集的视觉任务。</p>
-<p>#TODO</p>
+SCALE，我们就清楚ViT仍然更适用于大数据集的视觉任务。当然，如果使用预训练模型，对下游任务进行参数微调，性能也会很好。</p>
+<h2 id="cnn-transformer">CNN &amp; Transformer</h2>
+<p>当在数据规模相近的不带强制性正则的中小型数据集上(比如，ImageNet)采用ViT和ResNet,那么ViT的性能会劣于ResNet,主要原因：ViT缺乏CNN内在固有的Inductive
+bias(简单理解为合理的先验知识)——translation equivariance和locality。</p>
+<h2 id="overview-of-vit">Overview of ViT</h2>
+<figure>
+<img data-src="/images/Transformer/ViT-model.png" alt="ViT Overview" />
+<figcaption aria-hidden="true">ViT Overview</figcaption>
+</figure>
+<p>可以看到其结构相对于Transfomer的架构相对简单，原来的encoder-decoder结构将decoder抽象为了简单的MLP，且加入了可以学习的<code>classfication token</code>
+(简称<code>cls token</code>)，当然也可以不加，但是需要在最后进行全局平均池化。</p>
+<h2 id="method">Method</h2>
+<ul>
+<li>input:图像<span class="math inline">\({x} \in \mathbb{R}^{H \times W
+\times C}\)</span></li>
+<li>设定patch_size=P,将多通道图像打成2D,此时图像变为<span
+class="math inline">\({x}_p \in \mathbb{R}^{N \times (P^2 \cdot C)
+}\)</span>,其中<span
+class="math inline">\(P^2\)</span>是每个patch的分辨率(图像大小)，C为通道数，则每个patch
+token的大小为<span class="math inline">\(P^2 \cdot
+C\)</span>，N为每个通道切割出的patch数，即<span
+class="math inline">\(N=\frac{HW}{P^2}\)</span>,然后将多个patch
+token打包成一个batch</li>
+<li>假定batch size为N,则单个embedded batch可以描述为<span
+class="math inline">\([x_p^1, x_p^2, \dotsb,
+x_p^N]\)</span>,将其进行线性投影，投影矩阵为<span
+class="math inline">\(E\)</span>，即作<span
+class="math inline">\([x_p^1\textbf{E}, x_p^2\textbf{E}, \dotsb,
+x_p^N\textbf{E}]\)</span></li>
+<li>concat拼接<code>cls token</code>,<span
+class="math inline">\([x_{class}, x_p^1\textbf{E}, x_p^2\textbf{E},
+\dotsb, x_p^N\textbf{E}]\)</span></li>
+<li>加上位置编码<span class="math inline">\(E_{pos}\)</span></li>
+</ul>
 
     </div>
 
@@ -622,13 +659,13 @@ SCALE，我们就清楚ViT仍然更适用于大数据集的视觉任务。</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">18k</span>
+    <span title="站点总字数">19k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:06</span>
+    <span title="站点阅读时长">1:08</span>
   </span>
 </div>
 <div class="busuanzi-count">
