@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Fourier Series and Fourier Transform</title>
-    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
     <title>Combinatorics</title>
     <url>/2023/06/24/Combinatorial-Mathematics/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -52,47 +46,10 @@ class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
 ]]></content>
   </entry>
   <entry>
-    <title>Principal component analysis</title>
-    <url>/2023/05/30/Principal-component-analysis/</url>
+    <title>Fourier Series and Fourier Transform</title>
+    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
     <content><![CDATA[
 ]]></content>
-  </entry>
-  <entry>
-    <title>Applied Multivariate Statistical Analysis(2)</title>
-    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
-    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
-<h2 id="基本形式">基本形式</h2>
-<ul>
-<li>一元正态分布的密度函数：<span
-class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
-<li>多元正态分布的密度函数：<span
-class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
-其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
-class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
-对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
-class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
-其中<span class="math inline">\(\bf
-c\)</span>为常数。这是个高维椭圆，中心在<span
-class="math inline">\(\bf\mu\)</span>，拥有<span
-class="math inline">\(p\)</span>个轴，第<span
-class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
-c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
-class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
-class="math inline">\(\lambda_i\)</span>和<span
-class="math inline">\(\textbf{e}_i\)</span>为<span
-class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
-</ul>
-<h2 id="线性变换">线性变换</h2>
-<p><span class="math inline">\(X~\)</span></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
-      </tags>
   </entry>
   <entry>
     <title>Pattern Recognition and Machine Learning(1)</title>
@@ -227,226 +184,46 @@ b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
       </tags>
   </entry>
   <entry>
-    <title>创建一个hexoBlog</title>
-    <url>/2023/05/08/Create-a-hexoBlog/</url>
-    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
-<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
-methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
-<hr />
-<h1 id="安装">安装</h1>
-<h2 id="安装需求">安装需求</h2>
-<ul>
-<li>Node.js (version &gt;= 10.13)</li>
-<li>Git</li>
-<li>npm</li>
-<li>github账户</li>
-</ul>
-<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
-<h2 id="安装hexo">安装hexo</h2>
-<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
-其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
-href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="初始化blog">初始化blog</h2>
-<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
-s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
-href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
-<h2 id="创建新的blog">创建新的blog</h2>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
-</blockquote>
-<h2 id="生成和部署blog">生成和部署blog</h2>
-<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<h1
-id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
-<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
-<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
-<code>git config --global --list</code>
-查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
-<h2 id="生成ssh密钥">生成SSH密钥</h2>
-<p>使用<code>git config --global --list</code>
-查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
-下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
-alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
-将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
-href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
-SSH
-key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
-<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
-<h2
-id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
-<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
-href="https://hexo.io/themes/"
-class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
-<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
-<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
-<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
-同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
-<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1
-id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
-<ol type="1">
-<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
-<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
-<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
-&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
-href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
-</ol>
-<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
-<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
-选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
-在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
-3.
-来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
-4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
-alt="styl设置" /></p>
-<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
-<p><span
-class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
-class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
-href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
-1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
-执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
-由于在1中我们将import设置为demand类型，所以在需要使用<span
-class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
-alt="latex渲染" />，这就是我转Next主题的文章。</p>
-<blockquote>
-<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
-</blockquote>
-<h1 id="next主题配置">Next主题配置</h1>
-<p>相似于section 2.3-section 5，参考<a
-href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
-class="math inline">\(\LaTeX\)</span>配置，可以参考<a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
-latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
-download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
-<h1 id="注意事项">注意事项</h1>
-<ol type="1">
-<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
-<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
-class="uri">https://hexo.io/zh-cn/docs/</a></li>
-</ol>
-<h1 id="参考文章">参考文章</h1>
-<ul>
-<li><a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064"
-class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
-<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
-class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
-<li><a href="https://www.issey.top/"
-class="uri">https://www.issey.top/</a></li>
-</ul>
+    <title>Principal component analysis</title>
+    <url>/2023/05/30/Principal-component-analysis/</url>
+    <content><![CDATA[
 ]]></content>
-      <categories>
-        <category>Instruction</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
-    <title>Deep Residual Networks for Image Recognition</title>
-    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
-href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
-Image Recognition</a>作为开篇。<br />
-主要目的：<br />
-1. 什么是ResNet？其基本结构是什么？<br />
-2. 为什么提出ResNet?或者说它的优势是什么？<br />
-3. 为何会有其优势，从数理层面的解释是什么？<br />
-4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
-<hr />
-<h1 id="论文解析">论文解析</h1>
-<h2 id="概要">概要</h2>
-<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
-<h2 id="引言">引言</h2>
-<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
-normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
-Normalization)。<br />
-然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
-alt="深层网络准确率饱和现象" />
-从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
-<font color="red">
-设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
-mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
-error)。
-</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
-alt="Shortcut connection" /> <font color="red">Deep residual learning
-framework</font>:假设我们希望得到的一个潜在映射为<span
-class="math inline">\(\mathcal{H}(\bf
-x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
-class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
-class="math inline">\(\mathcal{F}(\textbf{x}) :=
-\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
-class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
-connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
-x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
-x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
-alt="全局设计" /></p>
-<h2 id="实验结果">实验结果</h2>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
-alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
-block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
-alt="Resnet性能同plain CNN的对比" />
-上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
-class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
-<h1 id="数理解释">数理解释</h1>
-<ol type="1">
-<li>假设plain CNN需要学得潜在的mapping是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
-class="math inline">\(g\)</span>;(2)深层部分的映射<span
-class="math inline">\(f\)</span>，即<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
-class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
-f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
-g(\theta)}{\partial
-\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
-<li>同样的，ResNet需要学习的潜在mapping也是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
-connection的原因，每次迭代训练参数时需要做的是<span
-class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
-g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
-\underbrace{\frac{\partial g(\theta)}{\partial
-\theta}}_{(2)}\)</span>，在(1)中还会存在plain
-CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
-</ol>
-<h1 id="总结">总结</h1>
-<p>ResNet就是使用了shortcut(residual)
-connection的CNN变种，其基本结构就是残差块(residual
-block)和残差连接(residual
-connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
-<h1 id="遗留问题">遗留问题</h1>
-<ol type="1">
-<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
-<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
-<li>提到Residual，在机器学习中，比如Gradient
-boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
-</ol>
+    <title>Applied Multivariate Statistical Analysis(2)</title>
+    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
+    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
+<h2 id="基本形式">基本形式</h2>
+<ul>
+<li>一元正态分布的密度函数：<span
+class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
+<li>多元正态分布的密度函数：<span
+class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
+其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
+class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
+对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
+class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
+其中<span class="math inline">\(\bf
+c\)</span>为常数。这是个高维椭圆，中心在<span
+class="math inline">\(\bf\mu\)</span>，拥有<span
+class="math inline">\(p\)</span>个轴，第<span
+class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
+c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
+class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
+class="math inline">\(\lambda_i\)</span>和<span
+class="math inline">\(\textbf{e}_i\)</span>为<span
+class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
+</ul>
+<h2 id="线性变换">线性变换</h2>
+<p><span class="math inline">\(X~\)</span></p>
 ]]></content>
       <categories>
         <category>机器学习</category>
-        <category>深度学习</category>
+        <category>统计学习</category>
       </categories>
       <tags>
-        <tag>图像识别</tag>
-        <tag>ResNet</tag>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
       </tags>
   </entry>
   <entry>
@@ -816,93 +593,226 @@ Multivariate Statistical Analysis(2)</a></p>
       </tags>
   </entry>
   <entry>
-    <title>Masked Autoencoder</title>
-    <url>/2023/07/13/Masked-Autoencoder/</url>
-    <content><![CDATA[<h1 id="参考">参考</h1>
+    <title>创建一个hexoBlog</title>
+    <url>/2023/05/08/Create-a-hexoBlog/</url>
+    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
+<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
+methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
+<hr />
+<h1 id="安装">安装</h1>
+<h2 id="安装需求">安装需求</h2>
+<ul>
+<li>Node.js (version &gt;= 10.13)</li>
+<li>Git</li>
+<li>npm</li>
+<li>github账户</li>
+</ul>
+<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
+<h2 id="安装hexo">安装hexo</h2>
+<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
+其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
+href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="初始化blog">初始化blog</h2>
+<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
+s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
+href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
+<h2 id="创建新的blog">创建新的blog</h2>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
+</blockquote>
+<h2 id="生成和部署blog">生成和部署blog</h2>
+<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<h1
+id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
+<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
+<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
+<code>git config --global --list</code>
+查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
+<h2 id="生成ssh密钥">生成SSH密钥</h2>
+<p>使用<code>git config --global --list</code>
+查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
+下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
+alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
+将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
+href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
+SSH
+key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
+<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
+<h2
+id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
+<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
+href="https://hexo.io/themes/"
+class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
+<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
+<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
+<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
+同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1
+id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
 <ol type="1">
-<li><a href="https://arxiv.org/pdf/2111.06377.pdf">paper</a></li>
+<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
+<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
+<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
+&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
+href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
+</ol>
+<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
+<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
+选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
+在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
+3.
+来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
+4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
+alt="styl设置" /></p>
+<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
+<p><span
+class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
+class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
+href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
+1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
+执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
+由于在1中我们将import设置为demand类型，所以在需要使用<span
+class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
+alt="latex渲染" />，这就是我转Next主题的文章。</p>
+<blockquote>
+<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
+</blockquote>
+<h1 id="next主题配置">Next主题配置</h1>
+<p>相似于section 2.3-section 5，参考<a
+href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
+class="math inline">\(\LaTeX\)</span>配置，可以参考<a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
+latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
+download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
+<h1 id="注意事项">注意事项</h1>
+<ol type="1">
+<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
+<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
+class="uri">https://hexo.io/zh-cn/docs/</a></li>
+</ol>
+<h1 id="参考文章">参考文章</h1>
+<ul>
 <li><a
-href="https://www.bilibili.com/video/BV1sq4y1q77t/?spm_id_from=333.788&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">文献精读
-by 李沐</a></li>
-</ol>
-<h1 id="prerequsitions">Prerequsitions</h1>
-<ul>
-<li>NLP
-<ul>
-<li>Transformer</li>
-<li>BERT</li>
-</ul></li>
-<li>CV
-<ul>
-<li>ViT</li>
-</ul></li>
-<li>自监督
-<ul>
-<li>Encoder-Decoder</li>
-<li>AutoEncoder</li>
-<li>DAE(Denoising Autoencoder)
-<ul>
-<li>Pascal Vincent, Hugo Larochelle, Yoshua Bengio, and PierreAntoine
-Manzagol. Extracting and composing robust features with denoising
-autoencoders. In ICML, 2008.</li>
-</ul></li>
-<li>VAE(Variational Autoencoder)</li>
-</ul></li>
-<li>迁移学习（预训练）</li>
-<li>CNN</li>
+href="https://blog.csdn.net/qq_52466006/article/details/126924064"
+class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
+<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
+class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
+<li><a href="https://www.issey.top/"
+class="uri">https://www.issey.top/</a></li>
 </ul>
-<h1 id="question">Question</h1>
-<ol type="1">
-<li>What is the Masked Autoencoder? Details about the architecture?</li>
-<li>What is the main application scenario of Masked Autoencoder?
-<ol type="1">
-<li>数据去噪</li>
-<li>特征学习</li>
-<li>生成模型</li>
-<li>数据压缩</li>
-</ol></li>
-</ol>
-<h1 id="abstract">Abstract</h1>
-<ol type="1">
-<li>scalable self-supervised learners for CV;</li>
-<li>操作：对输入的图片进行随机掩码，然后利用MAE重构打上掩码的patches(这就意味着，它是一个生成模型，且可以学得Latent
-representation);</li>
-<li>框架：非对称的encoder-decoder
-<ol type="1">
-<li>encoder:只在可视的patch进行操作</li>
-<li>decoder:利用潜表示和打了掩码的patches重构原始图像</li>
-</ol></li>
-</ol>
-<h1 id="introduction">Introduction</h1>
-<h2 id="讨论">讨论</h2>
-<p>在计算机视觉领域，自编码器方法的发展滞后于NLP领域。那么，对掩码自编码器(MAE)，是什么使得它在处理视觉任务和NLP任务时不同的呢？</p>
-<ul>
-<li>过去的10年内，CNN在视觉领域占据主导地位。CNN一般在利用局部感受野，在图像网格上进行局部采集特征表示。相比较于MAE，无法融合诸如mask
-tokens和位置编码这样的"指示器"(indicators)。但是结构上的差异，可以由引入ViT解决。<br />
-</li>
-<li>语言和视觉图像之间的信息密度是不一样的
-<ul>
-<li>语言具有丰富的信息，可以包含高度语义化的特征</li>
-<li>图像是具有严重空间冗余的自然信号，可以从相邻的patches中恢复，而对部分、物体和场景的高级理解很少</li>
-</ul></li>
-<li>解码器decoder可以将学到的潜表示(latent
-representation)映射回输入时的模样，然而decoder在NLP和CV领域起到不同作用。</li>
-</ul>
-<h1 id="框架">框架</h1>
-<figure>
-<img data-src="/images/Masked-Autoencoder/p1.png" alt="MAE" />
-<figcaption aria-hidden="true">MAE</figcaption>
-</figure>
-<p>注：预训练pre-training指的是在目标任务之前，在大规模的未标记数据上进行训练的过程。在这个过程中，模型通过学习数据中的统计规律和特征来提取有用的表示，从而为后续的具体任务提供更好的初始化参数或特征。</p>
-<h1 id="approach">Approach</h1>
 ]]></content>
       <categories>
-        <category>自监督学习</category>
+        <category>Instruction</category>
       </categories>
       <tags>
-        <tag>Encoder-Decoder</tag>
-        <tag>Autoencoder</tag>
-        <tag>MAE</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deep Residual Networks for Image Recognition</title>
+    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
+href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
+Image Recognition</a>作为开篇。<br />
+主要目的：<br />
+1. 什么是ResNet？其基本结构是什么？<br />
+2. 为什么提出ResNet?或者说它的优势是什么？<br />
+3. 为何会有其优势，从数理层面的解释是什么？<br />
+4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
+<hr />
+<h1 id="论文解析">论文解析</h1>
+<h2 id="概要">概要</h2>
+<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
+<h2 id="引言">引言</h2>
+<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
+normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
+Normalization)。<br />
+然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
+alt="深层网络准确率饱和现象" />
+从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
+<font color="red">
+设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
+mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
+error)。
+</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
+<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
+alt="Shortcut connection" /> <font color="red">Deep residual learning
+framework</font>:假设我们希望得到的一个潜在映射为<span
+class="math inline">\(\mathcal{H}(\bf
+x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
+class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
+class="math inline">\(\mathcal{F}(\textbf{x}) :=
+\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
+class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
+connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
+x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
+x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
+<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
+alt="全局设计" /></p>
+<h2 id="实验结果">实验结果</h2>
+<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
+alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
+block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
+<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
+alt="Resnet性能同plain CNN的对比" />
+上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
+class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
+<h1 id="数理解释">数理解释</h1>
+<ol type="1">
+<li>假设plain CNN需要学得潜在的mapping是<span
+class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
+class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
+class="math inline">\(g\)</span>;(2)深层部分的映射<span
+class="math inline">\(f\)</span>，即<span
+class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
+class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
+f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
+g(\theta)}{\partial
+\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
+<li>同样的，ResNet需要学习的潜在mapping也是<span
+class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
+class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
+connection的原因，每次迭代训练参数时需要做的是<span
+class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
+g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
+\underbrace{\frac{\partial g(\theta)}{\partial
+\theta}}_{(2)}\)</span>，在(1)中还会存在plain
+CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
+</ol>
+<h1 id="总结">总结</h1>
+<p>ResNet就是使用了shortcut(residual)
+connection的CNN变种，其基本结构就是残差块(residual
+block)和残差连接(residual
+connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
+<h1 id="遗留问题">遗留问题</h1>
+<ol type="1">
+<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
+<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
+<li>提到Residual，在机器学习中，比如Gradient
+boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>图像识别</tag>
+        <tag>ResNet</tag>
       </tags>
   </entry>
   <entry>
@@ -1526,6 +1436,96 @@ class="math inline">\(I(X;Y)\)</span></li>
       </tags>
   </entry>
   <entry>
+    <title>Masked Autoencoder</title>
+    <url>/2023/07/13/Masked-Autoencoder/</url>
+    <content><![CDATA[<h1 id="参考">参考</h1>
+<ol type="1">
+<li><a href="https://arxiv.org/pdf/2111.06377.pdf">paper</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV1sq4y1q77t/?spm_id_from=333.788&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">文献精读
+by 李沐</a></li>
+</ol>
+<h1 id="prerequsitions">Prerequsitions</h1>
+<ul>
+<li>NLP
+<ul>
+<li>Transformer</li>
+<li>BERT</li>
+</ul></li>
+<li>CV
+<ul>
+<li>ViT</li>
+</ul></li>
+<li>自监督
+<ul>
+<li>Encoder-Decoder</li>
+<li>AutoEncoder</li>
+<li>DAE(Denoising Autoencoder)
+<ul>
+<li>Pascal Vincent, Hugo Larochelle, Yoshua Bengio, and PierreAntoine
+Manzagol. Extracting and composing robust features with denoising
+autoencoders. In ICML, 2008.</li>
+</ul></li>
+<li>VAE(Variational Autoencoder)</li>
+</ul></li>
+<li>迁移学习（预训练）</li>
+<li>CNN</li>
+</ul>
+<h1 id="question">Question</h1>
+<ol type="1">
+<li>What is the Masked Autoencoder? Details about the architecture?</li>
+<li>What is the main application scenario of Masked Autoencoder?
+<ol type="1">
+<li>数据去噪</li>
+<li>特征学习</li>
+<li>生成模型</li>
+<li>数据压缩</li>
+</ol></li>
+</ol>
+<h1 id="abstract">Abstract</h1>
+<ol type="1">
+<li>scalable self-supervised learners for CV;</li>
+<li>操作：对输入的图片进行随机掩码，然后利用MAE重构打上掩码的patches(这就意味着，它是一个生成模型，且可以学得Latent
+representation);</li>
+<li>框架：非对称的encoder-decoder
+<ol type="1">
+<li>encoder:只在可视的patch进行操作</li>
+<li>decoder:利用潜表示和打了掩码的patches重构原始图像</li>
+</ol></li>
+</ol>
+<h1 id="introduction">Introduction</h1>
+<h2 id="讨论">讨论</h2>
+<p>在计算机视觉领域，自编码器方法的发展滞后于NLP领域。那么，对掩码自编码器(MAE)，是什么使得它在处理视觉任务和NLP任务时不同的呢？</p>
+<ul>
+<li>过去的10年内，CNN在视觉领域占据主导地位。CNN一般在利用局部感受野，在图像网格上进行局部采集特征表示。相比较于MAE，无法融合诸如mask
+tokens和位置编码这样的"指示器"(indicators)。但是结构上的差异，可以由引入ViT解决。<br />
+</li>
+<li>语言和视觉图像之间的信息密度是不一样的
+<ul>
+<li>语言具有丰富的信息，可以包含高度语义化的特征</li>
+<li>图像是具有严重空间冗余的自然信号，可以从相邻的patches中恢复，而对部分、物体和场景的高级理解很少</li>
+</ul></li>
+<li>解码器decoder可以将学到的潜表示(latent
+representation)映射回输入时的模样，然而decoder在NLP和CV领域起到不同作用。</li>
+</ul>
+<h1 id="框架">框架</h1>
+<figure>
+<img data-src="/images/Masked-Autoencoder/p1.png" alt="MAE" />
+<figcaption aria-hidden="true">MAE</figcaption>
+</figure>
+<p>注：预训练pre-training指的是在目标任务之前，在大规模的未标记数据上进行训练的过程。在这个过程中，模型通过学习数据中的统计规律和特征来提取有用的表示，从而为后续的具体任务提供更好的初始化参数或特征。</p>
+<h1 id="approach">Approach</h1>
+]]></content>
+      <categories>
+        <category>自监督学习</category>
+      </categories>
+      <tags>
+        <tag>Encoder-Decoder</tag>
+        <tag>Autoencoder</tag>
+        <tag>MAE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Transformer &amp; ViT</title>
     <url>/2023/07/06/Transformer/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -1812,7 +1812,8 @@ class="math inline">\([x_{class}, x_p^1\textbf{E}, x_p^2\textbf{E},
 <ol start="3" type="1">
 <li>ViTRGB</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot; Vision Transformer &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ViTRGB</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        *,</span></span><br><span class="line"><span class="params">        image_size,</span></span><br><span class="line"><span class="params">        patch_size,</span></span><br><span class="line"><span class="params">        num_classes,</span></span><br><span class="line"><span class="params">        dim,  <span class="comment"># 特征维度/token size</span></span></span><br><span class="line"><span class="params">        depth,  <span class="comment"># depth of encoder stack</span></span></span><br><span class="line"><span class="params">        heads,</span></span><br><span class="line"><span class="params">        mlp_dim,</span></span><br><span class="line"><span class="params">        pool=<span class="string">&quot;cls&quot;</span>,  <span class="comment"># aption:(&#x27;cls&#x27;, &#x27;mean&#x27;),池化类型:&#x27;cls&#x27;表示选择classification token, &#x27;mean&#x27;表示选择全局平均池化 </span></span></span><br><span class="line"><span class="params">        channels=<span class="number">3</span>,  <span class="comment"># 图像通道数，默认RGB-3</span></span></span><br><span class="line"><span class="params">        dim_head=<span class="number">64</span>,  <span class="comment"># dimension of each head</span></span></span><br><span class="line"><span class="params">        dropout=<span class="number">0.0</span>,</span></span><br><span class="line"><span class="params">        emb_dropout=<span class="number">0.0</span>,</span></span><br><span class="line"><span class="params">        pixelwise=<span class="literal">False</span>,</span></span><br><span class="line"><span class="params">    </span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        <span class="comment"># 1D --&gt; 2D shape</span></span><br><span class="line">        image_height, image_width = pair(image_size)</span><br><span class="line">        patch_height, patch_width = pair(patch_size)</span><br><span class="line"></span><br><span class="line">        self.pixelwise = pixelwise</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 裁剪为同样大小的patches</span></span><br><span class="line">        self.image_height = image_height</span><br><span class="line">        self.image_width = image_width</span><br><span class="line">        self.patch_height = patch_height</span><br><span class="line">        self.patch_width = patch_width</span><br><span class="line">        self.num_patches_height = image_height // patch_height</span><br><span class="line">        self.num_patches_width = image_width // patch_width</span><br><span class="line"></span><br><span class="line">        <span class="keyword">assert</span> (image_height % patch_height == <span class="number">0</span> <span class="keyword">and</span> image_width % patch_width</span><br><span class="line">                == <span class="number">0</span>), <span class="string">&quot;Image dimensions must be divisible by the patch size.&quot;</span></span><br><span class="line"></span><br><span class="line">        num_patches = (image_height // patch_height) * (image_width //</span><br><span class="line">                                                        patch_width)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># patch_dim 其实就是变为token之前的维度，之后经过MLP,将patch_dim变成token size(即下面dim)</span></span><br><span class="line">        patch_dim = channels * patch_height * patch_width</span><br><span class="line">        <span class="keyword">assert</span> pool <span class="keyword">in</span> &#123;</span><br><span class="line">            <span class="string">&quot;cls&quot;</span>,</span><br><span class="line">            <span class="string">&quot;mean&quot;</span>,</span><br><span class="line">        &#125;, <span class="string">&quot;pool type must be either cls (cls token) or mean (mean pooling)&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># reorder the tensor corresponding to the shape of image</span></span><br><span class="line">        <span class="comment"># image shape:[batch_size, channels, height, width]</span></span><br><span class="line">        <span class="comment"># --&gt; image shape:[batch_size, channels, h x patch_height, w x patch_width]</span></span><br><span class="line">        <span class="comment"># --&gt; iamge shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        self.to_patch_embedding = nn.Sequential(</span><br><span class="line">            Rearrange(</span><br><span class="line">                <span class="string">&quot;b c (h p1) (w p2) -&gt; b (h w) (p1 p2 c)&quot;</span>,</span><br><span class="line">                p1=patch_height,</span><br><span class="line">                p2=patch_width,</span><br><span class="line">            ),</span><br><span class="line">            nn.LayerNorm(patch_dim),</span><br><span class="line">            nn.Linear(patch_dim, dim),</span><br><span class="line">            nn.LayerNorm(dim),</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 注意这里是num_patches + 1，所以考虑到cls token的位置编码</span></span><br><span class="line">        self.pos_embedding = nn.Parameter(torch.randn(<span class="number">1</span>, num_patches + <span class="number">1</span>, dim))</span><br><span class="line">        self.cls_token = nn.Parameter(torch.randn(<span class="number">1</span>, <span class="number">1</span>, dim))</span><br><span class="line">        self.dropout = nn.Dropout(emb_dropout)</span><br><span class="line"></span><br><span class="line">        self.transformer = Transformer(dim, depth, heads, dim_head, mlp_dim,</span><br><span class="line">                                       dropout)</span><br><span class="line"></span><br><span class="line">        self.pool = pool</span><br><span class="line">        self.to_latent = nn.Identity()</span><br><span class="line"></span><br><span class="line">        self.mlp_head = nn.Sequential(nn.LayerNorm(dim),</span><br><span class="line">                                      nn.Linear(dim, num_classes))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 像素级</span></span><br><span class="line">        <span class="keyword">if</span> self.pixelwise:</span><br><span class="line">            self.mlp_head = nn.Sequential(</span><br><span class="line">                nn.LayerNorm(dim),</span><br><span class="line">                nn.Linear(dim, num_classes * patch_height * patch_width),</span><br><span class="line">                Rearrange(</span><br><span class="line">                    <span class="string">&quot;b h w (p1 p2 num_classes) -&gt; b (h p1) (w p2) num_classes&quot;</span>,</span><br><span class="line">                    p1=patch_height,</span><br><span class="line">                    p2=patch_width,</span><br><span class="line">                    num_classes=num_classes,</span><br><span class="line">                ),</span><br><span class="line">                <span class="comment"># reorder shape,交换dim=1和最后一维</span></span><br><span class="line">                MoveAxis((-<span class="number">1</span>, <span class="number">1</span>)),</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;patch_height=&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;patch_width=&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;num_classes=&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, img</span>):</span><br><span class="line">        <span class="comment"># patch embedding, x.shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        x = self.to_patch_embedding(img)</span><br><span class="line">        <span class="comment"># b:batch size, n: number of samples(n = h x w)</span></span><br><span class="line">        b, n, _ = x.shape</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 每个batch需要补上cls token，所以复制b份</span></span><br><span class="line">        cls_tokens = repeat(self.cls_token, <span class="string">&quot;1 1 d -&gt; b 1 d&quot;</span>, b=b)</span><br><span class="line">        <span class="comment"># x.shape after concat:[batch_size, h x w + 1, patch_height x patch_width x channels]</span></span><br><span class="line">        <span class="comment"># 注意这里和x = torch.cat((x,cls_token), dim=1)有区别，谁在前，谁就在低维</span></span><br><span class="line">        x = torch.cat(</span><br><span class="line">            (cls_tokens, x), dim=<span class="number">1</span></span><br><span class="line">        )  <span class="comment"># cls_token在前，所以cls token在[:,0]的位置，patch embedding的位置是[:,1:]</span></span><br><span class="line">        <span class="comment"># 加上posistion embedding</span></span><br><span class="line">        x += self.pos_embedding[:, :(n + <span class="number">1</span>)]</span><br><span class="line">        x = self.dropout(x)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># x抛进Transfomer</span></span><br><span class="line">        x = self.transformer(x)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># x = x.mean(dim = 1) if self.pool == &#x27;mean&#x27; else x[:, 0]</span></span><br><span class="line">        x = x[:, <span class="number">1</span>:, :]  <span class="comment"># remove cls..</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 去除cls token之后的shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        x = self.to_latent(x)</span><br><span class="line">        x = rearrange(</span><br><span class="line">            x,</span><br><span class="line">            <span class="string">&quot;b (h w) d -&gt; b h w d&quot;</span>,</span><br><span class="line">            h=self.num_patches_height,</span><br><span class="line">            w=self.num_patches_width,</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> self.mlp_head(x)</span><br></pre></td></tr></table></figure>
+<p>这里，position embedding为随机初始化的张量</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot; Vision Transformer &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ViTRGB</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        *,</span></span><br><span class="line"><span class="params">        image_size,</span></span><br><span class="line"><span class="params">        patch_size,</span></span><br><span class="line"><span class="params">        num_classes,</span></span><br><span class="line"><span class="params">        dim,  <span class="comment"># 特征维度/token size</span></span></span><br><span class="line"><span class="params">        depth,  <span class="comment"># depth of encoder stack</span></span></span><br><span class="line"><span class="params">        heads,</span></span><br><span class="line"><span class="params">        mlp_dim,</span></span><br><span class="line"><span class="params">        pool=<span class="string">&quot;cls&quot;</span>,  <span class="comment"># option:(&#x27;cls&#x27;, &#x27;mean&#x27;),池化类型:&#x27;cls&#x27;表示选择classification token, &#x27;mean&#x27;表示选择全局平均池化 </span></span></span><br><span class="line"><span class="params">        channels=<span class="number">3</span>,  <span class="comment"># 图像通道数，默认RGB-3</span></span></span><br><span class="line"><span class="params">        dim_head=<span class="number">64</span>,  <span class="comment"># dimension of each head</span></span></span><br><span class="line"><span class="params">        dropout=<span class="number">0.0</span>,</span></span><br><span class="line"><span class="params">        emb_dropout=<span class="number">0.0</span>,</span></span><br><span class="line"><span class="params">        pixelwise=<span class="literal">False</span>,</span></span><br><span class="line"><span class="params">    </span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        <span class="comment"># 1D --&gt; 2D shape</span></span><br><span class="line">        image_height, image_width = pair(image_size)</span><br><span class="line">        patch_height, patch_width = pair(patch_size)</span><br><span class="line"></span><br><span class="line">        self.pixelwise = pixelwise</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 裁剪为同样大小的patches</span></span><br><span class="line">        self.image_height = image_height</span><br><span class="line">        self.image_width = image_width</span><br><span class="line">        self.patch_height = patch_height</span><br><span class="line">        self.patch_width = patch_width</span><br><span class="line">        self.num_patches_height = image_height // patch_height</span><br><span class="line">        self.num_patches_width = image_width // patch_width</span><br><span class="line"></span><br><span class="line">        <span class="keyword">assert</span> (image_height % patch_height == <span class="number">0</span> <span class="keyword">and</span> image_width % patch_width</span><br><span class="line">                == <span class="number">0</span>), <span class="string">&quot;Image dimensions must be divisible by the patch size.&quot;</span></span><br><span class="line"></span><br><span class="line">        num_patches = (image_height // patch_height) * (image_width //</span><br><span class="line">                                                        patch_width)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># patch_dim 其实就是变为token之前的维度，之后经过MLP,将patch_dim变成token size(即下面dim)</span></span><br><span class="line">        patch_dim = channels * patch_height * patch_width</span><br><span class="line">        <span class="keyword">assert</span> pool <span class="keyword">in</span> &#123;</span><br><span class="line">            <span class="string">&quot;cls&quot;</span>,</span><br><span class="line">            <span class="string">&quot;mean&quot;</span>,</span><br><span class="line">        &#125;, <span class="string">&quot;pool type must be either cls (cls token) or mean (mean pooling)&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># reorder the tensor corresponding to the shape of image</span></span><br><span class="line">        <span class="comment"># image shape:[batch_size, channels, height, width]</span></span><br><span class="line">        <span class="comment"># --&gt; image shape:[batch_size, channels, h x patch_height, w x patch_width]</span></span><br><span class="line">        <span class="comment"># --&gt; iamge shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        self.to_patch_embedding = nn.Sequential(</span><br><span class="line">            Rearrange(</span><br><span class="line">                <span class="string">&quot;b c (h p1) (w p2) -&gt; b (h w) (p1 p2 c)&quot;</span>,</span><br><span class="line">                p1=patch_height,</span><br><span class="line">                p2=patch_width,</span><br><span class="line">            ),</span><br><span class="line">            nn.LayerNorm(patch_dim),</span><br><span class="line">            nn.Linear(patch_dim, dim),</span><br><span class="line">            nn.LayerNorm(dim),</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 注意这里是num_patches + 1，所以考虑到cls token的位置编码</span></span><br><span class="line">        self.pos_embedding = nn.Parameter(torch.randn(<span class="number">1</span>, num_patches + <span class="number">1</span>, dim))</span><br><span class="line">        self.cls_token = nn.Parameter(torch.randn(<span class="number">1</span>, <span class="number">1</span>, dim))</span><br><span class="line">        self.dropout = nn.Dropout(emb_dropout)</span><br><span class="line"></span><br><span class="line">        self.transformer = Transformer(dim, depth, heads, dim_head, mlp_dim,</span><br><span class="line">                                       dropout)</span><br><span class="line"></span><br><span class="line">        self.pool = pool</span><br><span class="line">        self.to_latent = nn.Identity()</span><br><span class="line"></span><br><span class="line">        self.mlp_head = nn.Sequential(nn.LayerNorm(dim),</span><br><span class="line">                                      nn.Linear(dim, num_classes))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 像素级</span></span><br><span class="line">        <span class="keyword">if</span> self.pixelwise:</span><br><span class="line">            self.mlp_head = nn.Sequential(</span><br><span class="line">                nn.LayerNorm(dim),</span><br><span class="line">                nn.Linear(dim, num_classes * patch_height * patch_width),</span><br><span class="line">                Rearrange(</span><br><span class="line">                    <span class="string">&quot;b h w (p1 p2 num_classes) -&gt; b (h p1) (w p2) num_classes&quot;</span>,</span><br><span class="line">                    p1=patch_height,</span><br><span class="line">                    p2=patch_width,</span><br><span class="line">                    num_classes=num_classes,</span><br><span class="line">                ),</span><br><span class="line">                <span class="comment"># reorder shape,交换dim=1和最后一维</span></span><br><span class="line">                MoveAxis((-<span class="number">1</span>, <span class="number">1</span>)),</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;patch_height=&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;patch_width=&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;num_classes=&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, img</span>):</span><br><span class="line">        <span class="comment"># patch embedding, x.shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        x = self.to_patch_embedding(img)</span><br><span class="line">        <span class="comment"># b:batch size, n: number of samples(n = h x w)</span></span><br><span class="line">        b, n, _ = x.shape</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 每个batch需要补上cls token，所以复制b份</span></span><br><span class="line">        cls_tokens = repeat(self.cls_token, <span class="string">&quot;1 1 d -&gt; b 1 d&quot;</span>, b=b)</span><br><span class="line">        <span class="comment"># x.shape after concat:[batch_size, h x w + 1, patch_height x patch_width x channels]</span></span><br><span class="line">        <span class="comment"># 注意这里和x = torch.cat((x,cls_token), dim=1)有区别，谁在前，谁就在低维</span></span><br><span class="line">        x = torch.cat(</span><br><span class="line">            (cls_tokens, x), dim=<span class="number">1</span></span><br><span class="line">        )  <span class="comment"># cls_token在前，所以cls token在[:,0]的位置，patch embedding的位置是[:,1:]</span></span><br><span class="line">        <span class="comment"># 加上posistion embedding</span></span><br><span class="line">        x += self.pos_embedding[:, :(n + <span class="number">1</span>)]</span><br><span class="line">        x = self.dropout(x)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># x抛进Transfomer</span></span><br><span class="line">        x = self.transformer(x)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># x = x.mean(dim = 1) if self.pool == &#x27;mean&#x27; else x[:, 0]</span></span><br><span class="line">        x = x[:, <span class="number">1</span>:, :]  <span class="comment"># remove cls..</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 去除cls token之后的shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        x = self.to_latent(x)</span><br><span class="line">        x = rearrange(</span><br><span class="line">            x,</span><br><span class="line">            <span class="string">&quot;b (h w) d -&gt; b h w d&quot;</span>,</span><br><span class="line">            h=self.num_patches_height,</span><br><span class="line">            w=self.num_patches_width,</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> self.mlp_head(x)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>机器学习</category>
