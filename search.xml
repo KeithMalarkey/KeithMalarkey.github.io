@@ -52,55 +52,6 @@ class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
 ]]></content>
   </entry>
   <entry>
-    <title>Applied Multivariate Statistical Analysis(2)</title>
-    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
-    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
-<h2 id="基本形式">基本形式</h2>
-<ul>
-<li>一元正态分布的密度函数：<span
-class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
-<li>多元正态分布的密度函数：<span
-class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
-其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
-class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
-对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
-class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
-其中<span class="math inline">\(\bf
-c\)</span>为常数。这是个高维椭圆，中心在<span
-class="math inline">\(\bf\mu\)</span>，拥有<span
-class="math inline">\(p\)</span>个轴，第<span
-class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
-c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
-class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
-class="math inline">\(\lambda_i\)</span>和<span
-class="math inline">\(\textbf{e}_i\)</span>为<span
-class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
-</ul>
-<h2 id="线性变换">线性变换</h2>
-<p><span class="math inline">\(X~\)</span></p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>统计分析</tag>
-        <tag>数据降维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Principal component analysis</title>
-    <url>/2023/05/30/Principal-component-analysis/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>activate functional</title>
-    <url>/2023/08/03/activate-functional/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
     <title>Pattern Recognition and Machine Learning(1)</title>
     <url>/2023/06/01/PRML-1/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -230,6 +181,218 @@ b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
       </categories>
       <tags>
         <tag>PRML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Principal component analysis</title>
+    <url>/2023/05/30/Principal-component-analysis/</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>Applied Multivariate Statistical Analysis(2)</title>
+    <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
+    <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
+<h2 id="基本形式">基本形式</h2>
+<ul>
+<li>一元正态分布的密度函数：<span
+class="math display">\[f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp(-\frac{(x-\mu)^2}{2\sigma^2})\]</span></li>
+<li>多元正态分布的密度函数：<span
+class="math display">\[f(\bf{x})=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}exp(-\frac{(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})}{2})\]</span>
+其中<span class="math inline">\(\bf\mu\)</span>为均值，<span
+class="math inline">\(\bf\Sigma\)</span>为协方差矩阵;
+对概率密度作等高线图（同条等高线上各处概率密度值相等），即<span
+class="math display">\[(\bf{x-\mu})^T\Sigma^{-1}(\bf{x-\mu})=c^2\]</span>
+其中<span class="math inline">\(\bf
+c\)</span>为常数。这是个高维椭圆，中心在<span
+class="math inline">\(\bf\mu\)</span>，拥有<span
+class="math inline">\(p\)</span>个轴，第<span
+class="math inline">\(i\)</span>个轴为<span class="math inline">\(\pm
+c\sqrt{\lambda_i\textbf{e}_i}\)</span>，其中<span
+class="math inline">\(\Sigma\textbf{e}_i=\lambda_i\textbf{e}_i\)</span>，即<span
+class="math inline">\(\lambda_i\)</span>和<span
+class="math inline">\(\textbf{e}_i\)</span>为<span
+class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
+</ul>
+<h2 id="线性变换">线性变换</h2>
+<p><span class="math inline">\(X~\)</span></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>统计分析</tag>
+        <tag>数据降维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hyperspectral or Multispectral Image</title>
+    <url>/2023/07/14/Hyperspectral-or-Multispectral-Image/</url>
+    <content><![CDATA[<h1 id="什么是高多光谱图像">什么是高(多)光谱图像</h1>
+<p>一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel)</p>
+<p>高光谱图像： + 大量不同波段的图像(N channels, gennerally, N <span
+class="math inline">\(\geq\)</span> 100) + 波段可以连续或离散 +
+每个波段捕捉不同波长范围内的光谱信息</p>
+<p>高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数千个窄波段范围内获取数据，并生成具有多个波段的图像。每个波段对应着不同的光谱范围，例如可见光、红外线和近红外线等。通过组合这些波段的数据，我们可以获得一个包含丰富光谱信息的多波段图像。</p>
+<p>多光谱图像: + N channels(generally, 1 <span
+class="math inline">\(\leq\)</span> N <span
+class="math inline">\(\leq\)</span> 100)</p>
+<p>多光谱图像和高光谱图像高度相似，区别在于波段较少</p>
+<h1 id="高多光谱b-times-h-times-w图象识别">高(多)光谱(B <span
+class="math inline">\(\times\)</span> H <span
+class="math inline">\(\times\)</span> W)图象识别</h1>
+<h2 id="光谱信息和空间信息">光谱信息和空间信息</h2>
+<p>机器学习任务主要是学习特征表示，但是在接触高光谱之初，其实由于没有相关知识的学习，对于学习什么特征表示，是一头雾水。</p>
+<p>通过些许论文的阅读，了解到主要是来自spectral-spatial的特征。如果一张图片是由多个channels组成，那么在高光谱图像中的channels也可以称为波段(spectral
+bands, B)。</p>
+<h3 id="spatial-information">spatial information</h3>
+<p>spatial(空间)信息其实很好理解，就是将所有的波段分离开来，每张子图(<span
+class="math inline">\(H \times
+W\)</span>)内表现出的特征，就叫做spatial特征。</p>
+<p>通过利用图像的空间信息，例如像素的邻域关系、纹理、形状等，可以进一步提高分类的准确性。常见的方法包括基于纹理特征的滤波器方法、基于空间像素关系的邻域统计方法等。</p>
+<h3 id="spectral-information">spectral information</h3>
+<p>其实光谱信息(spectral
+information)是很抽象的。因为空间信息中像素的邻域关系、纹理、形状都可以理解并抛给深度网络进行学习特征表示，但是spectral,
+what is it?</p>
+<p>以下是面向GPT的结果：<br />
+1.
+光谱特征提取：对于每个像素，可以提取每个波段的光谱特征，例如波段反射率或辐射强度。通过计算波段的统计特征，如平均值、标准差、最大值、最小值等，可以获取波段的特征表示。<br />
+2.
+光谱指数：通过计算不同波段之间的比值或差异，可以提取地物的特定属性。常用的光谱指数包括NDVI（归一化植被指数）、NDWI（归一化水体指数）、NDSI（归一化积雪指数）等。这些指数可以用于提取植被、水体、积雪等地物信息。<br />
+3.
+光谱曲线形状：每个地物类别在光谱上具有特定的形状和特征。通过对比不同地物类别在光谱曲线上的差异，可以区分不同地物类别。例如，某个地物类别可能在某个波段上有较高的反射率，而其他类别则相对较低。<br />
+4.
+波段组合：将多个波段进行组合，形成新的特征表示。可以通过使用波段的比值、差异或组合算法（如主成分分析）来创建新的波段组合。这些波段组合可以提供更具区分度的特征，用于地物分类。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>创建一个hexoBlog</title>
+    <url>/2023/05/08/Create-a-hexoBlog/</url>
+    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
+<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
+methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
+<hr />
+<h1 id="安装">安装</h1>
+<h2 id="安装需求">安装需求</h2>
+<ul>
+<li>Node.js (version &gt;= 10.13)</li>
+<li>Git</li>
+<li>npm</li>
+<li>github账户</li>
+</ul>
+<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
+<h2 id="安装hexo">安装hexo</h2>
+<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
+其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
+href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="初始化blog">初始化blog</h2>
+<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
+s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
+href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
+<h2 id="创建新的blog">创建新的blog</h2>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
+</blockquote>
+<h2 id="生成和部署blog">生成和部署blog</h2>
+<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<h1
+id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
+<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
+<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
+<code>git config --global --list</code>
+查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
+<h2 id="生成ssh密钥">生成SSH密钥</h2>
+<p>使用<code>git config --global --list</code>
+查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
+下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
+alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
+将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
+href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
+SSH
+key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
+<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
+<h2
+id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
+<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
+href="https://hexo.io/themes/"
+class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
+<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
+<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
+<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
+同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1
+id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
+<ol type="1">
+<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
+<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
+<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
+&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
+href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
+</ol>
+<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
+<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
+选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
+在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
+3.
+来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
+4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
+alt="styl设置" /></p>
+<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
+<p><span
+class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
+class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
+href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
+1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
+执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
+由于在1中我们将import设置为demand类型，所以在需要使用<span
+class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
+alt="latex渲染" />，这就是我转Next主题的文章。</p>
+<blockquote>
+<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
+</blockquote>
+<h1 id="next主题配置">Next主题配置</h1>
+<p>相似于section 2.3-section 5，参考<a
+href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
+class="math inline">\(\LaTeX\)</span>配置，可以参考<a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
+latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
+download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
+<h1 id="注意事项">注意事项</h1>
+<ol type="1">
+<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
+<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
+class="uri">https://hexo.io/zh-cn/docs/</a></li>
+</ol>
+<h1 id="参考文章">参考文章</h1>
+<ul>
+<li><a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064"
+class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
+<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
+class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
+<li><a href="https://www.issey.top/"
+class="uri">https://www.issey.top/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Instruction</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -599,135 +762,6 @@ Multivariate Statistical Analysis(2)</a></p>
       </tags>
   </entry>
   <entry>
-    <title>创建一个hexoBlog</title>
-    <url>/2023/05/08/Create-a-hexoBlog/</url>
-    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
-<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
-methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
-<hr />
-<h1 id="安装">安装</h1>
-<h2 id="安装需求">安装需求</h2>
-<ul>
-<li>Node.js (version &gt;= 10.13)</li>
-<li>Git</li>
-<li>npm</li>
-<li>github账户</li>
-</ul>
-<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
-<h2 id="安装hexo">安装hexo</h2>
-<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
-其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
-href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="初始化blog">初始化blog</h2>
-<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
-s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
-href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
-<h2 id="创建新的blog">创建新的blog</h2>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
-</blockquote>
-<h2 id="生成和部署blog">生成和部署blog</h2>
-<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<h1
-id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
-<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
-<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
-<code>git config --global --list</code>
-查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
-<h2 id="生成ssh密钥">生成SSH密钥</h2>
-<p>使用<code>git config --global --list</code>
-查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
-下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
-alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
-将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
-href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
-SSH
-key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
-<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
-<h2
-id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
-<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
-href="https://hexo.io/themes/"
-class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
-<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
-<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
-<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
-同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
-<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1
-id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
-<ol type="1">
-<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
-<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
-<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
-&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
-href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
-</ol>
-<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
-<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
-选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
-在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
-3.
-来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
-4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
-alt="styl设置" /></p>
-<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
-<p><span
-class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
-class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
-href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
-1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
-执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
-由于在1中我们将import设置为demand类型，所以在需要使用<span
-class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
-alt="latex渲染" />，这就是我转Next主题的文章。</p>
-<blockquote>
-<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
-</blockquote>
-<h1 id="next主题配置">Next主题配置</h1>
-<p>相似于section 2.3-section 5，参考<a
-href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
-class="math inline">\(\LaTeX\)</span>配置，可以参考<a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
-latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
-download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
-<h1 id="注意事项">注意事项</h1>
-<ol type="1">
-<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
-<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
-class="uri">https://hexo.io/zh-cn/docs/</a></li>
-</ol>
-<h1 id="参考文章">参考文章</h1>
-<ul>
-<li><a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064"
-class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
-<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
-class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
-<li><a href="https://www.issey.top/"
-class="uri">https://www.issey.top/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Instruction</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Deep Residual Networks for Image Recognition</title>
     <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -820,46 +854,6 @@ boosting中的residual和这里的resodual有什么区别？(这部分目前我�
         <tag>图像识别</tag>
         <tag>ResNet</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hyperspectral or Multispectral Image</title>
-    <url>/2023/07/14/Hyperspectral-or-Multispectral-Image/</url>
-    <content><![CDATA[<h1 id="什么是高多光谱图像">什么是高(多)光谱图像</h1>
-<p>一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel)</p>
-<p>高光谱图像： + 大量不同波段的图像(N channels, gennerally, N <span
-class="math inline">\(\geq\)</span> 100) + 波段可以连续或离散 +
-每个波段捕捉不同波长范围内的光谱信息</p>
-<p>高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数千个窄波段范围内获取数据，并生成具有多个波段的图像。每个波段对应着不同的光谱范围，例如可见光、红外线和近红外线等。通过组合这些波段的数据，我们可以获得一个包含丰富光谱信息的多波段图像。</p>
-<p>多光谱图像: + N channels(generally, 1 <span
-class="math inline">\(\leq\)</span> N <span
-class="math inline">\(\leq\)</span> 100)</p>
-<p>多光谱图像和高光谱图像高度相似，区别在于波段较少</p>
-<h1 id="高多光谱b-times-h-times-w图象识别">高(多)光谱(B <span
-class="math inline">\(\times\)</span> H <span
-class="math inline">\(\times\)</span> W)图象识别</h1>
-<h2 id="光谱信息和空间信息">光谱信息和空间信息</h2>
-<p>机器学习任务主要是学习特征表示，但是在接触高光谱之初，其实由于没有相关知识的学习，对于学习什么特征表示，是一头雾水。</p>
-<p>通过些许论文的阅读，了解到主要是来自spectral-spatial的特征。如果一张图片是由多个channels组成，那么在高光谱图像中的channels也可以称为波段(spectral
-bands, B)。</p>
-<h3 id="spatial-information">spatial information</h3>
-<p>spatial(空间)信息其实很好理解，就是将所有的波段分离开来，每张子图(<span
-class="math inline">\(H \times
-W\)</span>)内表现出的特征，就叫做spatial特征。</p>
-<p>通过利用图像的空间信息，例如像素的邻域关系、纹理、形状等，可以进一步提高分类的准确性。常见的方法包括基于纹理特征的滤波器方法、基于空间像素关系的邻域统计方法等。</p>
-<h3 id="spectral-information">spectral information</h3>
-<p>其实光谱信息(spectral
-information)是很抽象的。因为空间信息中像素的邻域关系、纹理、形状都可以理解并抛给深度网络进行学习特征表示，但是spectral,
-what is it?</p>
-<p>以下是面向GPT的结果：<br />
-1.
-光谱特征提取：对于每个像素，可以提取每个波段的光谱特征，例如波段反射率或辐射强度。通过计算波段的统计特征，如平均值、标准差、最大值、最小值等，可以获取波段的特征表示。<br />
-2.
-光谱指数：通过计算不同波段之间的比值或差异，可以提取地物的特定属性。常用的光谱指数包括NDVI（归一化植被指数）、NDWI（归一化水体指数）、NDSI（归一化积雪指数）等。这些指数可以用于提取植被、水体、积雪等地物信息。<br />
-3.
-光谱曲线形状：每个地物类别在光谱上具有特定的形状和特征。通过对比不同地物类别在光谱曲线上的差异，可以区分不同地物类别。例如，某个地物类别可能在某个波段上有较高的反射率，而其他类别则相对较低。<br />
-4.
-波段组合：将多个波段进行组合，形成新的特征表示。可以通过使用波段的比值、差异或组合算法（如主成分分析）来创建新的波段组合。这些波段组合可以提供更具区分度的特征，用于地物分类。</p>
-]]></content>
   </entry>
   <entry>
     <title>Information Theory</title>
@@ -1442,10 +1436,94 @@ class="math inline">\(I(X;Y)\)</span></li>
       </tags>
   </entry>
   <entry>
-    <title>loss-criterion-optimizer-scheduler</title>
-    <url>/2023/08/04/loss-criterion-optimizer-scheduler/</url>
-    <content><![CDATA[
+    <title>Masked Autoencoder</title>
+    <url>/2023/07/13/Masked-Autoencoder/</url>
+    <content><![CDATA[<h1 id="参考">参考</h1>
+<ol type="1">
+<li><a href="https://arxiv.org/pdf/2111.06377.pdf">paper</a></li>
+<li><a
+href="https://www.bilibili.com/video/BV1sq4y1q77t/?spm_id_from=333.788&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">文献精读
+by 李沐</a></li>
+</ol>
+<h1 id="prerequsitions">Prerequsitions</h1>
+<ul>
+<li>NLP
+<ul>
+<li>Transformer</li>
+<li>BERT</li>
+</ul></li>
+<li>CV
+<ul>
+<li>ViT</li>
+</ul></li>
+<li>自监督
+<ul>
+<li>Encoder-Decoder</li>
+<li>AutoEncoder</li>
+<li>DAE(Denoising Autoencoder)
+<ul>
+<li>Pascal Vincent, Hugo Larochelle, Yoshua Bengio, and PierreAntoine
+Manzagol. Extracting and composing robust features with denoising
+autoencoders. In ICML, 2008.</li>
+</ul></li>
+<li>VAE(Variational Autoencoder)</li>
+</ul></li>
+<li>迁移学习（预训练）</li>
+<li>CNN</li>
+</ul>
+<h1 id="question">Question</h1>
+<ol type="1">
+<li>What is the Masked Autoencoder? Details about the architecture?</li>
+<li>What is the main application scenario of Masked Autoencoder?
+<ol type="1">
+<li>数据去噪</li>
+<li>特征学习</li>
+<li>生成模型</li>
+<li>数据压缩</li>
+</ol></li>
+</ol>
+<h1 id="abstract">Abstract</h1>
+<ol type="1">
+<li>scalable self-supervised learners for CV;</li>
+<li>操作：对输入的图片进行随机掩码，然后利用MAE重构打上掩码的patches(这就意味着，它是一个生成模型，且可以学得Latent
+representation);</li>
+<li>框架：非对称的encoder-decoder
+<ol type="1">
+<li>encoder:只在可视的patch进行操作</li>
+<li>decoder:利用潜表示和打了掩码的patches重构原始图像</li>
+</ol></li>
+</ol>
+<h1 id="introduction">Introduction</h1>
+<h2 id="讨论">讨论</h2>
+<p>在计算机视觉领域，自编码器方法的发展滞后于NLP领域。那么，对掩码自编码器(MAE)，是什么使得它在处理视觉任务和NLP任务时不同的呢？</p>
+<ul>
+<li>过去的10年内，CNN在视觉领域占据主导地位。CNN一般在利用局部感受野，在图像网格上进行局部采集特征表示。相比较于MAE，无法融合诸如mask
+tokens和位置编码这样的"指示器"(indicators)。但是结构上的差异，可以由引入ViT解决。<br />
+</li>
+<li>语言和视觉图像之间的信息密度是不一样的
+<ul>
+<li>语言具有丰富的信息，可以包含高度语义化的特征</li>
+<li>图像是具有严重空间冗余的自然信号，可以从相邻的patches中恢复，而对部分、物体和场景的高级理解很少</li>
+</ul></li>
+<li>解码器decoder可以将学到的潜表示(latent
+representation)映射回输入时的模样，然而decoder在NLP和CV领域起到不同作用。</li>
+</ul>
+<h1 id="框架">框架</h1>
+<figure>
+<img data-src="/images/Masked-Autoencoder/p1.png" alt="MAE" />
+<figcaption aria-hidden="true">MAE</figcaption>
+</figure>
+<p>注：预训练pre-training指的是在目标任务之前，在大规模的未标记数据上进行训练的过程。在这个过程中，模型通过学习数据中的统计规律和特征来提取有用的表示，从而为后续的具体任务提供更好的初始化参数或特征。</p>
+<h1 id="approach">Approach</h1>
 ]]></content>
+      <categories>
+        <category>自监督学习</category>
+      </categories>
+      <tags>
+        <tag>Encoder-Decoder</tag>
+        <tag>Autoencoder</tag>
+        <tag>MAE</tag>
+      </tags>
   </entry>
   <entry>
     <title>Transformer &amp; ViT</title>
@@ -1746,93 +1824,94 @@ class="math inline">\([x_{class}, x_p^1\textbf{E}, x_p^2\textbf{E},
       </tags>
   </entry>
   <entry>
-    <title>Masked Autoencoder</title>
-    <url>/2023/07/13/Masked-Autoencoder/</url>
-    <content><![CDATA[<h1 id="参考">参考</h1>
-<ol type="1">
-<li><a href="https://arxiv.org/pdf/2111.06377.pdf">paper</a></li>
-<li><a
-href="https://www.bilibili.com/video/BV1sq4y1q77t/?spm_id_from=333.788&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">文献精读
-by 李沐</a></li>
-</ol>
-<h1 id="prerequsitions">Prerequsitions</h1>
-<ul>
-<li>NLP
-<ul>
-<li>Transformer</li>
-<li>BERT</li>
-</ul></li>
-<li>CV
-<ul>
-<li>ViT</li>
-</ul></li>
-<li>自监督
-<ul>
-<li>Encoder-Decoder</li>
-<li>AutoEncoder</li>
-<li>DAE(Denoising Autoencoder)
-<ul>
-<li>Pascal Vincent, Hugo Larochelle, Yoshua Bengio, and PierreAntoine
-Manzagol. Extracting and composing robust features with denoising
-autoencoders. In ICML, 2008.</li>
-</ul></li>
-<li>VAE(Variational Autoencoder)</li>
-</ul></li>
-<li>迁移学习（预训练）</li>
-<li>CNN</li>
-</ul>
-<h1 id="question">Question</h1>
-<ol type="1">
-<li>What is the Masked Autoencoder? Details about the architecture?</li>
-<li>What is the main application scenario of Masked Autoencoder?
-<ol type="1">
-<li>数据去噪</li>
-<li>特征学习</li>
-<li>生成模型</li>
-<li>数据压缩</li>
-</ol></li>
-</ol>
-<h1 id="abstract">Abstract</h1>
-<ol type="1">
-<li>scalable self-supervised learners for CV;</li>
-<li>操作：对输入的图片进行随机掩码，然后利用MAE重构打上掩码的patches(这就意味着，它是一个生成模型，且可以学得Latent
-representation);</li>
-<li>框架：非对称的encoder-decoder
-<ol type="1">
-<li>encoder:只在可视的patch进行操作</li>
-<li>decoder:利用潜表示和打了掩码的patches重构原始图像</li>
-</ol></li>
-</ol>
-<h1 id="introduction">Introduction</h1>
-<h2 id="讨论">讨论</h2>
-<p>在计算机视觉领域，自编码器方法的发展滞后于NLP领域。那么，对掩码自编码器(MAE)，是什么使得它在处理视觉任务和NLP任务时不同的呢？</p>
-<ul>
-<li>过去的10年内，CNN在视觉领域占据主导地位。CNN一般在利用局部感受野，在图像网格上进行局部采集特征表示。相比较于MAE，无法融合诸如mask
-tokens和位置编码这样的"指示器"(indicators)。但是结构上的差异，可以由引入ViT解决。<br />
-</li>
-<li>语言和视觉图像之间的信息密度是不一样的
-<ul>
-<li>语言具有丰富的信息，可以包含高度语义化的特征</li>
-<li>图像是具有严重空间冗余的自然信号，可以从相邻的patches中恢复，而对部分、物体和场景的高级理解很少</li>
-</ul></li>
-<li>解码器decoder可以将学到的潜表示(latent
-representation)映射回输入时的模样，然而decoder在NLP和CV领域起到不同作用。</li>
-</ul>
-<h1 id="框架">框架</h1>
-<figure>
-<img data-src="/images/Masked-Autoencoder/p1.png" alt="MAE" />
-<figcaption aria-hidden="true">MAE</figcaption>
-</figure>
-<p>注：预训练pre-training指的是在目标任务之前，在大规模的未标记数据上进行训练的过程。在这个过程中，模型通过学习数据中的统计规律和特征来提取有用的表示，从而为后续的具体任务提供更好的初始化参数或特征。</p>
-<h1 id="approach">Approach</h1>
+    <title>loss-criterion</title>
+    <url>/2023/08/04/loss-criterion/</url>
+    <content><![CDATA[<h1 id="常见损失函数">常见损失函数</h1>
+<h2 id="l1-loss">L1 loss</h2>
+<p>L1 loss，也称为绝对值损失（Absolute Error
+Loss），是深度学习中常用的一种损失函数，用于衡量预测值与目标值之间的差异。L1
+loss 计算的是预测值和目标值之间的绝对差值的平均值。</p>
+<p>对于单个样本，L1 loss 的计算公式如下： <span
+class="math display">\[L_1(y,\hat{y}) = \frac{1}{N} \sum_{i=1}^N
+|y_i-\hat{y_i}|\]</span></p>
+<p>其中：<br />
+- <span class="math inline">\(N\)</span> 是样本数量。<br />
+- <span class="math inline">\(y_i\)</span> 是第 $ i $
+个样本的目标值（真实值）。<br />
+- <span class="math inline">\(\hat{y_i}\)</span> 是第 $ i $
+个样本的预测值。</p>
+<p>L1 loss
+的一个重要特点是它对异常值（outliers）不敏感，因为它仅考虑了差值的绝对值，而不是平方。这使得
+L1 loss 在某些情况下对噪声和异常值有更好的鲁棒性。</p>
+<p>L1 loss
+在回归问题中广泛使用，特别是当目标值和预测值的分布有重叠时，或者对预测值和目标值的误差更敏感时。在某些情况下，L1
+loss
+可以产生更稀疏的解，因为它倾向于使一些权重变为零，从而达到特征选择的效果。</p>
+<p>在 PyTorch 中，你可以使用 <code>torch.nn.L1Loss</code> 类来创建 L1
+loss 的实例，也可以直接使用 <code>torch.nn.functional.l1_loss</code>
+函数计算 L1 loss。</p>
+<h2 id="mse-loss">MSE loss</h2>
+<p>均方误差（Mean Squared
+Error，MSE）是在回归问题中常用的损失函数，用于衡量模型预测值与实际目标值之间的差异。MSE
+的计算方法是将每个预测值与对应的目标值之差的平方求平均，以衡量模型的预测误差。</p>
+<p>MSE 损失的公式如下：</p>
+<p><span class="math display">\[
+MSE = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \hat{y_{i}})^2
+\]</span></p>
+<p>其中，<code>n</code> 是样本数量，<span
+class="math inline">\(\hat{y_i}\)</span> 是模型的预测值，<span
+class="math inline">\(y_i\)</span>是实际的目标值。MSE
+越小表示模型的预测值越接近实际值，而较大的 MSE
+则表示模型预测的误差较大。</p>
+<p>MSE
+损失对误差较大的样本进行了较大的惩罚，因为误差的平方会放大较大的值。然而，MSE
+对异常值较为敏感，这可能会导致模型对异常值过度拟合。另外，MSE
+损失在优化过程中可能会引起梯度消失或梯度爆炸问题，特别是当预测值与目标值之间的差距较大时。</p>
+<p>在 PyTorch 中，您可以使用 <code>torch.nn.MSELoss</code> 类来计算 MSE
+损失。当选择损失函数时，应根据问题和数据的特点来权衡选择，考虑模型的需求和数据的分布。</p>
+<h2 id="smooth-l1-loss">smooth-L1 loss</h2>
+<p>Smooth L1 loss（平滑 L1
+损失）是一种在机器学习和深度学习中常用于回归任务的损失函数。它旨在解决均方误差（MSE）损失和
+L1 损失的一些局限性。Smooth L1
+损失结合了两者的优点，提供了一个对异常值不太敏感的损失函数，同时可以防止梯度爆炸问题。</p>
+<p>Smooth L1 损失的公式如下：</p>
+<p><span class="math display">\[Smooth L1 loss =
+\begin{cases}
+    \frac{0.5 x^2}{\beta} , &amp; |x| &lt; \beta \\
+    |x| - 0.5\beta, &amp;    otherwise \\
+\end{cases}
+\]</span></p>
+<p>在这个公式中，<code>x</code> 表示预测值和目标值之间的差异，<span
+class="math inline">\(\beta\)</span>是一个超参数，控制损失在从二次方到线性之间的转换点。当绝对差异
+<code>|x|</code> 小于 <span class="math inline">\(\beta\)</span>
+时，损失是二次方的，有助于减轻异常值的影响。当绝对差异大于 <span
+class="math inline">\(\beta\)</span>
+时，损失变为线性，使得模型能够容忍较大的误差而不会过度惩罚。</p>
+<p>Smooth L1
+损失在目标值可能存在异常值或噪声的情况下特别有用。它提供了比传统的 L1
+损失更稳定的梯度，因为传统的 L1
+损失由于其线性性质在异常值存在时会很敏感。Smooth L1
+损失在诸如目标检测之类的任务中非常适用，其中边界框回归需要对异常值和噪声具有鲁棒性。</p>
+<p>在 PyTorch 中，您可以使用 <code>torch.nn.SmoothL1Loss</code> 类来计算
+Smooth L1 损失。值得注意的是，虽然 Smooth L1 损失为传统的 L1
+损失提供了更平滑和更具鲁棒性的替代方案，但选择损失函数应基于问题和数据的特性来进行。</p>
+<h2 id="cross-entropy-loss">Cross Entropy loss</h2>
+<p>交叉熵损失（Cross-Entropy
+Loss）是在分类问题中常用的损失函数，用于衡量模型的预测值与真实标签之间的差异。交叉熵损失的计算基于概率分布，可以衡量模型对不同类别的预测概率与实际标签的一致性。</p>
+<p>假设有一个分类问题，有多个类别（如数字分类、图像分类等），每个类别都有一个对应的真实标签。交叉熵损失的目标是最小化模型预测概率与实际标签之间的差异，从而使模型的预测更加接近真实情况。</p>
+<p>对于单个样本的交叉熵损失，公式如下：</p>
+<p><span class="math display">\[
+CE = -\sum^{n}_{i=1}(y_{i} \times \log(\hat{y_{i}}))
+\]</span></p>
+<p>其中，<span class="math inline">\(y_i\)</span>
+是实际标签的独热编码形式，<span class="math inline">\(\hat{y_i}\)</span>
+是模型的预测概率分布。交叉熵损失将每个类别的实际标签与模型预测的概率相乘，并取负对数，然后对所有类别求和。这样做可以将正确分类的类别趋近于0的交叉熵损失，而对错误分类的类别会增大损失。(这里看信息论就行)</p>
+<p>在 PyTorch 中，您可以使用 <code>torch.nn.CrossEntropyLoss</code>
+类来计算交叉熵损失。需要注意的是，交叉熵损失通常适用于多类别分类问题，并且要求输入的模型预测值是未经过
+softmax 激活函数的原始分数。</p>
+<p>交叉熵损失在训练神经网络分类模型时非常常见，它可以帮助模型学习如何更好地区分不同类别，从而提高分类性能。</p>
+<h2 id="其他损失函数">其他损失函数</h2>
+<p>都可以查看<code>nn.loss</code>下有哪些损失函数，也考虑自己加入正则化项设计损失函数</p>
 ]]></content>
-      <categories>
-        <category>自监督学习</category>
-      </categories>
-      <tags>
-        <tag>Encoder-Decoder</tag>
-        <tag>Autoencoder</tag>
-        <tag>MAE</tag>
-      </tags>
   </entry>
 </search>
