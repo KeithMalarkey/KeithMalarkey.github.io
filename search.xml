@@ -1,6 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Combinatorics</title>
+    <url>/2023/06/24/Combinatorial-Mathematics/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>主要记录一些组合数学和离散数学的知识框架用以回顾,
+参考书：（美）R.A.Brualdi. 组合数学（第五版）. 机械工业出版社，2012.</p>
+<h1 id="什么是组合数学">什么是组合数学</h1>
+<p>组合数学也称为组合学和组合分析，是一门研究离散对象的科学。随着计算机科学的日益发展，组合数学的重要性也日渐凸显，因为计算机科学的核心内容是使用算法处理离散数据。组合数学主要研究满足一定条件的组态（也称组合模型）的存在、计数以及构造等方面的问题。组合数学的主要内容有组合计数、组合设计、组合矩阵、组合优化（最佳组合）等。组合数学不仅在软件技术中有重要的应用价值，在企业管理，交通规划，试验设计，战争指挥，金融分析等领域都有重要的应用。</p>
+<h2 id="切块问题">切块问题</h2>
+<p>把一个<span class="math inline">\(3 \times 3 \times
+3\)</span>的立方体木块切成27个<span class="math inline">\(1 \times 1
+\times
+1\)</span>的小立方体木块，如果切割过程中允许重新排列已切割木块的位置，求完成整个切割的最少次数。<br />
+1. 测量实心长方体的对角线长度？<br />
+2. 如果把上述问题中的立方体换成<span class="math inline">\(3 \times 6
+\times 9\)</span>的长方体结果如何？</p>
+<p>思路：对于<span class="math inline">\(1 \times 1 \times
+5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil \log_2
+5 \rceil\)</span>；相似的，对于<span class="math inline">\(1 \times 3
+\times 5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil
+\log_2 3 \rceil + \lceil \log_2 5 \rceil\)</span></p>
+<p>解答：由上分析，对于任意<span class="math inline">\(w_1 \times w_2
+\times w_3\)</span>的立方体，分割成单位立方体至少需要<span
+class="math inline">\(\sum\limits_{i=1}^3 \lceil \log_2 w_i
+\rceil\)</span>,故此时的最小切割代价为<span class="math inline">\(3
+\times \lceil \log_2 3 \rceil = 6\)</span></p>
+<h2 id="nim问题">Nim问题</h2>
+<p>有五堆石子，各堆石子的个数分别是10、29和48。甲乙两人玩取石子游戏，要求：两个人轮流取石子，每个人取石子时，只能从同一堆中取，最少取一枚，最多可以把整堆石子取走。谁取到最后的石子，谁获胜。如果你是其中的一个游戏人，你选择先取子还是后取子，如何取？</p>
+<p>思路：按位异或，非零，则先手必胜；否则，先手必输。</p>
+<p>解答：10D=1010B,29D=11101B,48D=110000B,由<span
+class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
+0\)</span>，所以先手必赢。</p>
+<p>取子方案：<br />
+<span class="math inline">\(110000(48D) \rightarrow
+010111(23D)\)</span>,即从第三堆48块中取走25块，并保证每次自己取子之后，每堆石子数按位异或为0.，这样最终就会获胜。</p>
+<h1 id="鸽笼原理">鸽笼原理</h1>
+<h2 id="简单形式">简单形式</h2>
+<p>若把n+1个物体放到n
+（n≥1）个盒子中去，则至少有一个盒子放有至少2个物体。</p>
+<p>证明：用反证法证明。如果n个盒子中每个盒子至多放入一个物体，则放入n个盒子中的物体总数至多为n个。这与假设有n+1个物体矛盾。从而定理得证。</p>
+<h2 id="例题">例题</h2>
+<p><img data-src="/images/Combinatorial-Mathematics/p1.jpg" alt="p1" /> <img data-src="/images/Combinatorial-Mathematics/p2.png" alt="p2" /> <img data-src="/images/Combinatorial-Mathematics/p3.png" alt="p3" /> <img data-src="/images/Combinatorial-Mathematics/p4.png" alt="p4-1" /> <img data-src="/images/Combinatorial-Mathematics/p4-1.png" alt="p4-2" /></p>
+<h2 id="一般形式">一般形式</h2>
+]]></content>
+  </entry>
+  <entry>
+    <title>Fourier Series and Fourier Transform</title>
+    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>Principal component analysis</title>
+    <url>/2023/05/30/Principal-component-analysis/</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>Pattern Recognition and Machine Learning(1)</title>
+    <url>/2023/06/01/PRML-1/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<ol type="1">
+<li>学习模式识别和机器学习的基础</li>
+<li>贝叶斯学派日常学习记录</li>
+<li>不断夯实基础，包括统计学习的相关概念、图网络和经典的生成模型等</li>
+<li>面向以下几个优秀UP学习：
+<ol type="1">
+<li><a
+href="https://space.bilibili.com/497536319?spm_id_from=333.999.0.0">徐芝兰</a></li>
+<li><a
+href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">派派大星星</a></li>
+<li><a
+href="https://space.bilibili.com/552439878?spm_id_from=333.999.0.0">Poros踵</a></li>
+</ol></li>
+<li><a
+href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">UP派派大星星</a>
+给出了相关书籍的<a
+href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>,里面会有简略中文版书籍和公式推导</li>
+<li><a
+href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">英文原版书籍</a></li>
+<li>因为一些推理或者proof不够完整，自己整理和修改了<a
+href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>，之后会上传到github(尚未完成：TODO)
+<!-- #TODO --></li>
+</ol>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>需要一些前备知识： 1. 概率论(够用)或随机过程(更好) 2.
+线性代数/高等代数/矩阵论 3. 微积分基础</p>
+<h1 id="频率学派和贝叶斯学派">频率学派和贝叶斯学派</h1>
+<p>在学习大数定理时，在样本观测值已知情形下，我们可以确定该样本的似然函数，通过求最大似然确定未知参数。即，假设对独立同分布(i.i.d,
+independent and identical distribution)的样本集<span
+class="math inline">\(X_1,X_2,\dotsb,X_n\)</span>进行观测，其观测值依次为<span
+class="math inline">\(x_1,x_2,\dotsb,x_n\)</span>，其样本的p.d.f(概率密度函数)为<span
+class="math display">\[p(x_i|\omega)(i=1,2,\dots,n)\]</span>
+则相应似然函数为<span
+class="math inline">\(f(\omega)=\prod\limits_{i=1}^n
+p(x_i|\omega)\)</span>,然后求得对参数<span
+class="math inline">\(\omega\)</span>的极大参数估计<span
+class="math inline">\(\hat{\omega}_{MLE}\)</span>，其推导如下： <span
+class="math display">\[
+\begin{equation*}
+    \begin{split}
+    \hat{\omega}_{MLE}&amp;= argmax \ln f(\omega)\\
+    &amp;= argmax \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
+    &amp;= argmin - \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
+    \end{split}
+\end{equation*}
+\]</span> 参考<a
+href="https://zhuanlan.zhihu.com/p/337637096">频率学派和贝叶斯学派</a>,<font color="purple">频率学派和贝叶斯学派的主要区别：是否允许先验概率分布的使用</font>。</p>
+<ul>
+<li>频率学派不假设任何的先验知识，不参照过去的经验，只按照当前已有的数据进行概率推断</li>
+<li>贝叶斯学派会假设先验知识的存在，然后再用采样逐渐修改先验知识并逼近真实知识(一个不断更新先验知识的过程，也就是一个不断学习的过程)</li>
+</ul>
+<p>因此贝叶斯推论中前一次得到的后验概率分布可以作为后一次的先验概率。但实际上，在数据量趋近无穷时，频率学派和贝叶斯学派得到的结果是一样的，也就是说频率方法是贝叶斯方法的极限。当考虑的试验次数非常少的时候，贝叶斯方法的解释非常有用。此外，贝叶斯理论将我们对于随机过程的先验知识纳入考虑，当我们获得的数据越来越多的时候，这个先验的概率分布就会被更新到后验分布中。</p>
+<h2 id="贝叶斯公式">贝叶斯公式</h2>
+<p><span class="math display">\[
+\begin{equation}
+\begin{split}
+    p(\theta | x)&amp;= \frac{p(x|\theta) \cdot \pi(\theta)}{p(x)}\\
+    &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\sum\limits_{\Theta}
+p(x|\theta) \cdot \pi(\theta)}\\
+    \text{或} &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\int_{\Theta}
+p(x|\theta) \cdot \pi(\theta)d\theta}
+\end{split}
+\end{equation}
+\]</span> 其中，<span
+class="math inline">\(\pi(\theta)\)</span>称为先验概率(the prior)，<span
+class="math inline">\(p(x|\theta)\)</span>称为似然函数(likelihood)，<span
+class="math inline">\(p(x)\)</span>称为边缘分布(margin
+distribution)，<span class="math inline">\(p(\theta |
+x)\)</span>称为后验分布(the
+posterior)。事实上，分母可以看成是对后验分布的正则化或归一化</p>
+<h2 id="先验概率分布">先验概率分布</h2>
+<blockquote>
+<p><a
+href="https://en.wikipedia.org/wiki/Prior_probability">维基百科</a>:A
+prior probability distribution of an uncertain quantity, often simply
+called the prior, is its assumed probability distribution before some
+evidence is taken into account. For example, the prior could be the
+probability distribution representing the relative proportions of voters
+who will vote for a particular politician in a future election. The
+unknown quantity may be a parameter of the model or a latent variable
+rather than an observable variable.
+不确定量的先验概率分布，通常简称为先验，是在考虑某些证据之前假定的概率分布。例如，先验可以是代表在未来选举中投票给特定政治家的选民的相对比例的概率分布。未知量可能是模型的参数或潜在变量，而不是可观察变量。</p>
+</blockquote>
+<h2 id="共轭分布">共轭分布</h2>
+<p>在贝叶斯统计中，如果先验分布和后验分布属于同类（分布形式相同），则先验分布与后验分布被称为<font color="red">共轭分布</font>，而先验分布被称为似然函数的<font color="red">共轭先验</font>。如果我们需要验证共轭分布，由于<span
+class="math inline">\(posterior \propto likelihood \times
+prior\)</span>，所以带入似然函数和先验分布子式之后，若后验分布和先验分布的形式相同，那么就说明两者是共轭分布。</p>
+<h2 id="共轭分布举例">共轭分布举例</h2>
+<ol type="1">
+<li>二项分布 <span class="math display">\[Bin(m|N,\mu)=\binom{N}{m}\mu^m
+(1-\mu)^{N-m} \label{eq3}\]</span></li>
+<li>Beta分布 <span
+class="math display">\[Bata(\mu|a,b)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}
+\mu^{a-1}(1-\mu)^{b-1}(a,b&gt;0,\mu \in (0,1)) \label{eq4}\]</span>
+其中，<span class="math inline">\(\Gamma(x) \equiv \int_0^\infty
+u^{x-1}e^{-u}du(x&gt;0)\)</span></li>
+<li>由分布<span class="math inline">\(\ref{eq3}\)</span> <span
+class="math inline">\(\times\)</span> 分布 <span
+class="math inline">\(\ref{eq4}\)</span>，归一化之后得到： <span
+class="math display">\[p(\mu|m,l,a,b) \propto
+\mu^{m+a-1}(1-\mu)^{l+b-1}\]</span>，其中<span
+class="math inline">\(l=N-m\)</span>。和先验分布的形式相同。所以说,二项分布和Beta分布互为共轭先验，分布<span
+class="math inline">\(p(\mu|m,l,a,b)\)</span>和二项分布以及beta分布都是共轭分布</li>
+</ol>
+<h1 id="概率分布">概率分布</h1>
+<h2 id="二元分布0-1分布binary-distribution">二元分布/0-1分布(Binary
+distribution)</h2>
+<p><span
+class="math display">\[Bern(x|\mu)=\mu^x(1-\mu)^{1-x}\]</span>，可以看到这是特殊的伯努利分布</p>
+<h2 id="二项分布binomial-distribution">二项分布(Binomial
+distribution)</h2>
+<p><span class="math display">\[Bin(m|N, \mu) = \binom{N}{m}\mu^m(1 -
+\mu)^{N - m}\]</span></p>
+<h2 id="beta分布">Beta分布</h2>
+<p><span class="math display">\[Beta(\mu|a, b) = \frac{\Gamma(a +
+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
+(0,1))\]</span>，其中<span class="math inline">\(\Gamma(x) \equiv
+\int_0^\infty u^{x-1}e^{-u}du (x &gt; 0)\)</span></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>贝叶斯学习</category>
+        <category>统计学习</category>
+      </categories>
+      <tags>
+        <tag>PRML</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Applied Multivariate Statistical Analysis(2)</title>
     <url>/2023/05/15/Applied-Multivariate-Statistical-Analysis-2/</url>
     <content><![CDATA[<h1 id="多元正态分布">多元正态分布</h1>
@@ -35,229 +224,6 @@ class="math inline">\(\Sigma\)</span>的特征值和特征向量。</li>
       <tags>
         <tag>统计分析</tag>
         <tag>数据降维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Deep Residual Networks for Image Recognition</title>
-    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
-href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
-Image Recognition</a>作为开篇。<br />
-主要目的：<br />
-1. 什么是ResNet？其基本结构是什么？<br />
-2. 为什么提出ResNet?或者说它的优势是什么？<br />
-3. 为何会有其优势，从数理层面的解释是什么？<br />
-4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
-<hr />
-<h1 id="论文解析">论文解析</h1>
-<h2 id="概要">概要</h2>
-<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
-<h2 id="引言">引言</h2>
-<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
-normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
-Normalization)。<br />
-然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
-alt="深层网络准确率饱和现象" />
-从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
-<font color="red">
-设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
-mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
-error)。
-</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
-alt="Shortcut connection" /> <font color="red">Deep residual learning
-framework</font>:假设我们希望得到的一个潜在映射为<span
-class="math inline">\(\mathcal{H}(\bf
-x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
-class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
-class="math inline">\(\mathcal{F}(\textbf{x}) :=
-\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
-class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
-connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
-x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
-x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
-<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
-alt="全局设计" /></p>
-<h2 id="实验结果">实验结果</h2>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
-alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
-block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
-<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
-alt="Resnet性能同plain CNN的对比" />
-上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
-class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
-<h1 id="数理解释">数理解释</h1>
-<ol type="1">
-<li>假设plain CNN需要学得潜在的mapping是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
-class="math inline">\(g\)</span>;(2)深层部分的映射<span
-class="math inline">\(f\)</span>，即<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
-class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
-f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
-g(\theta)}{\partial
-\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
-<li>同样的，ResNet需要学习的潜在mapping也是<span
-class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
-class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
-connection的原因，每次迭代训练参数时需要做的是<span
-class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
-g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
-\underbrace{\frac{\partial g(\theta)}{\partial
-\theta}}_{(2)}\)</span>，在(1)中还会存在plain
-CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
-</ol>
-<h1 id="总结">总结</h1>
-<p>ResNet就是使用了shortcut(residual)
-connection的CNN变种，其基本结构就是残差块(residual
-block)和残差连接(residual
-connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
-<h1 id="遗留问题">遗留问题</h1>
-<ol type="1">
-<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
-<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
-<li>提到Residual，在机器学习中，比如Gradient
-boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>图像识别</tag>
-        <tag>ResNet</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>创建一个hexoBlog</title>
-    <url>/2023/05/08/Create-a-hexoBlog/</url>
-    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
-<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
-methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
-<hr />
-<h1 id="安装">安装</h1>
-<h2 id="安装需求">安装需求</h2>
-<ul>
-<li>Node.js (version &gt;= 10.13)</li>
-<li>Git</li>
-<li>npm</li>
-<li>github账户</li>
-</ul>
-<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
-<h2 id="安装hexo">安装hexo</h2>
-<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
-其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
-href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="初始化blog">初始化blog</h2>
-<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
-s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
-href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
-<h2 id="创建新的blog">创建新的blog</h2>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
-</blockquote>
-<h2 id="生成和部署blog">生成和部署blog</h2>
-<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<h1
-id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
-<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
-<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
-<code>git config --global --list</code>
-查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
-<h2 id="生成ssh密钥">生成SSH密钥</h2>
-<p>使用<code>git config --global --list</code>
-查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
-下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
-alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
-将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
-href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
-SSH
-key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
-<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
-<h2
-id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
-<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
-href="https://hexo.io/themes/"
-class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
-<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
-<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
-<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
-同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
-<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h1
-id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
-<ol type="1">
-<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
-<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
-<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
-&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
-href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
-</ol>
-<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
-<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
-选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
-在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
-3.
-来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
-4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
-alt="styl设置" /></p>
-<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
-<p><span
-class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
-class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
-href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
-1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
-执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
-由于在1中我们将import设置为demand类型，所以在需要使用<span
-class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
-alt="latex渲染" />，这就是我转Next主题的文章。</p>
-<blockquote>
-<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
-</blockquote>
-<h1 id="next主题配置">Next主题配置</h1>
-<p>相似于section 2.3-section 5，参考<a
-href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
-class="math inline">\(\LaTeX\)</span>配置，可以参考<a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
-latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
-href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
-download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
-<h1 id="注意事项">注意事项</h1>
-<ol type="1">
-<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
-<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
-class="uri">https://hexo.io/zh-cn/docs/</a></li>
-</ol>
-<h1 id="参考文章">参考文章</h1>
-<ul>
-<li><a
-href="https://blog.csdn.net/qq_52466006/article/details/126924064"
-class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
-<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
-class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
-<li><a href="https://www.issey.top/"
-class="uri">https://www.issey.top/</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Instruction</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -627,6 +593,100 @@ Multivariate Statistical Analysis(2)</a></p>
       </tags>
   </entry>
   <entry>
+    <title>Deep Residual Networks for Image Recognition</title>
+    <url>/2023/05/16/Deep-Residual-Networks-for-Image-Recognition/</url>
+    <content><![CDATA[<h1 id="前言">前言</h1>
+<p>残差网络(ResNet)已经成为了SOTA的方法，在图像识别、文本处理等领域有着举足轻重的地位。本贴以何凯明的<a
+href="https://arxiv.org/pdf/1512.03385.pdf">Deep Residual Learning for
+Image Recognition</a>作为开篇。<br />
+主要目的：<br />
+1. 什么是ResNet？其基本结构是什么？<br />
+2. 为什么提出ResNet?或者说它的优势是什么？<br />
+3. 为何会有其优势，从数理层面的解释是什么？<br />
+4. 适用的场景是什么？它与卷积网的不同点是什么？</p>
+<hr />
+<h1 id="论文解析">论文解析</h1>
+<h2 id="概要">概要</h2>
+<p>一般而言，深度神经网络难以训练。ResNet给出了较之于传统深度网络更加deeper的结构，且由于给出了更加平和的优化地形，缓解了网络训练的压力。</p>
+<h2 id="引言">引言</h2>
+<p>深度网络有更好的图像分类性能。深度对于非平凡的图像识别任务是至关重要的因素。问题是：（通过训练所得）更好的网络是否就是简单地堆加更多的网络层呢？现实是，如果要对此作出回答，必须先要解决梯度弥散和梯度爆炸的问题。目前(2022/2023)，常见的为了处理梯度消失和梯度爆炸的常见手段是对网络参数进行weight
+normlization,或者对间歇地在网络中增加normlization layers(BN, Batch
+Normalization)。<br />
+然而，在解决了梯度问题使得loss开始收敛之后，新的问题出现了：网络深度增加了，准确率一度饱和甚至出现了下降的现象。如下图所示：<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p1.png"
+alt="深层网络准确率饱和现象" />
+从Fig.1可以看出，不是说层数越多，训练（测试）的错误率就越小，况且也没有出现过拟合。此外还发现，在一定的迭代之后出现明显的饱和现象。训练精度的降级意味着复杂的模型难以优化。
+<font color="red">
+设计思路：考虑一个可以在深层增加更多layers的浅层结构。存在一种设计，就是将深层的layers设计成恒等映射(identity
+mapping)，这种设计(相比于只用浅层网络)应该不会产生更高的训练误差(training
+error)。
+</font>。换言之，浅层网络本就可以构造出比较好的特征空间，即便是在后面加了恒等映射，其性能也不会变得比浅层网络更差。<br />
+<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p2.png"
+alt="Shortcut connection" /> <font color="red">Deep residual learning
+framework</font>:假设我们希望得到的一个潜在映射为<span
+class="math inline">\(\mathcal{H}(\bf
+x)\)</span>,当然这也是整个框架希望得到的(设计思路那里所说的可以在深层增加更多layers的浅层结构，然后深层+浅层作为整个framework)。在深层layers中，目标学习映射将不再是<span
+class="math inline">\(\mathcal{H}(\textbf{x})\)</span>，而是<span
+class="math inline">\(\mathcal{F}(\textbf{x}) :=
+\mathcal{H}(\textbf{x})-\textbf{x}\)</span>，并且对来自浅层网络的输入<span
+class="math inline">\(\bf x\)</span>进行恒等映射之后，进行shortcut
+connection，将深层网络学到的<span class="math inline">\(\mathcal{F}({\bf
+x})\)</span>直接同恒等映射后的<span class="math inline">\(\bf
+x\)</span>相加，我们从Fig.2中看到这样的流程。在下图中给出了残差网络的全局设计。
+<img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p3.jpg"
+alt="全局设计" /></p>
+<h2 id="实验结果">实验结果</h2>
+<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p4.png"
+alt="ImageNet上的残差结构" /> 从Tab.1看到，每个残差块(residual
+block)以及残差块的数量都是超参数(回到了炼丹玄学)，所以这些都要在验证集上不断调试，我。。</p>
+<p><img data-src="/images/Deep-Residual-Networks-for-Image-Recognition/p5.png"
+alt="Resnet性能同plain CNN的对比" />
+上图给出了ImageNet数据集上的对比，首先对比左右图，可以看到ResNet的性能优势；其次我们看到ResNet收敛的速度更快；最后，我们看得到两个错误率断崖式降低，原因是学习率的调整(<span
+class="math inline">\(\times 0.1\)</span>)，所以这又是一个超参数。</p>
+<h1 id="数理解释">数理解释</h1>
+<ol type="1">
+<li>假设plain CNN需要学得潜在的mapping是<span
+class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
+class="math inline">\(\theta\)</span>是需要学到的网络参数)，它可以抽象成两个部分：(1)浅层部分的映射<span
+class="math inline">\(g\)</span>;(2)深层部分的映射<span
+class="math inline">\(f\)</span>，即<span
+class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))\)</span>。所以在参数优化时，实际上做的就是<span
+class="math inline">\(\frac{\partial\mathcal{G}(\theta)}{\partial\theta}=\frac{\partial
+f(g(\theta))}{\partial g(\theta)} \cdot \frac{\partial
+g(\theta)}{\partial
+\theta}\)</span>。所以，由于这样的多次迭代(上百甚至百万次)，容易出现梯度弥散(梯度消失)的现象；</li>
+<li>同样的，ResNet需要学习的潜在mapping也是<span
+class="math inline">\(\mathcal{G}(\theta)\)</span>(<span
+class="math inline">\(\mathcal{G}(\theta)=f(g(\theta))+g(\theta)\)</span>)，但是由于residual
+connection的原因，每次迭代训练参数时需要做的是<span
+class="math inline">\(\underbrace{\frac{\partial f(g(\theta))}{\partial
+g(\theta)} \cdot \frac{\partial g(\theta)}{\partial \theta}}_{(1)} +
+\underbrace{\frac{\partial g(\theta)}{\partial
+\theta}}_{(2)}\)</span>，在(1)中还会存在plain
+CNN中情况，但是由于(2)的存在，经过多次迭代之后，完全不会出现梯度弥散的情形。所以这就是较之于CNN的优势所在。</li>
+</ol>
+<h1 id="总结">总结</h1>
+<p>ResNet就是使用了shortcut(residual)
+connection的CNN变种，其基本结构就是残差块(residual
+block)和残差连接(residual
+connection)。提出ResNet的背景就是深度网络可以有效地提高图像识别的性能，但是当到了一定的深度时，出行了性能饱和甚至降级，原因也不是饱和，况且由于深度网络由于庞大复杂的参数优化任务，难以优化，所以提出了残差网络用以解决深度网络的参数学习问题，有效的解决了梯度弥散问题。</p>
+<h1 id="遗留问题">遗留问题</h1>
+<ol type="1">
+<li>ResNet有效地解决了深度网络参数优化过程中的梯度弥散现象，那么如何缓和/解决梯度爆炸呢？</li>
+<li>由于ResNet在CNN的基础之上，多了残差结构，那么如何设计残差块和学习率衰变都是额外的超参数设定任务。</li>
+<li>提到Residual，在机器学习中，比如Gradient
+boosting中的residual和这里的resodual有什么区别？(这部分目前我还是小白，哎)。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>图像识别</tag>
+        <tag>ResNet</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hyperspectral or Multispectral Image</title>
     <url>/2023/07/14/Hyperspectral-or-Multispectral-Image/</url>
     <content><![CDATA[<h1 id="什么是高多光谱图像">什么是高(多)光谱图像</h1>
@@ -665,6 +725,135 @@ what is it?</p>
 4.
 波段组合：将多个波段进行组合，形成新的特征表示。可以通过使用波段的比值、差异或组合算法（如主成分分析）来创建新的波段组合。这些波段组合可以提供更具区分度的特征，用于地物分类。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>创建一个hexoBlog</title>
+    <url>/2023/05/08/Create-a-hexoBlog/</url>
+    <content><![CDATA[<h1 id="使用hexo框架创建个人博客">使用hexo框架创建个人博客</h1>
+<p>创建个人博客，主要用于机器学习及其相关数学基础，包括线性降维、非线性降维（流形学习）、统计分析、凸分析、信息论基础等。除此之外，会做一些算法笔记，包括一些state-of-art
+methods。也可能写一点和算法分析、操作系统、Linux、vim(neovim)的学术/技术贴。在此，本贴给出hexo博客的创建流程。</p>
+<hr />
+<h1 id="安装">安装</h1>
+<h2 id="安装需求">安装需求</h2>
+<ul>
+<li>Node.js (version &gt;= 10.13)</li>
+<li>Git</li>
+<li>npm</li>
+<li>github账户</li>
+</ul>
+<p>可以使用下面的cmd命令查看是否安装成功及版本 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node --version</span><br><span class="line">git --version</span><br><span class="line">npm --verison</span><br></pre></td></tr></table></figure> 或者</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">node -V</span><br><span class="line">git -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
+<h2 id="安装hexo">安装hexo</h2>
+<p>创建本地仓库/路径，用以编辑blog，比如 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d</span><br><span class="line"><span class="built_in">mkdir</span> KeithBlog</span><br><span class="line"><span class="built_in">cd</span> KeithBlog/</span><br></pre></td></tr></table></figure> &gt;
+其上的代码块中，KeithBlog即本地仓库所在文件夹，并且在下面的代码块执行需要翻墙或者配置国内镜像源（cnpm）(建议面向知乎或搜索引擎，比如<a
+href="https://zhuanlan.zhihu.com/p/426952333">zhihu</a>)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="初始化blog">初始化blog</h2>
+<p>准备好环境之后，就可以初始化blog了，在本地仓下使用下面bash命令，初始化一个名为blog的目录结构，会生成基础的构建
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure> &gt; hexo
+s是关于hexo的命令，通常用来在本地对编辑的网页博客进行预览，可以参考<a
+href="https://hexo.io/zh-cn/docs/commands">hexoCmds</a></p>
+<h2 id="创建新的blog">创建新的blog</h2>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">hexo n [layout] <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 如：hexo new &quot;keith&#x27;s first Blog&quot; --&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>layout表示文章布局，可以选择post/page/draft，需要在_config.yml配置文件中对default_layout的参数进行修改。</p>
+</blockquote>
+<h2 id="生成和部署blog">生成和部署blog</h2>
+<p>使用下面的cmd就可以生成网页（当前还没有部署到github项目中）
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- clean清楚缓存文件和静态文件,g指的是generate,d指的是deploy --&gt;</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<h1
+id="将blog项目部署到github以chic主题为例">将blog项目部署到github(以Chic主题为例)</h1>
+<h2 id="为blog创建github的repo">为blog创建github的repo</h2>
+<p><code>cd /KeithBlog/blog</code>进入博客的本地仓，输入<code>git init</code>初始化git的main分支，在github上创建一个新的repo,注意一定要是<code>username.github.io</code>,这里的<code>username</code>指的是github名称，当然也可以在bash环境下使用
+<code>git config --global --list</code>
+查看user.name确认<code>username</code>，当然还需要配置SSH密钥</p>
+<h2 id="生成ssh密钥">生成SSH密钥</h2>
+<p>使用<code>git config --global --list</code>
+查看user.email确认<code>&lt;email&gt;</code>，之后在bash环境下使用<code>ssh-keygen -t rsa -C &lt;email&gt;</code>,然后一直回车，当出现
+下图时，说明密钥已经生成 <img data-src="/images/Create-a-hexoBlog/p1.png"
+alt="密钥" /> 之后以下bash代码 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">vi id_rsa.pub</span><br></pre></td></tr></table></figure>
+将内容全部复制后，在键盘输入：q，退出vi编辑。之后，来到<a
+href="https://github.com/">github</a>中,点击右上角的用户头像，选择Settings,然后选择左侧的<code>SSH and GPG keys</code>，选择New
+SSH
+key,随便取个title(比如key4blog)，将刚刚复制的公钥粘贴到下方的Key中，然后执行bash命令<code>ssh -T git@github.com</code>确认主机和github网站之间的ssh通信是否连接成功
+<img data-src="/images/Create-a-hexoBlog/p2.png" alt="连接判断" /></p>
+<h2
+id="配置blog主题建议安装next主题">配置blog主题(建议安装Next主题)</h2>
+<p><code>cd /KeithBlog/blog</code>回到本地仓,在<a
+href="https://hexo.io/themes/"
+class="uri">https://hexo.io/themes/</a>中选择心仪的主题，我选择了Chic,所以在bash中执行<code>git clone git@github.com:Siricee/hexo-theme-Chic.git themes/Chic</code>,打开到路径<code>themes\Chic</code>,编辑<code>_config.yml</code>配置文件（注意yml也是键值对，但是冒号之后需要有空格，并且由空格控制嵌套结构），更改或编辑基本信息（navname、nickname、description、links等），然后<code>cd /KeithBlog/blog</code>回到仓库地址，编辑<code>_config.yml</code>配置文件，主要包括#Site信息和url(一定要是<code>https://&lt;username&gt;.github.io</code>),并且将theme变成Chic，deploy编辑为
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:<span class="tag">&lt;<span class="name">username</span>&gt;</span>/<span class="tag">&lt;<span class="name">username</span>&gt;</span>.github.io.git</span><br><span class="line">  <span class="comment">&lt;!-- 注意branch不是旧版本的master --&gt;</span></span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></p>
+<p>之后<code>hexo g &amp;&amp; hexo d</code>并输入<code>https://&lt;username&gt;.github.io</code>查看是否部署成功</p>
+<h2 id="生成tag和categories页面">生成tag和categories页面</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tag</span><br><span class="line">hexo new page category</span><br></pre></td></tr></table></figure>
+<p>之后,执行bash指令<code>cd source/tag/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Tag</span><br><span class="line">layout: tag</span><br></pre></td></tr></table></figure>
+同样地，执行bash命令<code>cd source/category/</code>和<code>vi index.md</code>,编辑成
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">title: Category</span><br><span class="line">layout: category</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成自定义theme的blog">生成自定义theme的blog</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 注意hexo d可以将本地仓上传到github repo中，和git remote add后push功能一致</span></span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h1
+id="博客中图片无法同步以chic主题为例">博客中图片无法同步(以Chic主题为例)</h1>
+<ol type="1">
+<li>本地仓路径为<code>/d/KeithBlog/blog</code>(根目录)，在根目录使用<code>git clone https://github.com/CodeFalling/hexo-asset-image</code>下载hexo-asset-image;</li>
+<li>在博客的（不是主题的）<code>_config.yml</code>中，将<code>post_asset_folder</code>设置为<code>true</code>;</li>
+<li>来到<code>/blog/source/_posts/</code>下，建立当前博客(当前编辑的markdown文件名)同名的文件夹（folder），然后放置博客插图到该文件夹(folder)下,在<code>.md</code>格式下的图片地址为<code>./&lt;folder&gt;/&lt;picname&gt;</code>；
+&gt;注意：如果你使用typora编辑markdown,一定要是<code>./&lt;folder&gt;/&lt;picname&gt;</code>的地址格式，而不是<code>/&lt;folder&gt;/&lt;picname&gt;</code>，具体可以参考<a
+href="https://www.bilibili.com/video/BV1D7411U7Yk/?spm_id_from=333.880.my_history.page.click&amp;vd_source=03a1d15d9e2ed541e2d422d799de6c41">bilibili</a>这位up的教程,这主要是由于typora的默认地址格式设置导致，如果是vscode则没有该问题</li>
+</ol>
+<h1 id="更改页面字体以chic主题为例">更改页面字体(以Chic主题为例)</h1>
+<p>初始状态的字体真的很丑，所以有必要换一下字体 1.
+选择自己喜欢的字体（.ttf格式，我选择的是Arial来自JBmono）; 2.
+在<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\fonts\</code>下新建字体文件夹(costom-font)，导入上述自定义字体;
+3.
+来到<code>themes\Chic(&lt;your-chosen-theme&gt;)\source\css\</code>下，编辑font.styl风格文档，将<code>font-family</code>改为文件夹名<code>&lt;costom-font&gt;</code>，且将该字体设置为首选。
+4. .styl具体如下：<img data-src="/images/Create-a-hexoBlog/p3.png"
+alt="styl设置" /></p>
+<h1 id="latex支持以chic主题为例">latex支持(以Chic主题为例)</h1>
+<p><span
+class="math inline">\(\LaTeX\)</span>中的公式编辑是十分重要的，而且在论文/笔记编辑中由于强大的排版优势，经常涉及到。但是hexo自带的markdown渲染不支持<span
+class="math inline">\(\LaTeX\)</span>，所以如果使用的是next主题还需要很多额外配置（网上的教程也很多），幸运的是Chic主题不需要，可以参考<a
+href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">latex编辑</a>，具体操作流程：
+1. 在<code>Chic\_config.yml</code>配置文件末添加 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># plugin functions</span></span><br><span class="line"><span class="comment">## Mathjax: Math Formula Support</span></span><br><span class="line"><span class="comment">## https://www.mathjax.org</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">import:</span> <span class="string">demand</span> <span class="comment"># global or demand</span></span><br><span class="line"><span class="comment">## global: all pages will load mathjax,this will degrade performance  and some grammers may be parsed wrong.</span></span><br><span class="line"><span class="comment">## demand: Recommend option,if your post need fomula, you can declare &#x27;mathjax: true&#x27; in Front-matter</span></span><br></pre></td></tr></table></figure> 2.
+执行bash命令<code>npm uninstall hexo-renderer-marked --save</code>和<code>npm install hexo-renderer-kramed --save</code>，然后去到<code>&lt;your-project-dir&gt;/node_modules/hexo-renderer-kramed/lib/renderer.js</code>，将代码块
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="comment">// Fit kramed&#x27;s rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.<span class="title function_">replace</span>(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">&#x27;$$$$$1$$$$&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 修改为： <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">formatText</span>(<span class="params">text</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 3.
+由于在1中我们将import设置为demand类型，所以在需要使用<span
+class="math inline">\(\LaTeX\)</span>编辑的博客文章头部设定<code>mathjax: true</code>,比如此文章<img data-src="/images/Create-a-hexoBlog/p4.png"
+alt="latex渲染" />，这就是我转Next主题的文章。</p>
+<blockquote>
+<p>注意，这样做只能满足单行latex编辑，所以还存在问题</p>
+</blockquote>
+<h1 id="next主题配置">Next主题配置</h1>
+<p>相似于section 2.3-section 5，参考<a
+href="https://blog.csdn.net/Bennnnnnn/article/details/128000842">Next主题配置</a>。至于<span
+class="math inline">\(\LaTeX\)</span>配置，可以参考<a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064">hexo-next
+latex配置</a>，但是很多帖子反应pandoc下载的版本过低，我这里直接给出下载pandoc的<a
+href="https://github.com/jgm/pandoc/blob/main/INSTALL.md">pandoc
+download</a>，可以依据自己的OS在cmd下载到系统，并且使用<code>pandoc --version</code>查看是否安装成功或版本，插图刷新的问题不同于Chic主题，需要在<code>blog\source\images</code>下创建对应博客名称的文件夹<code>&lt;folder&gt;</code>，在<code>&lt;folder&gt;</code>下放置图片，还有一个值得注意的是，在编辑博客的markdown文件时，地址格式为<code>/images/&lt;folder&gt;/&lt;pic&gt;.&lt;format&gt;</code>，可以利用<code>hexo s</code>在本地预览并同步修改刷新，查看是否成功。</p>
+<h1 id="注意事项">注意事项</h1>
+<ol type="1">
+<li>在同步到github-page时，一定要注意branch是否正确（master/main是有区别的），否则很容易出现位同步刷新网页博客的问题;</li>
+<li>hexo官网：<a href="https://hexo.io/zh-cn/docs/"
+class="uri">https://hexo.io/zh-cn/docs/</a></li>
+</ol>
+<h1 id="参考文章">参考文章</h1>
+<ul>
+<li><a
+href="https://blog.csdn.net/qq_52466006/article/details/126924064"
+class="uri">https://blog.csdn.net/qq_52466006/article/details/126924064</a></li>
+<li><a href="https://blog.csdn.net/Bennnnnnn/article/details/128000842"
+class="uri">https://blog.csdn.net/Bennnnnnn/article/details/128000842</a></li>
+<li><a href="https://www.issey.top/"
+class="uri">https://www.issey.top/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Instruction</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>Information Theory</title>
@@ -1337,142 +1526,6 @@ representation)映射回输入时的模样，然而decoder在NLP和CV领域起�
       </tags>
   </entry>
   <entry>
-    <title>loss-criterion</title>
-    <url>/2023/08/04/loss-criterion/</url>
-    <content><![CDATA[<h1 id="常见损失函数">常见损失函数</h1>
-<h2 id="l1-loss">L1 loss</h2>
-<p>L1 loss，也称为绝对值损失（Absolute Error
-Loss），是深度学习中常用的一种损失函数，用于衡量预测值与目标值之间的差异。L1
-loss 计算的是预测值和目标值之间的绝对差值的平均值。</p>
-<p>对于单个样本，L1 loss 的计算公式如下： <span
-class="math display">\[L_1(y,\hat{y}) = \frac{1}{N} \sum_{i=1}^N
-|y_i-\hat{y_i}|\]</span></p>
-<p>其中：<br />
-- <span class="math inline">\(N\)</span> 是样本数量。<br />
-- <span class="math inline">\(y_i\)</span> 是第 $ i $
-个样本的目标值（真实值）。<br />
-- <span class="math inline">\(\hat{y_i}\)</span> 是第 $ i $
-个样本的预测值。</p>
-<p>L1 loss
-的一个重要特点是它对异常值（outliers）不敏感，因为它仅考虑了差值的绝对值，而不是平方。这使得
-L1 loss 在某些情况下对噪声和异常值有更好的鲁棒性。</p>
-<p>L1 loss
-在回归问题中广泛使用，特别是当目标值和预测值的分布有重叠时，或者对预测值和目标值的误差更敏感时。在某些情况下，L1
-loss
-可以产生更稀疏的解，因为它倾向于使一些权重变为零，从而达到特征选择的效果。</p>
-<p>在 PyTorch 中，你可以使用 <code>torch.nn.L1Loss</code> 类来创建 L1
-loss 的实例，也可以直接使用 <code>torch.nn.functional.l1_loss</code>
-函数计算 L1 loss。</p>
-<h2 id="mse-loss">MSE loss</h2>
-<p>均方误差（Mean Squared
-Error，MSE）是在回归问题中常用的损失函数，用于衡量模型预测值与实际目标值之间的差异。MSE
-的计算方法是将每个预测值与对应的目标值之差的平方求平均，以衡量模型的预测误差。</p>
-<p>MSE 损失的公式如下：</p>
-<p><span class="math display">\[
-MSE = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \hat{y_{i}})^2
-\]</span></p>
-<p>其中，<code>n</code> 是样本数量，<span
-class="math inline">\(\hat{y_i}\)</span> 是模型的预测值，<span
-class="math inline">\(y_i\)</span>是实际的目标值。MSE
-越小表示模型的预测值越接近实际值，而较大的 MSE
-则表示模型预测的误差较大。</p>
-<p>MSE
-损失对误差较大的样本进行了较大的惩罚，因为误差的平方会放大较大的值。然而，MSE
-对异常值较为敏感，这可能会导致模型对异常值过度拟合。另外，MSE
-损失在优化过程中可能会引起梯度消失或梯度爆炸问题，特别是当预测值与目标值之间的差距较大时。</p>
-<p>在 PyTorch 中，您可以使用 <code>torch.nn.MSELoss</code> 类来计算 MSE
-损失。当选择损失函数时，应根据问题和数据的特点来权衡选择，考虑模型的需求和数据的分布。</p>
-<h2 id="smooth-l1-loss">smooth-L1 loss</h2>
-<p>Smooth L1 loss（平滑 L1
-损失）是一种在机器学习和深度学习中常用于回归任务的损失函数。它旨在解决均方误差（MSE）损失和
-L1 损失的一些局限性。Smooth L1
-损失结合了两者的优点，提供了一个对异常值不太敏感的损失函数，同时可以防止梯度爆炸问题。</p>
-<p>Smooth L1 损失的公式如下：</p>
-<p><span class="math display">\[Smooth L1 loss =
-\begin{cases}
-    \frac{0.5 x^2}{\beta} , &amp; |x| &lt; \beta \\
-    |x| - 0.5\beta, &amp;    otherwise \\
-\end{cases}
-\]</span></p>
-<p>在这个公式中，<code>x</code> 表示预测值和目标值之间的差异，<span
-class="math inline">\(\beta\)</span>是一个超参数，控制损失在从二次方到线性之间的转换点。当绝对差异
-<code>|x|</code> 小于 <span class="math inline">\(\beta\)</span>
-时，损失是二次方的，有助于减轻异常值的影响。当绝对差异大于 <span
-class="math inline">\(\beta\)</span>
-时，损失变为线性，使得模型能够容忍较大的误差而不会过度惩罚。</p>
-<p>Smooth L1
-损失在目标值可能存在异常值或噪声的情况下特别有用。它提供了比传统的 L1
-损失更稳定的梯度，因为传统的 L1
-损失由于其线性性质在异常值存在时会很敏感。Smooth L1
-损失在诸如目标检测之类的任务中非常适用，其中边界框回归需要对异常值和噪声具有鲁棒性。</p>
-<p>在 PyTorch 中，您可以使用 <code>torch.nn.SmoothL1Loss</code> 类来计算
-Smooth L1 损失。值得注意的是，虽然 Smooth L1 损失为传统的 L1
-损失提供了更平滑和更具鲁棒性的替代方案，但选择损失函数应基于问题和数据的特性来进行。</p>
-<h2 id="cross-entropy-loss">Cross Entropy loss</h2>
-<p>交叉熵损失（Cross-Entropy
-Loss）是在分类问题中常用的损失函数，用于衡量模型的预测值与真实标签之间的差异。交叉熵损失的计算基于概率分布，可以衡量模型对不同类别的预测概率与实际标签的一致性。</p>
-<p>假设有一个分类问题，有多个类别（如数字分类、图像分类等），每个类别都有一个对应的真实标签。交叉熵损失的目标是最小化模型预测概率与实际标签之间的差异，从而使模型的预测更加接近真实情况。</p>
-<p>对于单个样本的交叉熵损失，公式如下：</p>
-<p><span class="math display">\[
-CE = -\sum^{n}_{i=1}(y_{i} \times \log(\hat{y_{i}}))
-\]</span></p>
-<p>其中，<span class="math inline">\(y_i\)</span>
-是实际标签的独热编码形式，<span class="math inline">\(\hat{y_i}\)</span>
-是模型的预测概率分布。交叉熵损失将每个类别的实际标签与模型预测的概率相乘，并取负对数，然后对所有类别求和。这样做可以将正确分类的类别趋近于0的交叉熵损失，而对错误分类的类别会增大损失。(这里看信息论就行)</p>
-<p>在 PyTorch 中，您可以使用 <code>torch.nn.CrossEntropyLoss</code>
-类来计算交叉熵损失。需要注意的是，交叉熵损失通常适用于多类别分类问题，并且要求输入的模型预测值是未经过
-softmax 激活函数的原始分数。</p>
-<p>交叉熵损失在训练神经网络分类模型时非常常见，它可以帮助模型学习如何更好地区分不同类别，从而提高分类性能。</p>
-<h2 id="其他损失函数">其他损失函数</h2>
-<p>都可以查看<code>nn.loss</code>下有哪些损失函数，也考虑自己加入正则化项设计损失函数</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Combinatorics</title>
-    <url>/2023/06/24/Combinatorial-Mathematics/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>主要记录一些组合数学和离散数学的知识框架用以回顾,
-参考书：（美）R.A.Brualdi. 组合数学（第五版）. 机械工业出版社，2012.</p>
-<h1 id="什么是组合数学">什么是组合数学</h1>
-<p>组合数学也称为组合学和组合分析，是一门研究离散对象的科学。随着计算机科学的日益发展，组合数学的重要性也日渐凸显，因为计算机科学的核心内容是使用算法处理离散数据。组合数学主要研究满足一定条件的组态（也称组合模型）的存在、计数以及构造等方面的问题。组合数学的主要内容有组合计数、组合设计、组合矩阵、组合优化（最佳组合）等。组合数学不仅在软件技术中有重要的应用价值，在企业管理，交通规划，试验设计，战争指挥，金融分析等领域都有重要的应用。</p>
-<h2 id="切块问题">切块问题</h2>
-<p>把一个<span class="math inline">\(3 \times 3 \times
-3\)</span>的立方体木块切成27个<span class="math inline">\(1 \times 1
-\times
-1\)</span>的小立方体木块，如果切割过程中允许重新排列已切割木块的位置，求完成整个切割的最少次数。<br />
-1. 测量实心长方体的对角线长度？<br />
-2. 如果把上述问题中的立方体换成<span class="math inline">\(3 \times 6
-\times 9\)</span>的长方体结果如何？</p>
-<p>思路：对于<span class="math inline">\(1 \times 1 \times
-5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil \log_2
-5 \rceil\)</span>；相似的，对于<span class="math inline">\(1 \times 3
-\times 5\)</span>的立方体，至少需要切<span class="math inline">\(\lceil
-\log_2 3 \rceil + \lceil \log_2 5 \rceil\)</span></p>
-<p>解答：由上分析，对于任意<span class="math inline">\(w_1 \times w_2
-\times w_3\)</span>的立方体，分割成单位立方体至少需要<span
-class="math inline">\(\sum\limits_{i=1}^3 \lceil \log_2 w_i
-\rceil\)</span>,故此时的最小切割代价为<span class="math inline">\(3
-\times \lceil \log_2 3 \rceil = 6\)</span></p>
-<h2 id="nim问题">Nim问题</h2>
-<p>有五堆石子，各堆石子的个数分别是10、29和48。甲乙两人玩取石子游戏，要求：两个人轮流取石子，每个人取石子时，只能从同一堆中取，最少取一枚，最多可以把整堆石子取走。谁取到最后的石子，谁获胜。如果你是其中的一个游戏人，你选择先取子还是后取子，如何取？</p>
-<p>思路：按位异或，非零，则先手必胜；否则，先手必输。</p>
-<p>解答：10D=1010B,29D=11101B,48D=110000B,由<span
-class="math inline">\(001010 \oplus 011101 \oplus 110000=100111 \neq
-0\)</span>，所以先手必赢。</p>
-<p>取子方案：<br />
-<span class="math inline">\(110000(48D) \rightarrow
-010111(23D)\)</span>,即从第三堆48块中取走25块，并保证每次自己取子之后，每堆石子数按位异或为0.，这样最终就会获胜。</p>
-<h1 id="鸽笼原理">鸽笼原理</h1>
-<h2 id="简单形式">简单形式</h2>
-<p>若把n+1个物体放到n
-（n≥1）个盒子中去，则至少有一个盒子放有至少2个物体。</p>
-<p>证明：用反证法证明。如果n个盒子中每个盒子至多放入一个物体，则放入n个盒子中的物体总数至多为n个。这与假设有n+1个物体矛盾。从而定理得证。</p>
-<h2 id="例题">例题</h2>
-<p><img data-src="/images/Combinatorial-Mathematics/p1.jpg" alt="p1" /> <img data-src="/images/Combinatorial-Mathematics/p2.png" alt="p2" /> <img data-src="/images/Combinatorial-Mathematics/p3.png" alt="p3" /> <img data-src="/images/Combinatorial-Mathematics/p4.png" alt="p4-1" /> <img data-src="/images/Combinatorial-Mathematics/p4-1.png" alt="p4-2" /></p>
-<h2 id="一般形式">一般形式</h2>
-]]></content>
-  </entry>
-  <entry>
     <title>Transformer &amp; ViT</title>
     <url>/2023/07/06/Transformer/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -1761,6 +1814,15 @@ class="math inline">\([x_{class}, x_p^1\textbf{E}, x_p^2\textbf{E},
 </ol>
 <p>这里，position embedding为随机初始化的张量</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ViTRGB</span>(nn.Module):</span><br><span class="line"><span class="string">&quot;&quot;&quot; Vision Transformer &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        *,</span></span><br><span class="line"><span class="params">        image_size,</span></span><br><span class="line"><span class="params">        patch_size,</span></span><br><span class="line"><span class="params">        num_classes,</span></span><br><span class="line"><span class="params">        dim,  <span class="comment"># 特征维度/token size</span></span></span><br><span class="line"><span class="params">        depth,  <span class="comment"># depth of encoder stack</span></span></span><br><span class="line"><span class="params">        heads,</span></span><br><span class="line"><span class="params">        mlp_dim,</span></span><br><span class="line"><span class="params">        pool=<span class="string">&quot;cls&quot;</span>,  <span class="comment"># option:(&#x27;cls&#x27;, &#x27;mean&#x27;),池化类型:&#x27;cls&#x27;表示选择classification token, &#x27;mean&#x27;表示选择全局平均池化 </span></span></span><br><span class="line"><span class="params">        channels=<span class="number">3</span>,  <span class="comment"># 图像通道数，默认RGB-3</span></span></span><br><span class="line"><span class="params">        dim_head=<span class="number">64</span>,  <span class="comment"># dimension of each head</span></span></span><br><span class="line"><span class="params">        dropout=<span class="number">0.0</span>,</span></span><br><span class="line"><span class="params">        emb_dropout=<span class="number">0.0</span>,</span></span><br><span class="line"><span class="params">        pixelwise=<span class="literal">False</span>,</span></span><br><span class="line"><span class="params">    </span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        <span class="comment"># 1D --&gt; 2D shape</span></span><br><span class="line">        image_height, image_width = pair(image_size)</span><br><span class="line">        patch_height, patch_width = pair(patch_size)</span><br><span class="line"></span><br><span class="line">        self.pixelwise = pixelwise</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 裁剪为同样大小的patches</span></span><br><span class="line">        self.image_height = image_height</span><br><span class="line">        self.image_width = image_width</span><br><span class="line">        self.patch_height = patch_height</span><br><span class="line">        self.patch_width = patch_width</span><br><span class="line">        self.num_patches_height = image_height // patch_height</span><br><span class="line">        self.num_patches_width = image_width // patch_width</span><br><span class="line"></span><br><span class="line">        <span class="keyword">assert</span> (image_height % patch_height == <span class="number">0</span> <span class="keyword">and</span> image_width % patch_width</span><br><span class="line">                == <span class="number">0</span>), <span class="string">&quot;Image dimensions must be divisible by the patch size.&quot;</span></span><br><span class="line"></span><br><span class="line">        num_patches = (image_height // patch_height) * (image_width //</span><br><span class="line">                                                        patch_width)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># patch_dim 其实就是变为token之前的维度，之后经过MLP,将patch_dim变成token size(即下面dim)</span></span><br><span class="line">        patch_dim = channels * patch_height * patch_width</span><br><span class="line">        <span class="keyword">assert</span> pool <span class="keyword">in</span> &#123;</span><br><span class="line">            <span class="string">&quot;cls&quot;</span>,</span><br><span class="line">            <span class="string">&quot;mean&quot;</span>,</span><br><span class="line">        &#125;, <span class="string">&quot;pool type must be either cls (cls token) or mean (mean pooling)&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># reorder the tensor corresponding to the shape of image</span></span><br><span class="line">        <span class="comment"># image shape:[batch_size, channels, height, width]</span></span><br><span class="line">        <span class="comment"># --&gt; image shape:[batch_size, channels, h x patch_height, w x patch_width]</span></span><br><span class="line">        <span class="comment"># --&gt; iamge shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        self.to_patch_embedding = nn.Sequential(</span><br><span class="line">            Rearrange(</span><br><span class="line">                <span class="string">&quot;b c (h p1) (w p2) -&gt; b (h w) (p1 p2 c)&quot;</span>,</span><br><span class="line">                p1=patch_height,</span><br><span class="line">                p2=patch_width,</span><br><span class="line">            ),</span><br><span class="line">            nn.LayerNorm(patch_dim),</span><br><span class="line">            nn.Linear(patch_dim, dim),</span><br><span class="line">            nn.LayerNorm(dim),</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 注意这里是num_patches + 1，所以考虑到cls token的位置编码</span></span><br><span class="line">        self.pos_embedding = nn.Parameter(torch.randn(<span class="number">1</span>, num_patches + <span class="number">1</span>, dim))</span><br><span class="line">        self.cls_token = nn.Parameter(torch.randn(<span class="number">1</span>, <span class="number">1</span>, dim))</span><br><span class="line">        self.dropout = nn.Dropout(emb_dropout)</span><br><span class="line"></span><br><span class="line">        self.transformer = Transformer(dim, depth, heads, dim_head, mlp_dim,</span><br><span class="line">                                       dropout)</span><br><span class="line"></span><br><span class="line">        self.pool = pool</span><br><span class="line">        self.to_latent = nn.Identity()</span><br><span class="line"></span><br><span class="line">        self.mlp_head = nn.Sequential(nn.LayerNorm(dim),</span><br><span class="line">                                      nn.Linear(dim, num_classes))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 像素级</span></span><br><span class="line">        <span class="keyword">if</span> self.pixelwise:</span><br><span class="line">            self.mlp_head = nn.Sequential(</span><br><span class="line">                nn.LayerNorm(dim),</span><br><span class="line">                nn.Linear(dim, num_classes * patch_height * patch_width),</span><br><span class="line">                Rearrange(</span><br><span class="line">                    <span class="string">&quot;b h w (p1 p2 num_classes) -&gt; b (h p1) (w p2) num_classes&quot;</span>,</span><br><span class="line">                    p1=patch_height,</span><br><span class="line">                    p2=patch_width,</span><br><span class="line">                    num_classes=num_classes,</span><br><span class="line">                ),</span><br><span class="line">                <span class="comment"># reorder shape,交换dim=1和最后一维</span></span><br><span class="line">                MoveAxis((-<span class="number">1</span>, <span class="number">1</span>)),</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;patch_height=&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;patch_width=&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;num_classes=&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, img</span>):</span><br><span class="line">        <span class="comment"># patch embedding, x.shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        x = self.to_patch_embedding(img)</span><br><span class="line">        <span class="comment"># b:batch size, n: number of samples(n = h x w)</span></span><br><span class="line">        b, n, _ = x.shape</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 每个batch需要补上cls token，所以复制b份</span></span><br><span class="line">        cls_tokens = repeat(self.cls_token, <span class="string">&quot;1 1 d -&gt; b 1 d&quot;</span>, b=b)</span><br><span class="line">        <span class="comment"># x.shape after concat:[batch_size, h x w + 1, patch_height x patch_width x channels]</span></span><br><span class="line">        <span class="comment"># 注意这里和x = torch.cat((x,cls_token), dim=1)有区别，谁在前，谁就在低维</span></span><br><span class="line">        x = torch.cat(</span><br><span class="line">            (cls_tokens, x), dim=<span class="number">1</span></span><br><span class="line">        )  <span class="comment"># cls_token在前，所以cls token在[:,0]的位置，patch embedding的位置是[:,1:]</span></span><br><span class="line">        <span class="comment"># 加上posistion embedding</span></span><br><span class="line">        x += self.pos_embedding[:, :(n + <span class="number">1</span>)]</span><br><span class="line">        x = self.dropout(x)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># x抛进Transfomer</span></span><br><span class="line">        x = self.transformer(x)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># x = x.mean(dim = 1) if self.pool == &#x27;mean&#x27; else x[:, 0]</span></span><br><span class="line">        x = x[:, <span class="number">1</span>:, :]  <span class="comment"># remove cls..</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 去除cls token之后的shape:[batch_size, h x w, patch_height x patch_width x channels]</span></span><br><span class="line">        x = self.to_latent(x)</span><br><span class="line">        x = rearrange(</span><br><span class="line">            x,</span><br><span class="line">            <span class="string">&quot;b (h w) d -&gt; b h w d&quot;</span>,</span><br><span class="line">            h=self.num_patches_height,</span><br><span class="line">            w=self.num_patches_width,</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> self.mlp_head(x)</span><br></pre></td></tr></table></figure>
+<h1 id="总结计算机视觉角度">总结(计算机视觉角度)</h1>
+<ol type="1">
+<li>CNN引入的inductive
+bias使得他们在处理局部特征时更加高效，但是无法捕获长程(long-range)的依赖关系；</li>
+<li>从这两点来看，其实CNN和attention机制各有优劣势。CNN因为可以捕捉感受野内的特征，但是无法跳脱出这样的局限，使得他无法捕获长程依赖，即便是在引入池化操作，那也只是在临近的感受野范围内进行特征融合，说明这种能力很weak；注意力机制，其实就是在每个patch上进行“特征提取”，这点同卷积操作的目的是一致的。</li>
+<li>attention确实可以捕获长程以来，但是它需要将整幅图分成多个patch进行embedding，然后进行多头注意力机制，这需要消耗大量的内存，这就是缺点之一；</li>
+<li>注意力机制常常在pretext task中出现，所以它是一个large
+scale模型。</li>
+</ol>
 ]]></content>
       <categories>
         <category>机器学习</category>
@@ -1771,147 +1833,94 @@ class="math inline">\([x_{class}, x_p^1\textbf{E}, x_p^2\textbf{E},
       </tags>
   </entry>
   <entry>
-    <title>Fourier Series and Fourier Transform</title>
-    <url>/2023/06/13/Fourier-Serie-and-Fourier-Transformation/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>Principal component analysis</title>
-    <url>/2023/05/30/Principal-component-analysis/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>Pattern Recognition and Machine Learning(1)</title>
-    <url>/2023/06/01/PRML-1/</url>
-    <content><![CDATA[<h1 id="前言">前言</h1>
-<ol type="1">
-<li>学习模式识别和机器学习的基础</li>
-<li>贝叶斯学派日常学习记录</li>
-<li>不断夯实基础，包括统计学习的相关概念、图网络和经典的生成模型等</li>
-<li>面向以下几个优秀UP学习：
-<ol type="1">
-<li><a
-href="https://space.bilibili.com/497536319?spm_id_from=333.999.0.0">徐芝兰</a></li>
-<li><a
-href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">派派大星星</a></li>
-<li><a
-href="https://space.bilibili.com/552439878?spm_id_from=333.999.0.0">Poros踵</a></li>
-</ol></li>
-<li><a
-href="https://space.bilibili.com/6293151?spm_id_from=333.999.0.0">UP派派大星星</a>
-给出了相关书籍的<a
-href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>,里面会有简略中文版书籍和公式推导</li>
-<li><a
-href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">英文原版书籍</a></li>
-<li>因为一些推理或者proof不够完整，自己整理和修改了<a
-href="https://github.com/jiangyiqun233/PRML_learning">github-repo</a>，之后会上传到github(尚未完成：TODO)
-<!-- #TODO --></li>
-</ol>
-<h1 id="prerequisites">Prerequisites</h1>
-<p>需要一些前备知识： 1. 概率论(够用)或随机过程(更好) 2.
-线性代数/高等代数/矩阵论 3. 微积分基础</p>
-<h1 id="频率学派和贝叶斯学派">频率学派和贝叶斯学派</h1>
-<p>在学习大数定理时，在样本观测值已知情形下，我们可以确定该样本的似然函数，通过求最大似然确定未知参数。即，假设对独立同分布(i.i.d,
-independent and identical distribution)的样本集<span
-class="math inline">\(X_1,X_2,\dotsb,X_n\)</span>进行观测，其观测值依次为<span
-class="math inline">\(x_1,x_2,\dotsb,x_n\)</span>，其样本的p.d.f(概率密度函数)为<span
-class="math display">\[p(x_i|\omega)(i=1,2,\dots,n)\]</span>
-则相应似然函数为<span
-class="math inline">\(f(\omega)=\prod\limits_{i=1}^n
-p(x_i|\omega)\)</span>,然后求得对参数<span
-class="math inline">\(\omega\)</span>的极大参数估计<span
-class="math inline">\(\hat{\omega}_{MLE}\)</span>，其推导如下： <span
-class="math display">\[
-\begin{equation*}
-    \begin{split}
-    \hat{\omega}_{MLE}&amp;= argmax \ln f(\omega)\\
-    &amp;= argmax \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
-    &amp;= argmin - \sum\limits_{i=1}^{n} \ln p(x_i|\omega)\\
-    \end{split}
-\end{equation*}
-\]</span> 参考<a
-href="https://zhuanlan.zhihu.com/p/337637096">频率学派和贝叶斯学派</a>,<font color="purple">频率学派和贝叶斯学派的主要区别：是否允许先验概率分布的使用</font>。</p>
-<ul>
-<li>频率学派不假设任何的先验知识，不参照过去的经验，只按照当前已有的数据进行概率推断</li>
-<li>贝叶斯学派会假设先验知识的存在，然后再用采样逐渐修改先验知识并逼近真实知识(一个不断更新先验知识的过程，也就是一个不断学习的过程)</li>
-</ul>
-<p>因此贝叶斯推论中前一次得到的后验概率分布可以作为后一次的先验概率。但实际上，在数据量趋近无穷时，频率学派和贝叶斯学派得到的结果是一样的，也就是说频率方法是贝叶斯方法的极限。当考虑的试验次数非常少的时候，贝叶斯方法的解释非常有用。此外，贝叶斯理论将我们对于随机过程的先验知识纳入考虑，当我们获得的数据越来越多的时候，这个先验的概率分布就会被更新到后验分布中。</p>
-<h2 id="贝叶斯公式">贝叶斯公式</h2>
+    <title>loss-criterion</title>
+    <url>/2023/08/04/loss-criterion/</url>
+    <content><![CDATA[<h1 id="常见损失函数">常见损失函数</h1>
+<h2 id="l1-loss">L1 loss</h2>
+<p>L1 loss，也称为绝对值损失（Absolute Error
+Loss），是深度学习中常用的一种损失函数，用于衡量预测值与目标值之间的差异。L1
+loss 计算的是预测值和目标值之间的绝对差值的平均值。</p>
+<p>对于单个样本，L1 loss 的计算公式如下： <span
+class="math display">\[L_1(y,\hat{y}) = \frac{1}{N} \sum_{i=1}^N
+|y_i-\hat{y_i}|\]</span></p>
+<p>其中：<br />
+- <span class="math inline">\(N\)</span> 是样本数量。<br />
+- <span class="math inline">\(y_i\)</span> 是第 $ i $
+个样本的目标值（真实值）。<br />
+- <span class="math inline">\(\hat{y_i}\)</span> 是第 $ i $
+个样本的预测值。</p>
+<p>L1 loss
+的一个重要特点是它对异常值（outliers）不敏感，因为它仅考虑了差值的绝对值，而不是平方。这使得
+L1 loss 在某些情况下对噪声和异常值有更好的鲁棒性。</p>
+<p>L1 loss
+在回归问题中广泛使用，特别是当目标值和预测值的分布有重叠时，或者对预测值和目标值的误差更敏感时。在某些情况下，L1
+loss
+可以产生更稀疏的解，因为它倾向于使一些权重变为零，从而达到特征选择的效果。</p>
+<p>在 PyTorch 中，你可以使用 <code>torch.nn.L1Loss</code> 类来创建 L1
+loss 的实例，也可以直接使用 <code>torch.nn.functional.l1_loss</code>
+函数计算 L1 loss。</p>
+<h2 id="mse-loss">MSE loss</h2>
+<p>均方误差（Mean Squared
+Error，MSE）是在回归问题中常用的损失函数，用于衡量模型预测值与实际目标值之间的差异。MSE
+的计算方法是将每个预测值与对应的目标值之差的平方求平均，以衡量模型的预测误差。</p>
+<p>MSE 损失的公式如下：</p>
 <p><span class="math display">\[
-\begin{equation}
-\begin{split}
-    p(\theta | x)&amp;= \frac{p(x|\theta) \cdot \pi(\theta)}{p(x)}\\
-    &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\sum\limits_{\Theta}
-p(x|\theta) \cdot \pi(\theta)}\\
-    \text{或} &amp;=\frac{p(x|\theta) \cdot \pi(\theta)}{\int_{\Theta}
-p(x|\theta) \cdot \pi(\theta)d\theta}
-\end{split}
-\end{equation}
-\]</span> 其中，<span
-class="math inline">\(\pi(\theta)\)</span>称为先验概率(the prior)，<span
-class="math inline">\(p(x|\theta)\)</span>称为似然函数(likelihood)，<span
-class="math inline">\(p(x)\)</span>称为边缘分布(margin
-distribution)，<span class="math inline">\(p(\theta |
-x)\)</span>称为后验分布(the
-posterior)。事实上，分母可以看成是对后验分布的正则化或归一化</p>
-<h2 id="先验概率分布">先验概率分布</h2>
-<blockquote>
-<p><a
-href="https://en.wikipedia.org/wiki/Prior_probability">维基百科</a>:A
-prior probability distribution of an uncertain quantity, often simply
-called the prior, is its assumed probability distribution before some
-evidence is taken into account. For example, the prior could be the
-probability distribution representing the relative proportions of voters
-who will vote for a particular politician in a future election. The
-unknown quantity may be a parameter of the model or a latent variable
-rather than an observable variable.
-不确定量的先验概率分布，通常简称为先验，是在考虑某些证据之前假定的概率分布。例如，先验可以是代表在未来选举中投票给特定政治家的选民的相对比例的概率分布。未知量可能是模型的参数或潜在变量，而不是可观察变量。</p>
-</blockquote>
-<h2 id="共轭分布">共轭分布</h2>
-<p>在贝叶斯统计中，如果先验分布和后验分布属于同类（分布形式相同），则先验分布与后验分布被称为<font color="red">共轭分布</font>，而先验分布被称为似然函数的<font color="red">共轭先验</font>。如果我们需要验证共轭分布，由于<span
-class="math inline">\(posterior \propto likelihood \times
-prior\)</span>，所以带入似然函数和先验分布子式之后，若后验分布和先验分布的形式相同，那么就说明两者是共轭分布。</p>
-<h2 id="共轭分布举例">共轭分布举例</h2>
-<ol type="1">
-<li>二项分布 <span class="math display">\[Bin(m|N,\mu)=\binom{N}{m}\mu^m
-(1-\mu)^{N-m} \label{eq3}\]</span></li>
-<li>Beta分布 <span
-class="math display">\[Bata(\mu|a,b)=\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}
-\mu^{a-1}(1-\mu)^{b-1}(a,b&gt;0,\mu \in (0,1)) \label{eq4}\]</span>
-其中，<span class="math inline">\(\Gamma(x) \equiv \int_0^\infty
-u^{x-1}e^{-u}du(x&gt;0)\)</span></li>
-<li>由分布<span class="math inline">\(\ref{eq3}\)</span> <span
-class="math inline">\(\times\)</span> 分布 <span
-class="math inline">\(\ref{eq4}\)</span>，归一化之后得到： <span
-class="math display">\[p(\mu|m,l,a,b) \propto
-\mu^{m+a-1}(1-\mu)^{l+b-1}\]</span>，其中<span
-class="math inline">\(l=N-m\)</span>。和先验分布的形式相同。所以说,二项分布和Beta分布互为共轭先验，分布<span
-class="math inline">\(p(\mu|m,l,a,b)\)</span>和二项分布以及beta分布都是共轭分布</li>
-</ol>
-<h1 id="概率分布">概率分布</h1>
-<h2 id="二元分布0-1分布binary-distribution">二元分布/0-1分布(Binary
-distribution)</h2>
-<p><span
-class="math display">\[Bern(x|\mu)=\mu^x(1-\mu)^{1-x}\]</span>，可以看到这是特殊的伯努利分布</p>
-<h2 id="二项分布binomial-distribution">二项分布(Binomial
-distribution)</h2>
-<p><span class="math display">\[Bin(m|N, \mu) = \binom{N}{m}\mu^m(1 -
-\mu)^{N - m}\]</span></p>
-<h2 id="beta分布">Beta分布</h2>
-<p><span class="math display">\[Beta(\mu|a, b) = \frac{\Gamma(a +
-b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}(a,b &gt; 0, \mu \in
-(0,1))\]</span>，其中<span class="math inline">\(\Gamma(x) \equiv
-\int_0^\infty u^{x-1}e^{-u}du (x &gt; 0)\)</span></p>
+MSE = \frac{1}{n} \sum_{i=1}^{n} (y_{i} - \hat{y_{i}})^2
+\]</span></p>
+<p>其中，<code>n</code> 是样本数量，<span
+class="math inline">\(\hat{y_i}\)</span> 是模型的预测值，<span
+class="math inline">\(y_i\)</span>是实际的目标值。MSE
+越小表示模型的预测值越接近实际值，而较大的 MSE
+则表示模型预测的误差较大。</p>
+<p>MSE
+损失对误差较大的样本进行了较大的惩罚，因为误差的平方会放大较大的值。然而，MSE
+对异常值较为敏感，这可能会导致模型对异常值过度拟合。另外，MSE
+损失在优化过程中可能会引起梯度消失或梯度爆炸问题，特别是当预测值与目标值之间的差距较大时。</p>
+<p>在 PyTorch 中，您可以使用 <code>torch.nn.MSELoss</code> 类来计算 MSE
+损失。当选择损失函数时，应根据问题和数据的特点来权衡选择，考虑模型的需求和数据的分布。</p>
+<h2 id="smooth-l1-loss">smooth-L1 loss</h2>
+<p>Smooth L1 loss（平滑 L1
+损失）是一种在机器学习和深度学习中常用于回归任务的损失函数。它旨在解决均方误差（MSE）损失和
+L1 损失的一些局限性。Smooth L1
+损失结合了两者的优点，提供了一个对异常值不太敏感的损失函数，同时可以防止梯度爆炸问题。</p>
+<p>Smooth L1 损失的公式如下：</p>
+<p><span class="math display">\[Smooth L1 loss =
+\begin{cases}
+    \frac{0.5 x^2}{\beta} , &amp; |x| &lt; \beta \\
+    |x| - 0.5\beta, &amp;    otherwise \\
+\end{cases}
+\]</span></p>
+<p>在这个公式中，<code>x</code> 表示预测值和目标值之间的差异，<span
+class="math inline">\(\beta\)</span>是一个超参数，控制损失在从二次方到线性之间的转换点。当绝对差异
+<code>|x|</code> 小于 <span class="math inline">\(\beta\)</span>
+时，损失是二次方的，有助于减轻异常值的影响。当绝对差异大于 <span
+class="math inline">\(\beta\)</span>
+时，损失变为线性，使得模型能够容忍较大的误差而不会过度惩罚。</p>
+<p>Smooth L1
+损失在目标值可能存在异常值或噪声的情况下特别有用。它提供了比传统的 L1
+损失更稳定的梯度，因为传统的 L1
+损失由于其线性性质在异常值存在时会很敏感。Smooth L1
+损失在诸如目标检测之类的任务中非常适用，其中边界框回归需要对异常值和噪声具有鲁棒性。</p>
+<p>在 PyTorch 中，您可以使用 <code>torch.nn.SmoothL1Loss</code> 类来计算
+Smooth L1 损失。值得注意的是，虽然 Smooth L1 损失为传统的 L1
+损失提供了更平滑和更具鲁棒性的替代方案，但选择损失函数应基于问题和数据的特性来进行。</p>
+<h2 id="cross-entropy-loss">Cross Entropy loss</h2>
+<p>交叉熵损失（Cross-Entropy
+Loss）是在分类问题中常用的损失函数，用于衡量模型的预测值与真实标签之间的差异。交叉熵损失的计算基于概率分布，可以衡量模型对不同类别的预测概率与实际标签的一致性。</p>
+<p>假设有一个分类问题，有多个类别（如数字分类、图像分类等），每个类别都有一个对应的真实标签。交叉熵损失的目标是最小化模型预测概率与实际标签之间的差异，从而使模型的预测更加接近真实情况。</p>
+<p>对于单个样本的交叉熵损失，公式如下：</p>
+<p><span class="math display">\[
+CE = -\sum^{n}_{i=1}(y_{i} \times \log(\hat{y_{i}}))
+\]</span></p>
+<p>其中，<span class="math inline">\(y_i\)</span>
+是实际标签的独热编码形式，<span class="math inline">\(\hat{y_i}\)</span>
+是模型的预测概率分布。交叉熵损失将每个类别的实际标签与模型预测的概率相乘，并取负对数，然后对所有类别求和。这样做可以将正确分类的类别趋近于0的交叉熵损失，而对错误分类的类别会增大损失。(这里看信息论就行)</p>
+<p>在 PyTorch 中，您可以使用 <code>torch.nn.CrossEntropyLoss</code>
+类来计算交叉熵损失。需要注意的是，交叉熵损失通常适用于多类别分类问题，并且要求输入的模型预测值是未经过
+softmax 激活函数的原始分数。</p>
+<p>交叉熵损失在训练神经网络分类模型时非常常见，它可以帮助模型学习如何更好地区分不同类别，从而提高分类性能。</p>
+<h2 id="其他损失函数">其他损失函数</h2>
+<p>都可以查看<code>nn.loss</code>下有哪些损失函数，也考虑自己加入正则化项设计损失函数</p>
 ]]></content>
-      <categories>
-        <category>机器学习</category>
-        <category>贝叶斯学习</category>
-        <category>统计学习</category>
-      </categories>
-      <tags>
-        <tag>PRML</tag>
-      </tags>
   </entry>
 </search>
