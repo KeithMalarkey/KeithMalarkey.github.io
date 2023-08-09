@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"keithmalarkey.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="什么是高(多)光谱图像 一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel) 高光谱图像： + 大量不同波段的图像(N channels, gennerally, N \(\geq\) 100) + 波段可以连续或离散 + 每个波段捕捉不同波长范围内的光谱信息 高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数">
+    <meta name="description" content="什么是高(多)光谱图像 一般常见的图像：  RGB图像（3 channels）  纯色图像(1 channel)  高光谱图像：  大量不同波段的图像(N channels, gennerally, N \(\geq\) 100) 波段可以连续(大多情形)或离散 每个波段捕捉不同波长范围内的光谱信息">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hyperspectral or Multispectral Image">
 <meta property="og:url" content="https://keithmalarkey.github.io/2023/07/14/Hyperspectral-or-Multispectral-Image/index.html">
 <meta property="og:site_name" content="Keith&#39;s Blog">
-<meta property="og:description" content="什么是高(多)光谱图像 一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel) 高光谱图像： + 大量不同波段的图像(N channels, gennerally, N \(\geq\) 100) + 波段可以连续或离散 + 每个波段捕捉不同波长范围内的光谱信息 高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数">
+<meta property="og:description" content="什么是高(多)光谱图像 一般常见的图像：  RGB图像（3 channels）  纯色图像(1 channel)  高光谱图像：  大量不同波段的图像(N channels, gennerally, N \(\geq\) 100) 波段可以连续(大多情形)或离散 每个波段捕捉不同波长范围内的光谱信息">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-14T00:48:49.000Z">
-<meta property="article:modified_time" content="2023-07-14T04:28:25.233Z">
+<meta property="article:modified_time" content="2023-08-09T03:14:57.181Z">
 <meta property="article:author" content="Keith Malarkey">
 <meta property="article:tag" content="python, machine-learning, deep-learning">
 <meta name="twitter:card" content="summary">
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E5%A4%9A%E5%85%89%E8%B0%B1%E5%9B%BE%E5%83%8F"><span class="nav-number">1.</span> <span class="nav-text">什么是高(多)光谱图像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E5%A4%9A%E5%85%89%E8%B0%B1b-times-h-times-w%E5%9B%BE%E8%B1%A1%E8%AF%86%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">高(多)光谱(B \(\times\) H \(\times\) W)图象识别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E8%B0%B1%E4%BF%A1%E6%81%AF%E5%92%8C%E7%A9%BA%E9%97%B4%E4%BF%A1%E6%81%AF"><span class="nav-number">2.1.</span> <span class="nav-text">光谱信息和空间信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spatial-information"><span class="nav-number">2.1.1.</span> <span class="nav-text">spatial information</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spectral-information"><span class="nav-number">2.1.2.</span> <span class="nav-text">spectral information</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E5%A4%9A%E5%85%89%E8%B0%B1%E5%9B%BE%E5%83%8F"><span class="nav-number">1.</span> <span class="nav-text">什么是高(多)光谱图像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E5%A4%9A%E5%85%89%E8%B0%B1c-times-h-times-w%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">高(多)光谱(C \(\times\) H \(\times\) W)图像识别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E8%B0%B1%E4%BF%A1%E6%81%AF%E5%92%8C%E7%A9%BA%E9%97%B4%E4%BF%A1%E6%81%AF"><span class="nav-number">2.1.</span> <span class="nav-text">光谱信息和空间信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spatial-information"><span class="nav-number">2.1.1.</span> <span class="nav-text">spatial information</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spectral-information"><span class="nav-number">2.1.2.</span> <span class="nav-text">spectral information</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%91%E6%88%98"><span class="nav-number">2.2.</span> <span class="nav-text">挑战</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -238,9 +238,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-07-14 08:48:49 / 修改时间：12:28:25" itemprop="dateCreated datePublished" datetime="2023-07-14T08:48:49+08:00">2023-07-14</time>
+      <time title="创建时间：2023-07-14 08:48:49" itemprop="dateCreated datePublished" datetime="2023-07-14T08:48:49+08:00">2023-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-09 11:14:57" itemprop="dateModified" datetime="2023-08-09T11:14:57+08:00">2023-08-09</time>
     </span>
 
   
@@ -271,14 +277,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>883</span>
+      <span>1.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -289,22 +295,33 @@
     
     
     <div class="post-body" itemprop="articleBody"><h1 id="什么是高多光谱图像">什么是高(多)光谱图像</h1>
-<p>一般常见的图像： + RGB图像（3 channels） + 纯色图像(1 channel)</p>
-<p>高光谱图像： + 大量不同波段的图像(N channels, gennerally, N <span
-class="math inline">\(\geq\)</span> 100) + 波段可以连续或离散 +
-每个波段捕捉不同波长范围内的光谱信息</p>
+<p>一般常见的图像：</p>
+<ol type="1">
+<li>RGB图像（3 channels）<br />
+</li>
+<li>纯色图像(1 channel)</li>
+</ol>
+<p>高光谱图像：</p>
+<ol type="1">
+<li>大量不同波段的图像(N channels, gennerally, N <span
+class="math inline">\(\geq\)</span> 100)</li>
+<li>波段可以连续(大多情形)或离散</li>
+<li>每个波段捕捉不同波长范围内的光谱信息</li>
+</ol>
 <p>高光谱图像通常由高光谱成像设备（如高光谱遥感仪或高光谱相机）获取。这些设备能够在数百个或数千个窄波段范围内获取数据，并生成具有多个波段的图像。每个波段对应着不同的光谱范围，例如可见光、红外线和近红外线等。通过组合这些波段的数据，我们可以获得一个包含丰富光谱信息的多波段图像。</p>
-<p>多光谱图像: + N channels(generally, 1 <span
-class="math inline">\(\leq\)</span> N <span
-class="math inline">\(\leq\)</span> 100)</p>
+<p>多光谱图像:</p>
+<ul>
+<li>N channels(generally, 1 <span class="math inline">\(\leq\)</span> N
+<span class="math inline">\(\leq\)</span> 100)</li>
+</ul>
 <p>多光谱图像和高光谱图像高度相似，区别在于波段较少</p>
-<h1 id="高多光谱b-times-h-times-w图象识别">高(多)光谱(B <span
+<h1 id="高多光谱c-times-h-times-w图像识别">高(多)光谱(C <span
 class="math inline">\(\times\)</span> H <span
-class="math inline">\(\times\)</span> W)图象识别</h1>
+class="math inline">\(\times\)</span> W)图像识别</h1>
 <h2 id="光谱信息和空间信息">光谱信息和空间信息</h2>
 <p>机器学习任务主要是学习特征表示，但是在接触高光谱之初，其实由于没有相关知识的学习，对于学习什么特征表示，是一头雾水。</p>
 <p>通过些许论文的阅读，了解到主要是来自spectral-spatial的特征。如果一张图片是由多个channels组成，那么在高光谱图像中的channels也可以称为波段(spectral
-bands, B)。</p>
+bands, C)。</p>
 <h3 id="spatial-information">spatial information</h3>
 <p>spatial(空间)信息其实很好理解，就是将所有的波段分离开来，每张子图(<span
 class="math inline">\(H \times
@@ -323,6 +340,25 @@ what is it?</p>
 光谱曲线形状：每个地物类别在光谱上具有特定的形状和特征。通过对比不同地物类别在光谱曲线上的差异，可以区分不同地物类别。例如，某个地物类别可能在某个波段上有较高的反射率，而其他类别则相对较低。<br />
 4.
 波段组合：将多个波段进行组合，形成新的特征表示。可以通过使用波段的比值、差异或组合算法（如主成分分析）来创建新的波段组合。这些波段组合可以提供更具区分度的特征，用于地物分类。</p>
+<h2 id="挑战">挑战</h2>
+<ol type="1">
+<li>高光谱图像虽然拥有很多波段，会给出很多图像特征信息，但是每个波段的图像中也包含了很多冗余信息；考虑到高光谱拥有很多波段，所以这种冗余信息会积累到一个相当大的规模，以下是常见的两种策略，来解决维度灾难和信息冗余
+<ul>
+<li>特征提取
+<ul>
+<li>PCA</li>
+<li>LDA</li>
+<li>下采样式的深度学习方法(CNN、RNN等)</li>
+<li>..</li>
+</ul></li>
+<li>波段选择(本质就是特征选择)
+<ul>
+<li>准则函数</li>
+<li>搜索方法</li>
+</ul></li>
+</ul></li>
+<li>波段组合策略中组合优化问题，这些都是NP-hard level的问题</li>
+</ol>
 
     </div>
 
@@ -388,13 +424,13 @@ what is it?</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">21k</span>
+    <span title="站点总字数">22k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:18</span>
+    <span title="站点阅读时长">1:19</span>
   </span>
 </div>
 <div class="busuanzi-count">
