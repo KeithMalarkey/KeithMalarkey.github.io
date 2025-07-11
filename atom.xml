@@ -8,7 +8,17 @@
     <author>
       <name>keithmalarkey</name>
     </author>
-    <updated>2025-07-09T07:43:05.000Z</updated>
+    <updated>2025-07-11T09:39:43.000Z</updated>
+    <entry>
+        <id>https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</id>
+        <title>JVM内存模型</title>
+        <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/"/>
+        <content type="html"></content>
+        <category term="Java Core" scheme="https://keithmalarkey.github.io/categories/Java-Core/" />
+        <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java-Core/Java%E5%9F%BA%E7%A1%80/" />
+        <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
+        <updated>2025-07-11T09:39:43.000Z</updated>
+    </entry>
     <entry>
         <id>https://keithmalarkey.github.io/2025/07/09/%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/</id>
         <title>泛型编程</title>

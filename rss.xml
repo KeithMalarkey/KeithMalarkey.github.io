@@ -10,8 +10,18 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 09 Jul 2025 15:43:05 +0800</pubDate>
-        <lastBuildDate>Wed, 09 Jul 2025 15:43:05 +0800</lastBuildDate>
+        <pubDate>Fri, 11 Jul 2025 17:39:43 +0800</pubDate>
+        <lastBuildDate>Fri, 11 Jul 2025 17:39:43 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</guid>
+            <title>JVM内存模型</title>
+            <link>https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</link>
+            <category term="Java Core" scheme="https://keithmalarkey.github.io/categories/Java-Core/" />
+            <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java-Core/Java%E5%9F%BA%E7%A1%80/" />
+            <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
+            <pubDate>Fri, 11 Jul 2025 17:39:43 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://keithmalarkey.github.io/2025/07/09/%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/</guid>
             <title>泛型编程</title>

@@ -7,6 +7,18 @@
     "home_page_url": "https://keithmalarkey.github.io",
     "items": [
         {
+            "id": "https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/",
+            "url": "https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/",
+            "title": "JVM内存模型",
+            "date_published": "2025-07-11T09:39:43.000Z",
+            "content_html": "",
+            "tags": [
+                "Java Core",
+                "Java基础",
+                "内存模型"
+            ]
+        },
+        {
             "id": "https://keithmalarkey.github.io/2025/07/09/%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/",
             "url": "https://keithmalarkey.github.io/2025/07/09/%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/",
             "title": "泛型编程",
