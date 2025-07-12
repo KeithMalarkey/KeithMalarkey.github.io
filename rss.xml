@@ -10,8 +10,15 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Fri, 11 Jul 2025 17:39:43 +0800</pubDate>
-        <lastBuildDate>Fri, 11 Jul 2025 17:39:43 +0800</lastBuildDate>
+        <pubDate>Sat, 12 Jul 2025 13:45:57 +0800</pubDate>
+        <lastBuildDate>Sat, 12 Jul 2025 13:45:57 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://keithmalarkey.github.io/2025/07/12/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</guid>
+            <title>Java内存模型</title>
+            <link>https://keithmalarkey.github.io/2025/07/12/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</link>
+            <pubDate>Sat, 12 Jul 2025 13:45:57 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</guid>
             <title>JVM内存模型</title>
@@ -20,7 +27,20 @@
             <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java-Core/Java%E5%9F%BA%E7%A1%80/" />
             <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
             <pubDate>Fri, 11 Jul 2025 17:39:43 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
+            <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;./JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/image0.png&#34; alt=&#34;JDK&amp;lt;=7&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;./JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/image1.png&#34; alt=&#34;JDK&amp;gt;=8&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：图源来自 https://dunwu.github.io/blog/pages/682c2df6/?highlight=% E5%86%85% E5% AD%98% E6% A8% A1% E5%9E%8B#% E8%99%9A% E6%8B%9F% E6%9C% BA% E5% AF% B9% E8% B1% A1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;jmmjava-memory-model中的方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jmmjava-memory-model中的方法&#34;&gt;#&lt;/a&gt; JMM (Java Memory Model) 中的方法&lt;/h1&gt;
+&lt;h2 id=&#34;分类及标准&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类及标准&#34;&gt;#&lt;/a&gt; 分类及标准&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Java 方法：完全 Java 编写的方法&lt;/li&gt;
+&lt;li&gt;native 方法：用 &lt;code&gt;native&lt;/code&gt;  关键字声明，用其他语言 (如 C/C++) 实现的方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;进阶java内存模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进阶java内存模型&#34;&gt;#&lt;/a&gt; 进阶 ——Java 内存模型&lt;/h1&gt;
+&lt;p&gt;Java 内存模型简称 JMM (Java Memory Model)，是基于 JVM 的内存结构（物理特性），专注多线程环境下内存可见性、有序性和原子性的技术架构。定义了线程与内存的交互方式，解决了多线程并发问题，核心内容包括：happens-before 原则、volatile、synchronized 等语义。这部分内容将在中介绍&lt;/p&gt;
+ ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://keithmalarkey.github.io/2025/07/09/%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/</guid>
@@ -225,6 +245,7 @@
 &lt;li&gt;&lt;code&gt;IdentityHashMap&lt;/code&gt; ：基于引用相等实现的键值对集合，键不可重复，值可以重复，适合缓存场景。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ConcurrentHashMap&lt;/code&gt; ：线程安全的哈希表实现，适合高并发场景。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ConcurrentSkipListMap&lt;/code&gt; ：基于跳表实现的有序键值对集合，键不可重复，值可以重复，并且保持键的排序。&lt;/li&gt;
+&lt;li&gt;补充：HashTable&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;queue&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#queue&#34;&gt;#&lt;/a&gt; Queue&lt;/h3&gt;
 &lt;ul&gt;
