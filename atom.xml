@@ -20,10 +20,37 @@
         <id>https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</id>
         <title>JVM内存模型</title>
         <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/11/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/"/>
-        <content type="html">&lt;p&gt;&lt;img data-src=&#34;./JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/image0.png&#34; alt=&#34;JDK&amp;lt;=7&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;./JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/image1.png&#34; alt=&#34;JDK&amp;gt;=8&#34;&gt;&lt;/p&gt;
+        <content type="html">&lt;h1 id=&#34;jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm&#34;&gt;#&lt;/a&gt; JVM&lt;/h1&gt;
+&lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;仿真机器（计算机的基本组成：计算单元，控制单元、存储单元、I/O）&lt;/li&gt;
+&lt;li&gt;JRE 环境下，JVM 的主要组件：类装载子系统、字节码执行引擎、运行时数据区&lt;/li&gt;
+&lt;li&gt;特点：跨平台（越来越不突出的优势）&lt;br&gt;
+&amp;lt;!-- &lt;img data-src=&#34;./JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/JVM.png&#34; alt=&#34;JVM&#34;&gt; --&amp;gt;&lt;br&gt;
+&lt;img data-src=&#34;./JVM.png&#34; alt=&#34;JVM&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;搭建过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搭建过程&#34;&gt;#&lt;/a&gt; 搭建过程&lt;/h2&gt;
+&lt;p&gt;OS 装载 JVM 的主要步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建 JVM 的配置及环境；&lt;/li&gt;
+&lt;li&gt;装载 JVM.dll；&lt;/li&gt;
+&lt;li&gt;初始化 JVM.dll 并挂载到 JNIENV（JNI 接口）实例；&lt;/li&gt;
+&lt;li&gt;调用 JNIENV 实例，处理 class 类&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;lifetime-of-jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lifetime-of-jvm&#34;&gt;#&lt;/a&gt; lifetime of JVM&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;启动：启动一个 Java 程序时，一个 JVM 实例就产生了，任何一个拥有 public static void main (String [] args) 函数的 class 都可以作为 JVM 实例运行的起点；&lt;/li&gt;
+&lt;li&gt;运行：main () 作为该程序初始线程的起点，任何其他线程均由该线程启动。JVM 内部有两种线程：守护线程 (daemon thread) 和非守护线程，main () 属于非守护线程，守护线程通常由 JVM 自己使用，java 程序也可以表明自己创建的线程是守护线程；&lt;/li&gt;
+&lt;li&gt;消亡：当程序中的所有非守护线程都终止时，JVM 才退出；若安全管理器允许，程序也可以使用 Runtime 类或者 System.exit () 来退出。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;jvm内存模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm内存模型&#34;&gt;#&lt;/a&gt; JVM 内存模型&lt;/h1&gt;
+&lt;p&gt;对于 JDK&amp;lt;=7 和 JDK8+，采用的 JVM 模型是有差异的，可以参照如下示意图。其中黄色部分是线程隔离的，蓝色区域则是线程共享的。&lt;br&gt;
+&amp;lt;!-- &lt;img data-src=&#34;./JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/image0.png&#34; alt=&#34;JDK&amp;lt;=7&#34;&gt; --&amp;gt;&lt;br&gt;
+&lt;img data-src=&#34;./image0.png&#34; alt=&#34;JDK&amp;lt;=7&#34;&gt;&lt;br&gt;
+&amp;lt;!-- &lt;img data-src=&#34;./JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/image1.png&#34; alt=&#34;JDK&amp;gt;=8&#34;&gt; --&amp;gt;&lt;br&gt;
+&lt;img data-src=&#34;./image1.png&#34; alt=&#34;JDK&amp;gt;=8&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;注：图源来自 https://dunwu.github.io/blog/pages/682c2df6/?highlight=% E5%86%85% E5% AD%98% E6% A8% A1% E5%9E%8B#% E8%99%9A% E6%8B%9F% E6%9C% BA% E5% AF% B9% E8% B1% A1&lt;/p&gt;
+&lt;p&gt;注：图源来自&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kdW53dS5naXRodWIuaW8vYmxvZy9wYWdlcy82ODJjMmRmNi8/aGlnaGxpZ2h0PSVFNSU4NiU4NSVFNSVBRCU5OCVFNiVBOCVBMSVFNSU5RSU4QiMlRTglOTklOUElRTYlOEIlOUYlRTYlOUMlQkElRTUlQUYlQjklRTglQjElQTE=&#34;&gt; ref3&lt;/span&gt; &amp;amp; &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk5MTAzOC9hcnRpY2xlL2RldGFpbHMvMTQxMzYzMTgxP3V0bV9tZWRpdW09ZGlzdHJpYnV0ZS5wY19yZWxldmFudC5ub25lLXRhc2stYmxvZy0yfmRlZmF1bHR+YmFpZHVqc19iYWlkdWxhbmRpbmd3b3JkfmRlZmF1bHQtMS0xNDEzNjMxODEtYmxvZy0xMzQ2MTY4NjEuMjM1JTVFdjQzJTVFcGNfYmxvZ19ib3R0b21fcmVsZXZhbmNlX2Jhc2U2JmFtcDtzcG09MTAwMS4yMTAxLjMwMDEuNDI0Mi4yJmFtcDt1dG1fcmVsZXZhbnRfaW5kZXg9Mw==&#34;&gt;ref1&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;jmmjava-memory-model中的方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jmmjava-memory-model中的方法&#34;&gt;#&lt;/a&gt; JMM (Java Memory Model) 中的方法&lt;/h1&gt;
 &lt;h2 id=&#34;分类及标准&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分类及标准&#34;&gt;#&lt;/a&gt; 分类及标准&lt;/h2&gt;
@@ -32,7 +59,13 @@
 &lt;li&gt;native 方法：用 &lt;code&gt;native&lt;/code&gt;  关键字声明，用其他语言 (如 C/C++) 实现的方法&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;进阶java内存模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进阶java内存模型&#34;&gt;#&lt;/a&gt; 进阶 ——Java 内存模型&lt;/h1&gt;
-&lt;p&gt;Java 内存模型简称 JMM (Java Memory Model)，是基于 JVM 的内存结构（物理特性），专注多线程环境下内存可见性、有序性和原子性的技术架构。定义了线程与内存的交互方式，解决了多线程并发问题，核心内容包括：happens-before 原则、volatile、synchronized 等语义。这部分内容将在中介绍&lt;/p&gt;
+&lt;p&gt;Java 内存模型简称 JMM (Java Memory Model)，是基于 JVM 的内存结构（物理特性），专注多线程环境下内存可见性、有序性和原子性的技术架构。定义了线程与内存的交互方式，解决了多线程并发问题，核心内容包括：happens-before 原则、volatile、synchronized 等语义。这部分内容将在&lt;a href=&#34;https://keithmalarkey.github.io/2025/07/12/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/&#34;&gt; Java 内存模型&lt;/a&gt;中介绍&lt;/p&gt;
+&lt;h1 id=&#34;参考&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参考&#34;&gt;#&lt;/a&gt; 参考&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDk5MTAzOC9hcnRpY2xlL2RldGFpbHMvMTQxMzYzMTgxP3V0bV9tZWRpdW09ZGlzdHJpYnV0ZS5wY19yZWxldmFudC5ub25lLXRhc2stYmxvZy0yfmRlZmF1bHR+YmFpZHVqc19iYWlkdWxhbmRpbmd3b3JkfmRlZmF1bHQtMS0xNDEzNjMxODEtYmxvZy0xMzQ2MTY4NjEuMjM1JTVFdjQzJTVFcGNfYmxvZ19ib3R0b21fcmVsZXZhbmNlX2Jhc2U2JmFtcDtzcG09MTAwMS4yMTAxLjMwMDEuNDI0Mi4yJmFtcDt1dG1fcmVsZXZhbnRfaW5kZXg9Mw==&#34;&gt;ref1&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzcxMzMyNzY1L2FydGljbGUvZGV0YWlscy8xMzQ2MTY4NjE=&#34;&gt;ref2&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kdW53dS5naXRodWIuaW8vYmxvZy9wYWdlcy82ODJjMmRmNi8/aGlnaGxpZ2h0PSVFNSU4NiU4NSVFNSVBRCU5OCVFNiVBOCVBMSVFNSU5RSU4QiMlRTglOTklOUElRTYlOEIlOUYlRTYlOUMlQkElRTUlQUYlQjklRTglQjElQTE=&#34;&gt;ref3&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         <category term="Java Core" scheme="https://keithmalarkey.github.io/categories/Java-Core/" />
         <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java-Core/Java%E5%9F%BA%E7%A1%80/" />
