@@ -8,7 +8,201 @@
     <author>
       <name>keithmalarkey</name>
     </author>
-    <updated>2025-07-18T11:36:48.000Z</updated>
+    <updated>2025-07-23T05:33:25.000Z</updated>
+    <entry>
+        <id>https://keithmalarkey.github.io/2025/07/23/linux%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/</id>
+        <title>linux软件管理</title>
+        <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/23/linux%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/"/>
+        <content type="html">&lt;h1 id=&#34;linux软件管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#linux软件管理&#34;&gt;#&lt;/a&gt; linux 软件管理&lt;/h1&gt;
+&lt;h2 id=&#34;清单&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#清单&#34;&gt;#&lt;/a&gt; 清单&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;npm&lt;/li&gt;
+&lt;li&gt;git&lt;/li&gt;
+&lt;li&gt;yarn&lt;/li&gt;
+&lt;li&gt;apt/apt-get&lt;/li&gt;
+&lt;li&gt;pacman&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;npm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#npm&#34;&gt;#&lt;/a&gt; npm&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;npm&lt;/code&gt; （Node Package Manager）是 &lt;code&gt;Node.js&lt;/code&gt;  的默认包管理工具，用于下载、安装、管理和发布 JavaScript 代码模块（称为 &amp;quot;包&amp;quot; 或 &amp;quot;package&amp;quot;）。它是全球最大的开源软件注册中心，拥有超过 200 万个可复用的代码包。&lt;/p&gt;
+&lt;h3 id=&#34;npm的核心功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#npm的核心功能&#34;&gt;#&lt;/a&gt; npm 的核心功能&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;功能&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;安装依赖包&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;通过 npm install 下载和管理项目所需的库（如 React、Vue、Express）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;管理项目依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;记录依赖项到 package.json，确保团队协作时环境一致。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;运行脚本&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;通过 npm run 执行自定义命令（如启动服务器、打包代码）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;发布自己的包&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;可将自己写的模块发布到 npm 供他人使用。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;版本控制&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;支持语义化版本（^1.2.3），避免依赖冲突。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;npm的基本使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#npm的基本使用&#34;&gt;#&lt;/a&gt; npm 的基本使用&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;初始化项目&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm init          &lt;span class=&#34;comment&#34;&gt;# 交互式创建 package.json&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm init -y       &lt;span class=&#34;comment&#34;&gt;# 快速生成默认配置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+ 会生成  &lt;code&gt;package.json&lt;/code&gt; ，记录项目信息和依赖。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装包&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;作用&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;npm install&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;安装依赖包&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;npm install lodash&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;npm install -g&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;全局安装包&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;npm install -g typescript&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;npm install --save-dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;安装开发依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;npm install jest --save-dev eslint&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;安装后：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;依赖包会被下载到  &lt;code&gt;node_modules&lt;/code&gt;  目录。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package.json&lt;/code&gt;  会更新  &lt;code&gt;dependencies&lt;/code&gt;  或  &lt;code&gt;devDependencies&lt;/code&gt;  字段。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;卸载包&lt;br&gt;
+ &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm uninstall &amp;lt;包名&amp;gt;          &lt;span class=&#34;comment&#34;&gt;# 移除包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm uninstall -g &amp;lt;包名&amp;gt;       &lt;span class=&#34;comment&#34;&gt;# 移除全局包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更新包&lt;br&gt;
+ &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm update &amp;lt;包名&amp;gt;    &lt;span class=&#34;comment&#34;&gt;# 更新指定包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm update          &lt;span class=&#34;comment&#34;&gt;# 更新所有包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm outdated        &lt;span class=&#34;comment&#34;&gt;# 检查过时的包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行脚本&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在 package.json 中定义脚本:&lt;br&gt;
+&lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;start&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;node app.js&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;build&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;webpack&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后运行：&lt;br&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm run start   &lt;span class=&#34;comment&#34;&gt;# 执行 &amp;quot;start&amp;quot; 脚本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm run build   &lt;span class=&#34;comment&#34;&gt;# 执行 &amp;quot;build&amp;quot; 脚本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;npm和yarn的对比&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#npm和yarn的对比&#34;&gt;#&lt;/a&gt; npm 和 yarn 的对比&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;工具&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;特点&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;安装命令&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;npm&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Node.js 自带，生态最广&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;npm install&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;yarn&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;更快、更安全&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;yarn add&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;git&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git&#34;&gt;#&lt;/a&gt; &lt;strong&gt;git&lt;/strong&gt; 😉&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;git&lt;/code&gt;  是一个分布式版本控制系统，用于跟踪文件的更改，特别是源代码文件。它允许多个开发者协同工作，管理项目的历史记录。git 的逻辑存储划分为三个主要部分：工作区（Working Directory）、暂存区（Staging Area）和版本库（Repository）。因此，git 的工作流主要是在三个区域上的操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 nvim/vim 等编辑器中，git 通常通过插件集成，提供版本控制功能。比如 lazygit 是一个基于终端的 Git UI 工具，提供了更友好的界面来管理 Git 仓库。在 vscode 这样的轻量级 IDE 中，也提供了很多可视化的 git extensions (如 git graph)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;git核心工作流&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git核心工作流&#34;&gt;#&lt;/a&gt; git 核心工作流&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;初始化本地仓&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git init &lt;span class=&#34;comment&#34;&gt;# 初始化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; &amp;lt;repo_url&amp;gt; &lt;span class=&#34;comment&#34;&gt;# 克隆远程仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+2. 基本文件操作&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git add &amp;lt;file/files&amp;gt;          &lt;span class=&#34;comment&#34;&gt;# 将文件添加到暂存区&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .                     &lt;span class=&#34;comment&#34;&gt;# 添加所有修改文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; &amp;lt;file&amp;gt;                 &lt;span class=&#34;comment&#34;&gt;# 删除文件并暂存&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;mv&lt;/span&gt; &amp;lt;old&amp;gt; &amp;lt;new&amp;gt;            &lt;span class=&#34;comment&#34;&gt;# 重命名文件并暂存&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;提交更改&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;提交信息&amp;quot;&lt;/span&gt;       &lt;span class=&#34;comment&#34;&gt;# 提交暂存区的更改&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -am &lt;span class=&#34;string&#34;&gt;&amp;quot;提交信息&amp;quot;&lt;/span&gt;      &lt;span class=&#34;comment&#34;&gt;# 自动添加所有已跟踪文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit --amend &lt;span class=&#34;string&#34;&gt;&amp;quot;新提交信息&amp;quot;&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;# 修改上次提交&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+4. 查看状态和日志&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git status                    &lt;span class=&#34;comment&#34;&gt;# 查看工作区和暂存区状态&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;log&lt;/span&gt;                       &lt;span class=&#34;comment&#34;&gt;# 查看提交历史&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;log&lt;/span&gt; --oneline             &lt;span class=&#34;comment&#34;&gt;# 简洁日志&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git diff                      &lt;span class=&#34;comment&#34;&gt;# 查看未暂存的更改&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git diff --cached             &lt;span class=&#34;comment&#34;&gt;# 查看已暂存的更改&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;分支管理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git branch                    &lt;span class=&#34;comment&#34;&gt;# 列出所有本地分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git branch &amp;lt;name&amp;gt;             &lt;span class=&#34;comment&#34;&gt;# 创建新分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout &amp;lt;branch&amp;gt;         &lt;span class=&#34;comment&#34;&gt;# 切换到分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git switch &amp;lt;branch&amp;gt;           &lt;span class=&#34;comment&#34;&gt;# (Git 2.23+) 更安全的切换命令&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git merge &amp;lt;branch&amp;gt;            &lt;span class=&#34;comment&#34;&gt;# 合并指定分支到当前分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git branch -d &amp;lt;branch&amp;gt;        &lt;span class=&#34;comment&#34;&gt;# 删除已合并的分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git branch -D &amp;lt;branch&amp;gt;        &lt;span class=&#34;comment&#34;&gt;# 强制删除未合并的分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;远程仓库协作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git remote -v                 &lt;span class=&#34;comment&#34;&gt;# 查看远程仓库地址&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add &amp;lt;name&amp;gt; &amp;lt;url&amp;gt;   &lt;span class=&#34;comment&#34;&gt;# 添加远程仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git fetch                     &lt;span class=&#34;comment&#34;&gt;# 拉取远程更新（不自动合并）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git pull                      &lt;span class=&#34;comment&#34;&gt;# 拉取并合并远程更改（= fetch + merge）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git pull --rebase             &lt;span class=&#34;comment&#34;&gt;# 使用变基代替合并&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push                      &lt;span class=&#34;comment&#34;&gt;# 推送本地提交到远程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin &amp;lt;branch&amp;gt;   &lt;span class=&#34;comment&#34;&gt;# 首次推送并设置上游分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+7. 标签管理&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git tag                       &lt;span class=&#34;comment&#34;&gt;# 列出所有标签&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git tag &amp;lt;tagname&amp;gt;             &lt;span class=&#34;comment&#34;&gt;# 创建新标签&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git tag -a &amp;lt;tagname&amp;gt; -m &lt;span class=&#34;string&#34;&gt;&amp;quot;信息&amp;quot;&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;# 创建带注释的标签&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git tag -d &amp;lt;tagname&amp;gt;          &lt;span class=&#34;comment&#34;&gt;# 删除标签&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin &amp;lt;tagname&amp;gt;     &lt;span class=&#34;comment&#34;&gt;# 推送标签到远程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin --tags        &lt;span class=&#34;comment&#34;&gt;# 推送所有标签&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;团队协作工作流&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#团队协作工作流&#34;&gt;#&lt;/a&gt; 团队协作工作流&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;主分支模型&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;main&lt;/code&gt; / &lt;code&gt;master&lt;/code&gt; : 稳定生产代码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;develop&lt;/code&gt; : 开发分支，集成所有功能分支&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;feature/*&lt;/code&gt; : 功能分支，从 &lt;code&gt;develop&lt;/code&gt;  分支创建，完成后合并到 &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;release/*&lt;/code&gt; : 发布分支，从 &lt;code&gt;develop&lt;/code&gt;  创建，准备发布到 &lt;code&gt;main&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hotfix/*&lt;/code&gt; : 紧急修复分支，从 &lt;code&gt;main&lt;/code&gt;  创建，修复后合并到 &lt;code&gt;main&lt;/code&gt;  和 &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;常用协作命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 开发新功能&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout -b feature/login develop  &lt;span class=&#34;comment&#34;&gt;# 从develop创建功能分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin feature/login         &lt;span class=&#34;comment&#34;&gt;# 推送功能分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 合并到develop&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout develop&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git merge --no-ff feature/login       &lt;span class=&#34;comment&#34;&gt;# 保留分支历史&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 发布版本&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout -b release/1.0 develop&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin release/1.0&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 紧急修复&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout -b hotfix/1.0.1 main     &lt;span class=&#34;comment&#34;&gt;# 从main创建修复分支&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push origin hotfix/1.0.1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;高级操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#高级操作&#34;&gt;#&lt;/a&gt; 高级操作&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;撤销修改&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git restore &amp;lt;file&amp;gt;            &lt;span class=&#34;comment&#34;&gt;# 撤销工作区修改（Git 2.23+）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git reset --hard HEAD         &lt;span class=&#34;comment&#34;&gt;# 重置工作区和暂存区到最新提交&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git revert &amp;lt;commit_hash&amp;gt;      &lt;span class=&#34;comment&#34;&gt;# 创建新提交来撤销指定提交&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;存储临时修改&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git stash                     &lt;span class=&#34;comment&#34;&gt;# 储藏当前工作区&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git stash pop                 &lt;span class=&#34;comment&#34;&gt;# 恢复最近储藏的内容&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git stash list                &lt;span class=&#34;comment&#34;&gt;# 查看储藏列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;标签管理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git tag v1.0                  &lt;span class=&#34;comment&#34;&gt;# 创建轻量标签&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git tag -a v1.0 -m &lt;span class=&#34;string&#34;&gt;&amp;quot;版本1.0&amp;quot;&lt;/span&gt;  &lt;span class=&#34;comment&#34;&gt;# 创建附注标签&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push --tags               &lt;span class=&#34;comment&#34;&gt;# 推送所有标签到远程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;子模块管理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git submodule add &amp;lt;repo_url&amp;gt;  &lt;span class=&#34;comment&#34;&gt;# 添加子模块&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git submodule update --init   &lt;span class=&#34;comment&#34;&gt;# 初始化并更新子模块&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;yarn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#yarn&#34;&gt;#&lt;/a&gt; yarn&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;yarn&lt;/code&gt;  是 Facebook 开发的 JavaScript 包管理工具，旨在提供更快、更安全的依赖管理体验。它是 &lt;code&gt;npm&lt;/code&gt;  的替代品，提供了更好的性能和一致性。&lt;/p&gt;
+</content>
+        <category term="linux" scheme="https://keithmalarkey.github.io/categories/linux/" />
+        <category term="linux" scheme="https://keithmalarkey.github.io/tags/linux/" />
+        <category term="linux软件管理" scheme="https://keithmalarkey.github.io/tags/linux%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/" />
+        <updated>2025-07-23T05:33:25.000Z</updated>
+    </entry>
     <entry>
         <id>https://keithmalarkey.github.io/2025/07/18/Java%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/</id>
         <title>Java注解和反射</title>
@@ -309,8 +503,10 @@
         <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/12/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/"/>
         <content type="html"></content>
         <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/" />
+        <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
         <category term="Java面试" scheme="https://keithmalarkey.github.io/tags/Java%E9%9D%A2%E8%AF%95/" />
-        <category term="Java Core" scheme="https://keithmalarkey.github.io/tags/Java-Core/" />
+        <category term="Java" scheme="https://keithmalarkey.github.io/tags/Java/" />
+        <category term="JMM" scheme="https://keithmalarkey.github.io/tags/JMM/" />
         <updated>2025-07-12T05:45:57.000Z</updated>
     </entry>
     <entry>
