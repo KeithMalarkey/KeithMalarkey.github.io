@@ -82,6 +82,12 @@
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kdW53dS5naXRodWIuaW8vYmxvZy9wYWdlcy8zMTI0OGE1My8/aGlnaGxpZ2h0PSVFNSU4RiU4RCVFNSVCMCU4NCMlRTUlOEElQTglRTYlODAlODElRTQlQkIlQTMlRTclOTAlODY=&#34;&gt;ref1&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
+        <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/" />
+        <category term="Java架构基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/Java%E6%9E%B6%E6%9E%84%E5%9F%BA%E7%A1%80/" />
+        <category term="Java面试" scheme="https://keithmalarkey.github.io/tags/Java%E9%9D%A2%E8%AF%95/" />
+        <category term="Java" scheme="https://keithmalarkey.github.io/tags/Java/" />
+        <category term="注解" scheme="https://keithmalarkey.github.io/tags/%E6%B3%A8%E8%A7%A3/" />
+        <category term="反射" scheme="https://keithmalarkey.github.io/tags/%E5%8F%8D%E5%B0%84/" />
         <updated>2025-07-18T11:36:48.000Z</updated>
     </entry>
     <entry>
@@ -292,6 +298,9 @@
 </content>
         <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/" />
         <category term="Java面试" scheme="https://keithmalarkey.github.io/tags/Java%E9%9D%A2%E8%AF%95/" />
+        <category term="Java" scheme="https://keithmalarkey.github.io/tags/Java/" />
+        <category term="equals()方法" scheme="https://keithmalarkey.github.io/tags/equals-%E6%96%B9%E6%B3%95/" />
+        <category term="==运算法" scheme="https://keithmalarkey.github.io/tags/%E8%BF%90%E7%AE%97%E6%B3%95/" />
         <updated>2025-07-16T11:42:05.000Z</updated>
     </entry>
     <entry>

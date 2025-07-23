@@ -16,6 +16,12 @@
             <guid isPermalink="true">https://keithmalarkey.github.io/2025/07/18/Java%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/</guid>
             <title>Java注解和反射</title>
             <link>https://keithmalarkey.github.io/2025/07/18/Java%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84/</link>
+            <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/" />
+            <category term="Java架构基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/Java%E6%9E%B6%E6%9E%84%E5%9F%BA%E7%A1%80/" />
+            <category term="Java面试" scheme="https://keithmalarkey.github.io/tags/Java%E9%9D%A2%E8%AF%95/" />
+            <category term="Java" scheme="https://keithmalarkey.github.io/tags/Java/" />
+            <category term="注解" scheme="https://keithmalarkey.github.io/tags/%E6%B3%A8%E8%A7%A3/" />
+            <category term="反射" scheme="https://keithmalarkey.github.io/tags/%E5%8F%8D%E5%B0%84/" />
             <pubDate>Fri, 18 Jul 2025 19:36:48 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;注解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注解&#34;&gt;#&lt;/a&gt; 注解&lt;/h1&gt;
 &lt;h2 id=&#34;annotation的定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#annotation的定义&#34;&gt;#&lt;/a&gt; Annotation 的定义&lt;/h2&gt;
@@ -242,6 +248,9 @@
             <link>https://keithmalarkey.github.io/2025/07/16/equals/</link>
             <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/" />
             <category term="Java面试" scheme="https://keithmalarkey.github.io/tags/Java%E9%9D%A2%E8%AF%95/" />
+            <category term="Java" scheme="https://keithmalarkey.github.io/tags/Java/" />
+            <category term="equals()方法" scheme="https://keithmalarkey.github.io/tags/equals-%E6%96%B9%E6%B3%95/" />
+            <category term="==运算法" scheme="https://keithmalarkey.github.io/tags/%E8%BF%90%E7%AE%97%E6%B3%95/" />
             <pubDate>Wed, 16 Jul 2025 19:42:05 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;bg-for-java-string-variables&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bg-for-java-string-variables&#34;&gt;#&lt;/a&gt; B.G FOR JAVA STRING VARIABLES&lt;/h1&gt;
 &lt;p&gt;考虑到 Java 的变量分为基本类型和引用类型。在介绍 == 运算符和 equals () 方法之前，先来看看 Java 变量的底层存储机制。这里主要涉及的是 GC 堆和字符串常量池两个存储单元。&lt;/p&gt;
