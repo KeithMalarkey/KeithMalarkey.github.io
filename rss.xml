@@ -10,8 +10,21 @@
         </author>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Fri, 25 Jul 2025 10:58:03 +0800</pubDate>
-        <lastBuildDate>Fri, 25 Jul 2025 10:58:03 +0800</lastBuildDate>
+        <pubDate>Mon, 28 Jul 2025 17:24:47 +0800</pubDate>
+        <lastBuildDate>Mon, 28 Jul 2025 17:24:47 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://keithmalarkey.github.io/2025/07/28/Java%E7%BA%BF%E7%A8%8B/</guid>
+            <title>Java线程</title>
+            <link>https://keithmalarkey.github.io/2025/07/28/Java%E7%BA%BF%E7%A8%8B/</link>
+            <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/" />
+            <category term="Java" scheme="https://keithmalarkey.github.io/tags/Java/" />
+            <category term="Java线程" scheme="https://keithmalarkey.github.io/tags/Java%E7%BA%BF%E7%A8%8B/" />
+            <category term="多线程" scheme="https://keithmalarkey.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" />
+            <category term="并发编程" scheme="https://keithmalarkey.github.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" />
+            <pubDate>Mon, 28 Jul 2025 17:24:47 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Thread/Runnable/Callable/Executor/ThreadPool/CompletableFuture/ThreadLocal/Lock/Semaphore/CyclicBarrier/CountDownLatch/AtomicReference/Thread Safety/Volatile/Synchronized&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</guid>
             <title>网络协议</title>
@@ -105,7 +118,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;pacman&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pacman&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;red&#34;&gt;pacman&lt;/span&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;pacman&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pacman&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;yellow&#34;&gt;pacman&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;pacman&lt;/code&gt;  是 Arch Linux 及其衍生发行版的包管理器，用于安装、更新和删除软件包。它使用  &lt;code&gt;.pkg.tar.zst&lt;/code&gt;  格式的软件包。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;除了 pacman 外，Arch Linux 还提供了 AUR（Arch User Repository），这是一个由社区维护的软件包仓库，用户可以通过 AUR 工具（yay、paru）来安装和管理 AUR 中的软件包。&lt;/p&gt;
@@ -146,7 +159,7 @@
 &lt;p&gt;了解一下 &lt;code&gt;makepkg&lt;/code&gt; ，它是 AUR 的构建工具，用于从 AUR 源代码包构建和安装软件包。它通常与 &lt;code&gt;yay&lt;/code&gt;  或 &lt;code&gt;paru&lt;/code&gt;  一起使用。常见 &lt;code&gt;makepkg&lt;/code&gt;  的命令包括： &lt;code&gt;makepkg -si&lt;/code&gt; （构建并安装软件包）、 &lt;code&gt;makepkg -s&lt;/code&gt; （仅构建软件包）、 &lt;code&gt;makepkg -p &amp;lt;build-script&amp;gt;&lt;/code&gt;  等。如果你没有制定 &lt;code&gt;build-script&lt;/code&gt; ，则默认使用 &lt;code&gt;PKGBUILD&lt;/code&gt;  文件。因此， &lt;code&gt;makepkg&lt;/code&gt;  常常在 &lt;code&gt;PKGBUILD&lt;/code&gt;  文件所在的目录中运行。( &lt;code&gt;PKGBUILD&lt;/code&gt;  是一个 shell script)&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;curl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#curl&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;red&#34;&gt;curl&lt;/span&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;curl&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#curl&#34;&gt;#&lt;/a&gt; &lt;span class=&#34;yellow&#34;&gt;curl&lt;/span&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;curl&lt;/code&gt; （Client URL）是一个强大的命令行工具，用于在 Linux/Unix 系统中传输数据。它支持多种协议，包括 HTTP、HTTPS、FTP、SFTP 。&lt;/p&gt;
 &lt;h3 id=&#34;基本语法结构-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本语法结构-2&#34;&gt;#&lt;/a&gt; 基本语法结构&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;curl&lt;/code&gt;  命令的语法格式：&lt;br&gt;
@@ -844,6 +857,7 @@
             <category term="Java Core" scheme="https://keithmalarkey.github.io/categories/Java-Core/" />
             <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java-Core/Java%E5%9F%BA%E7%A1%80/" />
             <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
+            <category term="JVM" scheme="https://keithmalarkey.github.io/tags/JVM/" />
             <pubDate>Fri, 11 Jul 2025 17:39:43 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm&#34;&gt;#&lt;/a&gt; JVM&lt;/h1&gt;
 &lt;h2 id=&#34;定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h2&gt;
@@ -852,6 +866,25 @@
 &lt;li&gt;JRE 下，JVM 的主要组件：类装载子系统、字节码执行引擎、运行时数据区&lt;/li&gt;
 &lt;li&gt;特点：跨平台（越来越不突出的优势）&lt;br&gt;
 &lt;img data-src=&#34;./JVM.png&#34; alt=&#34;JVM&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;h3 id=&#34;计算机体系结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机体系结构&#34;&gt;#&lt;/a&gt; 计算机体系结构&lt;/h3&gt;
+&lt;p&gt;真实计算机的核心部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指令集 (RISC/CISC)&lt;/li&gt;
+&lt;li&gt;CPU&lt;/li&gt;
+&lt;li&gt;寻址方式&lt;/li&gt;
+&lt;li&gt;寄存器&lt;/li&gt;
+&lt;li&gt;存储单元&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;jvm-体系结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#jvm-体系结构&#34;&gt;#&lt;/a&gt; JVM 体系结构&lt;/h3&gt;
+&lt;p&gt;核心部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JVM 指令集&lt;/li&gt;
+&lt;li&gt;类加载器&lt;/li&gt;
+&lt;li&gt;执行引擎 - 相当于 JVM 的 CPU&lt;/li&gt;
+&lt;li&gt;内存区 - JVM 的存储&lt;/li&gt;
+&lt;li&gt;本地方法调用 - 调用 C/C++ 等本地方法 `&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;搭建过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搭建过程&#34;&gt;#&lt;/a&gt; 搭建过程&lt;/h2&gt;
 &lt;p&gt;OS 装载 JVM 的主要步骤：&lt;/p&gt;
@@ -864,6 +897,16 @@
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;JNI——&lt;strong&gt;J&lt;/strong&gt;ava &amp;amp; &lt;strong&gt;N&lt;/strong&gt;ative language &lt;strong&gt;I&lt;/strong&gt;nterface, 指的是 java 程序和 native 程序之间的交互接口。由于常见的 wins/linux 系统为 C/C++ 实现，所以可以一般性地认为是 Java 和 C/Cpp 程序之间的接口。详见：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2E1NTY2MjU1L2FydGljbGUvZGV0YWlscy8xNDY1MTI0ODM=&#34;&gt;JNI&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;h2 id=&#34;hotspot-jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hotspot-jvm&#34;&gt;#&lt;/a&gt; Hotspot JVM&lt;/h2&gt;
+&lt;p&gt;Hotspot JVM 是 Oracle 公司开发的 JVM 实现，广泛应用于 Java SE 和 Java EE 平台。它的主要特点包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;即时编译（JIT, just-in-time）&lt;/strong&gt;：Hotspot JVM 使用即时编译技术，将热点代码编译为本地机器码，以提高执行效率。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;垃圾回收（GC, garbage collection）&lt;/strong&gt;：Hotspot JVM 提供多种垃圾回收算法，如串行 GC、并行 GC、CMS（Concurrent Mark-Sweep）和 G1（Garbage-First）等，以自动管理内存。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多线程支持&lt;/strong&gt;：Hotspot JVM 支持多线程编程模型，允许多个线程并发执行，提高程序的并发性能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能优化&lt;/strong&gt;：Hotspot JVM 通过动态优化技术，能够在运行时分析代码的执行情况，并进行性能优化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;平台无关性&lt;/strong&gt;：Hotspot JVM 是跨平台的，可以在不同的操作系统上运行相同的 Java 程序。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;./hojvm.png&#34; alt=&#34;hotspot jvm&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;lifetime-of-jvm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lifetime-of-jvm&#34;&gt;#&lt;/a&gt; lifetime of JVM&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;启动：启动一个 Java 程序时，一个 JVM 实例就产生了，任何一个拥有 public static void main (String [] args) 函数的 class 都可以作为 JVM 实例运行的起点；&lt;/li&gt;
