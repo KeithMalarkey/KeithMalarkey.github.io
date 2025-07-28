@@ -843,9 +843,9 @@
             <title>Java内存模型</title>
             <link>https://keithmalarkey.github.io/2025/07/12/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</link>
             <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/" />
-            <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
             <category term="Java面试" scheme="https://keithmalarkey.github.io/tags/Java%E9%9D%A2%E8%AF%95/" />
             <category term="Java" scheme="https://keithmalarkey.github.io/tags/Java/" />
+            <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
             <category term="JMM" scheme="https://keithmalarkey.github.io/tags/JMM/" />
             <pubDate>Sat, 12 Jul 2025 13:45:57 +0800</pubDate>
             <description><![CDATA[  ]]></description>
