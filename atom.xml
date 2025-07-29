@@ -8,7 +8,70 @@
     <author>
       <name>keithmalarkey</name>
     </author>
-    <updated>2025-07-28T09:24:47.000Z</updated>
+    <updated>2025-07-29T13:15:48.000Z</updated>
+    <entry>
+        <id>https://keithmalarkey.github.io/2025/07/29/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E4%B9%8BTCP-UDP/</id>
+        <title>网络协议之TCP/UDP</title>
+        <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/29/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E4%B9%8BTCP-UDP/"/>
+        <content type="html"></content>
+        <updated>2025-07-29T13:15:48.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://keithmalarkey.github.io/2025/07/29/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</id>
+        <title>Java网络编程</title>
+        <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/29/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+        <content type="html">&lt;p&gt;socket HttpURLConnection HttpClient Netty WebSocket&lt;/p&gt;
+</content>
+        <updated>2025-07-29T13:13:14.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://keithmalarkey.github.io/2025/07/29/Java%E9%AB%98%E5%B9%B6%E5%8F%91/</id>
+        <title>Java高并发</title>
+        <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/29/Java%E9%AB%98%E5%B9%B6%E5%8F%91/"/>
+        <content type="html">&lt;h1 id=&#34;开篇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开篇&#34;&gt;#&lt;/a&gt; 开篇&lt;/h1&gt;
+&lt;p&gt;简而言之，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ29uY3VycmVuY3lfJTI4Y29tcHV0ZXJfc2NpZW5jZSUyOQ==&#34;&gt;并发 (concurrency)&lt;/span&gt; 指能够并行运行多个程序或程序的多个部分的能力。并发使程序能够通过利用底层操作系统和机器硬件的未开发能力来实现高性能和吞吐量。例如，现代计算机在一个 CPU 中有多个 CPU 或多个内核，程序可以利用所有内核进行某些处理；因此，与顺序处理相比，可以更快地完成任务。&lt;/p&gt;
+&lt;p&gt;Java 并发的核心是线程化。线程是一个轻量级进程，它有自己的调用栈，但可以访问同一进程中其他线程的共享数据。Java 应用程序默认在一个进程中运行。可以在 Java 应用程序中使用多个线程来实现并行处理或并发。&lt;/p&gt;
+&lt;h1 id=&#34;相关工具包&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相关工具包&#34;&gt;#&lt;/a&gt; 相关工具包&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvbGFuZy9UaHJlYWQuaHRtbA==&#34;&gt;java.lang.Thread&lt;/span&gt; 类&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvbGFuZy9SdW5uYWJsZS5odG1s&#34;&gt;java.lang.Runnable&lt;/span&gt; 接口&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvdXRpbC9jb25jdXJyZW50L3BhY2thZ2Utc3VtbWFyeS5odG1s&#34;&gt;java.util.concurrent&lt;/span&gt; 包&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvdXRpbC9jb25jdXJyZW50L2F0b21pYy9wYWNrYWdlLXN1bW1hcnkuaHRtbA==&#34;&gt;java.util.concurrent.atomic&lt;/span&gt; 包&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvdXRpbC9jb25jdXJyZW50L2xvY2tzL3BhY2thZ2Utc3VtbWFyeS5odG1s&#34;&gt;java.util.concurrent.locks&lt;/span&gt; 包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;java并发面临的问题和挑战&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java并发面临的问题和挑战&#34;&gt;#&lt;/a&gt; Java 并发面临的问题和挑战&lt;/h1&gt;
+&lt;p&gt;Java 并发编程确实是一个复杂的主题。它涉及到多个线程之间的协调和同步，以确保数据的一致性和正确性。以下是一些常见的挑战：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;线程安全&lt;/strong&gt;：确保多个线程访问共享数据时不会导致数据不一致或错误。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;死锁&lt;/strong&gt;：当两个或多个线程互相等待对方释放资源时，导致程序无法继续执行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;竞态条件&lt;/strong&gt;：当多个线程同时访问和修改共享数据时，可能会导致不可预测的结果。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能问题&lt;/strong&gt;：不当的线程管理可能导致性能下降，例如过多的上下文切换或资源竞争。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;调试困难&lt;/strong&gt;：多线程程序的错误通常难以重现和调试，因为它们可能只在特定的时间或条件下发生。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存可见性&lt;/strong&gt;：确保一个线程对共享变量的修改对其他线程可见，避免出现脏读或不可见的修改。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;线程生命周期管理&lt;/strong&gt;：正确地创建、启动、暂停和终止线程是一个挑战，尤其是在复杂的应用程序中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源管理&lt;/strong&gt;：确保线程正确地获取和释放资源，避免资源泄漏或过度使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;异步编程&lt;/strong&gt;：处理异步任务和回调可能会增加代码的复杂性，尤其是在错误处理和结果处理方面。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API 的复杂性&lt;/strong&gt;：Java 的并发 API（如 &lt;code&gt;java.util.concurrent&lt;/code&gt;  包）提供了许多工具和类，但它们的使用和配置可能会让人感到困惑。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;线程池管理&lt;/strong&gt;：合理配置和使用线程池以优化性能和资源使用率是一个挑战。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可扩展性&lt;/strong&gt;：设计并发程序时需要考虑到未来的扩展性，以便在需要时能够轻松添加更多线程或处理器。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存模型&lt;/strong&gt;：理解 Java 内存模型（JMM）对于编写正确的并发代码至关重要，它定义了线程如何与内存交互。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;简单这些挑战，其实还不能完全体现 Java 并发编程的实际复杂性。&lt;/p&gt;
+&lt;h1 id=&#34;线程安全&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#线程安全&#34;&gt;#&lt;/a&gt; 线程安全&lt;/h1&gt;
+</content>
+        <category term="Java进阶" scheme="https://keithmalarkey.github.io/categories/Java%E8%BF%9B%E9%98%B6/" />
+        <category term="Java线程" scheme="https://keithmalarkey.github.io/categories/Java%E8%BF%9B%E9%98%B6/Java%E7%BA%BF%E7%A8%8B/" />
+        <category term="并发编程" scheme="https://keithmalarkey.github.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" />
+        <category term="Java进阶" scheme="https://keithmalarkey.github.io/tags/Java%E8%BF%9B%E9%98%B6/" />
+        <updated>2025-07-29T06:03:29.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://keithmalarkey.github.io/2025/07/29/Java%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AE%A1%E7%A8%8B/</id>
+        <title>Java进程和管程</title>
+        <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/29/Java%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AE%A1%E7%A8%8B/"/>
+        <content type="html"></content>
+        <updated>2025-07-29T06:03:09.000Z</updated>
+    </entry>
     <entry>
         <id>https://keithmalarkey.github.io/2025/07/28/Java%E7%BA%BF%E7%A8%8B/</id>
         <title>Java线程</title>
@@ -23,10 +86,18 @@
         <updated>2025-07-28T09:24:47.000Z</updated>
     </entry>
     <entry>
-        <id>https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</id>
-        <title>网络协议</title>
-        <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
-        <content type="html"></content>
+        <id>https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E4%B9%8BHTTP/</id>
+        <title>HTTP协议</title>
+        <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E4%B9%8BHTTP/"/>
+        <content type="html">&lt;p&gt;http1.0 http1.1 http2.0 http3.0 https&lt;/p&gt;
+</content>
+        <category term="计算机网络" scheme="https://keithmalarkey.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+        <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/Java%E5%9F%BA%E7%A1%80/" />
+        <category term="C++基础" scheme="https://keithmalarkey.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/Java%E5%9F%BA%E7%A1%80/C-%E5%9F%BA%E7%A1%80/" />
+        <category term="Java面试" scheme="https://keithmalarkey.github.io/tags/Java%E9%9D%A2%E8%AF%95/" />
+        <category term="HTTP" scheme="https://keithmalarkey.github.io/tags/HTTP/" />
+        <category term="HTTPS" scheme="https://keithmalarkey.github.io/tags/HTTPS/" />
+        <category term="C++面试" scheme="https://keithmalarkey.github.io/tags/C-%E9%9D%A2%E8%AF%95/" />
         <updated>2025-07-25T02:58:03.000Z</updated>
     </entry>
     <entry>
@@ -841,9 +912,9 @@
         <link rel="alternate" href="https://keithmalarkey.github.io/2025/07/12/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/"/>
         <content type="html"></content>
         <category term="Java基础" scheme="https://keithmalarkey.github.io/categories/Java%E5%9F%BA%E7%A1%80/" />
+        <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
         <category term="Java面试" scheme="https://keithmalarkey.github.io/tags/Java%E9%9D%A2%E8%AF%95/" />
         <category term="Java" scheme="https://keithmalarkey.github.io/tags/Java/" />
-        <category term="内存模型" scheme="https://keithmalarkey.github.io/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" />
         <category term="JMM" scheme="https://keithmalarkey.github.io/tags/JMM/" />
         <updated>2025-07-12T05:45:57.000Z</updated>
     </entry>

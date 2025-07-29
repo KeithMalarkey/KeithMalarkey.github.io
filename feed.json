@@ -7,6 +7,43 @@
     "home_page_url": "https://keithmalarkey.github.io",
     "items": [
         {
+            "id": "https://keithmalarkey.github.io/2025/07/29/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E4%B9%8BTCP-UDP/",
+            "url": "https://keithmalarkey.github.io/2025/07/29/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E4%B9%8BTCP-UDP/",
+            "title": "网络协议之TCP/UDP",
+            "date_published": "2025-07-29T13:15:48.000Z",
+            "content_html": "",
+            "tags": []
+        },
+        {
+            "id": "https://keithmalarkey.github.io/2025/07/29/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/",
+            "url": "https://keithmalarkey.github.io/2025/07/29/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/",
+            "title": "Java网络编程",
+            "date_published": "2025-07-29T13:13:14.000Z",
+            "content_html": "<p>socket HttpURLConnection HttpClient Netty WebSocket</p>\n",
+            "tags": []
+        },
+        {
+            "id": "https://keithmalarkey.github.io/2025/07/29/Java%E9%AB%98%E5%B9%B6%E5%8F%91/",
+            "url": "https://keithmalarkey.github.io/2025/07/29/Java%E9%AB%98%E5%B9%B6%E5%8F%91/",
+            "title": "Java高并发",
+            "date_published": "2025-07-29T06:03:29.000Z",
+            "content_html": "<h1 id=\"开篇\"><a class=\"anchor\" href=\"#开篇\">#</a> 开篇</h1>\n<p>简而言之，<span class=\"exturl\" data-url=\"aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ29uY3VycmVuY3lfJTI4Y29tcHV0ZXJfc2NpZW5jZSUyOQ==\">并发 (concurrency)</span> 指能够并行运行多个程序或程序的多个部分的能力。并发使程序能够通过利用底层操作系统和机器硬件的未开发能力来实现高性能和吞吐量。例如，现代计算机在一个 CPU 中有多个 CPU 或多个内核，程序可以利用所有内核进行某些处理；因此，与顺序处理相比，可以更快地完成任务。</p>\n<p>Java 并发的核心是线程化。线程是一个轻量级进程，它有自己的调用栈，但可以访问同一进程中其他线程的共享数据。Java 应用程序默认在一个进程中运行。可以在 Java 应用程序中使用多个线程来实现并行处理或并发。</p>\n<h1 id=\"相关工具包\"><a class=\"anchor\" href=\"#相关工具包\">#</a> 相关工具包</h1>\n<ul>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvbGFuZy9UaHJlYWQuaHRtbA==\">java.lang.Thread</span> 类</li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvbGFuZy9SdW5uYWJsZS5odG1s\">java.lang.Runnable</span> 接口</li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvdXRpbC9jb25jdXJyZW50L3BhY2thZ2Utc3VtbWFyeS5odG1s\">java.util.concurrent</span> 包</li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvdXRpbC9jb25jdXJyZW50L2F0b21pYy9wYWNrYWdlLXN1bW1hcnkuaHRtbA==\">java.util.concurrent.atomic</span> 包</li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vZW4vamF2YS9qYXZhc2UvMjQvZG9jcy9hcGkvamF2YS5iYXNlL2phdmEvdXRpbC9jb25jdXJyZW50L2xvY2tzL3BhY2thZ2Utc3VtbWFyeS5odG1s\">java.util.concurrent.locks</span> 包</li>\n</ul>\n<h1 id=\"java并发面临的问题和挑战\"><a class=\"anchor\" href=\"#java并发面临的问题和挑战\">#</a> Java 并发面临的问题和挑战</h1>\n<p>Java 并发编程确实是一个复杂的主题。它涉及到多个线程之间的协调和同步，以确保数据的一致性和正确性。以下是一些常见的挑战：</p>\n<ol>\n<li><strong>线程安全</strong>：确保多个线程访问共享数据时不会导致数据不一致或错误。</li>\n<li><strong>死锁</strong>：当两个或多个线程互相等待对方释放资源时，导致程序无法继续执行。</li>\n<li><strong>竞态条件</strong>：当多个线程同时访问和修改共享数据时，可能会导致不可预测的结果。</li>\n<li><strong>性能问题</strong>：不当的线程管理可能导致性能下降，例如过多的上下文切换或资源竞争。</li>\n<li><strong>调试困难</strong>：多线程程序的错误通常难以重现和调试，因为它们可能只在特定的时间或条件下发生。</li>\n<li><strong>内存可见性</strong>：确保一个线程对共享变量的修改对其他线程可见，避免出现脏读或不可见的修改。</li>\n<li><strong>线程生命周期管理</strong>：正确地创建、启动、暂停和终止线程是一个挑战，尤其是在复杂的应用程序中。</li>\n<li><strong>资源管理</strong>：确保线程正确地获取和释放资源，避免资源泄漏或过度使用。</li>\n<li><strong>异步编程</strong>：处理异步任务和回调可能会增加代码的复杂性，尤其是在错误处理和结果处理方面。</li>\n<li><strong>API 的复杂性</strong>：Java 的并发 API（如 <code>java.util.concurrent</code>  包）提供了许多工具和类，但它们的使用和配置可能会让人感到困惑。</li>\n<li><strong>线程池管理</strong>：合理配置和使用线程池以优化性能和资源使用率是一个挑战。</li>\n<li><strong>可扩展性</strong>：设计并发程序时需要考虑到未来的扩展性，以便在需要时能够轻松添加更多线程或处理器。</li>\n<li><strong>内存模型</strong>：理解 Java 内存模型（JMM）对于编写正确的并发代码至关重要，它定义了线程如何与内存交互。</li>\n</ol>\n<p>简单这些挑战，其实还不能完全体现 Java 并发编程的实际复杂性。</p>\n<h1 id=\"线程安全\"><a class=\"anchor\" href=\"#线程安全\">#</a> 线程安全</h1>\n",
+            "tags": [
+                "Java进阶",
+                "Java线程",
+                "并发编程",
+                "Java进阶"
+            ]
+        },
+        {
+            "id": "https://keithmalarkey.github.io/2025/07/29/Java%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AE%A1%E7%A8%8B/",
+            "url": "https://keithmalarkey.github.io/2025/07/29/Java%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AE%A1%E7%A8%8B/",
+            "title": "Java进程和管程",
+            "date_published": "2025-07-29T06:03:09.000Z",
+            "content_html": "",
+            "tags": []
+        },
+        {
             "id": "https://keithmalarkey.github.io/2025/07/28/Java%E7%BA%BF%E7%A8%8B/",
             "url": "https://keithmalarkey.github.io/2025/07/28/Java%E7%BA%BF%E7%A8%8B/",
             "title": "Java线程",
@@ -21,12 +58,20 @@
             ]
         },
         {
-            "id": "https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
-            "url": "https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
-            "title": "网络协议",
+            "id": "https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E4%B9%8BHTTP/",
+            "url": "https://keithmalarkey.github.io/2025/07/25/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E4%B9%8BHTTP/",
+            "title": "HTTP协议",
             "date_published": "2025-07-25T02:58:03.000Z",
-            "content_html": "",
-            "tags": []
+            "content_html": "<p>http1.0 http1.1 http2.0 http3.0 https</p>\n",
+            "tags": [
+                "计算机网络",
+                "Java基础",
+                "C++基础",
+                "Java面试",
+                "HTTP",
+                "HTTPS",
+                "C++面试"
+            ]
         },
         {
             "id": "https://keithmalarkey.github.io/2025/07/24/linux%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/",
@@ -145,9 +190,9 @@
             "content_html": "",
             "tags": [
                 "Java基础",
+                "内存模型",
                 "Java面试",
                 "Java",
-                "内存模型",
                 "JMM"
             ]
         },
